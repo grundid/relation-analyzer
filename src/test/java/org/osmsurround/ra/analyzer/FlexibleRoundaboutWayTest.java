@@ -7,7 +7,6 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
-import org.osmsurround.ra.data.Node;
 
 public class FlexibleRoundaboutWayTest {
 
@@ -19,22 +18,22 @@ public class FlexibleRoundaboutWayTest {
 	}
 
 	@Test
-	public void testGetFirstNode() throws Exception {
-		Collection<Node> firstNode = flexibleRoundaboutWay.getFirstNode();
-		assertTrue(firstNode.contains(TestUtils.getNode(10)));
-		assertTrue(firstNode.contains(TestUtils.getNode(11)));
-		assertTrue(firstNode.contains(TestUtils.getNode(12)));
-		assertTrue(firstNode.contains(TestUtils.getNode(13)));
-		assertEquals(5, firstNode.size());
+	public void testGetStartNodes() throws Exception {
+		Collection<ConnectableNode> startNodes = flexibleRoundaboutWay.getStartNodes();
+		TestUtils.assertContainsNode(TestUtils.getNode(10), startNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(11), startNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(12), startNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(13), startNodes);
+		assertEquals(5, startNodes.iterator().next().size());
 	}
 
 	@Test
-	public void testGetLastNode() throws Exception {
-		Collection<Node> lastNode = flexibleRoundaboutWay.getLastNode();
-		assertTrue(lastNode.contains(TestUtils.getNode(10)));
-		assertTrue(lastNode.contains(TestUtils.getNode(11)));
-		assertTrue(lastNode.contains(TestUtils.getNode(12)));
-		assertTrue(lastNode.contains(TestUtils.getNode(13)));
-		assertEquals(5, lastNode.size());
+	public void testGetEndNodes() throws Exception {
+		Collection<ConnectableNode> endNodes = flexibleRoundaboutWay.getEndNodes();
+		TestUtils.assertContainsNode(TestUtils.getNode(10), endNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(11), endNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(12), endNodes);
+		TestUtils.assertContainsNode(TestUtils.getNode(13), endNodes);
+		assertEquals(5, endNodes.iterator().next().size());
 	}
 }

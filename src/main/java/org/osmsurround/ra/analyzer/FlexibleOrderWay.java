@@ -1,21 +1,27 @@
 package org.osmsurround.ra.analyzer;
 
+import java.util.Collection;
+
 import org.osmsurround.ra.data.Way;
 
 public class FlexibleOrderWay extends FixedOrderWay {
 
-	public FlexibleOrderWay(Way way, boolean reverse) {
-		super(way, reverse);
+	public FlexibleOrderWay(Way way) {
+		super(way);
 	}
 
 	@Override
-	public boolean isReversible() {
-		return true;
+	public Collection<ConnectableNode> getStartNodes() {
+		return getStartAndEndNodes();
 	}
 
 	@Override
-	public void reverse() {
-		reverse = !reverse;
+	public Collection<ConnectableNode> getEndNodes() {
+		return getStartAndEndNodes();
 	}
 
+	protected Collection<ConnectableNode> getStartAndEndNodes() {
+		return asCollection(getNodeAtIndexAsConnectableNode(way.getNodes().size() - 1),
+				getNodeAtIndexAsConnectableNode(0));
+	}
 }

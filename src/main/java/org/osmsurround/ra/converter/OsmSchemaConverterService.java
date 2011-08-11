@@ -33,7 +33,8 @@ public class OsmSchemaConverterService {
 
 		for (OsmRelation osmRelation : osmRoot.getRelation()) {
 			List<Member> members = createMembers(osmRelation, knownWays);
-			relations.add(new Relation(osmRelation.getId().longValue(), members));
+			relations.add(new Relation(osmRelation.getId().longValue(), members, osmRelation.getTimestamp()
+					.toGregorianCalendar(), osmRelation.getUser()));
 		}
 
 		return relations;

@@ -31,12 +31,9 @@ public class RoleServiceTest extends TestBase {
 		Map<String, List<ISegment>> splittedRelations = roleService.splitRelationByRole(osmRelation);
 		assertNotNull(splittedRelations);
 
-		assertEquals(2, splittedRelations.size());
-		assertTrue(splittedRelations.containsKey("forward"));
-		assertTrue(splittedRelations.containsKey("backward"));
-
-		assertEquals(52, splittedRelations.get("forward").size());
-		assertEquals(56, splittedRelations.get("backward").size());
+		assertEquals(1, splittedRelations.size());
+		assertTrue(splittedRelations.containsKey(""));
+		assertEquals(73, splittedRelations.get("").size());
 	}
 
 	@Test

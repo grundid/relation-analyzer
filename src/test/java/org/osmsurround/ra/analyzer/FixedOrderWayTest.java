@@ -1,7 +1,5 @@
 package org.osmsurround.ra.analyzer;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
@@ -28,36 +26,14 @@ public class FixedOrderWayTest {
 	}
 
 	@Test
-	public void testIsReverse() throws Exception {
-		assertFalse(fixedOrderWayNotReverse.isReversible());
-		assertFalse(fixedOrderWayReverse.isReversible());
+	public void testGetStartNodes() throws Exception {
+		TestUtils.assertContainsNode(nodeFirst, fixedOrderWayNotReverse.getStartNodes());
+		TestUtils.assertContainsNode(nodeLast, fixedOrderWayReverse.getStartNodes());
 	}
 
 	@Test
-	public void testReverse() throws Exception {
-		fixedOrderWayNotReverse.reverse();
-		assertEquals(nodeFirst, fixedOrderWayNotReverse.getFirstNode().iterator().next());
-		fixedOrderWayReverse.reverse();
-		assertEquals(nodeLast, fixedOrderWayReverse.getFirstNode().iterator().next());
+	public void testGetEndNodes() throws Exception {
+		TestUtils.assertContainsNode(nodeLast, fixedOrderWayNotReverse.getEndNodes());
+		TestUtils.assertContainsNode(nodeFirst, fixedOrderWayReverse.getEndNodes());
 	}
-
-	@Test
-	public void testGetFirstNode() throws Exception {
-		assertEquals(nodeFirst, fixedOrderWayNotReverse.getFirstNode().iterator().next());
-		assertEquals(nodeLast, fixedOrderWayReverse.getFirstNode().iterator().next());
-	}
-
-	@Test
-	public void testGetLastNode() throws Exception {
-		assertEquals(nodeLast, fixedOrderWayNotReverse.getLastNode().iterator().next());
-		assertEquals(nodeFirst, fixedOrderWayReverse.getLastNode().iterator().next());
-	}
-
-	@Test
-	public void testGetSegments() throws Exception {
-		assertEquals(fixedOrderWayNotReverse, fixedOrderWayNotReverse.getSegments().get(0));
-		assertEquals(fixedOrderWayReverse, fixedOrderWayReverse.getSegments().get(0));
-
-	}
-
 }

@@ -1,24 +1,18 @@
 package org.osmsurround.ra.analyzer;
 
 import java.util.Collection;
-import java.util.List;
 
-import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.data.Way;
-
+/**
+ * A segment represents a single way or a group of connected and directed ways. Every segment has one or more
+ * connectable start nodes and one or more connectable end nodes.
+ * 
+ * @see ConnectableNode
+ */
 public interface ISegment {
 
-	Collection<Node> getFirstNode();
+	Collection<ConnectableNode> getStartNodes();
 
-	Collection<Node> getLastNode();
+	Collection<ConnectableNode> getEndNodes();
 
-	void reverse();
-
-	boolean isReversible();
-
-	List<ISegment> getSegments();
-
-	List<Way> getWays();
-
-	List<Node> getNodesFromTo(Node firstNode, Node lastNode);
+	//	Collection<Node> getNodesBetween(ConnectableNode startNode, ConnectableNode endNode);
 }

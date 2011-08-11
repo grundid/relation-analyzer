@@ -308,7 +308,7 @@
   <node id="1243241468" lat="49.1260618" lon="9.2211748" version="1" changeset="7851899" user="hno" uid="115042" visible="true" timestamp="2011-04-13T13:29:13Z"/>
   <node id="1243241523" lat="49.1259118" lon="9.2211382" version="1" changeset="7851899" user="hno" uid="115042" visible="true" timestamp="2011-04-13T13:29:15Z"/>
   <node id="31017773" lat="49.1257937" lon="9.2211338" version="6" changeset="7851899" user="hno" uid="115042" visible="true" timestamp="2011-04-13T13:29:21Z"/>
-  <node id="30906924" lat="49.1422473" lon="9.2169549" version="6" changeset="8984780" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:46:21Z"/>
+  <node id="30906924" lat="49.1422402" lon="9.2170148" version="5" changeset="5183233" user="hno" uid="115042" visible="true" timestamp="2010-07-10T15:04:44Z"/>
   <node id="817445461" lat="49.1422858" lon="9.2163017" version="3" changeset="7699068" user="Teddy73" uid="136321" visible="true" timestamp="2011-03-28T21:11:57Z">
     <tag k="crossing" v="traffic_signals"/>
     <tag k="highway" v="traffic_signals"/>
@@ -363,7 +363,6 @@
     <tag k="crossing" v="traffic_signals"/>
     <tag k="highway" v="traffic_signals"/>
   </node>
-  <node id="1019645416" lat="49.1422297" lon="9.2169569" version="2" changeset="8984780" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:46:20Z"/>
   <node id="24345935" lat="49.1426244" lon="9.2091549" version="6" changeset="6535507" user="Elwood" uid="6669" visible="true" timestamp="2010-12-04T10:48:03Z"/>
   <node id="810134252" lat="49.1425287" lon="9.2150639" version="3" changeset="6535507" user="Elwood" uid="6669" visible="true" timestamp="2010-12-04T10:48:07Z"/>
   <node id="438083176" lat="49.1425564" lon="9.2146896" version="9" changeset="7699068" user="Teddy73" uid="136321" visible="true" timestamp="2011-03-28T21:11:57Z"/>
@@ -384,6 +383,7 @@
   </node>
   <node id="974003589" lat="49.1381019" lon="9.2030902" version="2" changeset="6565258" user="changchun_1" uid="131968" visible="true" timestamp="2010-12-06T16:29:06Z"/>
   <node id="308993055" lat="49.138079" lon="9.2028215" version="6" changeset="6565258" user="changchun_1" uid="131968" visible="true" timestamp="2010-12-06T16:29:07Z"/>
+  <node id="810133801" lat="49.1422883" lon="9.2169318" version="2" changeset="7864420" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-14T21:06:23Z"/>
   <node id="24345946" lat="49.1426938" lon="9.2100994" version="6" changeset="6535507" user="Elwood" uid="6669" visible="true" timestamp="2010-12-04T10:47:59Z"/>
   <node id="24345938" lat="49.1427014" lon="9.2095226" version="4" changeset="6535507" user="Elwood" uid="6669" visible="true" timestamp="2010-12-04T10:48:39Z"/>
   <node id="954410170" lat="49.1433787" lon="9.194818" version="2" changeset="6924869" user="changchun_1" uid="131968" visible="true" timestamp="2011-01-10T10:43:38Z">
@@ -661,7 +661,7 @@
   <node id="31019235" lat="49.1426773" lon="9.212318" version="8" changeset="7256013" user="changchun_1" uid="131968" visible="true" timestamp="2011-02-11T15:00:29Z"/>
   <node id="1250618373" lat="49.1481165" lon="9.1966323" version="1" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:45Z"/>
   <node id="1250618413" lat="49.149556" lon="9.1966956" version="1" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:45Z"/>
-  <node id="602440788" lat="49.1515725" lon="9.1968354" version="4" changeset="8984835" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:51:50Z"/>
+  <node id="602440788" lat="49.1515507" lon="9.1968412" version="3" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:51Z"/>
   <node id="716946564" lat="49.1474462" lon="9.1961268" version="3" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:54Z"/>
   <node id="867901078" lat="49.1465883" lon="9.1959083" version="2" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:54Z"/>
   <node id="36670912" lat="49.1480378" lon="9.1963281" version="6" changeset="7902275" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-18T22:45:55Z"/>
@@ -745,12 +745,12 @@
   <node id="1254041343" lat="49.1265268" lon="9.2232415" version="1" changeset="7925981" user="hno" uid="115042" visible="true" timestamp="2011-04-21T14:26:43Z"/>
   <node id="1172511208" lat="49.1312962" lon="9.2265475" version="1" changeset="7391863" user="hno" uid="115042" visible="true" timestamp="2011-02-25T16:24:32Z"/>
   <node id="535173024" lat="49.1313817" lon="9.2266201" version="2" changeset="7391863" user="hno" uid="115042" visible="true" timestamp="2011-02-25T16:24:34Z"/>
+  <node id="1174122478" lat="49.1422064" lon="9.2170105" version="1" changeset="7397806" user="changchun_1" uid="131968" visible="true" timestamp="2011-02-26T09:26:15Z"/>
   <node id="32695952" lat="49.1419639" lon="9.2191663" version="10" changeset="7397806" user="changchun_1" uid="131968" visible="true" timestamp="2011-02-26T09:26:33Z"/>
   <node id="318200109" lat="49.1420489" lon="9.2184878" version="8" changeset="7397806" user="changchun_1" uid="131968" visible="true" timestamp="2011-02-26T09:26:36Z">
     <tag k="name" v="Rathaus"/>
     <tag k="highway" v="bus_stop"/>
   </node>
-  <node id="1174122478" lat="49.1422084" lon="9.2169566" version="2" changeset="8984780" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:46:20Z"/>
   <node id="1174122502" lat="49.1416011" lon="9.2219758" version="3" changeset="7820786" user="changchun_1" uid="131968" visible="true" timestamp="2011-04-10T09:23:40Z"/>
   <node id="281064387" lat="49.1547198" lon="9.1916126" version="3" changeset="7410462" user="changchun_1" uid="131968" visible="true" timestamp="2011-02-27T13:10:09Z"/>
   <node id="1195719786" lat="49.1419168" lon="9.1795077" version="1" changeset="7516975" user="friedel_hn" uid="5079" visible="true" timestamp="2011-03-10T18:53:59Z"/>
@@ -883,7 +883,6 @@
   <node id="1232804256" lat="49.1400506" lon="9.2212646" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:01Z"/>
   <node id="1232804272" lat="49.1391132" lon="9.2212032" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:01Z"/>
   <node id="1232804339" lat="49.1391206" lon="9.2213014" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:03Z"/>
-  <node id="640554967" lat="49.1391356" lon="9.2214366" version="2" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:06Z"/>
   <node id="26734145" lat="49.1391418" lon="9.2220334" version="6" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:10Z"/>
   <node id="249173786" lat="49.1399729" lon="9.2212008" version="5" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:11Z"/>
   <node id="23743141" lat="49.1391421" lon="9.2219954" version="7" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:15Z"/>
@@ -965,8 +964,6 @@
   <node id="1274431437" lat="49.1423444" lon="9.1818285" version="1" changeset="8066370" user="friedel_hn" uid="5079" visible="true" timestamp="2011-05-06T15:58:04Z"/>
   <node id="1300400437" lat="49.1419819" lon="9.2189707" version="1" changeset="8250086" user="Unke17" uid="460083" visible="true" timestamp="2011-05-26T04:17:35Z"/>
   <node id="94922478" lat="49.1471701" lon="9.1853706" version="5" changeset="8593846" user="friedel_hn" uid="5079" visible="true" timestamp="2011-06-30T20:01:26Z"/>
-  <node id="1174122492" lat="49.1422599" lon="9.2169552" version="3" changeset="8984780" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:46:21Z"/>
-  <node id="810133801" lat="49.1422883" lon="9.2169528" version="3" changeset="8984780" user="nitegate" uid="18890" visible="true" timestamp="2011-08-11T11:46:21Z"/>
   <way id="4210436" visible="true" timestamp="2011-04-21T08:55:45Z" version="11" changeset="7923451" user="hno" uid="115042">
     <nd ref="825023822"/>
     <nd ref="26676315"/>
@@ -1001,14 +998,6 @@
     <tag k="name" v="Neckargartacher Straße"/>
     <tag k="maxspeed" v="50"/>
     <tag k="highway" v="secondary"/>
-  </way>
-  <way id="4855324" visible="true" timestamp="2011-02-26T09:26:19Z" version="15" changeset="7397806" user="changchun_1" uid="131968">
-    <nd ref="30906924"/>
-    <nd ref="1174122492"/>
-    <nd ref="810133801"/>
-    <tag k="name" v="Gerberstraße"/>
-    <tag k="maxspeed" v="30"/>
-    <tag k="highway" v="residential"/>
   </way>
   <way id="4962519" visible="true" timestamp="2010-03-04T16:56:49Z" version="8" changeset="4034229" user="hno" uid="115042">
     <nd ref="32859272"/>
@@ -1382,14 +1371,6 @@
     <tag k="lanes" v="2"/>
     <tag k="ref" v="B 293"/>
   </way>
-  <way id="7741501" visible="true" timestamp="2011-08-11T11:46:20Z" version="13" changeset="8984780" user="nitegate" uid="18890">
-    <nd ref="30906924"/>
-    <nd ref="1019645416"/>
-    <nd ref="1174122478"/>
-    <tag k="name" v="Kramstraße"/>
-    <tag k="maxspeed" v="30"/>
-    <tag k="highway" v="residential"/>
-  </way>
   <way id="42797725" visible="true" timestamp="2011-04-10T18:56:53Z" version="5" changeset="7825751" user="Teddy73" uid="136321">
     <nd ref="535171537"/>
     <nd ref="535171538"/>
@@ -1457,13 +1438,6 @@
     <nd ref="602440780"/>
     <nd ref="602440787"/>
     <nd ref="602440788"/>
-    <tag k="name" v="Neckargartacher Straße"/>
-    <tag k="maxspeed" v="50"/>
-    <tag k="highway" v="secondary"/>
-  </way>
-  <way id="47387723" visible="true" timestamp="2010-01-02T20:36:28Z" version="1" changeset="3522424" user="changchun_1" uid="131968">
-    <nd ref="602440788"/>
-    <nd ref="603245666"/>
     <tag k="name" v="Neckargartacher Straße"/>
     <tag k="maxspeed" v="50"/>
     <tag k="highway" v="secondary"/>
@@ -2542,20 +2516,7 @@
     <tag k="maxspeed" v="30"/>
     <tag k="highway" v="residential"/>
   </way>
-  <way id="125611925" visible="true" timestamp="2011-08-11T11:46:16Z" version="1" changeset="8984780" user="nitegate" uid="18890">
-    <nd ref="1232804339"/>
-    <nd ref="640554967"/>
-    <nd ref="23743141"/>
-    <tag k="oneway" v="yes"/>
-    <tag k="name" v="Wollhausstraße"/>
-    <tag k="maxspeed" v="50"/>
-    <tag k="highway" v="tertiary"/>
-  </way>
-  <relation id="959757" visible="true" timestamp="2011-08-11T11:51:49Z" version="127" changeset="8984835" user="nitegate" uid="18890">
-    <member type="way" ref="47387723" role=""/>
-    <member type="way" ref="7741501" role="backward"/>
-    <member type="way" ref="4855324" role=""/>
-    <member type="way" ref="125611925" role=""/>
+  <relation id="959757" visible="true" timestamp="2011-04-07T16:57:35Z" version="125" changeset="7796058" user="Teddy73" uid="136321">
     <member type="way" ref="106686092" role=""/>
     <member type="way" ref="106684764" role=""/>
     <member type="way" ref="34887005" role="forward"/>

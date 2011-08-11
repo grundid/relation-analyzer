@@ -1,10 +1,5 @@
 package org.osmsurround.ra.analyzer;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.osmsurround.ra.AnalyzeRelationModel;
 import org.osmsurround.ra.RelationLoaderService;
 import org.osmsurround.ra.data.Relation;
@@ -19,7 +14,7 @@ public class AnalyzeRelationService {
 	@Autowired
 	private RelationLoaderService relationLoaderService;
 	@Autowired
-	private AggregationService aggregationService;
+	private ConnectableService aggregationService;
 	@Autowired
 	private RoleService roleService;
 	@Autowired
@@ -28,16 +23,17 @@ public class AnalyzeRelationService {
 	public AnalyzerReport createReport(AnalyzeRelationModel relationModel) {
 		Relation osmRelation = relationLoaderService.loadRelation(relationModel.getRelationId().longValue());
 
-		Map<String, List<ISegment>> aggregatedRelation = new HashMap<String, List<ISegment>>();
+		//		Map<String, List<ISegment>> aggregatedRelation = new HashMap<String, List<ISegment>>();
+		//
+		//		Map<String, List<ISegment>> splittedRelation = roleService.splitRelationByRole(osmRelation);
+		//		for (Entry<String, List<ISegment>> entry : splittedRelation.entrySet()) {
+		//			List<ISegment> list = aggregationService.aggregate(entry.getValue());
+		//			aggregatedRelation.put(entry.getKey(), list);
+		//		}
 
-		Map<String, List<ISegment>> splittedRelation = roleService.splitRelationByRole(osmRelation);
-		for (Entry<String, List<ISegment>> entry : splittedRelation.entrySet()) {
-			List<ISegment> list = aggregationService.aggregate(entry.getValue());
-			aggregatedRelation.put(entry.getKey(), list);
-		}
-
-		AnalyzerReport analyzerReport = analyzerReportService.createReport(aggregatedRelation);
-		return analyzerReport;
+		//		AnalyzerReport analyzerReport = analyzerReportService.createReport(aggregatedRelation);
+		//		return analyzerReport;
+		return null;
 	}
 
 }

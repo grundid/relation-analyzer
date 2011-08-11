@@ -16,12 +16,22 @@ public class SegmentFactoryTest extends TestBase {
 	@Test
 	public void testCreateMember() throws Exception {
 
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "")) instanceof FlexibleOrderWay);
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward")) instanceof FixedOrderWay);
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "backward")) instanceof FixedOrderWay);
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "")) instanceof FlexibleRoundaboutWay);
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "forward")) instanceof FixedRoundaboutWay);
-		assertTrue(segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "backward")) instanceof FixedRoundaboutWay);
+		assertEqualClass(FlexibleOrderWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), ""))
+				.getClass());
 
+		assertEqualClass(FixedOrderWay.class,
+				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward")).getClass());
+		assertEqualClass(FixedOrderWay.class,
+				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "backward")).getClass());
+		assertEqualClass(FlexibleRoundaboutWay.class,
+				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "")).getClass());
+		assertEqualClass(FixedRoundaboutWay.class,
+				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "forward")).getClass());
+		assertEqualClass(FixedRoundaboutWay.class,
+				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "backward")).getClass());
+	}
+
+	private void assertEqualClass(Class<?> expected, Class<?> actual) {
+		assertEquals(expected.getName(), actual.getName());
 	}
 }

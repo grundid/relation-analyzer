@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SegmentFactory {
 
-	private static boolean CREATE_FLEXIBLE_ONLY = true;
+	private static boolean CREATE_FLEXIBLE_ONLY = false;
 	@Autowired
 	private RoundaboutService roundaboutService;
 
@@ -32,9 +32,9 @@ public class SegmentFactory {
 
 	private ISegment createFlexibleSegment(Way way, boolean isRoundabout) {
 		if (isRoundabout)
-			return new FlexibleRoundaboutWay(way, false);
+			return new FlexibleRoundaboutWay(way);
 		else
-			return new FlexibleOrderWay(way, false);
+			return new FlexibleOrderWay(way);
 	}
 
 	private ISegment createFixedSegment(Way way, boolean isRoundabout, boolean reverse) {

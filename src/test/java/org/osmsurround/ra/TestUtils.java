@@ -1,10 +1,14 @@
 package org.osmsurround.ra;
 
+import static org.junit.Assert.*;
+
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.analyzer.FixedOrderWay;
 import org.osmsurround.ra.analyzer.FixedRoundaboutWay;
 import org.osmsurround.ra.analyzer.FlexibleOrderWay;
@@ -85,11 +89,11 @@ public abstract class TestUtils {
 	}
 
 	public static ISegment asFlexibleOrderWay(long... nodeIds) {
-		return new FlexibleOrderWay(new Way(0, asNodes(nodeIds)), false);
+		return new FlexibleOrderWay(new Way(0, asNodes(nodeIds)));
 	}
 
 	public static FlexibleRoundaboutWay asFlexibleRoundaboutWay(long... nodeIds) {
-		return new FlexibleRoundaboutWay(new Way(0, asNodes(nodeIds)), false);
+		return new FlexibleRoundaboutWay(new Way(0, asNodes(nodeIds)));
 	}
 
 	public static FixedRoundaboutWay asFixedRoundaboutWay(long... nodeIds) {
@@ -106,4 +110,13 @@ public abstract class TestUtils {
 	public static Node getNode(long id) {
 		return NODES.get(Long.valueOf(id));
 	}
+
+	public static void assertContainsNode(Node expected, Collection<ConnectableNode> connectableNodes) {
+		boolean contains = false;
+		for (ConnectableNode connectableNode : connectableNodes) {
+			contains |= connectableNode.contains(expected);
+		}
+		assertTrue(contains);
+	}
+
 }

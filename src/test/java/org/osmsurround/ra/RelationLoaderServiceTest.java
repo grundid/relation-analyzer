@@ -2,6 +2,8 @@ package org.osmsurround.ra;
 
 import static org.junit.Assert.*;
 
+import java.util.Calendar;
+
 import org.junit.Test;
 import org.osmsurround.ra.data.Relation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +20,14 @@ public class RelationLoaderServiceTest extends TestBase {
 	public void testLoadRelation() throws Exception {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, 37415);
 
-		Relation osmRelation = relationLoaderService.loadRelation(37415);
-		assertNotNull(osmRelation);
-		assertEquals(37415, osmRelation.getRelationId());
-		assertEquals(73, osmRelation.getMembers().size());
+		Relation relation = relationLoaderService.loadRelation(37415);
+		assertNotNull(relation);
+		assertEquals(37415, relation.getRelationId());
+		assertEquals(73, relation.getMembers().size());
+		assertEquals("gormur", relation.getUser());
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.MILLISECOND, 0);
+		c.set(2011, 0, 1, 15, 42, 29);// 2011-01-01T14:42:29Z Daytime saving?
+		assertEquals(c.getTimeInMillis(), relation.getTimestamp().getTimeInMillis());
 	}
 }
