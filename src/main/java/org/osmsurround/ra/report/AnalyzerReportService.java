@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.osmsurround.ra.analyzer.ISegment;
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.segment;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,8 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
+import org.osmsurround.ra.analyzer.ConnectableNode;
+import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
 
 public class FlexibleRoundaboutWayTest {
 

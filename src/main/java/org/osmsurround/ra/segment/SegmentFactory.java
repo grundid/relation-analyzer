@@ -1,5 +1,6 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.segment;
 
+import org.osmsurround.ra.analyzer.RoundaboutService;
 import org.osmsurround.ra.data.Member;
 import org.osmsurround.ra.data.Way;
 import org.springframework.beans.factory.annotation.Autowired;

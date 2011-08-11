@@ -1,10 +1,11 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.segment;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
+import org.osmsurround.ra.segment.FixedOrderWay;
 
 public class FixedOrderWayTest {
 

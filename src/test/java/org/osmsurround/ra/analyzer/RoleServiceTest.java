@@ -10,6 +10,9 @@ import org.osmsurround.ra.RelationLoaderService;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.data.Relation;
+import org.osmsurround.ra.segment.FlexibleOrderWay;
+import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 

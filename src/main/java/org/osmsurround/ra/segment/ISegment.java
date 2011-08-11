@@ -1,6 +1,8 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.segment;
 
 import java.util.Collection;
+
+import org.osmsurround.ra.analyzer.ConnectableNode;
 
 /**
  * A segment represents a single way or a group of connected and directed ways. Every segment has one or more

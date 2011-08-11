@@ -14,7 +14,7 @@ public class AnalyzeRelationService {
 	@Autowired
 	private RelationLoaderService relationLoaderService;
 	@Autowired
-	private ConnectableService aggregationService;
+	private AggregationService aggregationService;
 	@Autowired
 	private RoleService roleService;
 	@Autowired

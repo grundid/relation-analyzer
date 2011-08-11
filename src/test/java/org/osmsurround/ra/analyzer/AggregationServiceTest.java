@@ -13,19 +13,20 @@ import org.junit.Test;
 import org.osmsurround.ra.HelperService;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @SuppressWarnings("unchecked")
-public class ConnectableServiceTest extends TestBase {
+public class AggregationServiceTest extends TestBase {
 
 	@Autowired
-	private ConnectableService connectableService;
+	private AggregationService aggregationService;
 	@Autowired
 	private HelperService helperService;
 
 	@Test
 	public void testAggregateEmpty() throws Exception {
-		List<ISegment> list = connectableService.aggregate(Collections.EMPTY_LIST);
+		List<ISegment> list = aggregationService.aggregate(Collections.EMPTY_LIST);
 		assertTrue(list.isEmpty());
 	}
 
@@ -33,7 +34,7 @@ public class ConnectableServiceTest extends TestBase {
 	public void testAggregateSingle() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1));
 
-		List<ISegment> list = connectableService.aggregate(segments);
+		List<ISegment> list = aggregationService.aggregate(segments);
 		assertEquals(1, list.size());
 	}
 
@@ -41,7 +42,7 @@ public class ConnectableServiceTest extends TestBase {
 	public void testAggregateTwoUnconnected() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(3, 4));
 
-		List<ISegment> list = connectableService.aggregate(segments);
+		List<ISegment> list = aggregationService.aggregate(segments);
 		assertEquals(2, list.size());
 	}
 
@@ -49,15 +50,15 @@ public class ConnectableServiceTest extends TestBase {
 	public void testAggregateTwoConnected() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(2, 3));
 
-		List<ISegment> list = connectableService.aggregate(segments);
+		List<ISegment> list = aggregationService.aggregate(segments);
 		assertEquals(1, list.size());
-		assertEquals(ConnectableSegment.class, list.get(0).getClass());
+		assertEquals(AggregatedSegment.class, list.get(0).getClass());
 	}
 
 	@Test
 	public void testAggregate12320() throws Exception {
 		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_12320);
-		List<ISegment> list = connectableService.aggregate(relation.get(""));
+		List<ISegment> list = aggregationService.aggregate(relation.get(""));
 		assertEquals(1, list.size());
 	}
 
@@ -66,7 +67,7 @@ public class ConnectableServiceTest extends TestBase {
 	public void testAggregate37415() throws Exception {
 		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_37415);
 		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
-			List<ISegment> list = connectableService.aggregate(entry.getValue());
+			List<ISegment> list = aggregationService.aggregate(entry.getValue());
 			assertEquals(1, list.size());
 		}
 	}
@@ -75,7 +76,7 @@ public class ConnectableServiceTest extends TestBase {
 	public void testAggregate959757() throws Exception {
 		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_959757);
 		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
-			List<ISegment> list = connectableService.aggregate(entry.getValue());
+			List<ISegment> list = aggregationService.aggregate(entry.getValue());
 			assertEquals(1, list.size());
 		}
 	}

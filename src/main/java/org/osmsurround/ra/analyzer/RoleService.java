@@ -7,6 +7,8 @@ import java.util.Map;
 
 import org.osmsurround.ra.data.Member;
 import org.osmsurround.ra.data.Relation;
+import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.SegmentFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

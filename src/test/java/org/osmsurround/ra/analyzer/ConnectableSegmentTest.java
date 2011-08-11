@@ -9,21 +9,21 @@ public class ConnectableSegmentTest {
 
 	@Test
 	public void testGetStartNodes() throws Exception {
-		ConnectableSegment segment = new ConnectableSegment(TestUtils.asFixedOrderWay(1, 2, 3, 4));
+		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFixedOrderWay(1, 2, 3, 4));
 		Collection<ConnectableNode> startNodes = segment.getStartNodes();
 		TestUtils.assertContainsNode(TestUtils.getNode(1), startNodes);
 	}
 
 	@Test
 	public void testGetLastNode() throws Exception {
-		ConnectableSegment segment = new ConnectableSegment(TestUtils.asFixedOrderWay(1, 2, 3, 4));
+		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFixedOrderWay(1, 2, 3, 4));
 		Collection<ConnectableNode> endNodes = segment.getEndNodes();
 		TestUtils.assertContainsNode(TestUtils.getNode(4), endNodes);
 	}
 
 	@Test
 	public void testGetStartNodesFlexible() throws Exception {
-		ConnectableSegment segment = new ConnectableSegment(TestUtils.asFlexibleOrderWay(1, 2, 3, 4));
+		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2, 3, 4));
 		Collection<ConnectableNode> startNodes = segment.getStartNodes();
 		TestUtils.assertContainsNode(TestUtils.getNode(1), startNodes);
 		TestUtils.assertContainsNode(TestUtils.getNode(4), startNodes);
@@ -31,7 +31,7 @@ public class ConnectableSegmentTest {
 
 	@Test
 	public void testGetLastNodeFlexible() throws Exception {
-		ConnectableSegment segment = new ConnectableSegment(TestUtils.asFlexibleOrderWay(1, 2, 3, 4));
+		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2, 3, 4));
 		Collection<ConnectableNode> endNodes = segment.getEndNodes();
 		TestUtils.assertContainsNode(TestUtils.getNode(1), endNodes);
 		TestUtils.assertContainsNode(TestUtils.getNode(4), endNodes);

@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
-import org.osmsurround.ra.analyzer.FixedOrderWay;
-import org.osmsurround.ra.analyzer.FixedRoundaboutWay;
-import org.osmsurround.ra.analyzer.FlexibleOrderWay;
-import org.osmsurround.ra.analyzer.FlexibleRoundaboutWay;
-import org.osmsurround.ra.analyzer.ISegment;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
+import org.osmsurround.ra.segment.FixedOrderWay;
+import org.osmsurround.ra.segment.FixedRoundaboutWay;
+import org.osmsurround.ra.segment.FlexibleOrderWay;
+import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

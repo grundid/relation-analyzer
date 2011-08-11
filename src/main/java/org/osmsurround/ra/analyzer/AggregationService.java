@@ -5,10 +5,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ConnectableService {
+public class AggregationService {
 
 	public List<ISegment> aggregate(List<ISegment> segments) {
 
@@ -16,26 +17,26 @@ public class ConnectableService {
 
 		int lastRun = 0;
 		do {
-			List<ConnectableSegment> connectableSegments = new ArrayList<ConnectableSegment>();
+			List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
 			lastRun = result.size();
 			for (Iterator<ISegment> it = result.iterator(); it.hasNext();) {
 				ISegment segment = it.next();
-				if (!canConnect(connectableSegments, segment))
-					connectableSegments.add(new ConnectableSegment(segment));
+				if (!canConnect(aggregatedSegments, segment))
+					aggregatedSegments.add(new AggregatedSegment(segment));
 			}
 
-			result = new ArrayList<ISegment>(connectableSegments);
+			result = new ArrayList<ISegment>(aggregatedSegments);
 
 		} while (result.size() > 1 && result.size() != lastRun);
 
 		return result;
 	}
 
-	private boolean canConnect(List<ConnectableSegment> connectableSegments, ISegment segment) {
+	private boolean canConnect(List<AggregatedSegment> connectableSegments, ISegment segment) {
 		Collection<ConnectableNode> newSegmentStartNodes = segment.getStartNodes();
 		Collection<ConnectableNode> newSegmentEndNodes = segment.getEndNodes();
 
-		for (ConnectableSegment connectableSegment : connectableSegments) {
+		for (AggregatedSegment connectableSegment : connectableSegments) {
 			Collection<ConnectableNode> startNodes = connectableSegment.getStartNodes();
 			Collection<ConnectableNode> endNodes = connectableSegment.getEndNodes();
 

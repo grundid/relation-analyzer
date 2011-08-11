@@ -3,7 +3,7 @@
  * (c) Copyright by M.IT 2002-2005
  * www.emaitie.de 
  */
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra;
 
 /**
  * @author adrian

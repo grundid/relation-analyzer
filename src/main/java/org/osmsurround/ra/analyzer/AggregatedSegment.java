@@ -4,15 +4,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.osmsurround.ra.segment.ISegment;
+
 /**
- * A connectable segment contains only segments that can be connected.
+ * A segment that contains only segments that can be connected.
  * 
  */
-public class ConnectableSegment implements ISegment {
+public class AggregatedSegment implements ISegment {
 
 	private List<ISegment> segments = new ArrayList<ISegment>();
 
-	public ConnectableSegment(ISegment segment) {
+	public AggregatedSegment(ISegment segment) {
 		segments.add(segment);
 	}
 

@@ -1,9 +1,10 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.segment;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 

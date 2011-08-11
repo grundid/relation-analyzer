@@ -3,10 +3,10 @@ package org.osmsurround.ra;
 import java.util.List;
 import java.util.Map;
 
-import org.osmsurround.ra.analyzer.ConnectableService;
-import org.osmsurround.ra.analyzer.ISegment;
+import org.osmsurround.ra.analyzer.AggregationService;
 import org.osmsurround.ra.analyzer.RoleService;
 import org.osmsurround.ra.data.Relation;
+import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -21,7 +21,7 @@ public class HelperService {
 	@Autowired
 	private RestTemplate restTemplate;
 	@Autowired
-	private ConnectableService aggregationService;
+	private AggregationService aggregationService;
 
 	public Map<String, List<ISegment>> loadSplittedRelation(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
