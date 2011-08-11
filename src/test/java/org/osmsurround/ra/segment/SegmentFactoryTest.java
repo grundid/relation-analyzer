@@ -6,11 +6,6 @@ import org.junit.Test;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.data.Member;
-import org.osmsurround.ra.segment.FixedOrderWay;
-import org.osmsurround.ra.segment.FixedRoundaboutWay;
-import org.osmsurround.ra.segment.FlexibleOrderWay;
-import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
-import org.osmsurround.ra.segment.SegmentFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class SegmentFactoryTest extends TestBase {
@@ -39,4 +34,10 @@ public class SegmentFactoryTest extends TestBase {
 	private void assertEqualClass(Class<?> expected, Class<?> actual) {
 		assertEquals(expected.getName(), actual.getName());
 	}
+
+	@Test(expected = RuntimeException.class)
+	public void testCreateUnknownMember() throws Exception {
+		segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unknown"));
+	}
+
 }

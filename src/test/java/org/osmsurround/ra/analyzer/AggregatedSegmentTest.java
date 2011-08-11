@@ -1,11 +1,14 @@
 package org.osmsurround.ra.analyzer;
 
+import static org.junit.Assert.*;
+
 import java.util.Collection;
 
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
+import org.osmsurround.ra.segment.ISegment;
 
-public class ConnectableSegmentTest {
+public class AggregatedSegmentTest {
 
 	@Test
 	public void testGetStartNodes() throws Exception {
@@ -35,6 +38,17 @@ public class ConnectableSegmentTest {
 		Collection<ConnectableNode> endNodes = segment.getEndNodes();
 		TestUtils.assertContainsNode(TestUtils.getNode(1), endNodes);
 		TestUtils.assertContainsNode(TestUtils.getNode(4), endNodes);
+	}
+
+	@Test
+	public void testNoAggregatedSubSegments() throws Exception {
+		AggregatedSegment topSegment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2));
+		AggregatedSegment segment = new AggregatedSegment(topSegment);
+		AggregatedSegment subSegment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(2, 3));
+		segment.addSegment(subSegment);
+		for (ISegment innerSegment : segment.getSegments())
+			assertFalse(innerSegment instanceof AggregatedSegment);
+
 	}
 
 }

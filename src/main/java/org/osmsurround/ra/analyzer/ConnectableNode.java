@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 
 import org.osmsurround.ra.data.Node;
 
@@ -35,5 +36,9 @@ public class ConnectableNode {
 
 	public int size() {
 		return nodes.size();
+	}
+
+	public Iterator<Node> getNodesIterator() {
+		return nodes.iterator();
 	}
 }

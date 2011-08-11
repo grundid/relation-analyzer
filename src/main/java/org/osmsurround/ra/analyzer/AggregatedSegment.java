@@ -15,7 +15,7 @@ public class AggregatedSegment implements ISegment {
 	private List<ISegment> segments = new ArrayList<ISegment>();
 
 	public AggregatedSegment(ISegment segment) {
-		segments.add(segment);
+		addSegment(segment);
 	}
 
 	@Override
@@ -35,7 +35,11 @@ public class AggregatedSegment implements ISegment {
 	}
 
 	public void addSegment(ISegment segment) {
-		segments.add(segment);
+		if (segment instanceof AggregatedSegment) {
+			addAllSegments(((AggregatedSegment)segment).getSegments());
+		}
+		else
+			segments.add(segment);
 	}
 
 	public void addAllSegments(Collection<ISegment> segments) {

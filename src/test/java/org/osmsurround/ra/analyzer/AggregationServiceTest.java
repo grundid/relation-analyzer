@@ -80,4 +80,14 @@ public class AggregationServiceTest extends TestBase {
 			assertEquals(1, list.size());
 		}
 	}
+
+	@Test
+	@Ignore
+	public void testAggregate954995() throws Exception {
+		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(954995);
+		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
+			List<ISegment> list = aggregationService.aggregate(entry.getValue());
+			assertEquals(1, list.size());
+		}
+	}
 }

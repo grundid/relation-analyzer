@@ -16,5 +16,9 @@ public interface ISegment {
 
 	Collection<ConnectableNode> getEndNodes();
 
+	//	boolean containsInStartNode(ConnectableNode connectableNode);
+
+	//	boolean containsInEndNode(ConnectableNode connectableNode);
+
 	//	Collection<Node> getNodesBetween(ConnectableNode startNode, ConnectableNode endNode);
 }
