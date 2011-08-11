@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="org.osmsurround.ra" />
+	<context:property-placeholder location="classpath:config.properties" />
+	<context:property-override location="classpath:config-inject.properties" />
+
+	<cache:annotation-driven />
+
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"
+		p:cacheManager-ref="ehcache" />
+
+	<!-- Ehcache library setup -->
+	<bean id="ehcache"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
+		p:config-location="classpath:ehcache.xml" />
+
+	<mvc:default-servlet-handler />
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="/rs/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/views/" p:suffix=".jsp">
+	</bean>
+
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- <mvc:interceptors> -->
+	<!-- Injects the current build type as a request attribute -->
+	<!-- <bean class="de.emaitie.webtools.spring.CurrentSystemInjectInterceptor"> 
+		<constructor-arg value="${currentBuild}"></constructor-arg> </bean> -->
+	<!-- Injects the current locale as a request attribute -->
+	<!-- <bean class="de.emaitie.webtools.spring.LocaleInjectInterceptor" /> -->
+
+	<!-- On pre-handle, detect the device that originated the web request -->
+	<!-- <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" 
+		/> -->
+	<!-- Redirects mobile users to "m.myapp.com". The order of this interceptor 
+		is significant (it should be declared after the DeviceResolverHandlerInterceptor) -->
+	<!-- <bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" 
+		factory-method="mDot"> <constructor-arg value="${siteName}" /> </bean> -->
+	<!-- </mvc:interceptors> -->
+
+	<!-- Locale resolver with supported and default locales -->
+	<!-- <bean id="localeResolver" class="de.emaitie.webtools.spring.RequestAndSessionLocaleResolver"> 
+		<constructor-arg index="0"> <bean class="java.util.Locale"> <constructor-arg 
+		value="en" index="0" /> <constructor-arg value="US" index="1" /> </bean> 
+		</constructor-arg> <constructor-arg index="1"> <map> <entry key="de"> <bean 
+		class="java.util.Locale"> <constructor-arg value="de" index="0" /> <constructor-arg 
+		value="DE" index="1" /> </bean> </entry> <entry key="en"> <bean class="java.util.Locale"> 
+		<constructor-arg value="en" index="0" /> <constructor-arg value="US" index="1" 
+		/> </bean> </entry> </map> </constructor-arg> </bean> -->
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>WEB-INF/messages/content</value>
+			</list>
+		</property>
+		<property name="cacheSeconds" value="5" />
+		<property name="useCodeAsDefaultMessage" value="true"></property>
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="fallbackToSystemLocale" value="false"></property>
+	</bean>
+
+	<!-- Transactions and Database -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" 
+		/> <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> <bean id="dataSource" 
+		class="org.apache.commons.dbcp.BasicDataSource"> <property name="driverClassName" 
+		value="${db.driverClassName}" /> <property name="url" value="${db.url}" /> 
+		<property name="username" value="${db.username}" /> <property name="password" 
+		value="${db.password}" /> </bean> -->
+	<!-- Mailing -->
+	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+		<property name="host" value="${mail.hostname}"></property> <property name="username" 
+		value="${mail.username}"> </property> <property name="password" value="${mail.password}"></property> 
+		</bean> -->
+
+	<!-- Templating -->
+	<!-- <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean"> 
+		<property name="resourceLoaderPath" value="/WEB-INF/velocity/" /> </bean> -->
+
+	<!-- Bug Report Service -->
+	<!-- <bean id="bugReportService" class="de.emaitie.webtools.service.BugReportService" 
+		/> -->
+</beans>

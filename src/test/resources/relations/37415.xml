@@ -1,0 +1,2266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="OpenStreetMap server">
+  <node id="164820516" lat="46.8189991" lon="-71.2311336" version="9" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:53Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164820524" lat="46.8202448" lon="-71.2411603" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:01Z"/>
+  <node id="164820525" lat="46.8204386" lon="-71.2420014" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:01Z"/>
+  <node id="164820526" lat="46.8206148" lon="-71.2425936" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:01Z"/>
+  <node id="164820527" lat="46.8210436" lon="-71.2435378" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:02Z"/>
+  <node id="164820529" lat="46.8214841" lon="-71.2442673" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:03Z"/>
+  <node id="164820531" lat="46.8222711" lon="-71.2452801" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:03Z"/>
+  <node id="164820532" lat="46.8226117" lon="-71.2456921" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:03Z"/>
+  <node id="164820533" lat="46.8229406" lon="-71.2462414" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:04Z"/>
+  <node id="164820534" lat="46.8232107" lon="-71.2467993" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:04Z"/>
+  <node id="164820535" lat="46.8237863" lon="-71.2482155" version="6" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:12Z">
+    <tag k="name" v="Boulevard Wilfrid-Hamel Ouest"/>
+    <tag k="highway" v="motorway_junction"/>
+  </node>
+  <node id="164841558" lat="46.9021326" lon="-71.3710822" version="20" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841567" lat="46.9077093" lon="-71.3745669" version="20" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841569" lat="46.9089875" lon="-71.3756827" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841570" lat="46.9094684" lon="-71.376129" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841571" lat="46.910172" lon="-71.3770217" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841580" lat="46.9154488" lon="-71.3823603" version="10" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:50:31Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164841584" lat="46.9174012" lon="-71.3846263" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841585" lat="46.9181223" lon="-71.3851155" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841586" lat="46.9188903" lon="-71.3853215" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841589" lat="46.9220735" lon="-71.3901366" version="15" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="164841592" lat="46.9244686" lon="-71.3941748" version="14" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164841591" lat="46.9234759" lon="-71.3928623" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841590" lat="46.9224557" lon="-71.3908952" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841588" lat="46.9202393" lon="-71.386239" version="12" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164841587" lat="46.919635" lon="-71.3855204" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841582" lat="46.9160479" lon="-71.3830552" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841583" lat="46.916851" lon="-71.3840046" version="11" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164841581" lat="46.9157852" lon="-71.3827457" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164926375" lat="46.814769" lon="-71.2250744" version="13" changeset="427391" user="Circeus" uid="69716" visible="true" timestamp="2008-12-16T06:54:46Z">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164926376" lat="46.8151625" lon="-71.2253662" version="13" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T01:44:12Z"/>
+  <node id="164928967" lat="46.8159561" lon="-71.226004" version="12" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T01:44:12Z"/>
+  <node id="164932106" lat="46.8147708" lon="-71.2278104" version="11" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:59Z"/>
+  <node id="164932102" lat="46.8142051" lon="-71.2271086" version="21" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T01:45:31Z"/>
+  <node id="164932104" lat="46.8144929" lon="-71.2274519" version="10" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T01:42:33Z"/>
+  <node id="164932107" lat="46.8151514" lon="-71.228227" version="9" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T01:42:33Z"/>
+  <node id="164932109" lat="46.8156225" lon="-71.2288061" version="8" changeset="328396" user="fsteggink" uid="37993" visible="true" timestamp="2008-06-28T23:21:21Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164932111" lat="46.8160264" lon="-71.229124" version="2" changeset="455063" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-10T03:51:54Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164932112" lat="46.8164489" lon="-71.229366" version="2" changeset="401906" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-05T19:08:59Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164935131" lat="46.8188747" lon="-71.2312371" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:47Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164935128" lat="46.8173299" lon="-71.2298809" version="8" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T02:55:10Z"/>
+  <node id="164957009" lat="46.8199023" lon="-71.2402599" version="6" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:41Z"/>
+  <node id="164957008" lat="46.8195325" lon="-71.2383009" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:41Z"/>
+  <node id="164957006" lat="46.8192623" lon="-71.2363783" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:43Z"/>
+  <node id="164957005" lat="46.8192153" lon="-71.2350823" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:44Z"/>
+  <node id="164957004" lat="46.8193387" lon="-71.2336489" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:45Z"/>
+  <node id="164957002" lat="46.8193387" lon="-71.2328593" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:46Z"/>
+  <node id="177107970" lat="46.8239262" lon="-71.2469766" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:00:25Z"/>
+  <node id="177107971" lat="46.821503" lon="-71.2481214" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:00:25Z"/>
+  <node id="177107972" lat="46.8201966" lon="-71.2487385" version="3" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:29:38Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="177107973" lat="46.8189705" lon="-71.2494655" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T22:58:06Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="177112236" lat="46.8189353" lon="-71.2493024" version="2" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:29:49Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="177112238" lat="46.8201452" lon="-71.2485666" version="2" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:29:49Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="177112239" lat="46.8208116" lon="-71.2482504" version="8" changeset="862430" user="fsteggink" uid="37993" visible="true" timestamp="2009-03-27T00:01:55Z"/>
+  <node id="177113596" lat="46.824086" lon="-71.2486415" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113597" lat="46.8243444" lon="-71.2489162" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113598" lat="46.8245852" lon="-71.2489248" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113599" lat="46.8247732" lon="-71.2487617" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113600" lat="46.8248554" lon="-71.2484699" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113601" lat="46.8248789" lon="-71.2482124" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113602" lat="46.8248201" lon="-71.2479377" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113604" lat="46.824597" lon="-71.2473798" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113605" lat="46.824456" lon="-71.2471824" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="177113607" lat="46.8242798" lon="-71.2470451" version="1" changeset="350186" user="martin hamel" uid="14986" visible="true" timestamp="2007-12-18T15:22:17Z"/>
+  <node id="269455507" lat="46.8984604" lon="-71.3685054" version="19" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="269455510" lat="46.8961392" lon="-71.3661713" version="22" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:03Z"/>
+  <node id="269455514" lat="46.8922877" lon="-71.3589659" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455515" lat="46.8920013" lon="-71.3585567" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455516" lat="46.8917596" lon="-71.3580865" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455517" lat="46.8916139" lon="-71.3577401" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455521" lat="46.8907259" lon="-71.3542915" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455522" lat="46.8905508" lon="-71.3538405" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455523" lat="46.8903372" lon="-71.3534305" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z"/>
+  <node id="269455525" lat="46.8895048" lon="-71.3521437" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455526" lat="46.8891027" lon="-71.3513635" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455527" lat="46.8888317" lon="-71.3506345" version="18" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:05:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455528" lat="46.8885608" lon="-71.3497391" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455529" lat="46.8883247" lon="-71.3488054" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455530" lat="46.8880625" lon="-71.3475648" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455531" lat="46.8879926" lon="-71.3470531" version="17" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:05:12Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455532" lat="46.8879139" lon="-71.3457101" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455533" lat="46.8878527" lon="-71.3451985" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455534" lat="46.8877041" lon="-71.3446869" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455535" lat="46.8874681" lon="-71.3442009" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455536" lat="46.8867775" lon="-71.3430369" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:48Z"/>
+  <node id="269455537" lat="46.8864978" lon="-71.3426532" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455538" lat="46.8863142" lon="-71.3424486" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455539" lat="46.8861569" lon="-71.3423335" version="16" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:04:54Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455540" lat="46.8859908" lon="-71.3422439" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455541" lat="46.8858684" lon="-71.3422183" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455542" lat="46.885746" lon="-71.3422056" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455543" lat="46.8841462" lon="-71.3424358" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455544" lat="46.8838578" lon="-71.3424486" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455545" lat="46.8835867" lon="-71.3424358" version="22" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:20:49Z"/>
+  <node id="269455546" lat="46.8833245" lon="-71.3423974" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="269455547" lat="46.8830447" lon="-71.3423079" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="269455548" lat="46.8815673" lon="-71.3422311" version="16" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:04:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455549" lat="46.8808154" lon="-71.3422183" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="269455550" lat="46.8802909" lon="-71.3421544" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="269455551" lat="46.8796614" lon="-71.3420265" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="269455558" lat="46.8749495" lon="-71.3399787" version="13" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:01:13Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455560" lat="46.8741393" lon="-71.3393691" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455561" lat="46.873786" lon="-71.3390335" version="12" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:59:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455562" lat="46.87341" lon="-71.3385859" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455563" lat="46.8732439" lon="-71.3384452" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455564" lat="46.8730778" lon="-71.3383428" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455565" lat="46.8725531" lon="-71.3381254" version="11" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:59:04Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455566" lat="46.8719673" lon="-71.3380487" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455567" lat="46.8715913" lon="-71.3381766" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455568" lat="46.8714514" lon="-71.3382149" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455569" lat="46.8712415" lon="-71.3382021" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455570" lat="46.8711104" lon="-71.338087" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="269455571" lat="46.8709005" lon="-71.3378568" version="3" changeset="52236" user="Circeus" uid="69716" visible="true" timestamp="2008-10-03T21:17:14Z">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="269455572" lat="46.870577" lon="-71.3374091" version="41" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:25Z"/>
+  <node id="269455573" lat="46.8702797" lon="-71.3370382" version="34" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="269455574" lat="46.8698512" lon="-71.3366545" version="36" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="269455575" lat="46.8673328" lon="-71.3344801" version="35" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="269455576" lat="46.8619108" lon="-71.3293511" version="1" changeset="123874" user="fsteggink" uid="37993" visible="true" timestamp="2008-06-10T02:40:45Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="269455577" lat="46.8605202" lon="-71.3276244" version="6" changeset="556990" user="Circeus" uid="69716" visible="true" timestamp="2008-12-22T22:28:45Z"/>
+  <node id="269455578" lat="46.8578527" lon="-71.3250791" version="6" changeset="556990" user="Circeus" uid="69716" visible="true" timestamp="2008-12-22T22:28:45Z"/>
+  <node id="269455579" lat="46.8576165" lon="-71.3249256" version="6" changeset="556990" user="Circeus" uid="69716" visible="true" timestamp="2008-12-22T22:28:45Z"/>
+  <node id="269455580" lat="46.8573532" lon="-71.3248533" version="2" changeset="357101" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-01T04:43:49Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="269455581" lat="46.8571967" lon="-71.3240175" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455582" lat="46.8568155" lon="-71.3230564" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455584" lat="46.855911" lon="-71.321549" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455585" lat="46.8556661" lon="-71.3207432" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455586" lat="46.8554912" lon="-71.3198862" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455587" lat="46.8551675" lon="-71.318006" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455588" lat="46.8550013" lon="-71.3173153" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455589" lat="46.8547564" lon="-71.3165863" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455590" lat="46.8524167" lon="-71.3106653" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:48Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455591" lat="46.8519769" lon="-71.3099126" version="7" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:48Z"/>
+  <node id="269455592" lat="46.85159" lon="-71.3094492" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="269455593" lat="46.8508115" lon="-71.3086434" version="1" changeset="123874" user="fsteggink" uid="37993" visible="true" timestamp="2008-06-10T02:40:50Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="269455594" lat="46.8504791" lon="-71.3080934" version="7" changeset="327785" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T15:14:39Z"/>
+  <node id="269455595" lat="46.8502779" lon="-71.3076457" version="7" changeset="327785" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T15:14:39Z"/>
+  <node id="269455623" lat="46.877795" lon="-71.3413187" version="32" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="275074156" lat="46.857009" lon="-71.3234736" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="275074157" lat="46.856624" lon="-71.3227635" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z"/>
+  <node id="275074158" lat="46.8573099" lon="-71.3245018" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:38Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="275074456" lat="46.818213" lon="-71.267161" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:38:18Z"/>
+  <node id="275074445" lat="46.8388088" lon="-71.2860962" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:24:15Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="275074447" lat="46.8386415" lon="-71.2859406" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:24:20Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="275074450" lat="46.8308376" lon="-71.2787818" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:25:09Z"/>
+  <node id="275074455" lat="46.819024" lon="-71.2677705" version="29" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:19Z"/>
+  <node id="275074457" lat="46.8176684" lon="-71.2667038" version="2" changeset="386550" user="fsteggink" uid="37993" visible="true" timestamp="2008-08-24T04:11:22Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="275074458" lat="46.8150265" lon="-71.2642656" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:38:18Z"/>
+  <node id="275074496" lat="46.836447" lon="-71.290969" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:37Z"/>
+  <node id="275074497" lat="46.8377449" lon="-71.2881302" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:37Z"/>
+  <node id="275074498" lat="46.8391187" lon="-71.2847828" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:38Z"/>
+  <node id="275074499" lat="46.8396389" lon="-71.2836873" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:38Z"/>
+  <node id="275074505" lat="46.8398691" lon="-71.2836091" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:56Z"/>
+  <node id="275074506" lat="46.837896" lon="-71.2883242" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:56Z"/>
+  <node id="275074507" lat="46.8365954" lon="-71.2911515" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:56Z"/>
+  <node id="275074521" lat="46.8412558" lon="-71.2817744" version="8" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:39Z"/>
+  <node id="275074522" lat="46.8427588" lon="-71.2803625" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:20:05Z"/>
+  <node id="275074523" lat="46.8432343" lon="-71.279736" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:20:05Z"/>
+  <node id="275074524" lat="46.8436159" lon="-71.2791352" version="18" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:20:05Z"/>
+  <node id="275074525" lat="46.843751" lon="-71.2787403" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:15:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="275074545" lat="46.8439212" lon="-71.2788433" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:16:16Z"/>
+  <node id="275074468" lat="46.8310163" lon="-71.2783998" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:25:32Z"/>
+  <node id="275074462" lat="46.8202248" lon="-71.2685109" version="4" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:42Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="275074463" lat="46.8204029" lon="-71.2686189" version="17" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:43Z"/>
+  <node id="275074464" lat="46.822617" lon="-71.2706329" version="17" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:59Z"/>
+  <node id="275074465" lat="46.8266095" lon="-71.2743307" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:33Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="275409263" lat="46.831471" lon="-71.2793762" version="17" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:25:03Z"/>
+  <node id="276487786" lat="46.8195014" lon="-71.2380841" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:42Z">
+    <tag k="name" v="Rue Robert-Rumilly"/>
+    <tag k="highway" v="motorway_junction"/>
+  </node>
+  <node id="276487826" lat="46.8192237" lon="-71.235386" version="3" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:44Z"/>
+  <node id="276488343" lat="46.8235322" lon="-71.247598" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T22:52:06Z"/>
+  <node id="276488341" lat="46.8200766" lon="-71.2403044" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:39Z"/>
+  <node id="279402245" lat="46.8171883" lon="-71.2298056" version="8" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T02:55:10Z"/>
+  <node id="279407706" lat="46.8189901" lon="-71.2315699" version="3" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:47Z"/>
+  <node id="281144016" lat="46.821757" lon="-71.2480117" version="1" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:27:54Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="281144019" lat="46.821649" lon="-71.2461236" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:29Z"/>
+  <node id="281144020" lat="46.8214253" lon="-71.246976" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:51Z"/>
+  <node id="281144021" lat="46.8216841" lon="-71.245425" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:29Z"/>
+  <node id="281144022" lat="46.8216972" lon="-71.2457646" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:29Z"/>
+  <node id="281144023" lat="46.8215087" lon="-71.2447007" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:29Z"/>
+  <node id="281144024" lat="46.8216402" lon="-71.2450853" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:29Z"/>
+  <node id="281144025" lat="46.8211929" lon="-71.2476938" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:50Z"/>
+  <node id="281144026" lat="46.8210569" lon="-71.2479694" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:50Z"/>
+  <node id="281144028" lat="46.8213113" lon="-71.2474054" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:21:51Z"/>
+  <node id="281144047" lat="46.8194474" lon="-71.2510138" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:13Z"/>
+  <node id="281144049" lat="46.8185044" lon="-71.2550816" version="8" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:31Z"/>
+  <node id="281144051" lat="46.8189781" lon="-71.2540966" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:32Z"/>
+  <node id="281144052" lat="46.8188202" lon="-71.2543722" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:31Z"/>
+  <node id="281144053" lat="46.8195275" lon="-71.2534105" version="1" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:28:18Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="281144054" lat="46.8192281" lon="-71.2537441" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:30:26Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="281144055" lat="46.8198552" lon="-71.2530455" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:12Z"/>
+  <node id="281144056" lat="46.8196545" lon="-71.253269" version="1" changeset="601143" user="fsteggink" uid="37993" visible="true" timestamp="2008-07-26T05:28:19Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="281144057" lat="46.8199824" lon="-71.2527314" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:12Z"/>
+  <node id="281144058" lat="46.819943" lon="-71.2528724" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:12Z"/>
+  <node id="281144059" lat="46.8199737" lon="-71.2524494" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:12Z"/>
+  <node id="281144060" lat="46.8199912" lon="-71.252584" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:26:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="281144062" lat="46.8198772" lon="-71.2521097" version="7" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:12Z"/>
+  <node id="290583172" lat="46.8146615" lon="-71.2638623" version="1" changeset="386550" user="fsteggink" uid="37993" visible="true" timestamp="2008-08-24T04:09:40Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="290583179" lat="46.8171553" lon="-71.2581634" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:30Z"/>
+  <node id="290583180" lat="46.8164544" lon="-71.2597668" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:30Z"/>
+  <node id="290583183" lat="46.814727" lon="-71.2637283" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:27Z"/>
+  <node id="290583190" lat="46.8175658" lon="-71.2572381" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:30Z"/>
+  <node id="290583204" lat="46.8150559" lon="-71.2629631" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:28Z"/>
+  <node id="290583214" lat="46.8153872" lon="-71.2622058" version="1" changeset="386550" user="fsteggink" uid="37993" visible="true" timestamp="2008-08-24T04:09:50Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="290583397" lat="46.8157686" lon="-71.2613343" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:29Z"/>
+  <node id="290583398" lat="46.8161112" lon="-71.2605513" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:29Z"/>
+  <node id="290583391" lat="46.8248317" lon="-71.2726733" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:16Z"/>
+  <node id="290583382" lat="46.8261276" lon="-71.2738964" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:27Z"/>
+  <node id="290583380" lat="46.8270887" lon="-71.2747724" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:38Z"/>
+  <node id="290583366" lat="46.8280594" lon="-71.2756578" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:49Z"/>
+  <node id="290583371" lat="46.8296156" lon="-71.2771241" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:55Z"/>
+  <node id="290583400" lat="46.8168097" lon="-71.2589471" version="1" changeset="386550" user="fsteggink" uid="37993" visible="true" timestamp="2008-08-24T04:10:37Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="290583402" lat="46.8181252" lon="-71.2559625" version="1" changeset="386550" user="fsteggink" uid="37993" visible="true" timestamp="2008-08-24T04:10:37Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="292439428" lat="46.823056" lon="-71.2710462" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:05Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="301272881" lat="46.8696944" lon="-71.3365191" version="11" changeset="6828284" user="gormur" uid="103253" visible="true" timestamp="2011-01-01T14:42:36Z">
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="301273490" lat="46.8665478" lon="-71.3337375" version="34" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="301273723" lat="46.8682967" lon="-71.3353802" version="34" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="301274300" lat="46.867246" lon="-71.334398" version="39" changeset="659000" user="Circeus" uid="69716" visible="true" timestamp="2008-12-29T18:41:00Z"/>
+  <node id="301489187" lat="46.8649916" lon="-71.3307396" version="11" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:36Z"/>
+  <node id="301489188" lat="46.864514" lon="-71.3318136" version="15" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:56:00Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489330" lat="46.8704137" lon="-71.3249632" version="10" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:54:37Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489332" lat="46.8688412" lon="-71.3268515" version="14" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:35Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489334" lat="46.8661183" lon="-71.3302418" version="12" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:55:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489336" lat="46.8660362" lon="-71.3303362" version="11" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:35Z"/>
+  <node id="301489338" lat="46.8657134" lon="-71.3305079" version="11" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:35Z"/>
+  <node id="301489340" lat="46.8651325" lon="-71.3306366" version="11" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:36Z"/>
+  <node id="301489462" lat="46.8675913" lon="-71.3284565" version="7" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:55:09Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489611" lat="46.8701556" lon="-71.3245255" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:54:07Z"/>
+  <node id="301489612" lat="46.8700382" lon="-71.3243281" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:54:07Z"/>
+  <node id="301489613" lat="46.8681876" lon="-71.3226077" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:54:08Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="301489614" lat="46.8661242" lon="-71.3207146" version="11" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="301489623" lat="46.8634482" lon="-71.3267485" version="8" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="301489624" lat="46.8633602" lon="-71.3269631" version="8" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="301489625" lat="46.8631137" lon="-71.3286368" version="8" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="301489626" lat="46.8625457" lon="-71.3299517" version="21" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="301694852" lat="46.8656363" lon="-71.330525" version="12" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T00:20:35Z"/>
+  <node id="303444265" lat="46.8657406" lon="-71.3215863" version="11" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:53:36Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="303444357" lat="46.864415" lon="-71.3245713" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:53:25Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="303444372" lat="46.8636641" lon="-71.3262624" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:53:16Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="303444380" lat="46.8640426" lon="-71.3254099" version="6" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z"/>
+  <node id="303444458" lat="46.8697523" lon="-71.3240618" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:54:07Z"/>
+  <node id="304147258" lat="46.8662995" lon="-71.3335027" version="41" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="304147668" lat="46.8620025" lon="-71.3294379" version="4" changeset="327785" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T14:49:44Z"/>
+  <node id="304398296" lat="46.8144878" lon="-71.2260887" version="2" changeset="427391" user="Circeus" uid="69716" visible="true" timestamp="2008-12-16T06:47:16Z">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="ref" v="2939"/>
+  </node>
+  <node id="304400035" lat="46.8162269" lon="-71.2262023" version="2" changeset="427391" user="Circeus" uid="69716" visible="true" timestamp="2008-12-16T07:06:08Z">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="note" v="this is technically two bus stops next to each others"/>
+    <tag k="ref" v="1198;1792"/>
+  </node>
+  <node id="304403901" lat="46.820311" lon="-71.2486845" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:00:25Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304404394" lat="46.8191452" lon="-71.2500326" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:01:25Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304409922" lat="46.8156955" lon="-71.2288635" version="2" changeset="427391" user="Circeus" uid="69716" visible="true" timestamp="2008-12-16T07:12:42Z">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="ref" v="1261"/>
+  </node>
+  <node id="304411396" lat="46.817628" lon="-71.230071" version="9" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T02:55:10Z"/>
+  <node id="304411397" lat="46.8176633" lon="-71.2302622" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:25Z"/>
+  <node id="304411399" lat="46.8180627" lon="-71.2305283" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:26Z"/>
+  <node id="304411402" lat="46.8182272" lon="-71.2306399" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:26Z"/>
+  <node id="304411403" lat="46.8184092" lon="-71.2309403" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:26Z"/>
+  <node id="304411405" lat="46.8186207" lon="-71.2312665" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:26Z"/>
+  <node id="304411407" lat="46.8187323" lon="-71.2312579" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:27Z"/>
+  <node id="304411483" lat="46.817804" lon="-71.230356" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:19:26Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304413176" lat="46.8200669" lon="-71.2486142" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:23:14Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304416178" lat="46.8182115" lon="-71.2557621" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:31:05Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304416599" lat="46.8174541" lon="-71.2574899" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:32:05Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304416845" lat="46.8162912" lon="-71.2601397" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:32:50Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304417761" lat="46.8155804" lon="-71.2617643" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:35:28Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304418837" lat="46.817757" lon="-71.2667782" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-13T23:38:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304419502" lat="46.8375147" lon="-71.2725284" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:07:08Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304419815" lat="46.8440169" lon="-71.2786397" version="8" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:16:16Z"/>
+  <node id="304419816" lat="46.8438788" lon="-71.2784866" version="9" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:13:07Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304421927" lat="46.8206682" lon="-71.2693155" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:03Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304422721" lat="46.8217613" lon="-71.2698545" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304423783" lat="46.8235419" lon="-71.2714915" version="12" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:10Z"/>
+  <node id="304423929" lat="46.8250764" lon="-71.2729042" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:27Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304425051" lat="46.8264841" lon="-71.2742177" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:32Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304426243" lat="46.8279966" lon="-71.2756005" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:43Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304426637" lat="46.8295855" lon="-71.2776012" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:25:55Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304426649" lat="46.8299501" lon="-71.2774217" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:29:00Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304427399" lat="46.8321785" lon="-71.2794693" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:24:50Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304427362" lat="46.832014" lon="-71.2798606" version="3" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304428152" lat="46.8340716" lon="-71.280591" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:03:54Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304428293" lat="46.8353243" lon="-71.2776575" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:07:08Z"/>
+  <node id="304428588" lat="46.836645" lon="-71.2745651" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:04:39Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304429133" lat="46.8365847" lon="-71.2747063" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:07:08Z"/>
+  <node id="304429268" lat="46.8352449" lon="-71.2778435" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:06:39Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304429945" lat="46.8402068" lon="-71.2750487" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:09:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304431941" lat="46.8437973" lon="-71.2784103" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:15:21Z"/>
+  <node id="304432607" lat="46.8434365" lon="-71.2794176" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:16:39Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304433010" lat="46.8424665" lon="-71.2807352" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:49Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304433371" lat="46.8404708" lon="-71.2824804" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:49Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304433623" lat="46.8401451" lon="-71.2828881" version="8" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:56Z"/>
+  <node id="304434529" lat="46.8372312" lon="-71.2926012" version="20" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:43Z"/>
+  <node id="304434533" lat="46.8361883" lon="-71.2915779" version="14" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:19:00Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304434624" lat="46.8388826" lon="-71.2859231" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:11Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304434762" lat="46.8385714" lon="-71.2861118" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:23:37Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304434884" lat="46.8372191" lon="-71.2927016" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:46Z"/>
+  <node id="304434888" lat="46.8372342" lon="-71.2928041" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:47Z"/>
+  <node id="304434890" lat="46.8372664" lon="-71.2928858" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:47Z"/>
+  <node id="304434893" lat="46.8373915" lon="-71.2929156" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:46Z"/>
+  <node id="304434898" lat="46.8374384" lon="-71.2928874" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:11Z"/>
+  <node id="304434900" lat="46.8374912" lon="-71.2927844" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:16Z"/>
+  <node id="304434902" lat="46.8374912" lon="-71.2927072" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:16Z"/>
+  <node id="304434903" lat="46.8374705" lon="-71.2926082" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:45Z"/>
+  <node id="304434905" lat="46.8374139" lon="-71.2925416" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:46Z"/>
+  <node id="304434906" lat="46.8373438" lon="-71.2925264" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:46Z"/>
+  <node id="304434908" lat="46.8372733" lon="-71.2925471" version="6" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:45Z"/>
+  <node id="304435001" lat="46.8374722" lon="-71.2928215" version="16" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304435567" lat="46.8363944" lon="-71.2916159" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:26:56Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304435611" lat="46.8364106" lon="-71.2918065" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:27:06Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304436192" lat="46.8387595" lon="-71.2940375" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:29:14Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304436195" lat="46.8391763" lon="-71.2944152" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436197" lat="46.8395051" lon="-71.2946212" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436200" lat="46.8398809" lon="-71.2946641" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436203" lat="46.8407674" lon="-71.2945439" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436205" lat="46.8409846" lon="-71.2945439" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436208" lat="46.8412195" lon="-71.2946212" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436210" lat="46.8416481" lon="-71.2949302" version="11" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:33:17Z"/>
+  <node id="304436214" lat="46.8427796" lon="-71.2960047" version="3" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:57Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304436216" lat="46.8441277" lon="-71.2972546" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:57Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304436220" lat="46.8454875" lon="-71.2985007" version="5" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:34:41Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304437712" lat="46.8443529" lon="-71.3010741" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:55Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304438158" lat="46.8434067" lon="-71.3031995" version="8" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:55Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304438333" lat="46.8461835" lon="-71.3026615" version="7" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:52Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304438334" lat="46.8460551" lon="-71.302919" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:52Z"/>
+  <node id="304438336" lat="46.8442604" lon="-71.3039268" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:51Z"/>
+  <node id="304439093" lat="46.8492028" lon="-71.3036127" version="11" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:53Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304439096" lat="46.8482834" lon="-71.3042201" version="4" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304439097" lat="46.8478298" lon="-71.3041398" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:39:00Z"/>
+  <node id="304439836" lat="46.8493165" lon="-71.3040498" version="2" changeset="327785" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T15:14:39Z">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="note" v="must remove because not served by this route"/>
+  </node>
+  <node id="304440016" lat="46.8499906" lon="-71.3066783" version="5" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:44:41Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304440657" lat="46.8507305" lon="-71.3085094" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:42:22Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304440697" lat="46.8509763" lon="-71.3088139" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:42:31Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304441412" lat="46.8542886" lon="-71.3153858" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:45:15Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304442270" lat="46.8553704" lon="-71.3191846" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304442272" lat="46.8542377" lon="-71.3152554" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:47:31Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304443111" lat="46.8593226" lon="-71.3264987" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:50:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304443117" lat="46.8594302" lon="-71.3265843" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:50:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304443354" lat="46.8606651" lon="-71.3278044" version="4" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:52:17Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304443965" lat="46.8615828" lon="-71.3289438" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:52:23Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304444152" lat="46.8626637" lon="-71.3296856" version="2" changeset="692549" user="Circeus" uid="69716" visible="true" timestamp="2008-12-31T04:45:13Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304445403" lat="46.8664366" lon="-71.3336324" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:56:29Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304445693" lat="46.8676642" lon="-71.3347895" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:57:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304445953" lat="46.8707881" lon="-71.3377013" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:58:14Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304446099" lat="46.8710173" lon="-71.3379849" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T00:58:41Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304447447" lat="46.8765117" lon="-71.3407144" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:02:27Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304447689" lat="46.880595" lon="-71.3421914" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:03:12Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304447691" lat="46.8781814" lon="-71.3414729" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:03:12Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304448149" lat="46.8839962" lon="-71.3424425" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:04:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304448151" lat="46.8821777" lon="-71.3422628" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:04:30Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304448775" lat="46.8915241" lon="-71.3574903" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:06:41Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304450977" lat="46.889369" lon="-71.372717" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:12:14Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304452019" lat="46.8942101" lon="-71.3723049" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:16:36Z"/>
+  <node id="304452016" lat="46.8947655" lon="-71.3722283" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452427" lat="46.8952326" lon="-71.3696083" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:16:35Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304452429" lat="46.8944999" lon="-71.3723605" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304453333" lat="46.8983229" lon="-71.3683875" version="2" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:22:57Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304453287" lat="46.8970987" lon="-71.3673614" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304454755" lat="46.8997548" lon="-71.3694044" version="11" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T23:54:42Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304455748" lat="46.9015241" lon="-71.3706555" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:26:11Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304455850" lat="46.9034562" lon="-71.3720814" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:26:31Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304456416" lat="46.9082109" lon="-71.3750092" version="2" changeset="343393" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T23:52:28Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304456418" lat="46.9068316" lon="-71.3741111" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:27:56Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304458325" lat="46.9258554" lon="-71.3955908" version="10" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="304458326" lat="46.9252106" lon="-71.39505" version="10" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:51:02Z"/>
+  <node id="304459399" lat="46.9277311" lon="-71.3974018" version="6" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:52:47Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304459508" lat="46.9288389" lon="-71.3982687" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:53:36Z"/>
+  <node id="304459509" lat="46.928751" lon="-71.3981657" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:53:36Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304459510" lat="46.9286631" lon="-71.3981657" version="3" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:53:36Z"/>
+  <node id="304463624" lat="46.9096557" lon="-71.3763667" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:50:31Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304463626" lat="46.9093385" lon="-71.3760084" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:50:32Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304464101" lat="46.9214266" lon="-71.3887702" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:51:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304464100" lat="46.9223056" lon="-71.3905974" version="2" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304464102" lat="46.921117" lon="-71.3881161" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:51:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304464338" lat="46.9265317" lon="-71.396207" version="1" changeset="321181" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T01:52:47Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304561503" lat="46.8758585" lon="-71.3404068" version="17" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:40:59Z"/>
+  <node id="304561767" lat="46.8790775" lon="-71.3418307" version="17" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:40:57Z"/>
+  <node id="304562110" lat="46.8834718" lon="-71.342419" version="16" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="304575805" lat="46.8365316" lon="-71.29193" version="1" changeset="327785" user="Circeus" uid="69716" visible="true" timestamp="2008-10-14T15:19:53Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304683056" lat="46.8363835" lon="-71.2917788" version="8" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:21:18Z"/>
+  <node id="304824354" lat="46.8197901" lon="-71.2518876" version="2" changeset="363849" user="Circeus" uid="69716" visible="true" timestamp="2008-10-15T18:01:23Z"/>
+  <node id="304825904" lat="46.8177935" lon="-71.2299264" version="4" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:54Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="305302001" lat="46.8700546" lon="-71.3368367" version="1" changeset="428700" user="Circeus" uid="69716" visible="true" timestamp="2008-10-18T00:45:48Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="307532520" lat="46.8721676" lon="-71.3380749" version="6" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="307533348" lat="46.8747893" lon="-71.3398582" version="4" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:34Z"/>
+  <node id="307534214" lat="46.8794144" lon="-71.3419437" version="4" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="307534575" lat="46.8848057" lon="-71.3423409" version="5" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:23:18Z"/>
+  <node id="307536932" lat="46.880968" lon="-71.3422209" version="2" changeset="575131" user="Circeus" uid="69716" visible="true" timestamp="2008-10-25T23:38:33Z"/>
+  <node id="307560448" lat="46.8414904" lon="-71.2762746" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:38:24Z"/>
+  <node id="307560902" lat="46.8529557" lon="-71.3119912" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:23Z"/>
+  <node id="307560949" lat="46.8494934" lon="-71.3047274" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:34Z"/>
+  <node id="307560967" lat="46.8490836" lon="-71.3037661" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:39Z"/>
+  <node id="307560968" lat="46.8486957" lon="-71.3040289" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:39Z"/>
+  <node id="307560982" lat="46.8474246" lon="-71.3037857" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:43Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307560983" lat="46.8459759" lon="-71.3030057" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:43Z"/>
+  <node id="307560984" lat="46.8444216" lon="-71.3038855" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:44Z"/>
+  <node id="307560985" lat="46.8441571" lon="-71.3039167" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:44Z"/>
+  <node id="307560986" lat="46.8440292" lon="-71.3038294" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:39:44Z"/>
+  <node id="307560995" lat="46.8468146" lon="-71.3032119" version="2" changeset="604533" user="Circeus" uid="69716" visible="true" timestamp="2008-10-27T01:39:47Z"/>
+  <node id="307561410" lat="46.8441413" lon="-71.2972652" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:40:52Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307561422" lat="46.8427704" lon="-71.2959954" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:40:56Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307561423" lat="46.8447015" lon="-71.2977698" version="3" changeset="586168" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T14:35:43Z"/>
+  <node id="307561646" lat="46.8373371" lon="-71.2929249" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:41:50Z"/>
+  <node id="307561667" lat="46.838781" lon="-71.294059" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:41:55Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307562261" lat="46.8404929" lon="-71.282461" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:22Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="307562262" lat="46.8421093" lon="-71.2811009" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:22Z"/>
+  <node id="307562264" lat="46.84245" lon="-71.2807522" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:22Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="307562265" lat="46.8454947" lon="-71.2985091" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:23Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307562356" lat="46.8433972" lon="-71.3032207" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:34Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307562358" lat="46.84619" lon="-71.3026456" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:34Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="307562360" lat="46.8461171" lon="-71.3028232" version="1" changeset="577741" user="fsteggink" uid="37993" visible="true" timestamp="2008-10-26T01:43:35Z"/>
+  <node id="307891866" lat="46.844428" lon="-71.3009054" version="4" changeset="3150014" user="pdunn" uid="32360" visible="true" timestamp="2009-11-18T12:30:59Z"/>
+  <node id="319139083" lat="46.8145523" lon="-71.2258562" version="3" changeset="151584" user="fsteggink" uid="37993" visible="true" timestamp="2009-02-05T02:51:58Z"/>
+  <node id="319139729" lat="46.8147243" lon="-71.2252357" version="1" changeset="427391" user="Circeus" uid="69716" visible="true" timestamp="2008-12-16T06:55:08Z">
+    <tag k="highway" v="bus_stop"/>
+    <tag k="ref" v="1277"/>
+  </node>
+  <node id="320026473" lat="46.8705356" lon="-71.3373575" version="15" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:25Z"/>
+  <node id="320408484" lat="46.8701933" lon="-71.3369608" version="6" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="320408497" lat="46.8699976" lon="-71.3367856" version="5" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="320408501" lat="46.8699084" lon="-71.3367057" version="4" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="321000387" lat="46.8612215" lon="-71.3284952" version="2" changeset="556990" user="Circeus" uid="69716" visible="true" timestamp="2008-12-22T22:28:45Z"/>
+  <node id="321000392" lat="46.8613389" lon="-71.328641" version="2" changeset="556990" user="Circeus" uid="69716" visible="true" timestamp="2008-12-22T22:28:45Z"/>
+  <node id="321314267" lat="46.8668861" lon="-71.3340576" version="3" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="321314271" lat="46.8677365" lon="-71.334857" version="3" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:07Z"/>
+  <node id="321318360" lat="46.8704422" lon="-71.3372409" version="4" changeset="576659" user="Circeus" uid="69716" visible="true" timestamp="2008-12-23T18:25:25Z"/>
+  <node id="366066762" lat="46.8198519" lon="-71.2390809" version="2" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:39Z"/>
+  <node id="385604124" lat="46.8562705" lon="-71.3222494" version="1" changeset="982459" user="fsteggink" uid="37993" visible="true" timestamp="2009-04-27T00:01:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="385604127" lat="46.8601637" lon="-71.3272871" version="1" changeset="982459" user="fsteggink" uid="37993" visible="true" timestamp="2009-04-27T00:01:03Z"/>
+  <node id="385604134" lat="46.8600414" lon="-71.3271747" version="1" changeset="982459" user="fsteggink" uid="37993" visible="true" timestamp="2009-04-27T00:01:03Z"/>
+  <node id="269455583" lat="46.8562346" lon="-71.3222013" version="6" changeset="982459" user="fsteggink" uid="37993" visible="true" timestamp="2009-04-27T00:01:06Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="388655506" lat="46.8654305" lon="-71.3326806" version="1" changeset="1048999" user="Circeus" uid="69716" visible="true" timestamp="2009-05-02T15:08:25Z"/>
+  <node id="430548917" lat="46.8932654" lon="-71.3599593" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:06Z"/>
+  <node id="430548921" lat="46.8929939" lon="-71.3597041" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:06Z"/>
+  <node id="430548928" lat="46.8925425" lon="-71.3592799" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:06Z"/>
+  <node id="430548934" lat="46.8907689" lon="-71.3544089" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:07Z"/>
+  <node id="430548937" lat="46.8910787" lon="-71.3555011" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:07Z"/>
+  <node id="430548938" lat="46.8911575" lon="-71.3558745" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:07Z"/>
+  <node id="430548980" lat="46.8952574" lon="-71.3678402" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430548982" lat="46.8951411" lon="-71.3684938" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430548984" lat="46.8951861" lon="-71.3680599" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430548985" lat="46.8963008" lon="-71.3665165" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430548992" lat="46.895405" lon="-71.3705266" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="430548999" lat="46.8951786" lon="-71.3688728" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="430549000" lat="46.8949196" lon="-71.372075" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430549002" lat="46.8951823" lon="-71.3716356" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:08Z"/>
+  <node id="430549005" lat="46.891921" lon="-71.3751557" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:09Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="430549007" lat="46.8981342" lon="-71.3682347" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:09Z"/>
+  <node id="430549055" lat="46.8887561" lon="-71.3721413" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:10Z"/>
+  <node id="430549061" lat="46.889189" lon="-71.3725515" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:10Z"/>
+  <node id="430549093" lat="46.890041" lon="-71.3733754" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:11Z"/>
+  <node id="430549094" lat="46.8896432" lon="-71.3729799" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:11Z"/>
+  <node id="430549100" lat="46.8895868" lon="-71.3729305" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:11Z"/>
+  <node id="430549104" lat="46.8902024" lon="-71.3735073" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:11Z"/>
+  <node id="430549109" lat="46.8908033" lon="-71.3740837" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:12Z"/>
+  <node id="430549121" lat="46.8925108" lon="-71.3738587" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:12Z"/>
+  <node id="430549132" lat="46.8921618" lon="-71.3746112" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:12Z"/>
+  <node id="430549331" lat="46.8998121" lon="-71.3694282" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:19Z"/>
+  <node id="430549339" lat="46.9004548" lon="-71.3699019" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:20Z"/>
+  <node id="430549401" lat="46.9043408" lon="-71.3727862" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:22Z"/>
+  <node id="430550063" lat="46.8945525" lon="-71.3723729" version="1" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:20:46Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="304455952" lat="46.9046439" lon="-71.3729741" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:00Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304459397" lat="46.9285234" lon="-71.3982862" version="14" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:00Z"/>
+  <node id="304459395" lat="46.928838" lon="-71.3984468" version="11" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:00Z"/>
+  <node id="304448768" lat="46.8934659" lon="-71.3601478" version="10" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:00Z"/>
+  <node id="304449392" lat="46.8920128" lon="-71.3633225" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304449390" lat="46.8881842" lon="-71.3716021" version="11" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304450012" lat="46.8901739" lon="-71.3673243" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304450011" lat="46.8891569" lon="-71.3695227" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304450447" lat="46.890544" lon="-71.3738349" version="10" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304450970" lat="46.8918948" lon="-71.3751306" version="6" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304450974" lat="46.8907586" lon="-71.3740408" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304451464" lat="46.8932251" lon="-71.3718593" version="6" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="304451337" lat="46.892746" lon="-71.3733162" version="5" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304451336" lat="46.8929369" lon="-71.3727356" version="5" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452010" lat="46.8951397" lon="-71.3682671" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452009" lat="46.8957288" lon="-71.3667829" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304452008" lat="46.8959197" lon="-71.3664656" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452015" lat="46.8950667" lon="-71.3718479" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452014" lat="46.8953042" lon="-71.3713398" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452013" lat="46.8953867" lon="-71.371071" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452012" lat="46.895428" lon="-71.370797" version="3" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:02Z"/>
+  <node id="304452140" lat="46.8931525" lon="-71.3720799" version="2" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164836395" lat="46.9017003" lon="-71.3707788" version="22" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164841565" lat="46.9067394" lon="-71.3740656" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z"/>
+  <node id="164841564" lat="46.9066728" lon="-71.3740378" version="14" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="164841566" lat="46.9073235" lon="-71.3743266" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z"/>
+  <node id="164841561" lat="46.9045369" lon="-71.3729035" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:03Z"/>
+  <node id="164841560" lat="46.9035728" lon="-71.3721808" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="164841563" lat="46.9062996" lon="-71.3738655" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="164841562" lat="46.9060533" lon="-71.3737464" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="164841559" lat="46.9029336" lon="-71.371707" version="21" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="164841568" lat="46.908536" lon="-71.3752793" version="26" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="269455519" lat="46.8912791" lon="-71.3565761" version="4" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="269455518" lat="46.8914168" lon="-71.3571679" version="4" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="269455509" lat="46.8964293" lon="-71.3667256" version="20" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="269455508" lat="46.8965827" lon="-71.3668995" version="6" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="269455524" lat="46.8897885" lon="-71.3525976" version="25" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="269455520" lat="46.890905" lon="-71.354781" version="4" changeset="1671988" user="fsteggink" uid="37993" visible="true" timestamp="2009-06-29T02:21:04Z"/>
+  <node id="440496029" lat="46.9098207" lon="-71.376576" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:21Z"/>
+  <node id="440496073" lat="46.9155052" lon="-71.3824158" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:22Z"/>
+  <node id="440496081" lat="46.917074" lon="-71.3842683" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:23Z"/>
+  <node id="440496095" lat="46.9199807" lon="-71.3858597" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:23Z"/>
+  <node id="440496096" lat="46.9193309" lon="-71.3853841" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:23Z"/>
+  <node id="440496097" lat="46.9203282" lon="-71.3863695" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:23Z"/>
+  <node id="440496111" lat="46.9232669" lon="-71.3924529" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z"/>
+  <node id="440496118" lat="46.9227958" lon="-71.3915703" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z"/>
+  <node id="440496122" lat="46.9221498" lon="-71.390288" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z">
+    <tag k="highway" v="stop"/>
+  </node>
+  <node id="440496133" lat="46.9225293" lon="-71.3910413" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z"/>
+  <node id="440496136" lat="46.9237722" lon="-71.3932913" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z"/>
+  <node id="440496137" lat="46.9245465" lon="-71.3942735" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:44:24Z"/>
+  <node id="440497254" lat="46.9274131" lon="-71.3970137" version="1" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:04Z"/>
+  <node id="304464105" lat="46.918466" lon="-71.385222" version="2" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304458324" lat="46.92702" lon="-71.3966179" version="11" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841578" lat="46.914395" lon="-71.3812011" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841579" lat="46.9150083" lon="-71.3818302" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841576" lat="46.9137698" lon="-71.3805598" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841574" lat="46.912535" lon="-71.3792932" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841572" lat="46.9108725" lon="-71.3776759" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="164841573" lat="46.9124564" lon="-71.3792126" version="16" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:18Z"/>
+  <node id="304463623" lat="46.9107539" lon="-71.3775651" version="2" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304463621" lat="46.9139267" lon="-71.3807207" version="2" changeset="1802553" user="fsteggink" uid="37993" visible="true" timestamp="2009-07-12T00:45:19Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="490203032" lat="46.8909274" lon="-71.3548737" version="2" changeset="2519368" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-18T03:08:29Z"/>
+  <node id="499688735" lat="46.9013355" lon="-71.370522" version="2" changeset="2519368" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-18T03:08:40Z"/>
+  <node id="499689401" lat="46.8974807" lon="-71.3676835" version="2" changeset="2519368" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-18T03:08:40Z"/>
+  <node id="502262064" lat="46.8250107" lon="-71.2728422" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:28:21Z"/>
+  <node id="502359589" lat="46.8406053" lon="-71.2754293" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:56Z"/>
+  <node id="502359663" lat="46.8436802" lon="-71.3025852" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:57Z"/>
+  <node id="502359668" lat="46.844859" lon="-71.2999371" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:57Z"/>
+  <node id="502359686" lat="46.8445139" lon="-71.3007124" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:57Z"/>
+  <node id="502359711" lat="46.8450768" lon="-71.2981196" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:57Z"/>
+  <node id="502359742" lat="46.8449799" lon="-71.2996655" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:58Z"/>
+  <node id="502359786" lat="46.8443291" lon="-71.3011275" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:58Z"/>
+  <node id="502359795" lat="46.8449156" lon="-71.2979694" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:58Z"/>
+  <node id="502359869" lat="46.8584394" lon="-71.3256457" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:59Z"/>
+  <node id="502359877" lat="46.859201" lon="-71.3263812" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T20:11:59Z"/>
+  <node id="502459795" lat="46.8573429" lon="-71.32477" version="1" changeset="2538586" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T21:05:12Z"/>
+  <node id="502459804" lat="46.8573255" lon="-71.3246287" version="1" changeset="2538586" user="geobase_fsteggink" uid="165146" visible="true" timestamp="2009-09-19T21:05:12Z"/>
+  <node id="164928968" lat="46.8164272" lon="-71.2263685" version="11" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:52Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164933307" lat="46.816443" lon="-71.2280012" version="13" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:53Z"/>
+  <node id="164933309" lat="46.8168894" lon="-71.229335" version="28" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:54Z"/>
+  <node id="164957001" lat="46.8191918" lon="-71.2321125" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:46Z"/>
+  <node id="164933311" lat="46.8174369" lon="-71.2296839" version="29" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:54Z"/>
+  <node id="276488364" lat="46.8166379" lon="-71.2289352" version="4" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:53Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="164933308" lat="46.8165504" lon="-71.2286157" version="28" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:53Z"/>
+  <node id="281143947" lat="46.8208799" lon="-71.2431537" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:43:02Z">
+    <tag k="name" v="Boulevard Wilfrid-Hamel Est"/>
+    <tag k="highway" v="motorway_junction"/>
+  </node>
+  <node id="164933312" lat="46.8183578" lon="-71.2303101" version="13" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:55Z"/>
+  <node id="164933306" lat="46.8165428" lon="-71.2268769" version="13" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:31:52Z"/>
+  <node id="164928965" lat="46.8155737" lon="-71.2256924" version="15" changeset="2701059" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:32:00Z"/>
+  <node id="276488340" lat="46.8197322" lon="-71.2384293" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:39Z"/>
+  <node id="164820522" lat="46.8194049" lon="-71.2365254" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:56Z"/>
+  <node id="164820517" lat="46.8193344" lon="-71.2320536" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:53Z"/>
+  <node id="164820519" lat="46.819446" lon="-71.2337102" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:55Z"/>
+  <node id="164820523" lat="46.8195048" lon="-71.2372292" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:56Z"/>
+  <node id="164820518" lat="46.8194636" lon="-71.2328604" version="5" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:54Z"/>
+  <node id="276487901" lat="46.8202118" lon="-71.241643" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:59Z"/>
+  <node id="164957012" lat="46.8211946" lon="-71.2440945" version="7" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:58Z"/>
+  <node id="276487860" lat="46.8195533" lon="-71.2374378" version="3" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:51Z"/>
+  <node id="164820521" lat="46.8193521" lon="-71.2352208" version="6" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:55Z">
+    <tag k="name" v="Rue Lee"/>
+    <tag k="highway" v="motorway_junction"/>
+  </node>
+  <node id="164957010" lat="46.8205251" lon="-71.242747" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-01T15:42:58Z">
+    <tag k="name" v="Rue Bourdages"/>
+    <tag k="highway" v="motorway_junction"/>
+  </node>
+  <node id="519549659" lat="46.830076" lon="-71.2775417" version="3" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="519549666" lat="46.8319308" lon="-71.2797928" version="2" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:02Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="519549665" lat="46.8318202" lon="-71.2796739" version="2" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="519549663" lat="46.8321052" lon="-71.2794031" version="3" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="519549662" lat="46.829918" lon="-71.2779168" version="3" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="519549668" lat="46.8319855" lon="-71.2792871" version="2" changeset="3866118" user="Gone" uid="120468" visible="true" timestamp="2010-02-14T03:11:03Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304434531" lat="46.8363422" lon="-71.2917366" version="20" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:15:45Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304422763" lat="46.8230641" lon="-71.2715171" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:45Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="290583091" lat="46.8192664" lon="-71.2679208" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:31Z"/>
+  <node id="292439429" lat="46.8229158" lon="-71.2713795" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:51Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304422447" lat="46.8215739" lon="-71.2701451" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:02Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="304423922" lat="46.8248027" lon="-71.2731303" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:24Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="290583387" lat="46.8246589" lon="-71.2729968" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:34Z"/>
+  <node id="290583090" lat="46.8192313" lon="-71.2680039" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:14Z"/>
+  <node id="304419503" lat="46.8338792" lon="-71.2810415" version="26" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:24:31Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304426284" lat="46.8280063" lon="-71.2761324" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:01Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="290583386" lat="46.8259764" lon="-71.27422" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:23Z"/>
+  <node id="304421194" lat="46.8199783" lon="-71.2683591" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:37Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="290583395" lat="46.8224763" lon="-71.2709716" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:57Z"/>
+  <node id="304419504" lat="46.8337051" lon="-71.2814007" version="19" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:24:38Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304425085" lat="46.8265615" lon="-71.2747902" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:12Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="290583381" lat="46.826457" lon="-71.2746935" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:18Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="304423778" lat="46.8234098" lon="-71.2718379" version="12" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:35Z"/>
+  <node id="290582987" lat="46.8201011" lon="-71.2687961" version="3" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:08Z">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="290583375" lat="46.8294374" lon="-71.2774635" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:01Z"/>
+  <node id="290583376" lat="46.8269429" lon="-71.2751433" version="16" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:26:07Z"/>
+  <node id="304422722" lat="46.8229259" lon="-71.2709237" version="2" changeset="2764422" user="SiEQ Technologies" uid="168558" visible="true" timestamp="2009-10-06T20:27:59Z">
+    <tag k="highway" v="bus_stop"/>
+  </node>
+  <node id="1076959041" lat="46.8696911" lon="-71.3364892" version="1" changeset="6828284" user="gormur" uid="103253" visible="true" timestamp="2011-01-01T14:42:23Z">
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="highway" v="bus_stop"/>
+    <tag k="note" v="was placed in junction. Arbitarily offset to east."/>
+  </node>
+  <way id="16225541" visible="true" timestamp="2009-10-01T15:42:52Z" version="10" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="164820516"/>
+    <nd ref="164820517"/>
+    <nd ref="164820518"/>
+    <nd ref="164820519"/>
+    <nd ref="164820521"/>
+    <nd ref="164820522"/>
+    <nd ref="164820523"/>
+    <nd ref="276487860"/>
+    <nd ref="276488340"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="17059320" visible="true" timestamp="2008-01-02T21:10:15Z" version="2" changeset="516944" user="andrewpmk" uid="1679">
+    <nd ref="164820535"/>
+    <nd ref="177113596"/>
+    <nd ref="177113597"/>
+    <nd ref="177113598"/>
+    <nd ref="177113599"/>
+    <nd ref="177113600"/>
+    <nd ref="177113601"/>
+    <nd ref="177113602"/>
+    <nd ref="177113604"/>
+    <nd ref="177113605"/>
+    <nd ref="177113607"/>
+    <nd ref="177107970"/>
+    <tag k="created_by" v="Potlatch 0.5d"/>
+    <tag k="highway" v="motorway_link"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24801359" visible="true" timestamp="2008-10-25T23:20:49Z" version="29" changeset="575131" user="Circeus" uid="69716">
+    <nd ref="269455524"/>
+    <nd ref="269455525"/>
+    <nd ref="269455526"/>
+    <nd ref="269455527"/>
+    <nd ref="269455528"/>
+    <nd ref="269455529"/>
+    <nd ref="269455530"/>
+    <nd ref="269455531"/>
+    <nd ref="269455532"/>
+    <nd ref="269455533"/>
+    <nd ref="269455534"/>
+    <nd ref="269455535"/>
+    <nd ref="269455536"/>
+    <nd ref="269455537"/>
+    <nd ref="269455538"/>
+    <nd ref="269455539"/>
+    <nd ref="269455540"/>
+    <nd ref="269455541"/>
+    <nd ref="269455542"/>
+    <nd ref="307534575"/>
+    <nd ref="269455543"/>
+    <nd ref="304448149"/>
+    <nd ref="269455544"/>
+    <nd ref="269455545"/>
+    <nd ref="304562110"/>
+    <tag k="name" v="Avenue Lapierre"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="24801361" visible="true" timestamp="2008-10-26T01:45:16Z" version="8" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="269455593"/>
+    <nd ref="304440657"/>
+    <nd ref="269455594"/>
+    <nd ref="269455595"/>
+    <nd ref="304440016"/>
+    <nd ref="307560949"/>
+    <nd ref="304439836"/>
+    <nd ref="304439093"/>
+    <tag k="name" v="Boulevard Bastien"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358; 369"/>
+  </way>
+  <way id="25230359" visible="true" timestamp="2008-10-14T00:26:57Z" version="5" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304433623"/>
+    <nd ref="275074505"/>
+    <nd ref="304434624"/>
+    <nd ref="275074445"/>
+    <nd ref="275074506"/>
+    <nd ref="275074507"/>
+    <nd ref="304435567"/>
+    <nd ref="304434531"/>
+    <tag k="name" v="Boulevard Lebourgneuf"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25230364" visible="true" timestamp="2008-10-14T00:15:53Z" version="7" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="275074524"/>
+    <nd ref="275074525"/>
+    <nd ref="304419816"/>
+    <tag k="name" v="Boulevard Lebourgneuf"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25230355" visible="true" timestamp="2010-02-14T03:11:06Z" version="24" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="304419504"/>
+    <nd ref="304427362"/>
+    <nd ref="519549666"/>
+    <nd ref="519549665"/>
+    <nd ref="275409263"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25366419" visible="true" timestamp="2009-10-01T15:42:38Z" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="276488340"/>
+    <nd ref="366066762"/>
+    <nd ref="276488341"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="25366421" visible="true" timestamp="2009-10-01T15:42:40Z" version="2" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="164957009"/>
+    <nd ref="164957008"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="25366422" visible="true" timestamp="2009-10-01T15:42:42Z" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="164957008"/>
+    <nd ref="276487786"/>
+    <nd ref="164957006"/>
+    <nd ref="276487826"/>
+    <nd ref="164957005"/>
+    <nd ref="164957004"/>
+    <nd ref="164957002"/>
+    <nd ref="164957001"/>
+    <nd ref="279407706"/>
+    <nd ref="164935131"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25366423" visible="true" timestamp="2008-07-05T19:07:49Z" version="1" changeset="401906" user="fsteggink" uid="37993">
+    <nd ref="164820534"/>
+    <nd ref="276488343"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="created_by" v="Potlatch 0.7b"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="25366424" visible="true" timestamp="2008-10-13T22:52:06Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="276488343"/>
+    <nd ref="164820535"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25775349" visible="true" timestamp="2008-10-13T23:21:51Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="177112239"/>
+    <nd ref="281144026"/>
+    <nd ref="281144025"/>
+    <nd ref="281144028"/>
+    <nd ref="281144020"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="motorway_link"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25775353" visible="true" timestamp="2008-10-15T18:01:13Z" version="7" changeset="363849" user="Circeus" uid="69716">
+    <nd ref="281144056"/>
+    <nd ref="281144055"/>
+    <nd ref="281144058"/>
+    <nd ref="281144057"/>
+    <nd ref="281144060"/>
+    <nd ref="281144059"/>
+    <nd ref="281144062"/>
+    <nd ref="304824354"/>
+    <nd ref="281144047"/>
+    <nd ref="304404394"/>
+    <nd ref="177107973"/>
+    <tag k="name" v="Rue Monseigneur-Plessis"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27458861" visible="true" timestamp="2008-12-31T04:45:13Z" version="9" changeset="692549" user="Circeus" uid="69716">
+    <nd ref="301489614"/>
+    <nd ref="303444265"/>
+    <nd ref="303444357"/>
+    <nd ref="303444380"/>
+    <nd ref="303444372"/>
+    <nd ref="301489623"/>
+    <nd ref="301489624"/>
+    <nd ref="301489625"/>
+    <nd ref="304444152"/>
+    <nd ref="301489626"/>
+    <tag k="name" v="Rue du Pomerol"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27715400" visible="true" timestamp="2011-04-06T00:57:48Z" version="15" changeset="7780546" user="elecnix" uid="6921">
+    <nd ref="430549005"/>
+    <nd ref="304450970"/>
+    <nd ref="430549109"/>
+    <nd ref="304450974"/>
+    <nd ref="304450447"/>
+    <nd ref="430549104"/>
+    <nd ref="430549093"/>
+    <nd ref="430549094"/>
+    <nd ref="430549100"/>
+    <nd ref="304450977"/>
+    <nd ref="430549061"/>
+    <nd ref="430549055"/>
+    <nd ref="304449390"/>
+    <tag k="name" v="Boulevard de la Colline"/>
+    <tag k="highway" v="tertiary"/>
+    <tag k="cycleway" v="lane"/>
+  </way>
+  <way id="27718575" visible="true" timestamp="2009-02-05T01:45:31Z" version="5" changeset="151584" user="fsteggink" uid="37993">
+    <nd ref="164932102"/>
+    <nd ref="304398296"/>
+    <tag k="name" v="Rue du Roi"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="residential"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27718816" visible="true" timestamp="2008-10-13T23:00:25Z" version="5" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="177107970"/>
+    <nd ref="281144016"/>
+    <nd ref="177107971"/>
+    <nd ref="304403901"/>
+    <nd ref="177107972"/>
+    <nd ref="177107973"/>
+    <tag k="name" v="Boulevard Wilfrid-Hamel"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="138"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27718964" visible="true" timestamp="2009-02-05T02:51:58Z" version="4" changeset="151584" user="fsteggink" uid="37993">
+    <nd ref="304398296"/>
+    <nd ref="319139083"/>
+    <nd ref="319139729"/>
+    <nd ref="164926375"/>
+    <tag k="name" v="Rue du Roi"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="residential"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27719166" visible="true" timestamp="2009-09-06T22:41:25Z" version="5" changeset="2397398" user="geobase_fsteggink" uid="165146">
+    <nd ref="304411396"/>
+    <nd ref="164935128"/>
+    <nd ref="279402245"/>
+    <nd ref="164932112"/>
+    <nd ref="164932111"/>
+    <tag k="name" v="Rue Dorchester"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27719162" visible="true" timestamp="2008-10-13T23:19:27Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304411396"/>
+    <nd ref="304411397"/>
+    <nd ref="304411483"/>
+    <nd ref="304411399"/>
+    <nd ref="304411402"/>
+    <nd ref="304411403"/>
+    <nd ref="304411405"/>
+    <nd ref="304411407"/>
+    <nd ref="164935131"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="27719175" visible="true" timestamp="2009-10-01T15:42:57Z" version="3" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="164957012"/>
+    <nd ref="164957010"/>
+    <nd ref="276487901"/>
+    <nd ref="164957009"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27719188" visible="true" timestamp="2008-10-13T23:21:29Z" version="1" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="281144020"/>
+    <nd ref="281144019"/>
+    <nd ref="281144022"/>
+    <nd ref="281144021"/>
+    <nd ref="281144024"/>
+    <nd ref="281144023"/>
+    <nd ref="164957012"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="motorway_link"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27719194" visible="true" timestamp="2008-10-13T23:23:14Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="177112236"/>
+    <nd ref="304413176"/>
+    <nd ref="177112238"/>
+    <nd ref="177112239"/>
+    <tag k="name" v="Boulevard Wilfrid-Hamel"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="138"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27719284" visible="true" timestamp="2009-10-04T02:40:14Z" version="7" changeset="2730938" user="Circeus" uid="69716">
+    <nd ref="290583172"/>
+    <nd ref="290583183"/>
+    <nd ref="290583204"/>
+    <nd ref="290583214"/>
+    <nd ref="304417761"/>
+    <nd ref="290583397"/>
+    <nd ref="290583398"/>
+    <nd ref="304416845"/>
+    <nd ref="290583180"/>
+    <nd ref="290583400"/>
+    <nd ref="290583179"/>
+    <nd ref="304416599"/>
+    <nd ref="290583190"/>
+    <nd ref="290583402"/>
+    <tag k="name" v="Rue Beaucage"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27719403" visible="true" timestamp="2009-10-04T02:40:14Z" version="3" changeset="2730938" user="Circeus" uid="69716">
+    <nd ref="290583172"/>
+    <nd ref="275074458"/>
+    <nd ref="275074457"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+  </way>
+  <way id="27719469" visible="true" timestamp="2008-10-14T00:11:59Z" version="4" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304419815"/>
+    <nd ref="304419816"/>
+    <tag k="name" v="Rue des Gradins"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27719473" visible="true" timestamp="2008-10-13T23:41:19Z" version="1" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304419503"/>
+    <nd ref="304419504"/>
+    <tag k="name" v="Rue des Rocailles"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720001" visible="true" timestamp="2008-10-14T00:16:17Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304419815"/>
+    <nd ref="275074545"/>
+    <nd ref="275074524"/>
+    <tag k="name" v="Boulevard Lebourgneuf"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27720004" visible="true" timestamp="2009-09-19T20:12:41Z" version="7" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="304419816"/>
+    <nd ref="304431941"/>
+    <nd ref="307560448"/>
+    <nd ref="502359589"/>
+    <nd ref="304429945"/>
+    <nd ref="304419502"/>
+    <tag k="name" v="Rue des Gradins"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720123" visible="true" timestamp="2008-10-26T01:45:01Z" version="6" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="275074524"/>
+    <nd ref="304432607"/>
+    <nd ref="275074523"/>
+    <nd ref="275074522"/>
+    <nd ref="304433010"/>
+    <nd ref="307562264"/>
+    <nd ref="307562262"/>
+    <nd ref="275074521"/>
+    <nd ref="307562261"/>
+    <nd ref="304433371"/>
+    <nd ref="304433623"/>
+    <tag k="name" v="Boulevard Lebourgneuf"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="27720243" visible="true" timestamp="2008-10-26T01:45:20Z" version="8" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="304434529"/>
+    <nd ref="304434908"/>
+    <nd ref="304434906"/>
+    <nd ref="304434905"/>
+    <nd ref="304434903"/>
+    <nd ref="304434902"/>
+    <nd ref="304434900"/>
+    <nd ref="304435001"/>
+    <tag k="name" v="Rue Le Mesnil"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720252" visible="true" timestamp="2008-10-14T00:23:38Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304434533"/>
+    <nd ref="275074496"/>
+    <nd ref="275074497"/>
+    <nd ref="304434762"/>
+    <nd ref="275074447"/>
+    <nd ref="275074498"/>
+    <nd ref="275074499"/>
+    <nd ref="304433623"/>
+    <tag k="name" v="Boulevard Lebourgneuf"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27720259" visible="true" timestamp="2009-09-19T20:12:33Z" version="3" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="304434531"/>
+    <nd ref="304434533"/>
+    <tag k="name" v="Rue Le Mesnil"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720264" visible="true" timestamp="2008-10-26T01:45:23Z" version="6" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="304434529"/>
+    <nd ref="304575805"/>
+    <nd ref="304435611"/>
+    <nd ref="304683056"/>
+    <nd ref="304434531"/>
+    <tag k="name" v="Rue Le Mesnil"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720284" visible="true" timestamp="2008-10-26T01:45:23Z" version="2" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="304435001"/>
+    <nd ref="304434898"/>
+    <nd ref="304434893"/>
+    <nd ref="307561646"/>
+    <nd ref="304434890"/>
+    <nd ref="304434888"/>
+    <nd ref="304434884"/>
+    <nd ref="304434529"/>
+    <tag k="name" v="Rue Le Mesnil"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720394" visible="true" timestamp="2009-09-19T20:12:38Z" version="6" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="307562356"/>
+    <nd ref="304438158"/>
+    <nd ref="502359663"/>
+    <nd ref="502359786"/>
+    <nd ref="304437712"/>
+    <nd ref="307891866"/>
+    <nd ref="502359686"/>
+    <nd ref="502359668"/>
+    <nd ref="502359742"/>
+    <nd ref="307562265"/>
+    <tag k="name" v="Boulevard La Morille"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720390" visible="true" timestamp="2009-09-19T20:12:40Z" version="7" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="304435001"/>
+    <nd ref="304436192"/>
+    <nd ref="307561667"/>
+    <nd ref="304436195"/>
+    <nd ref="304436197"/>
+    <nd ref="304436200"/>
+    <nd ref="304436203"/>
+    <nd ref="304436205"/>
+    <nd ref="304436208"/>
+    <nd ref="304436210"/>
+    <nd ref="307561422"/>
+    <nd ref="304436214"/>
+    <nd ref="304436216"/>
+    <nd ref="307561410"/>
+    <nd ref="307561423"/>
+    <nd ref="502359795"/>
+    <nd ref="502359711"/>
+    <nd ref="304436220"/>
+    <nd ref="307562265"/>
+    <tag k="name" v="Rue Le Mesnil"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720393" visible="true" timestamp="2008-10-26T01:45:19Z" version="2" changeset="577741" user="fsteggink" uid="37993">
+    <nd ref="307562358"/>
+    <nd ref="304438333"/>
+    <nd ref="307562360"/>
+    <nd ref="304438334"/>
+    <nd ref="307560983"/>
+    <nd ref="307560984"/>
+    <nd ref="304438336"/>
+    <nd ref="307560985"/>
+    <nd ref="307560986"/>
+    <nd ref="307562356"/>
+    <tag k="name" v="Rue Latreille"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720479" visible="true" timestamp="2009-09-19T20:12:41Z" version="6" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="304439093"/>
+    <nd ref="307560967"/>
+    <nd ref="307560968"/>
+    <nd ref="304439096"/>
+    <nd ref="304439097"/>
+    <nd ref="307560982"/>
+    <nd ref="307560995"/>
+    <nd ref="307562358"/>
+    <tag k="name" v="Rue Lespérance"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720657" visible="true" timestamp="2008-10-14T00:54:08Z" version="2" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="301489330"/>
+    <nd ref="301489611"/>
+    <nd ref="301489612"/>
+    <nd ref="303444458"/>
+    <nd ref="301489613"/>
+    <nd ref="301489614"/>
+    <tag k="name" v="Rue Estiembre"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720659" visible="true" timestamp="2008-10-15T00:20:36Z" version="8" changeset="343393" user="Circeus" uid="69716">
+    <nd ref="301489330"/>
+    <nd ref="301489332"/>
+    <nd ref="301489462"/>
+    <nd ref="301489334"/>
+    <nd ref="301489336"/>
+    <nd ref="301489338"/>
+    <nd ref="301694852"/>
+    <nd ref="301489340"/>
+    <nd ref="301489187"/>
+    <nd ref="301489188"/>
+    <tag k="name" v="Rue des Sommeliers"/>
+    <tag k="old_name" v="Rue Bédard"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720648" visible="true" timestamp="2010-02-14T18:56:31Z" version="3" changeset="3874380" user="Gone" uid="120468">
+    <nd ref="301489626"/>
+    <nd ref="304147668"/>
+    <nd ref="269455576"/>
+    <tag k="name" v="Avenue Lapierre"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="cycleway" v="lane"/>
+  </way>
+  <way id="27720736" visible="true" timestamp="2008-10-15T00:07:30Z" version="5" changeset="343393" user="Circeus" uid="69716">
+    <nd ref="304449390"/>
+    <nd ref="304450011"/>
+    <nd ref="304450012"/>
+    <nd ref="304449392"/>
+    <nd ref="304448768"/>
+    <tag k="name" v="Rue Roussin"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720732" visible="true" timestamp="2009-06-29T02:21:11Z" version="3" changeset="1671988" user="fsteggink" uid="37993">
+    <nd ref="304448768"/>
+    <nd ref="430548917"/>
+    <nd ref="430548921"/>
+    <nd ref="430548928"/>
+    <nd ref="269455514"/>
+    <nd ref="269455515"/>
+    <nd ref="269455516"/>
+    <nd ref="269455517"/>
+    <nd ref="304448775"/>
+    <nd ref="269455518"/>
+    <nd ref="269455519"/>
+    <nd ref="430548938"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="27720855" visible="true" timestamp="2009-06-29T02:21:08Z" version="3" changeset="1671988" user="fsteggink" uid="37993">
+    <nd ref="269455510"/>
+    <nd ref="304452008"/>
+    <nd ref="304452009"/>
+    <nd ref="430548980"/>
+    <nd ref="430548984"/>
+    <nd ref="304452010"/>
+    <nd ref="430548982"/>
+    <nd ref="430548999"/>
+    <nd ref="304452427"/>
+    <nd ref="430548992"/>
+    <nd ref="304452012"/>
+    <nd ref="304452013"/>
+    <nd ref="304452014"/>
+    <nd ref="430549002"/>
+    <nd ref="304452015"/>
+    <nd ref="430549000"/>
+    <nd ref="304452016"/>
+    <nd ref="430550063"/>
+    <nd ref="304452429"/>
+    <nd ref="304452019"/>
+    <nd ref="304451464"/>
+    <tag k="name" v="Rue Roger-Bontemps"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27720863" visible="true" timestamp="2009-06-29T02:21:08Z" version="14" changeset="1671988" user="fsteggink" uid="37993">
+    <nd ref="304459395"/>
+    <nd ref="304459397"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="tertiary"/>
+  </way>
+  <way id="27720842" visible="true" timestamp="2009-06-29T02:21:08Z" version="3" changeset="1671988" user="fsteggink" uid="37993">
+    <nd ref="304451464"/>
+    <nd ref="304452140"/>
+    <nd ref="304451336"/>
+    <nd ref="304451337"/>
+    <nd ref="430549121"/>
+    <nd ref="430549132"/>
+    <nd ref="430549005"/>
+    <tag k="name" v="Rue Pacifique"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="27721116" visible="true" timestamp="2008-10-14T01:53:36Z" version="3" changeset="321181" user="Circeus" uid="69716">
+    <nd ref="304459395"/>
+    <nd ref="304459508"/>
+    <nd ref="304459509"/>
+    <nd ref="304459510"/>
+    <nd ref="304459397"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="27734574" visible="true" timestamp="2008-10-25T23:38:35Z" version="12" changeset="575131" user="Circeus" uid="69716">
+    <nd ref="304562110"/>
+    <nd ref="269455546"/>
+    <nd ref="269455547"/>
+    <nd ref="304448151"/>
+    <nd ref="269455548"/>
+    <nd ref="307536932"/>
+    <nd ref="269455549"/>
+    <nd ref="304447689"/>
+    <nd ref="269455550"/>
+    <nd ref="269455551"/>
+    <nd ref="307534214"/>
+    <nd ref="304561767"/>
+    <nd ref="304447691"/>
+    <nd ref="269455623"/>
+    <nd ref="304447447"/>
+    <nd ref="304561503"/>
+    <nd ref="269455558"/>
+    <nd ref="307533348"/>
+    <nd ref="269455560"/>
+    <nd ref="269455561"/>
+    <nd ref="269455562"/>
+    <nd ref="269455563"/>
+    <nd ref="269455564"/>
+    <nd ref="269455565"/>
+    <nd ref="307532520"/>
+    <nd ref="269455566"/>
+    <nd ref="269455567"/>
+    <nd ref="269455568"/>
+    <nd ref="269455569"/>
+    <nd ref="269455570"/>
+    <nd ref="304446099"/>
+    <nd ref="269455571"/>
+    <tag k="name" v="Avenue Lapierre"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="27734700" visible="true" timestamp="2008-12-23T18:25:07Z" version="11" changeset="576659" user="Circeus" uid="69716">
+    <nd ref="269455571"/>
+    <nd ref="304445953"/>
+    <nd ref="269455572"/>
+    <nd ref="320026473"/>
+    <nd ref="321318360"/>
+    <nd ref="269455573"/>
+    <nd ref="320408484"/>
+    <nd ref="305302001"/>
+    <nd ref="320408497"/>
+    <nd ref="320408501"/>
+    <nd ref="269455574"/>
+    <nd ref="301272881"/>
+    <nd ref="301273723"/>
+    <nd ref="321314271"/>
+    <nd ref="304445693"/>
+    <nd ref="269455575"/>
+    <nd ref="301274300"/>
+    <nd ref="321314267"/>
+    <nd ref="301273490"/>
+    <nd ref="304445403"/>
+    <nd ref="304147258"/>
+    <tag k="name" v="Avenue Lapierre"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="29019557" visible="true" timestamp="2009-02-05T01:44:12Z" version="4" changeset="151584" user="fsteggink" uid="37993">
+    <nd ref="164926375"/>
+    <nd ref="164926376"/>
+    <nd ref="164928965"/>
+    <nd ref="164928967"/>
+    <nd ref="304400035"/>
+    <nd ref="164928968"/>
+    <tag k="name" v="Rue de la Couronne"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="29019650" visible="true" timestamp="2009-10-01T15:31:51Z" version="4" changeset="2701059" user="SiEQ Technologies" uid="168558">
+    <nd ref="164928968"/>
+    <nd ref="164933306"/>
+    <nd ref="164933307"/>
+    <nd ref="164933308"/>
+    <nd ref="276488364"/>
+    <nd ref="164933309"/>
+    <nd ref="164933311"/>
+    <nd ref="304825904"/>
+    <nd ref="164933312"/>
+    <nd ref="164820516"/>
+    <tag k="name" v="Rue de la Couronne"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="29019674" visible="true" timestamp="2009-02-05T01:42:33Z" version="3" changeset="151584" user="fsteggink" uid="37993">
+    <nd ref="164932111"/>
+    <nd ref="304409922"/>
+    <nd ref="164932109"/>
+    <nd ref="164932107"/>
+    <nd ref="164932106"/>
+    <nd ref="164932104"/>
+    <nd ref="164932102"/>
+    <tag k="name" v="Rue Dorchester"/>
+    <tag k="created_by" v="Potlatch 0.10f"/>
+    <tag k="highway" v="primary"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24801360" visible="true" timestamp="2009-09-19T20:12:38Z" version="8" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="269455576"/>
+    <nd ref="304443965"/>
+    <nd ref="321000392"/>
+    <nd ref="321000387"/>
+    <nd ref="304443354"/>
+    <nd ref="269455577"/>
+    <nd ref="385604127"/>
+    <nd ref="385604134"/>
+    <nd ref="304443117"/>
+    <nd ref="304443111"/>
+    <nd ref="502359877"/>
+    <nd ref="502359869"/>
+    <nd ref="269455578"/>
+    <nd ref="269455579"/>
+    <nd ref="269455580"/>
+    <tag k="name" v="Rue Élisabeth-II"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="24801354" visible="true" timestamp="2009-09-19T21:05:21Z" version="10" changeset="2538586" user="geobase_fsteggink" uid="165146">
+    <nd ref="269455580"/>
+    <nd ref="502459795"/>
+    <tag k="name" v="Boulevard Bastien"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="369"/>
+  </way>
+  <way id="27735759" visible="true" timestamp="2009-05-02T15:08:26Z" version="5" changeset="1048999" user="Circeus" uid="69716">
+    <nd ref="304147258"/>
+    <nd ref="388655506"/>
+    <nd ref="301489188"/>
+    <tag k="name" v="Avenue Lapierre"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="cycleway" v="lane"/>
+  </way>
+  <way id="40328462" visible="true" timestamp="2009-09-24T15:15:01Z" version="2" changeset="2606113" user="Flose" uid="170813">
+    <nd ref="177107973"/>
+    <nd ref="177112236"/>
+    <tag k="name" v="Rue Monseigneur-Plessis"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="37018945" visible="true" timestamp="2009-06-29T02:20:46Z" version="1" changeset="1671988" user="fsteggink" uid="37993">
+    <nd ref="430548938"/>
+    <nd ref="430548937"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="created_by" v="Potlatch 0.10e"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="37019006" visible="true" timestamp="2009-09-18T03:09:31Z" version="2" changeset="2519368" user="geobase_fsteggink" uid="165146">
+    <nd ref="164836395"/>
+    <nd ref="304455748"/>
+    <nd ref="499688735"/>
+    <nd ref="430549339"/>
+    <nd ref="430549331"/>
+    <nd ref="304454755"/>
+    <nd ref="269455507"/>
+    <nd ref="304453333"/>
+    <nd ref="430549007"/>
+    <nd ref="499689401"/>
+    <nd ref="304453287"/>
+    <nd ref="269455508"/>
+    <nd ref="269455509"/>
+    <nd ref="430548985"/>
+    <nd ref="269455510"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="37018946" visible="true" timestamp="2009-09-18T03:09:43Z" version="3" changeset="2519368" user="geobase_fsteggink" uid="165146">
+    <nd ref="430548937"/>
+    <nd ref="490203032"/>
+    <nd ref="269455520"/>
+    <nd ref="430548934"/>
+    <nd ref="269455521"/>
+    <nd ref="269455522"/>
+    <nd ref="269455523"/>
+    <nd ref="269455524"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="highway" v="secondary"/>
+  </way>
+  <way id="27721340" visible="true" timestamp="2009-07-12T00:45:21Z" version="6" changeset="1802553" user="fsteggink" uid="37993">
+    <nd ref="304459397"/>
+    <nd ref="304459399"/>
+    <nd ref="440497254"/>
+    <nd ref="304458324"/>
+    <nd ref="304464338"/>
+    <nd ref="304458325"/>
+    <nd ref="304458326"/>
+    <nd ref="440496137"/>
+    <nd ref="164841592"/>
+    <nd ref="440496136"/>
+    <nd ref="164841591"/>
+    <nd ref="440496111"/>
+    <nd ref="440496118"/>
+    <nd ref="440496133"/>
+    <nd ref="164841590"/>
+    <nd ref="304464100"/>
+    <nd ref="440496122"/>
+    <nd ref="164841589"/>
+    <nd ref="304464101"/>
+    <nd ref="304464102"/>
+    <nd ref="440496097"/>
+    <nd ref="164841588"/>
+    <nd ref="440496095"/>
+    <nd ref="164841587"/>
+    <nd ref="440496096"/>
+    <nd ref="164841586"/>
+    <nd ref="304464105"/>
+    <nd ref="164841585"/>
+    <nd ref="164841584"/>
+    <nd ref="440496081"/>
+    <nd ref="164841583"/>
+    <nd ref="164841582"/>
+    <nd ref="164841581"/>
+    <nd ref="440496073"/>
+    <nd ref="164841580"/>
+    <nd ref="164841579"/>
+    <nd ref="164841578"/>
+    <nd ref="304463621"/>
+    <nd ref="164841576"/>
+    <nd ref="164841574"/>
+    <nd ref="164841573"/>
+    <nd ref="164841572"/>
+    <nd ref="304463623"/>
+    <nd ref="164841571"/>
+    <nd ref="440496029"/>
+    <nd ref="304463624"/>
+    <nd ref="164841570"/>
+    <nd ref="304463626"/>
+    <nd ref="164841569"/>
+    <nd ref="164841568"/>
+    <nd ref="304456416"/>
+    <nd ref="164841567"/>
+    <nd ref="164841566"/>
+    <nd ref="304456418"/>
+    <nd ref="164841565"/>
+    <nd ref="164841564"/>
+    <nd ref="164841563"/>
+    <nd ref="164841562"/>
+    <nd ref="304455952"/>
+    <nd ref="164841561"/>
+    <nd ref="430549401"/>
+    <nd ref="164841560"/>
+    <nd ref="304455850"/>
+    <nd ref="164841559"/>
+    <nd ref="164841558"/>
+    <nd ref="164836395"/>
+    <tag k="name" v="Avenue du Lac-Saint-Charles"/>
+    <tag k="highway" v="tertiary"/>
+  </way>
+  <way id="41147500" visible="true" timestamp="2009-09-19T20:12:27Z" version="1" changeset="2538069" user="geobase_fsteggink" uid="165146">
+    <nd ref="304419502"/>
+    <nd ref="304428588"/>
+    <nd ref="304429133"/>
+    <nd ref="304428293"/>
+    <nd ref="304429268"/>
+    <nd ref="304428152"/>
+    <nd ref="304419503"/>
+    <tag k="name" v="Rue des Rocailles"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="41152977" visible="true" timestamp="2009-09-19T21:05:14Z" version="1" changeset="2538586" user="geobase_fsteggink" uid="165146">
+    <nd ref="502459795"/>
+    <nd ref="502459804"/>
+    <tag k="name" v="Boulevard Bastien"/>
+    <tag k="geobase:datasetName" v="NRN:Québec"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="geobase:uuid" v="31593f15b0c14a288cf53ac0a182a657"/>
+    <tag k="ref" v="369"/>
+    <tag k="is_in" v="Québec,Canada"/>
+    <tag k="attribution" v="GeoBase®"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="source" v="Geobase_Import_2009"/>
+    <tag k="geobase:acquisitionTechnique" v="GPS"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="41152981" visible="true" timestamp="2009-09-19T21:05:15Z" version="1" changeset="2538586" user="geobase_fsteggink" uid="165146">
+    <nd ref="502459804"/>
+    <nd ref="275074158"/>
+    <nd ref="269455581"/>
+    <nd ref="275074156"/>
+    <nd ref="269455582"/>
+    <nd ref="275074157"/>
+    <nd ref="385604124"/>
+    <nd ref="269455583"/>
+    <nd ref="269455584"/>
+    <nd ref="269455585"/>
+    <nd ref="269455586"/>
+    <nd ref="304442270"/>
+    <nd ref="269455587"/>
+    <nd ref="269455588"/>
+    <nd ref="269455589"/>
+    <nd ref="304441412"/>
+    <nd ref="304442272"/>
+    <nd ref="307560902"/>
+    <nd ref="269455590"/>
+    <nd ref="269455591"/>
+    <nd ref="269455592"/>
+    <nd ref="304440697"/>
+    <nd ref="269455593"/>
+    <tag k="name" v="Boulevard Bastien"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="369"/>
+  </way>
+  <way id="25366420" visible="true" timestamp="2009-10-01T15:42:59Z" version="4" changeset="2701171" user="SiEQ Technologies" uid="168558">
+    <nd ref="276488341"/>
+    <nd ref="164820524"/>
+    <nd ref="164820525"/>
+    <nd ref="164820526"/>
+    <nd ref="281143947"/>
+    <nd ref="164820527"/>
+    <nd ref="164820529"/>
+    <nd ref="164820531"/>
+    <nd ref="164820532"/>
+    <nd ref="164820533"/>
+    <nd ref="164820534"/>
+    <tag k="name" v="Autoroute Laurentienne"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="ref" v="175"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="41937457" visible="true" timestamp="2009-10-04T02:40:11Z" version="1" changeset="2730938" user="Circeus" uid="69716">
+    <nd ref="290583402"/>
+    <nd ref="304416178"/>
+    <nd ref="281144049"/>
+    <nd ref="281144052"/>
+    <nd ref="281144051"/>
+    <nd ref="281144054"/>
+    <nd ref="281144053"/>
+    <nd ref="281144056"/>
+    <tag k="name" v="Rue Beaucage"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="41937458" visible="true" timestamp="2009-10-04T02:40:11Z" version="1" changeset="2730938" user="Circeus" uid="69716">
+    <nd ref="275074457"/>
+    <nd ref="304418837"/>
+    <nd ref="275074456"/>
+    <nd ref="275074455"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+  </way>
+  <way id="41937464" visible="true" timestamp="2010-02-14T03:11:03Z" version="3" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="275409263"/>
+    <nd ref="275074450"/>
+    <nd ref="519549662"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="41937461" visible="true" timestamp="2010-02-14T03:11:04Z" version="3" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="519549659"/>
+    <nd ref="275074468"/>
+    <nd ref="519549668"/>
+    <nd ref="519549663"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="41937463" visible="true" timestamp="2010-02-14T03:11:05Z" version="3" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="519549663"/>
+    <nd ref="304427399"/>
+    <nd ref="304419503"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="41937462" visible="true" timestamp="2010-02-14T03:11:06Z" version="3" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="519549662"/>
+    <nd ref="304426637"/>
+    <nd ref="290583375"/>
+    <nd ref="304426284"/>
+    <nd ref="290583376"/>
+    <nd ref="304425085"/>
+    <nd ref="290583381"/>
+    <nd ref="290583386"/>
+    <nd ref="304423922"/>
+    <nd ref="290583387"/>
+    <nd ref="304423778"/>
+    <nd ref="304422763"/>
+    <nd ref="292439429"/>
+    <nd ref="290583395"/>
+    <nd ref="304422447"/>
+    <nd ref="304421927"/>
+    <nd ref="290582987"/>
+    <nd ref="290583090"/>
+    <nd ref="275074455"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="41157321" visible="true" timestamp="2010-02-14T03:11:06Z" version="4" changeset="3866118" user="Gone" uid="120468">
+    <nd ref="275074455"/>
+    <nd ref="290583091"/>
+    <nd ref="304421194"/>
+    <nd ref="275074462"/>
+    <nd ref="275074463"/>
+    <nd ref="304422721"/>
+    <nd ref="275074464"/>
+    <nd ref="304422722"/>
+    <nd ref="292439428"/>
+    <nd ref="304423783"/>
+    <nd ref="290583391"/>
+    <nd ref="502262064"/>
+    <nd ref="304423929"/>
+    <nd ref="290583382"/>
+    <nd ref="304425051"/>
+    <nd ref="275074465"/>
+    <nd ref="290583380"/>
+    <nd ref="304426243"/>
+    <nd ref="290583366"/>
+    <nd ref="290583371"/>
+    <nd ref="304426649"/>
+    <nd ref="519549659"/>
+    <tag k="name" v="Boulevard Pierre-Bertrand"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="ref" v="358"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <relation id="37415" visible="true" timestamp="2011-01-01T14:42:29Z" version="238" changeset="6828284" user="gormur" uid="103253">
+    <member type="node" ref="164841564" role="stop_91_forward"/>
+    <member type="node" ref="164841580" role="stop_96"/>
+    <member type="node" ref="164841583" role="stop_97"/>
+    <member type="node" ref="164841588" role="stop_99"/>
+    <member type="node" ref="164841592" role="stop_102"/>
+    <member type="node" ref="269455508" role="stop_85_forward"/>
+    <member type="node" ref="269455521" role="stop_72"/>
+    <member type="node" ref="269455527" role="stop_71"/>
+    <member type="node" ref="269455531" role="stop_70"/>
+    <member type="node" ref="269455539" role="stop_69"/>
+    <member type="node" ref="269455548" role="stop_67_forward"/>
+    <member type="node" ref="269455558" role="stop_63"/>
+    <member type="node" ref="269455561" role="stop_62"/>
+    <member type="node" ref="269455565" role="stop_61"/>
+    <member type="node" ref="269455583" role="stop_42"/>
+    <member type="node" ref="269455590" role="stop_39"/>
+    <member type="node" ref="275074158" role="stop_43"/>
+    <member type="node" ref="275074525" role="stop_24_forward"/>
+    <member type="node" ref="281144054" role="stop_5"/>
+    <member type="node" ref="281144060" role="stop_4"/>
+    <member type="node" ref="1076959041" role="stop_59_backward"/>
+    <member type="node" ref="301489188" role="stop_56"/>
+    <member type="node" ref="301489330" role="stop_52"/>
+    <member type="node" ref="301489332" role="stop_53"/>
+    <member type="node" ref="301489334" role="stop_55"/>
+    <member type="node" ref="301489462" role="stop_54"/>
+    <member type="node" ref="301489613" role="stop_51"/>
+    <member type="node" ref="303444265" role="stop_50"/>
+    <member type="node" ref="303444357" role="stop_49"/>
+    <member type="node" ref="303444372" role="stop_48"/>
+    <member type="node" ref="304398296" role="stop_0"/>
+    <member type="node" ref="304400035" role="stop_1_forward"/>
+    <member type="node" ref="304403901" role="stop_2_forward"/>
+    <member type="node" ref="304404394" role="stop_3"/>
+    <member type="node" ref="304409922" role="stop_1_backward"/>
+    <member type="node" ref="304411483" role="stop_2.5_backward"/>
+    <member type="node" ref="304413176" role="stop_2_backward"/>
+    <member type="node" ref="304416178" role="stop_6"/>
+    <member type="node" ref="304416599" role="stop_7"/>
+    <member type="node" ref="304416845" role="stop_8"/>
+    <member type="node" ref="304417761" role="stop_9"/>
+    <member type="node" ref="304418837" role="stop_10"/>
+    <member type="node" ref="304419502" role="stop_22"/>
+    <member type="node" ref="304421194" role="stop_11_forward"/>
+    <member type="node" ref="304421927" role="stop_11_backward"/>
+    <member type="node" ref="304422447" role="stop_12_backward"/>
+    <member type="node" ref="304422721" role="stop_12_forward"/>
+    <member type="node" ref="304422722" role="stop_13_forward"/>
+    <member type="node" ref="304422763" role="stop_13_backward"/>
+    <member type="node" ref="304423922" role="stop_14_backward"/>
+    <member type="node" ref="304423929" role="stop_14_forward"/>
+    <member type="node" ref="304425051" role="stop_15_forward"/>
+    <member type="node" ref="304425085" role="stop_15_backward"/>
+    <member type="node" ref="304426243" role="stop_16_forward"/>
+    <member type="node" ref="304426284" role="stop_16_backward"/>
+    <member type="node" ref="304426637" role="stop_17_backward"/>
+    <member type="node" ref="304426649" role="stop_17_forward"/>
+    <member type="node" ref="304427362" role="stop_18_backward"/>
+    <member type="node" ref="304427399" role="stop_18_forward"/>
+    <member type="node" ref="304428152" role="stop_19"/>
+    <member type="node" ref="304428588" role="stop_21"/>
+    <member type="node" ref="304429268" role="stop_20"/>
+    <member type="node" ref="304429945" role="stop_23"/>
+    <member type="node" ref="304432607" role="stop_24_backward"/>
+    <member type="node" ref="304433010" role="stop_25"/>
+    <member type="node" ref="304433371" role="stop_26"/>
+    <member type="node" ref="304434624" role="stop_27_forward"/>
+    <member type="node" ref="304434762" role="stop_27_backward"/>
+    <member type="node" ref="304435567" role="stop_28_forward"/>
+    <member type="node" ref="304435611" role="stop_28_backward"/>
+    <member type="node" ref="304436192" role="stop_29"/>
+    <member type="node" ref="304436214" role="stop_30"/>
+    <member type="node" ref="304436216" role="stop_31"/>
+    <member type="node" ref="304436220" role="stop_32"/>
+    <member type="node" ref="304437712" role="stop_33"/>
+    <member type="node" ref="304438158" role="stop_34"/>
+    <member type="node" ref="304438333" role="stop_35"/>
+    <member type="node" ref="304439096" role="stop_36"/>
+    <member type="node" ref="304440016" role="stop_37"/>
+    <member type="node" ref="304440657" role="stop_38_forward"/>
+    <member type="node" ref="304440697" role="stop_38_backward"/>
+    <member type="node" ref="304442270" role="stop_41"/>
+    <member type="node" ref="304442272" role="stop_40"/>
+    <member type="node" ref="304443111" role="stop_44_forward"/>
+    <member type="node" ref="304443117" role="stop_44_backward"/>
+    <member type="node" ref="304443354" role="stop_45"/>
+    <member type="node" ref="304443965" role="stop_46"/>
+    <member type="node" ref="304444152" role="stop_47"/>
+    <member type="node" ref="304445403" role="stop_57"/>
+    <member type="node" ref="304445693" role="stop_58"/>
+    <member type="node" ref="304445953" role="stop_60_forward"/>
+    <member type="node" ref="304446099" role="stop_60_backward"/>
+    <member type="node" ref="304447447" role="stop_64"/>
+    <member type="node" ref="304447689" role="stop_66"/>
+    <member type="node" ref="304447691" role="stop_65"/>
+    <member type="node" ref="304448149" role="stop_68"/>
+    <member type="node" ref="304448151" role="stop_67_backward"/>
+    <member type="node" ref="304448775" role="stop_73"/>
+    <member type="node" ref="304449390" role="stop_77"/>
+    <member type="node" ref="304449392" role="stop_74"/>
+    <member type="node" ref="304450011" role="stop_76"/>
+    <member type="node" ref="304450012" role="stop_75"/>
+    <member type="node" ref="304450970" role="stop_80"/>
+    <member type="node" ref="304450974" role="stop_79"/>
+    <member type="node" ref="304450977" role="stop_78"/>
+    <member type="node" ref="304452009" role="stop_84"/>
+    <member type="node" ref="304452140" role="stop_81"/>
+    <member type="node" ref="304452427" role="stop_83"/>
+    <member type="node" ref="304452429" role="stop_82"/>
+    <member type="node" ref="304453287" role="stop_85_backward"/>
+    <member type="node" ref="304453333" role="stop_86"/>
+    <member type="node" ref="304454755" role="stop_87"/>
+    <member type="node" ref="304455748" role="stop_88"/>
+    <member type="node" ref="304455850" role="stop_89"/>
+    <member type="node" ref="304455952" role="stop_90"/>
+    <member type="node" ref="304456416" role="stop_92"/>
+    <member type="node" ref="304456418" role="stop_91_backward"/>
+    <member type="node" ref="304459399" role="stop_104"/>
+    <member type="node" ref="304459509" role="stop_105"/>
+    <member type="node" ref="304463621" role="stop_95"/>
+    <member type="node" ref="304463623" role="stop_94"/>
+    <member type="node" ref="304463624" role="stop_93_forward"/>
+    <member type="node" ref="304463626" role="stop_93_backward"/>
+    <member type="node" ref="304464100" role="stop_101"/>
+    <member type="node" ref="304464101" role="stop_100_backward"/>
+    <member type="node" ref="304464102" role="stop_100_forward"/>
+    <member type="node" ref="304464105" role="stop_98"/>
+    <member type="node" ref="304464338" role="stop_103"/>
+    <member type="node" ref="305302001" role="stop_59_backward"/>
+    <member type="way" ref="16225541" role="forward"/>
+    <member type="way" ref="17059320" role="forward"/>
+    <member type="way" ref="24801354" role=""/>
+    <member type="way" ref="41152981" role=""/>
+    <member type="way" ref="24801359" role=""/>
+    <member type="way" ref="24801360" role=""/>
+    <member type="way" ref="24801361" role=""/>
+    <member type="way" ref="41937462" role="backward"/>
+    <member type="way" ref="41937464" role="backward"/>
+    <member type="way" ref="25230355" role="backward"/>
+    <member type="way" ref="41157321" role="forward"/>
+    <member type="way" ref="41937461" role="forward"/>
+    <member type="way" ref="41937463" role="forward"/>
+    <member type="way" ref="25230359" role="forward"/>
+    <member type="way" ref="25230364" role="forward"/>
+    <member type="way" ref="25366419" role="forward"/>
+    <member type="way" ref="25366420" role="forward"/>
+    <member type="way" ref="25366421" role="backward"/>
+    <member type="way" ref="25366422" role="backward"/>
+    <member type="way" ref="25366423" role="forward"/>
+    <member type="way" ref="25366424" role="forward"/>
+    <member type="way" ref="25775349" role="backward"/>
+    <member type="way" ref="25775353" role=""/>
+    <member type="way" ref="27458861" role=""/>
+    <member type="way" ref="27718575" role="backward"/>
+    <member type="way" ref="27718816" role="forward"/>
+    <member type="way" ref="27718964" role="forward"/>
+    <member type="way" ref="27719162" role="backward"/>
+    <member type="way" ref="27719166" role="backward"/>
+    <member type="way" ref="27719175" role="backward"/>
+    <member type="way" ref="27719188" role="backward"/>
+    <member type="way" ref="27719194" role="backward"/>
+    <member type="way" ref="27719284" role=""/>
+    <member type="way" ref="41937457" role=""/>
+    <member type="way" ref="27719403" role=""/>
+    <member type="way" ref="41937458" role=""/>
+    <member type="way" ref="41147500" role=""/>
+    <member type="way" ref="27719469" role="backward"/>
+    <member type="way" ref="27719473" role="backward"/>
+    <member type="way" ref="27720001" role="backward"/>
+    <member type="way" ref="27720004" role=""/>
+    <member type="way" ref="27720123" role="backward"/>
+    <member type="way" ref="27720243" role="forward"/>
+    <member type="way" ref="27720252" role="backward"/>
+    <member type="way" ref="27720259" role="backward"/>
+    <member type="way" ref="27720264" role=""/>
+    <member type="way" ref="27720284" role="backward"/>
+    <member type="way" ref="27720393" role=""/>
+    <member type="way" ref="27720394" role=""/>
+    <member type="way" ref="27720479" role=""/>
+    <member type="way" ref="27720648" role=""/>
+    <member type="way" ref="27720657" role=""/>
+    <member type="way" ref="27720659" role=""/>
+    <member type="way" ref="27720732" role=""/>
+    <member type="way" ref="37018945" role=""/>
+    <member type="way" ref="37018946" role=""/>
+    <member type="way" ref="27720736" role=""/>
+    <member type="way" ref="27720855" role=""/>
+    <member type="way" ref="27720863" role="forward"/>
+    <member type="way" ref="27721116" role="backward"/>
+    <member type="way" ref="27721340" role=""/>
+    <member type="way" ref="37019006" role=""/>
+    <member type="way" ref="27734574" role=""/>
+    <member type="way" ref="27734700" role=""/>
+    <member type="way" ref="27735759" role=""/>
+    <member type="way" ref="29019557" role="forward"/>
+    <member type="way" ref="29019650" role="forward"/>
+    <member type="way" ref="29019674" role="backward"/>
+    <member type="way" ref="27715400" role=""/>
+    <member type="way" ref="27720842" role=""/>
+    <member type="way" ref="27720390" role=""/>
+    <member type="way" ref="41152977" role=""/>
+    <member type="way" ref="40328462" role=""/>
+    <tag k="name" v="Place Jacques-Cartier--Lac-Saint-Charles"/>
+    <tag k="network" v="RTC"/>
+    <tag k="operator" v="Réseau de Transport de la Capitale"/>
+    <tag k="ref" v="82"/>
+    <tag k="route" v="bus"/>
+    <tag k="type" v="route"/>
+  </relation>
+</osm>
