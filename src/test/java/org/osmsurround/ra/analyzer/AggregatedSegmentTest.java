@@ -42,8 +42,7 @@ public class AggregatedSegmentTest {
 
 	@Test
 	public void testNoAggregatedSubSegments() throws Exception {
-		AggregatedSegment topSegment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2));
-		AggregatedSegment segment = new AggregatedSegment(topSegment);
+		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2));
 		AggregatedSegment subSegment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(2, 3));
 		segment.addSegment(subSegment);
 		for (ISegment innerSegment : segment.getSegments())

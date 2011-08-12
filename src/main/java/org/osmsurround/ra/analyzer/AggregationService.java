@@ -11,28 +11,43 @@ import org.springframework.stereotype.Service;
 @Service
 public class AggregationService {
 
-	public List<ISegment> aggregate(List<ISegment> segments) {
+	public List<AggregatedSegment> aggregate(List<ISegment> segments) {
 
-		List<ISegment> result = new ArrayList<ISegment>(segments);
+		List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
+		for (Iterator<ISegment> it = segments.iterator(); it.hasNext();) {
+			ISegment segment = it.next();
 
-		int lastRun = 0;
-		do {
-			List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
-			lastRun = result.size();
-			for (Iterator<ISegment> it = result.iterator(); it.hasNext();) {
-				ISegment segment = it.next();
-				if (!canConnect(aggregatedSegments, segment))
-					aggregatedSegments.add(new AggregatedSegment(segment));
-			}
+			AggregatedSegment newAggregatedSegment = new AggregatedSegment(segment);
+			if (!canConnect(aggregatedSegments, newAggregatedSegment))
+				aggregatedSegments.add(newAggregatedSegment);
+		}
 
-			result = new ArrayList<ISegment>(aggregatedSegments);
-
-		} while (result.size() > 1 && result.size() != lastRun);
-
-		return result;
+		return aggregateMore(aggregatedSegments);
 	}
 
-	private boolean canConnect(List<AggregatedSegment> connectableSegments, ISegment segment) {
+	private List<AggregatedSegment> aggregateMore(List<AggregatedSegment> segments) {
+
+		List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
+		int lastRun = 0;
+		do {
+
+			lastRun = segments.size();
+			aggregatedSegments = new ArrayList<AggregatedSegment>();
+			for (Iterator<AggregatedSegment> it = segments.iterator(); it.hasNext();) {
+				AggregatedSegment segment = it.next();
+
+				if (!canConnect(aggregatedSegments, segment))
+					aggregatedSegments.add(segment);
+			}
+
+			segments = aggregatedSegments;
+
+		} while (aggregatedSegments.size() > 1 && lastRun != aggregatedSegments.size());
+
+		return aggregatedSegments;
+	}
+
+	private boolean canConnect(List<AggregatedSegment> connectableSegments, AggregatedSegment segment) {
 		Collection<ConnectableNode> newSegmentStartNodes = segment.getStartNodes();
 		Collection<ConnectableNode> newSegmentEndNodes = segment.getEndNodes();
 

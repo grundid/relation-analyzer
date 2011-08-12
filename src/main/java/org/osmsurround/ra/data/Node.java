@@ -54,4 +54,9 @@ public class Node implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "NodeId: " + id;
+	}
+
 }

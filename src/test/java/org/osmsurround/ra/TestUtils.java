@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -12,10 +13,9 @@ import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 import org.osmsurround.ra.segment.FixedOrderWay;
-import org.osmsurround.ra.segment.FixedRoundaboutWay;
 import org.osmsurround.ra.segment.FlexibleOrderWay;
-import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
 import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.RoundaboutWay;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -34,24 +34,9 @@ public abstract class TestUtils {
 	private static final Map<Long, Node> NODES = new HashMap<Long, Node>();
 
 	static {
-		putNode(1, 0, 0);
-		putNode(2, 1, 0);
-		putNode(3, 1, 1);
-		putNode(4, 2, 2);
-		putNode(5, 3, 0);
-		putNode(6, 4, 0);
-
-		// Roundabout 1
-		putNode(10, 3, 3);
-		putNode(11, 2, 2);
-		putNode(12, 3, 1);
-		putNode(13, 4, 2);
-
-		// Roundabout 2
-		putNode(15, 8, 8);
-		putNode(16, 7, 7);
-		putNode(17, 8, 6);
-		putNode(18, 9, 7);
+		for (int x = 0; x < 20; x++) {
+			putNode(x, x, x);
+		}
 	}
 
 	private static void putNode(long id, float lon, float lat) {
@@ -92,12 +77,8 @@ public abstract class TestUtils {
 		return new FlexibleOrderWay(new Way(0, asNodes(nodeIds)));
 	}
 
-	public static FlexibleRoundaboutWay asFlexibleRoundaboutWay(long... nodeIds) {
-		return new FlexibleRoundaboutWay(new Way(0, asNodes(nodeIds)));
-	}
-
-	public static FixedRoundaboutWay asFixedRoundaboutWay(long... nodeIds) {
-		return new FixedRoundaboutWay(new Way(0, asNodes(nodeIds)), false);
+	public static RoundaboutWay asFlexibleRoundaboutWay(long... nodeIds) {
+		return new RoundaboutWay(new Way(0, asNodes(nodeIds)));
 	}
 
 	public static List<Node> asNodes(long... nodeIds) {
@@ -111,12 +92,22 @@ public abstract class TestUtils {
 		return NODES.get(Long.valueOf(id));
 	}
 
+	public static void assertContainsNode(Node expected, ConnectableNode connectableNode) {
+		assertTrue(connectableNode.contains(expected));
+	}
+
 	public static void assertContainsNode(Node expected, Collection<ConnectableNode> connectableNodes) {
 		boolean contains = false;
 		for (ConnectableNode connectableNode : connectableNodes) {
 			contains |= connectableNode.contains(expected);
 		}
 		assertTrue(contains);
+	}
+
+	public static void assertNodesInOrder(long[] expected, Collection<Node> actual) {
+		Iterator<Node> it = actual.iterator();
+		for (long id : expected)
+			assertEquals(TestUtils.getNode(id), it.next());
 	}
 
 }

@@ -11,7 +11,7 @@ import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.segment.FlexibleOrderWay;
-import org.osmsurround.ra.segment.FlexibleRoundaboutWay;
+import org.osmsurround.ra.segment.RoundaboutWay;
 import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
@@ -52,7 +52,7 @@ public class RoleServiceTest extends TestBase {
 		assertTrue(splittedRelations.containsKey(""));
 
 		assertEquals(931, splittedRelations.get("").size());
-		assertEquals(5, countInstances(FlexibleRoundaboutWay.class, splittedRelations.get("")));
+		assertEquals(5, countInstances(RoundaboutWay.class, splittedRelations.get("")));
 		assertEquals(926, countInstances(FlexibleOrderWay.class, splittedRelations.get("")));
 	}
 

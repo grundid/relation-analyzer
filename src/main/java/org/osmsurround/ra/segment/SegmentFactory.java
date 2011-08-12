@@ -16,33 +16,29 @@ public class SegmentFactory {
 	public ISegment createSegment(Member member) {
 		Way way = member.getWay();
 
-		boolean isRoundabout = roundaboutService.isRoundabout(way);
+		if (roundaboutService.isRoundabout(way))
+			return new RoundaboutWay(way);
 
 		if (CREATE_FLEXIBLE_ONLY)
-			return createFlexibleSegment(way, isRoundabout);
+			return createFlexibleSegment(way);
 
-		if ("".equals(member.getRole()))
-			return createFlexibleSegment(way, isRoundabout);
-		else if ("forward".equals(member.getRole()))
-			return createFixedSegment(way, isRoundabout, false);
-		else if ("backward".equals(member.getRole()))
-			return createFixedSegment(way, isRoundabout, true);
+		String memberRole = member.getRole();
+
+		if ("".equals(memberRole))
+			return createFlexibleSegment(way);
+		else if ("forward".equals(memberRole))
+			return createFixedSegment(way, false);
+		else if ("backward".equals(memberRole))
+			return createFixedSegment(way, true);
 
 		throw new RuntimeException("Unknown member role");
 	}
 
-	private ISegment createFlexibleSegment(Way way, boolean isRoundabout) {
-		if (isRoundabout)
-			return new FlexibleRoundaboutWay(way);
-		else
-			return new FlexibleOrderWay(way);
+	private ISegment createFlexibleSegment(Way way) {
+		return new FlexibleOrderWay(way);
 	}
 
-	private ISegment createFixedSegment(Way way, boolean isRoundabout, boolean reverse) {
-		if (isRoundabout)
-			return new FixedRoundaboutWay(way, reverse);
-		else
-			return new FixedOrderWay(way, reverse);
+	private ISegment createFixedSegment(Way way, boolean reverse) {
+		return new FixedOrderWay(way, reverse);
 	}
-
 }

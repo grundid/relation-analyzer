@@ -1,40 +1,74 @@
 package org.osmsurround.ra.segment;
 
+import static org.osmsurround.ra.TestUtils.*;
+
+import java.util.Collection;
+
 import org.junit.Before;
 import org.junit.Test;
-import org.osmsurround.ra.TestUtils;
+import org.osmsurround.ra.AnalyzerException;
+import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
-import org.osmsurround.ra.segment.FixedOrderWay;
 
 public class FixedOrderWayTest {
 
 	private FixedOrderWay fixedOrderWayNotReverse;
 	private FixedOrderWay fixedOrderWayReverse;
-	private Node nodeFirst;
-	private Node nodeLast;
+	private Node firstNode;
+	private Node lastNode;
 	private Way way;
 
 	@Before
 	public void setup() {
-		nodeFirst = TestUtils.getNode(1);
-		nodeLast = TestUtils.getNode(4);
-
-		way = new Way(0, TestUtils.asNodes(1, 2, 3, 4));
-
+		firstNode = getNode(1);
+		lastNode = getNode(4);
+		way = asWay(1, 2, 3, 4);
 		fixedOrderWayNotReverse = new FixedOrderWay(way, false);
 		fixedOrderWayReverse = new FixedOrderWay(way, true);
 	}
 
 	@Test
 	public void testGetStartNodes() throws Exception {
-		TestUtils.assertContainsNode(nodeFirst, fixedOrderWayNotReverse.getStartNodes());
-		TestUtils.assertContainsNode(nodeLast, fixedOrderWayReverse.getStartNodes());
+		assertContainsNode(firstNode, fixedOrderWayNotReverse.getStartNodes());
+		assertContainsNode(lastNode, fixedOrderWayReverse.getStartNodes());
 	}
 
 	@Test
 	public void testGetEndNodes() throws Exception {
-		TestUtils.assertContainsNode(nodeLast, fixedOrderWayNotReverse.getEndNodes());
-		TestUtils.assertContainsNode(nodeFirst, fixedOrderWayReverse.getEndNodes());
+		assertContainsNode(lastNode, fixedOrderWayNotReverse.getEndNodes());
+		assertContainsNode(firstNode, fixedOrderWayReverse.getEndNodes());
 	}
+
+	@Test
+	public void testGetNodesBetweenNotReverse() throws Exception {
+		Collection<Node> nodesBetweenNotReverse = fixedOrderWayNotReverse.getNodesBetween(
+				new ConnectableNode(firstNode), new ConnectableNode(lastNode));
+		assertNodesInOrder(new long[] { 1, 2, 3, 4 }, nodesBetweenNotReverse);
+	}
+
+	@Test
+	public void testGetNodesBetweenReverse() throws Exception {
+		Collection<Node> nodesBetweenReverse = fixedOrderWayReverse.getNodesBetween(new ConnectableNode(lastNode),
+				new ConnectableNode(firstNode));
+		assertNodesInOrder(new long[] { 4, 3, 2, 1 }, nodesBetweenReverse);
+	}
+
+	@Test(expected = AnalyzerException.class)
+	public void testGetNodesBetweenException() throws Exception {
+		fixedOrderWayNotReverse.getNodesBetween(new ConnectableNode(lastNode), new ConnectableNode(firstNode));
+	}
+
+	@Test
+	public void testGetNodesTillEnd() throws Exception {
+		assertNodesInOrder(new long[] { 1, 2, 3, 4 },
+				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(firstNode)));
+	}
+
+	@Test(expected = AnalyzerException.class)
+	public void testGetNodesTillEndException() throws Exception {
+		assertNodesInOrder(new long[] { 2, 3, 4 },
+				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(getNode(2))));
+	}
+
 }

@@ -20,8 +20,8 @@ public class IntersectionNode {
 		return node;
 	}
 
-	public void addEdge(Edge edge) {
-		edges.add(edge);
+	public void addEdge(Collection<Node> nodes, IntersectionNode endNode) {
+		edges.add(new Edge(this, nodes, endNode));
 	}
 
 	public Iterator<Edge> getEdgesIterator() {

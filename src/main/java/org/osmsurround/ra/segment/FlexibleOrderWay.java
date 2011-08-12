@@ -1,8 +1,12 @@
 package org.osmsurround.ra.segment;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.ConnectableNode;
+import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 
 public class FlexibleOrderWay extends FixedOrderWay {
@@ -12,17 +16,29 @@ public class FlexibleOrderWay extends FixedOrderWay {
 	}
 
 	@Override
-	public Collection<ConnectableNode> getStartNodes() {
+	public ConnectableNode getStartNodes() {
 		return getStartAndEndNodes();
 	}
 
 	@Override
-	public Collection<ConnectableNode> getEndNodes() {
+	public ConnectableNode getEndNodes() {
 		return getStartAndEndNodes();
 	}
 
-	protected Collection<ConnectableNode> getStartAndEndNodes() {
-		return asCollection(getNodeAtIndexAsConnectableNode(way.getNodes().size() - 1),
-				getNodeAtIndexAsConnectableNode(0));
+	@Override
+	public List<Node> getNodesBetween(ConnectableNode startNode, ConnectableNode endNode) {
+		List<Node> result = new ArrayList<Node>(getWayNodes());
+		if (startNode.contains(getSingleStartNode()) && endNode.contains(getSingleEndNode())) {
+			return result;
+		}
+		if (startNode.contains(getSingleEndNode()) && endNode.contains(getSingleStartNode())) {
+			Collections.reverse(result);
+			return result;
+		}
+		throw new AnalyzerException("Cannot find nodes between");
+	}
+
+	protected ConnectableNode getStartAndEndNodes() {
+		return asCollection(getNodeAtIndex(getWayNodes().size() - 1), getNodeAtIndex(0));
 	}
 }
