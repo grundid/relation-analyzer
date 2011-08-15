@@ -37,7 +37,7 @@ public class RoundaboutWay extends FlexibleOrderWay {
 		}
 	}
 
-	private int findNodeIndex(ConnectableNode connectableNode, List<Node> nodes) {
+	private static int findNodeIndex(ConnectableNode connectableNode, List<Node> nodes) {
 		for (int x = 0; x < nodes.size(); x++) {
 			if (connectableNode.contains(nodes.get(x))) {
 				return x;
@@ -57,5 +57,12 @@ public class RoundaboutWay extends FlexibleOrderWay {
 		if (startNodeIndex != 0)
 			result.addAll(nodes.subList(1, startNodeIndex + 1));
 		return result;
+	}
+
+	@Override
+	public ConnectableNode getOppositeNode(ConnectableNode startNode) {
+		List<Node> nodes = getWayNodes();
+		int nodeIndex = findNodeIndex(startNode, nodes);
+		return new ConnectableNode(nodes.get(nodeIndex));
 	}
 }

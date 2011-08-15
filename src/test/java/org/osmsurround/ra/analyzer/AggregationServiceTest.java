@@ -57,7 +57,7 @@ public class AggregationServiceTest extends TestBase {
 
 	@Test
 	public void testAggregate12320() throws Exception {
-		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_12320);
+		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_12320_NECKARTAL_WEG);
 		List<AggregatedSegment> list = aggregationService.aggregate(relation.get(""));
 		assertEquals(1, list.size());
 	}
@@ -74,7 +74,7 @@ public class AggregationServiceTest extends TestBase {
 
 	@Test
 	public void testAggregate959757() throws Exception {
-		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_959757);
+		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_959757_LINE_10);
 		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
 			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
 			assertEquals(1, list.size());

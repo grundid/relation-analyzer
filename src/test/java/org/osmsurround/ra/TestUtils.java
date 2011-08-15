@@ -27,9 +27,9 @@ import org.springframework.web.client.RestTemplate;
 
 public abstract class TestUtils {
 
-	public static final long RELATION_12320 = 12320;
+	public static final long RELATION_12320_NECKARTAL_WEG = 12320;
 	public static final long RELATION_37415 = 37415;
-	public static final long RELATION_959757 = 959757;
+	public static final long RELATION_959757_LINE_10 = 959757;
 
 	private static final Map<Long, Node> NODES = new HashMap<Long, Node>();
 
@@ -110,4 +110,9 @@ public abstract class TestUtils {
 			assertEquals(TestUtils.getNode(id), it.next());
 	}
 
+	public static void assertOppositeNode(ISegment segment, long startNodeId, long... expectedOppositeNodeIds) {
+		ConnectableNode oppositeNode = segment.getOppositeNode(new ConnectableNode(getNode(startNodeId)));
+		for (Node node : asNodes(expectedOppositeNodeIds))
+			assertTrue(oppositeNode.contains(node));
+	}
 }

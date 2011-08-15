@@ -13,6 +13,7 @@ public class IntersectionNodeWebCreator {
 
 	private Map<Node, IntersectionNode> nodeMap = new HashMap<Node, IntersectionNode>();
 	private List<ISegment> segments;
+	private List<IntersectionNode> leaves = new ArrayList<IntersectionNode>();
 
 	public IntersectionNodeWebCreator(List<ISegment> segments) {
 		this.segments = segments;
@@ -43,42 +44,39 @@ public class IntersectionNodeWebCreator {
 		return intersectionNode;
 	}
 
-	private List<IntersectionNode> addEdgesToNewNodes(List<IntersectionNode> oldIntersectionNodes) {
+	private List<IntersectionNode> addEdgesToNewNodes(List<IntersectionNode> intersectionNodesToConnect) {
 
 		List<IntersectionNode> newIntersectionNodes = new ArrayList<IntersectionNode>();
 
-		for (IntersectionNode intersectionNode : oldIntersectionNodes) {
-			ConnectableNode connectableNode = new ConnectableNode(intersectionNode.getNode());
+		for (IntersectionNode intersectionNode : intersectionNodesToConnect) {
+			ConnectableNode nodeToConnect = new ConnectableNode(intersectionNode.getNode());
+
 			for (ISegment segment : segments) {
-				if (segment.getStartNodes().isConnectable(connectableNode)) {
-					List<ISegment> connectionSegments = findConnectingSegments(segment.getEndNodes());
+				if (segment.getStartNodes().isConnectable(nodeToConnect)) {
+					List<ISegment> connectionSegments = findConnectingSegments(segment.getOppositeNode(nodeToConnect));
 
 					if (connectionSegments.isEmpty()) {
-						List<Node> nodesTillEnd = segment.getNodesTillEnd(connectableNode);
-						addEdge(newIntersectionNodes, intersectionNode, nodesTillEnd);
+						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
 					}
 					else {
 						for (ISegment connectedSegment : connectionSegments) {
-							if (segment.getEndNodes().isConnectable(connectedSegment.getStartNodes())) {
-								List<Node> nodesBetween = segment.getNodesBetween(connectableNode,
-										connectedSegment.getStartNodes()); //  segment.getEndNodes() sollten eine node bei conneectedSegment.getStartNodes haben
-								addEdge(newIntersectionNodes, intersectionNode, nodesBetween);
-							}
+							List<Node> nodesBetween = segment.getNodesBetween(nodeToConnect,
+									connectedSegment.getStartNodes());
+							addEdge(newIntersectionNodes, intersectionNode, nodesBetween);
 						}
 					}
 				}
-				else if (segment.getEndNodes().isConnectable(connectableNode)) {
+				else if (segment.getEndNodes().isConnectable(nodeToConnect)) {
 
-					List<ISegment> connectionSegments = findConnectingSegments(segment.getStartNodes());
+					List<ISegment> connectionSegments = findConnectingSegments(segment.getOppositeNode(nodeToConnect));
 
 					if (connectionSegments.isEmpty()) {
-						List<Node> nodesTillEnd = segment.getNodesTillEnd(connectableNode);
-						addEdge(newIntersectionNodes, intersectionNode, nodesTillEnd);
+						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
 					}
 					else {
 						for (ISegment connectedSegment : connectionSegments) {
 							List<Node> nodesBetween = segment.getNodesBetween(connectedSegment.getStartNodes(),
-									connectableNode);
+									nodeToConnect);
 							addEdge(newIntersectionNodes, intersectionNode, nodesBetween);
 						}
 					}
@@ -86,6 +84,12 @@ public class IntersectionNodeWebCreator {
 			}
 		}
 		return newIntersectionNodes;
+	}
+
+	private void addLeaf(List<IntersectionNode> newIntersectionNodes, IntersectionNode intersectionNode,
+			ConnectableNode nodeToConnect, ISegment segment) {
+		List<Node> nodesTillEnd = segment.getNodesTillEnd(nodeToConnect);
+		addEdge(newIntersectionNodes, intersectionNode, nodesTillEnd);
 	}
 
 	private void addEdge(List<IntersectionNode> newIntersectionNodes, IntersectionNode intersectionNode,

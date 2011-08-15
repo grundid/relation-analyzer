@@ -42,4 +42,11 @@ public class FlexibleOrderWayTest {
 		assertNodesInOrder(new long[] { 1, 2, 3, 4 }, flexibleOrderWay.getNodesTillEnd(new ConnectableNode(firstNode)));
 		assertNodesInOrder(new long[] { 4, 3, 2, 1 }, flexibleOrderWay.getNodesTillEnd(new ConnectableNode(lastNode)));
 	}
+
+	@Test
+	public void testGetOppositeNode() throws Exception {
+		assertOppositeNode(flexibleOrderWay, 1, 4);
+		assertOppositeNode(flexibleOrderWay, 4, 1);
+	}
+
 }

@@ -71,4 +71,12 @@ public class FixedOrderWayTest {
 				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(getNode(2))));
 	}
 
+	@Test
+	public void testGetOppositeNode() throws Exception {
+		assertOppositeNode(fixedOrderWayNotReverse, 1, 4);
+		assertOppositeNode(fixedOrderWayNotReverse, 4, 1);
+		assertOppositeNode(fixedOrderWayReverse, 4, 1);
+		assertOppositeNode(fixedOrderWayReverse, 1, 4);
+	}
+
 }

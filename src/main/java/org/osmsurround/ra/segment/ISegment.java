@@ -16,6 +16,8 @@ public interface ISegment {
 
 	ConnectableNode getEndNodes();
 
+	ConnectableNode getOppositeNode(ConnectableNode startNode);
+
 	//	boolean containsInStartNode(ConnectableNode connectableNode);
 
 	//	boolean containsInEndNode(ConnectableNode connectableNode);

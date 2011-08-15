@@ -82,4 +82,14 @@ public class FixedOrderWay implements ISegment {
 		return getNodesBetween(startNode, getEndNodes());
 	}
 
+	@Override
+	public ConnectableNode getOppositeNode(ConnectableNode startNode) {
+		if (startNode.contains(getSingleStartNode()))
+			return new ConnectableNode(getSingleEndNode());
+		else if (startNode.contains(getSingleEndNode()))
+			return new ConnectableNode(getSingleStartNode());
+
+		throw new AnalyzerException("Given node not a start or end node");
+	}
+
 }
