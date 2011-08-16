@@ -2,7 +2,9 @@ package org.osmsurround.ra.data;
 
 import java.io.Serializable;
 
-public class Node implements Serializable {
+import org.osmsurround.ra.export.LonLat;
+
+public class Node implements Serializable, LonLat {
 
 	private long id;
 	private float lat;
@@ -18,10 +20,12 @@ public class Node implements Serializable {
 		return id;
 	}
 
+	@Override
 	public float getLat() {
 		return lat;
 	}
 
+	@Override
 	public float getLon() {
 		return lon;
 	}

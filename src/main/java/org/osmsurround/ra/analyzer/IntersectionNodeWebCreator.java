@@ -53,7 +53,8 @@ public class IntersectionNodeWebCreator {
 
 			for (ISegment segment : segments) {
 				if (segment.getStartNodes().isConnectable(nodeToConnect)) {
-					List<ISegment> connectionSegments = findConnectingSegments(segment.getOppositeNode(nodeToConnect));
+					List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
+							segment.getOppositeNode(nodeToConnect), nodeToConnect);
 
 					if (connectionSegments.isEmpty()) {
 						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
@@ -68,7 +69,8 @@ public class IntersectionNodeWebCreator {
 				}
 				else if (segment.getEndNodes().isConnectable(nodeToConnect)) {
 
-					List<ISegment> connectionSegments = findConnectingSegments(segment.getOppositeNode(nodeToConnect));
+					List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
+							segment.getOppositeNode(nodeToConnect), nodeToConnect);
 
 					if (connectionSegments.isEmpty()) {
 						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
@@ -98,18 +100,21 @@ public class IntersectionNodeWebCreator {
 		IntersectionNode endNode = null;
 		if (nodeMap.containsKey(lastNode)) {
 			endNode = nodeMap.get(lastNode);
+			leaves.remove(endNode);
 		}
 		else {
 			endNode = createIntersectionNode(lastNode);
 			newIntersectionNodes.add(endNode);
+			leaves.add(endNode);
 		}
 		intersectionNode.addEdge(nodesBetween, endNode);
 	}
 
-	private List<ISegment> findConnectingSegments(ConnectableNode endNode) {
+	private List<ISegment> findConnectingSegmentsButNotMe(ConnectableNode endNode, ConnectableNode nodeToIgnore) {
 		List<ISegment> result = new ArrayList<ISegment>();
 		for (ISegment segment : segments) {
-			if (segment.getStartNodes().isConnectable(endNode))
+
+			if (segment.getStartNodes().isConnectable(endNode) && !segment.getEndNodes().isConnectable(nodeToIgnore))
 				result.add(segment);
 		}
 
@@ -126,4 +131,15 @@ public class IntersectionNodeWebCreator {
 		throw new AnalyzerException("Cannot determine a start node");
 	}
 
+	public Map<Node, IntersectionNode> getNodeMap() {
+		return nodeMap;
+	}
+
+	public List<IntersectionNode> getLeaves() {
+		return leaves;
+	}
+
+	public int getNodesAmount() {
+		return nodeMap.size();
+	}
 }
