@@ -128,7 +128,6 @@
 								<include>osm-0.6.xsd</include>
 								<include>gpx-1.1.xsd</include>
 							</schemaIncludes>
-							<generatePackage>org.osm.schema</generatePackage>
 						</configuration>
 					</execution>
 				</executions>

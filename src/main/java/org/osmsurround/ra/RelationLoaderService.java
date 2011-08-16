@@ -2,7 +2,7 @@ package org.osmsurround.ra;
 
 import java.util.List;
 
-import org.osm.schema.OsmRoot;
+import org.openstreetmap.api._0._6.OsmRoot;
 import org.osmsurround.ra.converter.OsmSchemaConverterService;
 import org.osmsurround.ra.data.Relation;
 import org.springframework.beans.factory.annotation.Autowired;

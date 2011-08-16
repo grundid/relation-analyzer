@@ -7,12 +7,13 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.osm.schema.GpxType;
-import org.osm.schema.ObjectFactory;
-import org.osm.schema.TrkType;
-import org.osm.schema.TrksegType;
-import org.osm.schema.WptType;
 import org.springframework.stereotype.Service;
+
+import com.topografix.gpx._1._1.GpxType;
+import com.topografix.gpx._1._1.ObjectFactory;
+import com.topografix.gpx._1._1.TrkType;
+import com.topografix.gpx._1._1.TrksegType;
+import com.topografix.gpx._1._1.WptType;
 
 @Service
 public class GpxExport {
