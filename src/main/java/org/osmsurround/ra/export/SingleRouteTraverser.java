@@ -6,17 +6,18 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
+import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.Edge;
 import org.osmsurround.ra.analyzer.IntersectionNode;
 import org.osmsurround.ra.data.Node;
 
-public class Traverser {
+public class SingleRouteTraverser {
 
 	private List<Node> nodes = new ArrayList<Node>();
 	private Collection<IntersectionNode> visitedNodes = new HashSet<IntersectionNode>();
 	private IntersectionNode endNode;
 
-	public Traverser(IntersectionNode startNode, IntersectionNode endNode) {
+	public SingleRouteTraverser(IntersectionNode startNode, IntersectionNode endNode) {
 		this.endNode = endNode;
 		traverseNodes(startNode);
 	}
@@ -41,7 +42,7 @@ public class Traverser {
 					nextNode = edge.getNextNode(startNode);
 				}
 				else
-					return;
+					throw new AnalyzerException("No way to go. All nodes visited before.");
 			}
 
 			nodes.addAll(edge.getNodesAfterNode(startNode.getNode()));

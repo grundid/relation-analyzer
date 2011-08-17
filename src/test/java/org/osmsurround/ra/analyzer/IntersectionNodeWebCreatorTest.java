@@ -128,7 +128,7 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	public void testRelation12320() throws Exception {
 
 		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
-				.loadSplittedAndAggregatedRelation(RELATION_12320_NECKARTAL_WEG);
+				.loadSplittedAndAggregatedRelation(RELATION_959757_LINE_10);
 		List<AggregatedSegment> list = aggregatedRelation.get("");
 
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
@@ -137,15 +137,9 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 
 		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
 
-		assertEquals(2, leaves.size());
+		assertEquals(4, leaves.size());
 
-		for (IntersectionNode intersectionNode : leaves) {
-			System.out.println(intersectionNode.getNode());
-		}
-
-		Iterator<IntersectionNode> it = leaves.iterator();
-
-		helperService.exportGpx(it.next(), it.next());
+		helperService.exportGpx(leaves);
 
 	}
 }

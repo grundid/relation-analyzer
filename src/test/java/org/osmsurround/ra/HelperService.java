@@ -2,6 +2,7 @@ package org.osmsurround.ra;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -90,6 +91,30 @@ public class HelperService {
 
 		List<Section> sectionList = new ArrayList<Section>();
 		sectionList.add(new SectionContainer("test", traverse));
+
+		exportSimple(sectionList);
+
+	}
+
+	public void exportGpx(Collection<IntersectionNode> leaves) {
+
+		List<Section> sectionList = new ArrayList<Section>();
+
+		for (IntersectionNode startNode : leaves) {
+			for (IntersectionNode endNode : leaves) {
+				if (startNode != endNode) {
+					try {
+						List<Node> traverse = traverseService.traverse(startNode, endNode);
+
+						sectionList.add(new SectionContainer("Route - " + startNode.getNode() + " - "
+								+ endNode.getNode(), traverse));
+					}
+					catch (AnalyzerException e) {
+						System.out.println("cannot create route - " + startNode.getNode() + " - " + endNode.getNode());
+					}
+				}
+			}
+		}
 
 		exportSimple(sectionList);
 

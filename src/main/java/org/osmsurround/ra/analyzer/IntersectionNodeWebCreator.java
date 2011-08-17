@@ -12,6 +12,17 @@ import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.segment.ISegment;
 
+/**
+ * IntersectionNodeWebCreator creates a web of nodes and returns the leaves of this web. The leaves are nodes with only
+ * one edge. They are basically the entry points to the web.
+ * 
+ * If the web is some kind of a ring, where all nodes are connected with at least two edges, the web creator will return
+ * two leaves which are the same node. They will be the entry point to the ring.
+ * 
+ * It is for the traverser to generate a useful route through the web.
+ * 
+ * 
+ */
 public class IntersectionNodeWebCreator {
 
 	private Collection<IntersectionNode> leaves = new ConcurrentLinkedQueue<IntersectionNode>();
@@ -37,7 +48,7 @@ public class IntersectionNodeWebCreator {
 				List<List<Node>> edgesForNode = findEdgesForNode(intersectionNode);
 
 				if (!edgesForNode.isEmpty()) {
-					it.remove(); // not a true leaf
+					it.remove(); // not a true leaf since it has more than one edge
 
 					for (List<Node> edgeNodes : edgesForNode) {
 

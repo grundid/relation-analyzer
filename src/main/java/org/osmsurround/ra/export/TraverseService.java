@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class TraverseService {
 
 	public List<Node> traverse(IntersectionNode startNode, IntersectionNode endNode) {
-		Traverser traverser = new Traverser(startNode, endNode);
+		SingleRouteTraverser traverser = new SingleRouteTraverser(startNode, endNode);
 		return traverser.getNodes();
 	}
 }
