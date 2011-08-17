@@ -25,4 +25,17 @@ public interface ISegment {
 	List<Node> getNodesBetween(ConnectableNode startNode, ConnectableNode endNode);
 
 	List<Node> getNodesTillEnd(ConnectableNode startNode);
+
+	/**
+	 * Returns true if the given node can connect to this segment's start or end nodes.
+	 * 
+	 */
+	boolean canConnect(ConnectableNode node);
+
+	/**
+	 * The purpose of this method is to find out if we can go forward with this segment starting with the given node.
+	 * The nodeToIgnore is a backward node that should not be connectable.
+	 * 
+	 */
+	boolean canConnectForwardOnly(ConnectableNode startNode, ConnectableNode endNodeToIgnore);
 }

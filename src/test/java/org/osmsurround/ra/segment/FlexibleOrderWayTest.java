@@ -1,5 +1,6 @@
 package org.osmsurround.ra.segment;
 
+import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
 import java.util.Collection;
@@ -49,4 +50,11 @@ public class FlexibleOrderWayTest {
 		assertOppositeNode(flexibleOrderWay, 4, 1);
 	}
 
+	@Test
+	public void testCanConnect() throws Exception {
+		assertTrue(flexibleOrderWay.canConnect(new ConnectableNode(firstNode)));
+		assertTrue(flexibleOrderWay.canConnect(new ConnectableNode(lastNode)));
+		assertFalse(flexibleOrderWay.canConnect(new ConnectableNode(getNode(2))));
+		assertFalse(flexibleOrderWay.canConnect(new ConnectableNode(getNode(3))));
+	}
 }

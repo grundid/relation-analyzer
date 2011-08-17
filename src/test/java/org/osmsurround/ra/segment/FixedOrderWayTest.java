@@ -1,5 +1,6 @@
 package org.osmsurround.ra.segment;
 
+import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
 import java.util.Collection;
@@ -77,6 +78,33 @@ public class FixedOrderWayTest {
 		assertOppositeNode(fixedOrderWayNotReverse, 4, 1);
 		assertOppositeNode(fixedOrderWayReverse, 4, 1);
 		assertOppositeNode(fixedOrderWayReverse, 1, 4);
+	}
+
+	@Test
+	public void testCanConnect() throws Exception {
+		assertTrue(fixedOrderWayNotReverse.canConnect(new ConnectableNode(firstNode)));
+		assertTrue(fixedOrderWayNotReverse.canConnect(new ConnectableNode(lastNode)));
+
+		assertTrue(fixedOrderWayReverse.canConnect(new ConnectableNode(firstNode)));
+		assertTrue(fixedOrderWayReverse.canConnect(new ConnectableNode(lastNode)));
+	}
+
+	@Test
+	public void testCanConnectForwardOnly() throws Exception {
+		assertTrue(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
+				getNode(10))));
+		assertFalse(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
+				lastNode)));
+		assertFalse(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
+				firstNode)));
+
+		assertTrue(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
+				getNode(10))));
+		assertFalse(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
+				firstNode)));
+		assertFalse(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
+				lastNode)));
+
 	}
 
 }

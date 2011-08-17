@@ -57,7 +57,7 @@ public class FixedOrderWay implements ISegment {
 			Collections.reverse(result);
 			return result;
 		}
-		throw new AnalyzerException("Cannot find nodes between");
+		throw new AnalyzerException("Cannot find nodes between in way " + way.getId());
 	}
 
 	protected ConnectableNode asCollection(Node... nodes) {
@@ -86,6 +86,16 @@ public class FixedOrderWay implements ISegment {
 			return new ConnectableNode(getSingleStartNode());
 
 		throw new AnalyzerException("Given node not a start or end node");
+	}
+
+	@Override
+	public boolean canConnect(ConnectableNode node) {
+		return node.contains(getSingleStartNode()) || node.contains(getSingleEndNode());
+	}
+
+	@Override
+	public boolean canConnectForwardOnly(ConnectableNode node, ConnectableNode endNodeToIgnore) {
+		return getStartNodes().isConnectable(node) && !getEndNodes().isConnectable(endNodeToIgnore);
 	}
 
 }

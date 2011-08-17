@@ -19,6 +19,11 @@ public class SegmentsBuilder {
 		return this;
 	}
 
+	public SegmentsBuilder appendRoundabout(long... nodeIds) {
+		segments.add(TestUtils.asRoundaboutWay(nodeIds));
+		return this;
+	}
+
 	public static SegmentsBuilder create() {
 		return new SegmentsBuilder();
 	}

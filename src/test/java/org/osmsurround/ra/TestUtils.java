@@ -79,7 +79,7 @@ public abstract class TestUtils {
 		return new FlexibleOrderWay(new Way(0, asNodes(nodeIds)));
 	}
 
-	public static RoundaboutWay asFlexibleRoundaboutWay(long... nodeIds) {
+	public static RoundaboutWay asRoundaboutWay(long... nodeIds) {
 		return new RoundaboutWay(new Way(0, asNodes(nodeIds)));
 	}
 
@@ -116,6 +116,8 @@ public abstract class TestUtils {
 		ConnectableNode oppositeNode = segment.getOppositeNode(new ConnectableNode(getNode(startNodeId)));
 		for (Node node : asNodes(expectedOppositeNodeIds))
 			assertTrue(oppositeNode.contains(node));
+
+		assertFalse(oppositeNode.contains(getNode(startNodeId)));
 	}
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(SegmentsBuilder segmentsBuilder) {

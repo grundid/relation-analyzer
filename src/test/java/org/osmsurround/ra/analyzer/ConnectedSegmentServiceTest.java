@@ -17,12 +17,5 @@ public class ConnectedSegmentServiceTest extends TestBase {
 	public void testConnectEmpty() throws Exception {
 		connectedSegmentService.connect(Collections.EMPTY_LIST);
 	}
-	//
-	//	@Test
-	//	public void testConnectSingle() throws Exception {
-	//		List<ISegment> segments = TestUtils.asSegments(TestUtils.asNodes(1, 2));
-	//		IntersectionNode connectedSegment = connectedSegmentService.connect(segments);
-	//		assertNotNull(connectedSegment);
-	//
-	//	}
+
 }

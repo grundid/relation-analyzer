@@ -94,18 +94,39 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	@Test
 	public void testCreateWebStarFlexible() throws Exception {
 
-		List<ISegment> segments = new ArrayList<ISegment>();
-		segments.add(asFlexibleOrderWay(1, 2, 3, 4));
-		segments.add(asFlexibleOrderWay(4, 5, 6, 7));
-		segments.add(asFlexibleOrderWay(4, 8, 9, 10));
-
-		Collection<IntersectionNode> leaves = executeAndGetLeaves(segments);
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 4)
+				.appendFlexible(4, 5).appendFlexible(4, 6));
 
 		assertEquals(3, leaves.size());
 
-		assertTrue(leaves.contains(new IntersectionNode(getNode(7))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(5))));
 		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
-		assertTrue(leaves.contains(new IntersectionNode(getNode(10))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(6))));
+	}
+
+	@Test
+	public void testCreateWebDoubleStarFlexible() throws Exception {
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 2)
+				.appendFlexible(3, 2).appendFlexible(2, 4).appendFlexible(5, 4));
+
+		assertEquals(3, leaves.size());
+
+		assertTrue(leaves.contains(new IntersectionNode(getNode(5))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(3))));
+	}
+
+	@Test
+	public void testCreateWebRoundabout() throws Exception {
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(5, 4)
+				.appendRoundabout(10, 5, 11, 6, 10).appendFlexible(6, 7));
+
+		assertEquals(2, leaves.size());
+
+		assertTrue(leaves.contains(new IntersectionNode(getNode(4))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(7))));
 	}
 
 	@Test
@@ -128,6 +149,25 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	public void testRelation12320() throws Exception {
 
 		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
+				.loadSplittedAndAggregatedRelation(RELATION_12320_NECKARTAL_WEG);
+		List<AggregatedSegment> list = aggregatedRelation.get("");
+
+		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
+				.getSegments());
+		intersectionNodeWebCreator.createWeb();
+
+		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
+
+		assertEquals(2, leaves.size());
+
+		helperService.exportGpx(leaves);
+
+	}
+
+	@Test
+	public void testRelation959757() throws Exception {
+
+		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
 				.loadSplittedAndAggregatedRelation(RELATION_959757_LINE_10);
 		List<AggregatedSegment> list = aggregatedRelation.get("");
 
@@ -137,7 +177,7 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 
 		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
 
-		assertEquals(4, leaves.size());
+		assertEquals(3, leaves.size());
 
 		helperService.exportGpx(leaves);
 

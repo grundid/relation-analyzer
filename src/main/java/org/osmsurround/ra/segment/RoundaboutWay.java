@@ -1,6 +1,7 @@
 package org.osmsurround.ra.segment;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.osmsurround.ra.AnalyzerException;
@@ -61,8 +62,39 @@ public class RoundaboutWay extends FlexibleOrderWay {
 
 	@Override
 	public ConnectableNode getOppositeNode(ConnectableNode startNode) {
-		List<Node> nodes = getWayNodes();
+		List<Node> nodes = new ArrayList<Node>(getWayNodes());
 		int nodeIndex = findNodeIndex(startNode, nodes);
-		return new ConnectableNode(nodes.get(nodeIndex));
+
+		if (nodeIndex == 0)
+			nodes.remove(nodes.size() - 1); // first and last node are the same
+
+		nodes.remove(nodeIndex);
+		return new ConnectableNode(nodes);
+	}
+
+	@Override
+	public boolean canConnect(ConnectableNode node) {
+		List<Node> nodes = getWayNodes();
+		for (Iterator<Node> it = node.getNodesIterator(); it.hasNext();) {
+			Node externalNode = it.next();
+			if (nodes.contains(externalNode))
+				return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean canConnectForwardOnly(ConnectableNode node, ConnectableNode endNodeToIgnore) {
+		if (node.isConnectable(endNodeToIgnore))
+			return false;
+
+		List<Node> nodes = getWayNodes();
+		int matchCount = 0;
+		for (Iterator<Node> it = node.getNodesIterator(); it.hasNext();) {
+			Node externalNode = it.next();
+			if (nodes.contains(externalNode))
+				matchCount++;
+		}
+		return matchCount == 1;
 	}
 }

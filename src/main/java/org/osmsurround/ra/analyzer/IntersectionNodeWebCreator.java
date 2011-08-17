@@ -13,14 +13,31 @@ import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.segment.ISegment;
 
 /**
+ * <p>
  * IntersectionNodeWebCreator creates a web of nodes and returns the leaves of this web. The leaves are nodes with only
  * one edge. They are basically the entry points to the web.
+ * </p>
  * 
- * If the web is some kind of a ring, where all nodes are connected with at least two edges, the web creator will return
- * two leaves which are the same node. They will be the entry point to the ring.
+ * <p>
+ * The edges of the web contain only the nodes that are needed to connect the two nodes of the edge. This has only a
+ * meaning if one deals with a roundabout. The edge will only contain the nodes between the entry and exit point of the
+ * roundabout.
+ * </p>
  * 
- * It is for the traverser to generate a useful route through the web.
+ * <p>
+ * If the web is some kind of a interconnected ring, where all nodes are connected with at least two edges, the web
+ * creator will return two leaves which are the same node. They will be the entry point to the ring.
+ * </p>
  * 
+ * <p>
+ * It is for the traverser to generate a useful route through the web. Returning the leaves gives the traverser a chance
+ * to traverse from A to B.
+ * </p>
+ * 
+ * <p>
+ * The analyzer uses the amount of leaves to decide if the relation is OK. For example for a route relation two leaves
+ * are expected.
+ * </p>
  * 
  */
 public class IntersectionNodeWebCreator {
@@ -71,8 +88,7 @@ public class IntersectionNodeWebCreator {
 
 		for (Iterator<ISegment> it = segments.iterator(); it.hasNext();) {
 			ISegment segment = it.next();
-			if (segment.getStartNodes().isConnectable(nodeToConnect)
-					|| segment.getEndNodes().isConnectable(nodeToConnect)) {
+			if (segment.canConnect(nodeToConnect)) {
 
 				List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
 						segment.getOppositeNode(nodeToConnect), nodeToConnect);
@@ -99,11 +115,9 @@ public class IntersectionNodeWebCreator {
 	private List<ISegment> findConnectingSegmentsButNotMe(ConnectableNode endNode, ConnectableNode nodeToIgnore) {
 		List<ISegment> result = new ArrayList<ISegment>();
 		for (ISegment segment : segments) {
-
-			if (segment.getStartNodes().isConnectable(endNode) && !segment.getEndNodes().isConnectable(nodeToIgnore))
+			if (segment.canConnectForwardOnly(endNode, nodeToIgnore))
 				result.add(segment);
 		}
-
 		return result;
 	}
 

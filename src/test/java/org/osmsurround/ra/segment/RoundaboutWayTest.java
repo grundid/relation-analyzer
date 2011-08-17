@@ -16,7 +16,7 @@ public class RoundaboutWayTest {
 
 	@Before
 	public void setup() {
-		roundaboutWay = asFlexibleRoundaboutWay(1, 2, 3, 4, 5, 1);
+		roundaboutWay = asRoundaboutWay(1, 2, 3, 4, 5, 1);
 	}
 
 	@Test
@@ -66,8 +66,31 @@ public class RoundaboutWayTest {
 
 	@Test
 	public void testGetOppositeNode() throws Exception {
-		for (int x = 1; x < 6; x++)
-			assertOppositeNode(roundaboutWay, x, x);
+		assertOppositeNode(roundaboutWay, 1, 2, 3, 4, 5);
+		assertOppositeNode(roundaboutWay, 2, 1, 3, 4, 5);
+		assertOppositeNode(roundaboutWay, 3, 2);
+		assertOppositeNode(roundaboutWay, 4, 3);
+		assertOppositeNode(roundaboutWay, 5, 4);
 	}
 
+	@Test
+	public void testCanConnect() throws Exception {
+		for (int x = 1; x < 6; x++)
+			assertTrue(roundaboutWay.canConnect(new ConnectableNode(getNode(x))));
+	}
+
+	@Test
+	public void testCanConnectForwardOnly() throws Exception {
+		assertTrue(roundaboutWay
+				.canConnectForwardOnly(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(2))));
+		assertTrue(roundaboutWay
+				.canConnectForwardOnly(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(5))));
+		assertTrue(roundaboutWay
+				.canConnectForwardOnly(new ConnectableNode(getNode(5)), new ConnectableNode(getNode(1))));
+		assertFalse(roundaboutWay.canConnectForwardOnly(new ConnectableNode(getNode(1)),
+				new ConnectableNode(getNode(1))));
+
+		assertFalse(roundaboutWay.canConnectForwardOnly(new ConnectableNode(getNode(7)),
+				new ConnectableNode(getNode(1))));
+	}
 }
