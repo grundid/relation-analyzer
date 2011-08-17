@@ -1,19 +1,18 @@
 package org.osmsurround.ra.analyzer;
 
 import static org.junit.Assert.*;
+import static org.osmsurround.ra.TestUtils.*;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.junit.Test;
 import org.osmsurround.ra.HelperService;
+import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
-import org.osmsurround.ra.TestUtils;
-import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,90 +22,130 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	private HelperService helperService;
 
 	@Test
-	public void testCreateWebStarFixed() throws Exception {
+	public void testCreateWebSimple() throws Exception {
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 2, 3, 4));
+
+		assertEquals(2, leaves.size());
+
+		assertTrue(leaves.contains(new IntersectionNode(getNode(4))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
+	}
+
+	@Test
+	public void testCreateWebTwoWay() throws Exception {
 
 		List<ISegment> segments = new ArrayList<ISegment>();
-		segments.add(TestUtils.asFlexibleOrderWay(1, 2, 3, 4));
-		segments.add(TestUtils.asFlexibleOrderWay(4, 5, 6, 7));
-		segments.add(TestUtils.asFlexibleOrderWay(4, 8, 9, 10));
+		segments.add(asFlexibleOrderWay(1, 2, 3, 4));
+		segments.add(asFlexibleOrderWay(4, 5, 6, 7));
 
-		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
-		IntersectionNode intersectionNode = intersectionNodeWebCreator.createWebStartingWithNode(TestUtils.getNode(4));
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(segments);
 
-		assertEquals(3, countEdges(intersectionNode));
+		assertEquals(2, leaves.size());
+
+		assertTrue(leaves.contains(new IntersectionNode(getNode(7))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
+	}
+
+	@Test
+	public void testCreateWebEdgeOrder() throws Exception {
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)
+				.appendFlexible(4, 3).appendFlexible(3, 2).appendFlexible(2, 1));
+
+		assertEquals(2, leaves.size());
+		Iterator<IntersectionNode> it = leaves.iterator();
+
+		IntersectionNode node1 = it.next();
+		IntersectionNode node2 = it.next();
+
+		assertEquals(getNode(5), node1.getNode());
+		assertEquals(getNode(1), node2.getNode());
+
+		Edge edge1 = node1.getEdgesIterator().next();
+		assertEquals(getNode(5), edge1.node1.getNode());
+		assertEquals(getNode(4), edge1.node2.getNode());
+
+		Edge edge2 = node2.getEdgesIterator().next();
+		assertEquals(getNode(1), edge2.node1.getNode());
+		assertEquals(getNode(2), edge2.node2.getNode());
+
+	}
+
+	@Test
+	public void testCreateWebCircle() throws Exception {
+
+		List<ISegment> segments = new ArrayList<ISegment>();
+		segments.add(asFlexibleOrderWay(1, 2));
+		segments.add(asFlexibleOrderWay(2, 3));
+		segments.add(asFlexibleOrderWay(3, 1));
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(segments);
+		assertEquals(2, leaves.size());
+
+		Iterator<IntersectionNode> it = leaves.iterator();
+
+		IntersectionNode node1 = it.next();
+		IntersectionNode node2 = it.next();
+
+		assertEquals(node1, node2);
+		assertTrue(node1 == node2);
 	}
 
 	@Test
 	public void testCreateWebStarFlexible() throws Exception {
 
 		List<ISegment> segments = new ArrayList<ISegment>();
-		segments.add(TestUtils.asFlexibleOrderWay(1, 2, 3));
-		segments.add(TestUtils.asFlexibleOrderWay(4, 3));
-		segments.add(TestUtils.asFlexibleOrderWay(5, 6, 1));
+		segments.add(asFlexibleOrderWay(1, 2, 3, 4));
+		segments.add(asFlexibleOrderWay(4, 5, 6, 7));
+		segments.add(asFlexibleOrderWay(4, 8, 9, 10));
 
-		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
-		IntersectionNode intersectionNode = intersectionNodeWebCreator.createWebStartingWithNode(TestUtils.getNode(3));
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(segments);
 
-		assertEquals(2, countEdges(intersectionNode));
+		assertEquals(3, leaves.size());
 
-		Map<Node, IntersectionNode> nodeMap = intersectionNodeWebCreator.getNodeMap();
+		assertTrue(leaves.contains(new IntersectionNode(getNode(7))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(10))));
+	}
 
-		assertEquals(1, countEdges(nodeMap.get(TestUtils.getNode(5))));
-		assertEquals(1, countEdges(nodeMap.get(TestUtils.getNode(4))));
+	@Test
+	public void testCreateWebLineFlexible() throws Exception {
 
-		assertEquals(2, intersectionNodeWebCreator.getLeaves().size());
+		List<ISegment> segments = new ArrayList<ISegment>();
+		segments.add(asFlexibleOrderWay(1, 2, 3));
+		segments.add(asFlexibleOrderWay(4, 3));
+		segments.add(asFlexibleOrderWay(5, 6, 1));
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(segments);
+
+		assertEquals(2, leaves.size());
+
+		assertTrue(leaves.contains(new IntersectionNode(getNode(4))));
+		assertTrue(leaves.contains(new IntersectionNode(getNode(5))));
 	}
 
 	@Test
 	public void testRelation12320() throws Exception {
 
 		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
-				.loadSplittedAndAggregatedRelation(TestUtils.RELATION_12320_NECKARTAL_WEG);
+				.loadSplittedAndAggregatedRelation(RELATION_12320_NECKARTAL_WEG);
 		List<AggregatedSegment> list = aggregatedRelation.get("");
-
-		//		helperService.exportSimple(HelperService.convert(list.get(0).getSegments()));
 
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
 				.getSegments());
-		IntersectionNode intersectionNode = intersectionNodeWebCreator.createWeb();
+		intersectionNodeWebCreator.createWeb();
 
-		helperService.exportGpx(intersectionNode, intersectionNodeWebCreator);
+		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
 
-		int count = countEdges(intersectionNode);
-		assertEquals(2, count);
+		assertEquals(2, leaves.size());
 
-		Node node = findNodeWithId(intersectionNode, 418151004);
-		assertNotNull(node);
-
-		assertEquals(1, intersectionNodeWebCreator.getLeaves().size());
-	}
-
-	private int countEdges(IntersectionNode intersectionNode) {
-		int count = 0;
-		for (Iterator<Edge> it = intersectionNode.getEdgesIterator(); it.hasNext();) {
-			it.next();
-			count++;
+		for (IntersectionNode intersectionNode : leaves) {
+			System.out.println(intersectionNode.getNode());
 		}
-		return count;
-	}
 
-	private Set<IntersectionNode> visitedNodes = new HashSet<IntersectionNode>();
+		Iterator<IntersectionNode> it = leaves.iterator();
 
-	private Node findNodeWithId(IntersectionNode startNode, long id) {
-		visitedNodes.add(startNode);
-		if (startNode.getNode().getId() == id)
-			return startNode.getNode();
-		else {
-			for (Iterator<Edge> it = startNode.getEdgesIterator(); it.hasNext();) {
-				Edge edge = it.next();
-				IntersectionNode nextNode = edge.getNextNode(startNode);
-				if (!visitedNodes.contains(nextNode)) {
-					Node node = findNodeWithId(nextNode, id);
-					if (node != null)
-						return node;
-				}
-			}
-		}
-		return null;
+		helperService.exportGpx(it.next(), it.next());
+
 	}
 }

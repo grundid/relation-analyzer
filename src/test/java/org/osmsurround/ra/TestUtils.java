@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
+import org.osmsurround.ra.analyzer.IntersectionNode;
+import org.osmsurround.ra.analyzer.IntersectionNodeWebCreator;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 import org.osmsurround.ra.segment.FixedOrderWay;
@@ -115,4 +117,18 @@ public abstract class TestUtils {
 		for (Node node : asNodes(expectedOppositeNodeIds))
 			assertTrue(oppositeNode.contains(node));
 	}
+
+	public static Collection<IntersectionNode> executeAndGetLeaves(SegmentsBuilder segmentsBuilder) {
+		return executeAndGetLeaves(segmentsBuilder.getSegments());
+
+	}
+
+	public static Collection<IntersectionNode> executeAndGetLeaves(List<ISegment> segments) {
+		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
+		intersectionNodeWebCreator.createWeb();
+
+		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
+		return leaves;
+	}
+
 }

@@ -49,17 +49,13 @@ public class FixedOrderWay implements ISegment {
 
 	@Override
 	public List<Node> getNodesBetween(ConnectableNode startNode, ConnectableNode endNode) {
-		List<Node> result = new ArrayList<Node>(way.getNodes());
-		if (!reverse) {
-			if (startNode.contains(getSingleStartNode()) && endNode.contains(getSingleEndNode())) {
-				return result;
-			}
+		List<Node> result = new ArrayList<Node>(getWayNodes());
+		if (startNode.contains(getSingleStartNode()) && endNode.contains(getSingleEndNode())) {
+			return result;
 		}
-		else {
-			if (startNode.contains(getSingleEndNode()) && endNode.contains(getSingleStartNode())) {
-				Collections.reverse(result);
-				return result;
-			}
+		if (startNode.contains(getSingleEndNode()) && endNode.contains(getSingleStartNode())) {
+			Collections.reverse(result);
+			return result;
 		}
 		throw new AnalyzerException("Cannot find nodes between");
 	}

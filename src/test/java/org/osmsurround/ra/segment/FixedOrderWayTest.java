@@ -49,14 +49,15 @@ public class FixedOrderWayTest {
 
 	@Test
 	public void testGetNodesBetweenReverse() throws Exception {
-		Collection<Node> nodesBetweenReverse = fixedOrderWayReverse.getNodesBetween(new ConnectableNode(lastNode),
-				new ConnectableNode(firstNode));
-		assertNodesInOrder(new long[] { 4, 3, 2, 1 }, nodesBetweenReverse);
+		assertNodesInOrder(new long[] { 4, 3, 2, 1 },
+				fixedOrderWayReverse.getNodesBetween(new ConnectableNode(lastNode), new ConnectableNode(firstNode)));
+		assertNodesInOrder(new long[] { 1, 2, 3, 4 },
+				fixedOrderWayReverse.getNodesBetween(new ConnectableNode(firstNode), new ConnectableNode(lastNode)));
 	}
 
 	@Test(expected = AnalyzerException.class)
 	public void testGetNodesBetweenException() throws Exception {
-		fixedOrderWayNotReverse.getNodesBetween(new ConnectableNode(lastNode), new ConnectableNode(firstNode));
+		fixedOrderWayNotReverse.getNodesBetween(new ConnectableNode(getNode(2)), new ConnectableNode(getNode(3)));
 	}
 
 	@Test
@@ -67,8 +68,7 @@ public class FixedOrderWayTest {
 
 	@Test(expected = AnalyzerException.class)
 	public void testGetNodesTillEndException() throws Exception {
-		assertNodesInOrder(new long[] { 2, 3, 4 },
-				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(getNode(2))));
+		fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(getNode(2)));
 	}
 
 	@Test

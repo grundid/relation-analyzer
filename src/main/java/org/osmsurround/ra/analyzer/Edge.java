@@ -1,23 +1,39 @@
 package org.osmsurround.ra.analyzer;
 
-import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 import org.osmsurround.ra.data.Node;
 
 public class Edge {
 
-	private IntersectionNode node1;
-	private Collection<Node> nodes;
-	private IntersectionNode node2;
+	protected IntersectionNode node1;
+	private List<Node> nodes;
+	protected IntersectionNode node2;
 
-	public Edge(IntersectionNode node1, Collection<Node> nodes, IntersectionNode node2) {
+	public Edge(IntersectionNode node1, List<Node> nodes, IntersectionNode node2) {
 		this.node1 = node1;
 		this.nodes = nodes;
 		this.node2 = node2;
 	}
 
-	public Collection<Node> getNodes() {
-		return nodes;
+	//	public List<Node> getNodesStartingWith(Node node) {
+	//		if (nodes.get(0).equals(node))
+	//			return nodes;
+	//		else {
+	//			Collections.reverse(nodes);
+	//			return nodes;
+	//		}
+	//	}
+
+	public List<Node> getNodesAfterNode(Node node) {
+		if (nodes.get(0).equals(node))
+			return nodes.subList(1, nodes.size());
+		else {
+			List<Node> subNodes = nodes.subList(0, nodes.size() - 1);
+			Collections.reverse(subNodes);
+			return subNodes;
+		}
 	}
 
 	public IntersectionNode getNextNode(IntersectionNode startingWithNode) {

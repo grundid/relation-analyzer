@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class TraverseService {
 
-	public List<Node> traverse(IntersectionNode startNode, int allNodes) {
-		Traverser traverser = new Traverser(startNode, allNodes);
+	public List<Node> traverse(IntersectionNode startNode, IntersectionNode endNode) {
+		Traverser traverser = new Traverser(startNode, endNode);
 		return traverser.getNodes();
 	}
 }

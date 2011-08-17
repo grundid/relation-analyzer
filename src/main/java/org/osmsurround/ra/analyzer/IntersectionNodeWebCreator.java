@@ -1,9 +1,12 @@
 package org.osmsurround.ra.analyzer;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.data.Node;
@@ -11,103 +14,75 @@ import org.osmsurround.ra.segment.ISegment;
 
 public class IntersectionNodeWebCreator {
 
-	private Map<Node, IntersectionNode> nodeMap = new HashMap<Node, IntersectionNode>();
+	private Collection<IntersectionNode> leaves = new ConcurrentLinkedQueue<IntersectionNode>();
+	private Map<Node, IntersectionNode> knownNodes = new HashMap<Node, IntersectionNode>();
 	private List<ISegment> segments;
-	private List<IntersectionNode> leaves = new ArrayList<IntersectionNode>();
 
 	public IntersectionNodeWebCreator(List<ISegment> segments) {
 		this.segments = segments;
 	}
 
-	public IntersectionNode createWeb() {
-
-		Node node = determineFirstIntersectionNode(segments);
-		return createWebStartingWithNode(node);
+	public Collection<IntersectionNode> getLeaves() {
+		return leaves;
 	}
 
-	public IntersectionNode createWebStartingWithNode(Node node) {
-		IntersectionNode firstIntersectionNode = createIntersectionNode(node);
-
-		List<IntersectionNode> newIntersectionNodes = new ArrayList<IntersectionNode>();
-		newIntersectionNodes.add(firstIntersectionNode);
-
+	public void createWeb() {
+		initFirstLeaves();
+		int lastSegmentsSize = segments.size();
 		do {
-			newIntersectionNodes = addEdgesToNewNodes(newIntersectionNodes);
-		} while (!newIntersectionNodes.isEmpty());
+			lastSegmentsSize = segments.size();
+			for (Iterator<IntersectionNode> it = leaves.iterator(); it.hasNext();) {
+				IntersectionNode intersectionNode = it.next();
 
-		return firstIntersectionNode;
-	}
+				List<List<Node>> edgesForNode = findEdgesForNode(intersectionNode);
 
-	private IntersectionNode createIntersectionNode(Node node) {
-		IntersectionNode intersectionNode = new IntersectionNode(node);
-		nodeMap.put(node, intersectionNode);
-		return intersectionNode;
-	}
+				if (!edgesForNode.isEmpty()) {
+					it.remove(); // not a true leaf
 
-	private List<IntersectionNode> addEdgesToNewNodes(List<IntersectionNode> intersectionNodesToConnect) {
+					for (List<Node> edgeNodes : edgesForNode) {
 
-		List<IntersectionNode> newIntersectionNodes = new ArrayList<IntersectionNode>();
+						IntersectionNode newLeafNode = createIntersectionNode(edgeNodes.get(edgeNodes.size() - 1));
+						intersectionNode.addEdge(edgeNodes, newLeafNode);
+						newLeafNode.addEdge(edgeNodes, intersectionNode);
 
-		for (IntersectionNode intersectionNode : intersectionNodesToConnect) {
-			ConnectableNode nodeToConnect = new ConnectableNode(intersectionNode.getNode());
-
-			for (ISegment segment : segments) {
-				if (segment.getStartNodes().isConnectable(nodeToConnect)) {
-					List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
-							segment.getOppositeNode(nodeToConnect), nodeToConnect);
-
-					if (connectionSegments.isEmpty()) {
-						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
-					}
-					else {
-						for (ISegment connectedSegment : connectionSegments) {
-							List<Node> nodesBetween = segment.getNodesBetween(nodeToConnect,
-									connectedSegment.getStartNodes());
-							addEdge(newIntersectionNodes, intersectionNode, nodesBetween);
-						}
-					}
-				}
-				else if (segment.getEndNodes().isConnectable(nodeToConnect)) {
-
-					List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
-							segment.getOppositeNode(nodeToConnect), nodeToConnect);
-
-					if (connectionSegments.isEmpty()) {
-						addLeaf(newIntersectionNodes, intersectionNode, nodeToConnect, segment);
-					}
-					else {
-						for (ISegment connectedSegment : connectionSegments) {
-							List<Node> nodesBetween = segment.getNodesBetween(connectedSegment.getStartNodes(),
-									nodeToConnect);
-							addEdge(newIntersectionNodes, intersectionNode, nodesBetween);
-						}
+						leaves.add(newLeafNode);
 					}
 				}
 			}
-		}
-		return newIntersectionNodes;
+
+		} while (lastSegmentsSize != segments.size());
 	}
 
-	private void addLeaf(List<IntersectionNode> newIntersectionNodes, IntersectionNode intersectionNode,
-			ConnectableNode nodeToConnect, ISegment segment) {
-		List<Node> nodesTillEnd = segment.getNodesTillEnd(nodeToConnect);
-		addEdge(newIntersectionNodes, intersectionNode, nodesTillEnd);
-	}
+	private List<List<Node>> findEdgesForNode(IntersectionNode intersectionNode) {
+		ConnectableNode nodeToConnect = new ConnectableNode(intersectionNode.getNode());
 
-	private void addEdge(List<IntersectionNode> newIntersectionNodes, IntersectionNode intersectionNode,
-			List<Node> nodesBetween) {
-		Node lastNode = nodesBetween.get(nodesBetween.size() - 1);
-		IntersectionNode endNode = null;
-		if (nodeMap.containsKey(lastNode)) {
-			endNode = nodeMap.get(lastNode);
-			leaves.remove(endNode);
+		List<List<Node>> edges = new ArrayList<List<Node>>();
+
+		for (Iterator<ISegment> it = segments.iterator(); it.hasNext();) {
+			ISegment segment = it.next();
+			if (segment.getStartNodes().isConnectable(nodeToConnect)
+					|| segment.getEndNodes().isConnectable(nodeToConnect)) {
+
+				List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
+						segment.getOppositeNode(nodeToConnect), nodeToConnect);
+
+				if (connectionSegments.isEmpty()) {
+					List<Node> nodesTillEnd = segment.getNodesTillEnd(nodeToConnect);
+					edges.add(nodesTillEnd);
+				}
+				else {
+					for (ISegment connectedSegment : connectionSegments) {
+						List<Node> nodesBetween = segment.getNodesBetween(nodeToConnect,
+								connectedSegment.getStartNodes());
+						edges.add(nodesBetween);
+					}
+				}
+
+				it.remove();
+			}
 		}
-		else {
-			endNode = createIntersectionNode(lastNode);
-			newIntersectionNodes.add(endNode);
-			leaves.add(endNode);
-		}
-		intersectionNode.addEdge(nodesBetween, endNode);
+
+		return edges;
 	}
 
 	private List<ISegment> findConnectingSegmentsButNotMe(ConnectableNode endNode, ConnectableNode nodeToIgnore) {
@@ -121,25 +96,47 @@ public class IntersectionNodeWebCreator {
 		return result;
 	}
 
-	// finde einen echten Kreuzungsknoten
-	private Node determineFirstIntersectionNode(List<ISegment> segments) {
+	private void initFirstLeaves() {
+		ISegment segmentToRemove = null;
+
 		for (ISegment segment : segments) {
 			ConnectableNode startNodes = segment.getStartNodes();
-			if (startNodes.size() <= 2)
-				return startNodes.getNodesIterator().next(); // TODO getOriginalStartNode
+			if (startNodes.size() == 2) {
+				segmentToRemove = segment;
+
+				Node firstNode = startNodes.getNodesIterator().next();
+
+				ConnectableNode connectableNode = new ConnectableNode(firstNode);
+				ConnectableNode oppositeNode = segment.getOppositeNode(connectableNode);
+				Node secondNode = oppositeNode.getNodesIterator().next();
+
+				List<Node> nodesBetween = segment.getNodesBetween(connectableNode, oppositeNode);
+
+				IntersectionNode intersectionNode1 = createIntersectionNode(firstNode);
+				IntersectionNode intersectionNode2 = createIntersectionNode(secondNode);
+
+				intersectionNode1.addEdge(nodesBetween, intersectionNode2);
+				intersectionNode2.addEdge(nodesBetween, intersectionNode1);
+
+				leaves.add(intersectionNode1);
+				leaves.add(intersectionNode2);
+				break;
+			}
 		}
-		throw new AnalyzerException("Cannot determine a start node");
+		if (segmentToRemove == null)
+			throw new AnalyzerException("Cannot determine a start node");
+		else
+			segments.remove(segmentToRemove);
+
 	}
 
-	public Map<Node, IntersectionNode> getNodeMap() {
-		return nodeMap;
+	private IntersectionNode createIntersectionNode(Node node) {
+		IntersectionNode intersectionNode = knownNodes.get(node);
+		if (intersectionNode == null) {
+			intersectionNode = new IntersectionNode(node);
+			knownNodes.put(node, intersectionNode);
+		}
+		return intersectionNode;
 	}
 
-	public List<IntersectionNode> getLeaves() {
-		return leaves;
-	}
-
-	public int getNodesAmount() {
-		return nodeMap.size();
-	}
 }

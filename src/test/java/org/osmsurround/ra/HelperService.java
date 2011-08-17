@@ -10,7 +10,6 @@ import java.util.Map.Entry;
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.analyzer.AggregationService;
 import org.osmsurround.ra.analyzer.IntersectionNode;
-import org.osmsurround.ra.analyzer.IntersectionNodeWebCreator;
 import org.osmsurround.ra.analyzer.RoleService;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Relation;
@@ -86,8 +85,8 @@ public class HelperService {
 		}
 	}
 
-	public void exportGpx(IntersectionNode intersectionNode, IntersectionNodeWebCreator webCreator) {
-		List<Node> traverse = traverseService.traverse(intersectionNode, webCreator.getNodesAmount());
+	public void exportGpx(IntersectionNode startNode, IntersectionNode endNode) {
+		List<Node> traverse = traverseService.traverse(startNode, endNode);
 
 		List<Section> sectionList = new ArrayList<Section>();
 		sectionList.add(new SectionContainer("test", traverse));
@@ -98,7 +97,7 @@ public class HelperService {
 
 	public void exportSimple(List<Section> sectionList) {
 		try {
-			FileOutputStream fos = new FileOutputStream("c:\\test.gpx");
+			FileOutputStream fos = new FileOutputStream("c:\\test_new.gpx");
 
 			gpxExport.export(sectionList, fos);
 			fos.flush();

@@ -1,10 +1,10 @@
 package org.osmsurround.ra.export;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import org.osmsurround.ra.analyzer.Edge;
 import org.osmsurround.ra.analyzer.IntersectionNode;
@@ -12,12 +12,12 @@ import org.osmsurround.ra.data.Node;
 
 public class Traverser {
 
-	private Map<IntersectionNode, Iterator<Edge>> visitedNodes = new HashMap<IntersectionNode, Iterator<Edge>>();
 	private List<Node> nodes = new ArrayList<Node>();
-	private final int allNodes;
+	private Collection<IntersectionNode> visitedNodes = new HashSet<IntersectionNode>();
+	private IntersectionNode endNode;
 
-	public Traverser(IntersectionNode startNode, int allNodes) {
-		this.allNodes = allNodes;
+	public Traverser(IntersectionNode startNode, IntersectionNode endNode) {
+		this.endNode = endNode;
 		traverseNodes(startNode);
 	}
 
@@ -26,25 +26,26 @@ public class Traverser {
 	}
 
 	private void traverseNodes(IntersectionNode startNode) {
-		if (visitedNodes.size() < allNodes) {
+		nodes.add(startNode.getNode());
+		while (!startNode.equals(endNode)) {
+			visitedNodes.add(startNode);
 
-			Iterator<Edge> edgeIterator = null;
+			Iterator<Edge> edgeIterator = startNode.getEdgesIterator();
 
-			if (visitedNodes.containsKey(startNode)) {
-				edgeIterator = visitedNodes.get(startNode);
-			}
-			else {
-				edgeIterator = startNode.getEdgesIterator();
-				visitedNodes.put(startNode, edgeIterator);
+			Edge edge = edgeIterator.next();
+			IntersectionNode nextNode = edge.getNextNode(startNode);
+
+			while (visitedNodes.contains(nextNode)) {
+				if (edgeIterator.hasNext()) {
+					edge = edgeIterator.next();
+					nextNode = edge.getNextNode(startNode);
+				}
+				else
+					return;
 			}
 
-			for (; edgeIterator.hasNext();) {
-				Edge edge = edgeIterator.next();
-				nodes.addAll(edge.getNodes());
-				IntersectionNode nextNode = edge.getNextNode(startNode);
-				if (!nextNode.getNode().equals(startNode.getNode()))
-					traverseNodes(nextNode);
-			}
+			nodes.addAll(edge.getNodesAfterNode(startNode.getNode()));
+			startNode = nextNode;
 		}
 	}
 }
