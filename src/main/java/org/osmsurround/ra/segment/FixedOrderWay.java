@@ -75,7 +75,10 @@ public class FixedOrderWay implements ISegment {
 
 	@Override
 	public List<Node> getNodesTillEnd(ConnectableNode startNode) {
-		return getNodesBetween(startNode, getEndNodes());
+		if (startNode.isConnectable(getStartNodes()))
+			return getNodesBetween(startNode, getEndNodes());
+		else
+			return getNodesBetween(startNode, getStartNodes());
 	}
 
 	@Override

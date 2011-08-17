@@ -177,7 +177,15 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 
 		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
 
+		for (IntersectionNode intersectionNode : leaves) {
+			System.out.println(intersectionNode.getNode());
+		}
+
 		assertEquals(3, leaves.size());
+
+		assertTrue(leaves.contains(getNode(418151004))); // Böckingen
+		assertTrue(leaves.contains(getNode(1025039190))); // Frankenbach
+		//		assertTrue(leaves.contains(getNode(1227186314))); // möglich
 
 		helperService.exportGpx(leaves);
 

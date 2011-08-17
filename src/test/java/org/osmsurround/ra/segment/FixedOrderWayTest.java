@@ -65,6 +65,8 @@ public class FixedOrderWayTest {
 	public void testGetNodesTillEnd() throws Exception {
 		assertNodesInOrder(new long[] { 1, 2, 3, 4 },
 				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(firstNode)));
+		assertNodesInOrder(new long[] { 4, 3, 2, 1 },
+				fixedOrderWayNotReverse.getNodesTillEnd(new ConnectableNode(lastNode)));
 	}
 
 	@Test(expected = AnalyzerException.class)
