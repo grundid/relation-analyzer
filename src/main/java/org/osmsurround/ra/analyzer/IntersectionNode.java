@@ -28,10 +28,9 @@ public class IntersectionNode {
 		return edges.iterator();
 	}
 
-	//	public List<Edge> getEdgesStartingWithThis()
-	//	{
-	//		List<Edge> newEdges 
-	//	}
+	public int getEdgesAmount() {
+		return edges.size();
+	}
 
 	@Override
 	public int hashCode() {

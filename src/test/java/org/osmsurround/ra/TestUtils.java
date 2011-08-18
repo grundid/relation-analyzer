@@ -36,7 +36,7 @@ public abstract class TestUtils {
 	private static final Map<Long, Node> NODES = new HashMap<Long, Node>();
 
 	static {
-		for (int x = 0; x < 20; x++) {
+		for (int x = 0; x < 30; x++) {
 			putNode(x, x, x);
 		}
 	}
@@ -92,6 +92,14 @@ public abstract class TestUtils {
 
 	public static Node getNode(long id) {
 		return NODES.get(Long.valueOf(id));
+	}
+
+	public static void assertContainsNodeId(Collection<IntersectionNode> nodes, long nodeId) {
+		for (IntersectionNode node : nodes) {
+			if (node.getNode().getId() == nodeId)
+				return;
+		}
+		fail("Node " + nodeId + " not found");
 	}
 
 	public static void assertContainsNode(Node expected, ConnectableNode connectableNode) {

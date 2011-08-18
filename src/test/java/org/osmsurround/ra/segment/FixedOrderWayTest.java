@@ -93,20 +93,35 @@ public class FixedOrderWayTest {
 
 	@Test
 	public void testCanConnectForwardOnly() throws Exception {
-		assertTrue(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
+		assertTrue(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(
 				getNode(10))));
-		assertFalse(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
+		assertFalse(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(
 				lastNode)));
-		assertFalse(fixedOrderWayNotReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
+		assertFalse(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(lastNode), new ConnectableNode(
 				firstNode)));
 
-		assertTrue(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
-				getNode(10))));
-		assertFalse(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(lastNode), new ConnectableNode(
-				firstNode)));
-		assertFalse(fixedOrderWayReverse.canConnectForwardOnly(new ConnectableNode(firstNode), new ConnectableNode(
-				lastNode)));
-
+		assertTrue(fixedOrderWayReverse.canConnectExcept(new ConnectableNode(lastNode),
+				new ConnectableNode(getNode(10))));
+		assertFalse(fixedOrderWayReverse
+				.canConnectExcept(new ConnectableNode(lastNode), new ConnectableNode(firstNode)));
+		assertFalse(fixedOrderWayReverse
+				.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(lastNode)));
 	}
 
+	@Test
+	public void testGetEndPointNodes() throws Exception {
+		ConnectableNode endpointNodesReverse = fixedOrderWayReverse.getEndpointNodes();
+		assertTrue(endpointNodesReverse.contains(getNode(1)));
+		assertTrue(endpointNodesReverse.contains(getNode(4)));
+		ConnectableNode endpointNodesNotReverse = fixedOrderWayNotReverse.getEndpointNodes();
+		assertTrue(endpointNodesNotReverse.contains(getNode(1)));
+		assertTrue(endpointNodesNotReverse.contains(getNode(4)));
+	}
+
+	@Test
+	public void testGetCommonNode() throws Exception {
+		RoundaboutWay roundaboutWay = asRoundaboutWay(5, 6, 7, 4, 5);
+		Node commonNode = fixedOrderWayNotReverse.getCommonNode(roundaboutWay.getEndpointNodes());
+		assertEquals(getNode(4), commonNode);
+	}
 }

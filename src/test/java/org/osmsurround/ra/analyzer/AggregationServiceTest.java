@@ -82,7 +82,7 @@ public class AggregationServiceTest extends TestBase {
 		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
 			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
 			assertEquals(exptectedAggregatedSegemnts, list.size());
-			assertEquals(110, list.get(0).getSegments().size());
+			assertEquals(111, list.get(0).getSegments().size());
 		}
 	}
 

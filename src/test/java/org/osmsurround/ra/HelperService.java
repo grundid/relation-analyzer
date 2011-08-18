@@ -86,17 +86,7 @@ public class HelperService {
 		}
 	}
 
-	public void exportGpx(IntersectionNode startNode, IntersectionNode endNode) {
-		List<Node> traverse = traverseService.traverse(startNode, endNode);
-
-		List<Section> sectionList = new ArrayList<Section>();
-		sectionList.add(new SectionContainer("test", traverse));
-
-		exportSimple(sectionList);
-
-	}
-
-	public void exportGpx(Collection<IntersectionNode> leaves) {
+	public void exportGpx(Collection<IntersectionNode> leaves, long relationId) {
 
 		List<Section> sectionList = new ArrayList<Section>();
 
@@ -116,13 +106,13 @@ public class HelperService {
 			}
 		}
 
-		exportSimple(sectionList);
+		exportSimple(sectionList, relationId);
 
 	}
 
-	public void exportSimple(List<Section> sectionList) {
+	public void exportSimple(List<Section> sectionList, long relationId) {
 		try {
-			FileOutputStream fos = new FileOutputStream("c:\\test_new.gpx");
+			FileOutputStream fos = new FileOutputStream("c:\\test_" + relationId + ".gpx");
 
 			gpxExport.export(sectionList, fos);
 			fos.flush();

@@ -74,17 +74,11 @@ public class RoundaboutWay extends FlexibleOrderWay {
 
 	@Override
 	public boolean canConnect(ConnectableNode node) {
-		List<Node> nodes = getWayNodes();
-		for (Iterator<Node> it = node.getNodesIterator(); it.hasNext();) {
-			Node externalNode = it.next();
-			if (nodes.contains(externalNode))
-				return true;
-		}
-		return false;
+		return getCommonNodeInternal(node) != null;
 	}
 
 	@Override
-	public boolean canConnectForwardOnly(ConnectableNode node, ConnectableNode endNodeToIgnore) {
+	public boolean canConnectExcept(ConnectableNode node, ConnectableNode endNodeToIgnore) {
 		if (node.isConnectable(endNodeToIgnore))
 			return false;
 
@@ -96,5 +90,29 @@ public class RoundaboutWay extends FlexibleOrderWay {
 				matchCount++;
 		}
 		return matchCount == 1;
+	}
+
+	@Override
+	public ConnectableNode getEndpointNodes() {
+		return getStartAndEndNodes();
+	}
+
+	@Override
+	public Node getCommonNode(ConnectableNode connectableNode) {
+		Node commonNode = getCommonNodeInternal(connectableNode);
+		if (commonNode == null)
+			throw new AnalyzerException("No common nodes");
+
+		return commonNode;
+	}
+
+	private Node getCommonNodeInternal(ConnectableNode connectableNode) {
+		List<Node> nodes = getWayNodes();
+		for (Iterator<Node> it = connectableNode.getNodesIterator(); it.hasNext();) {
+			Node externalNode = it.next();
+			if (nodes.contains(externalNode))
+				return externalNode;
+		}
+		return null;
 	}
 }

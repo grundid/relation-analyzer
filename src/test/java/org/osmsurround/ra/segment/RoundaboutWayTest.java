@@ -81,16 +81,30 @@ public class RoundaboutWayTest {
 
 	@Test
 	public void testCanConnectForwardOnly() throws Exception {
-		assertTrue(roundaboutWay
-				.canConnectForwardOnly(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(2))));
-		assertTrue(roundaboutWay
-				.canConnectForwardOnly(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(5))));
-		assertTrue(roundaboutWay
-				.canConnectForwardOnly(new ConnectableNode(getNode(5)), new ConnectableNode(getNode(1))));
-		assertFalse(roundaboutWay.canConnectForwardOnly(new ConnectableNode(getNode(1)),
-				new ConnectableNode(getNode(1))));
+		assertTrue(roundaboutWay.canConnectExcept(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(2))));
+		assertTrue(roundaboutWay.canConnectExcept(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(5))));
+		assertTrue(roundaboutWay.canConnectExcept(new ConnectableNode(getNode(5)), new ConnectableNode(getNode(1))));
+		assertFalse(roundaboutWay.canConnectExcept(new ConnectableNode(getNode(1)), new ConnectableNode(getNode(1))));
 
-		assertFalse(roundaboutWay.canConnectForwardOnly(new ConnectableNode(getNode(7)),
-				new ConnectableNode(getNode(1))));
+		assertFalse(roundaboutWay.canConnectExcept(new ConnectableNode(getNode(7)), new ConnectableNode(getNode(1))));
 	}
+
+	@Test
+	public void testGetEndPointNodes() throws Exception {
+		ConnectableNode endpointNodes = roundaboutWay.getEndpointNodes();
+		assertContainsNode(getNode(1), endpointNodes);
+		assertContainsNode(getNode(2), endpointNodes);
+		assertContainsNode(getNode(3), endpointNodes);
+		assertContainsNode(getNode(4), endpointNodes);
+		assertContainsNode(getNode(5), endpointNodes);
+		assertEquals(6, endpointNodes.size());
+	}
+
+	@Test
+	public void testGetCommonNode() throws Exception {
+		RoundaboutWay myRoundaboutWay = asRoundaboutWay(6, 7, 8, 5, 6);
+		Node commonNode = roundaboutWay.getCommonNode(myRoundaboutWay.getEndpointNodes());
+		assertEquals(getNode(5), commonNode);
+	}
+
 }

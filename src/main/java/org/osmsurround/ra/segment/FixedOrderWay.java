@@ -97,8 +97,23 @@ public class FixedOrderWay implements ISegment {
 	}
 
 	@Override
-	public boolean canConnectForwardOnly(ConnectableNode node, ConnectableNode endNodeToIgnore) {
-		return getStartNodes().isConnectable(node) && !getEndNodes().isConnectable(endNodeToIgnore);
+	public boolean canConnectExcept(ConnectableNode node, ConnectableNode endNodeToIgnore) {
+
+		return getStartNodes().isConnectable(node) && !getEndNodes().isConnectable(endNodeToIgnore)
+				|| getEndNodes().isConnectable(node) && !getStartNodes().isConnectable(endNodeToIgnore);
 	}
 
+	@Override
+	public ConnectableNode getEndpointNodes() {
+		return new ConnectableNode(getSingleStartNode(), getSingleEndNode());
+	}
+
+	@Override
+	public Node getCommonNode(ConnectableNode connectableNode) {
+		if (connectableNode.contains(getSingleStartNode()))
+			return getSingleStartNode();
+		if (connectableNode.contains(getSingleEndNode()))
+			return getSingleEndNode();
+		throw new AnalyzerException("No common nodes");
+	}
 }

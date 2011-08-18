@@ -3,9 +3,11 @@ package org.osmsurround.ra.analyzer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.osmsurround.ra.AnalyzerException;
@@ -26,7 +28,7 @@ import org.osmsurround.ra.segment.ISegment;
  * 
  * <p>
  * If the web is some kind of a interconnected ring, where all nodes are connected with at least two edges, the web
- * creator will return two leaves which are the same node. They will be the entry point to the ring.
+ * creator will return one leaf. It will be the single entry point to the ring.
  * </p>
  * 
  * <p>
@@ -55,6 +57,73 @@ public class IntersectionNodeWebCreator {
 	}
 
 	public void createWeb() {
+		for (ISegment segment : segments) {
+			List<ISegment> connectingSegments = findConnectingSegments(segment);
+			if (connectingSegments.isEmpty()) {
+				List<Node> nodes = segment.getNodesTillEnd(segment.getStartNodes());
+				createEdge(nodes);
+
+			}
+			else {
+				if (connectingSegments.size() == 1) {
+					Node commondNode = findCommonNode(segment, connectingSegments.iterator().next());
+					List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode));
+					createEdge(nodes);
+				}
+				else {
+					for (ISegment firstSegment : connectingSegments) {
+						for (ISegment secondSegment : connectingSegments.subList(
+								connectingSegments.indexOf(firstSegment) + 1, connectingSegments.size())) {
+							Node commondNode1 = findCommonNode(segment, firstSegment);
+							Node commondNode2 = findCommonNode(segment, secondSegment);
+							if (commondNode1.equals(commondNode2)) {
+								List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode1));
+								createEdge(nodes);
+							}
+							else {
+								List<Node> nodes = segment.getNodesBetween(new ConnectableNode(commondNode1),
+										new ConnectableNode(commondNode2));
+								createEdge(nodes);
+							}
+						}
+					}
+				}
+			}
+		}
+		for (IntersectionNode node : knownNodes.values()) {
+			if (node.getEdgesAmount() == 1)
+				leaves.add(node);
+		}
+		if (leaves.isEmpty() && !knownNodes.isEmpty())
+			leaves.add(knownNodes.values().iterator().next());
+	}
+
+	private void createEdge(List<Node> nodes) {
+		Node firstNode = nodes.get(0);
+		Node secondNode = nodes.get(nodes.size() - 1);
+
+		IntersectionNode intersectionNode1 = createIntersectionNode(firstNode);
+		IntersectionNode intersectionNode2 = createIntersectionNode(secondNode);
+
+		intersectionNode1.addEdge(nodes, intersectionNode2);
+		intersectionNode2.addEdge(nodes, intersectionNode1);
+	}
+
+	private Node findCommonNode(ISegment segment, ISegment segmentToConntent) {
+		return segment.getCommonNode(segmentToConntent.getEndpointNodes());
+	}
+
+	private List<ISegment> findConnectingSegments(ISegment segmentToConnect) {
+		ConnectableNode endPoints = segmentToConnect.getEndpointNodes();
+		List<ISegment> result = new ArrayList<ISegment>();
+		for (ISegment segment : segments) {
+			if (segment != segmentToConnect && segment.canConnect(endPoints))
+				result.add(segment);
+		}
+		return result;
+	}
+
+	public void createWebOld() {
 		initFirstLeaves();
 		int lastSegmentsSize = segments.size();
 		do {
@@ -73,8 +142,13 @@ public class IntersectionNodeWebCreator {
 						intersectionNode.addEdge(edgeNodes, newLeafNode);
 						newLeafNode.addEdge(edgeNodes, intersectionNode);
 
-						leaves.add(newLeafNode);
+						if (!leaves.contains(newLeafNode))
+							leaves.add(newLeafNode);
 					}
+				}
+				else {
+					if (intersectionNode.getEdgesAmount() > 1 && leaves.size() > 1)
+						leaves.remove(intersectionNode);
 				}
 			}
 
@@ -90,17 +164,16 @@ public class IntersectionNodeWebCreator {
 			ISegment segment = it.next();
 			if (segment.canConnect(nodeToConnect)) {
 
-				List<ISegment> connectionSegments = findConnectingSegmentsButNotMe(
-						segment.getOppositeNode(nodeToConnect), nodeToConnect);
+				Collection<Node> connectionEndpoints = findConnectionEndpoints(segment.getOppositeNode(nodeToConnect),
+						nodeToConnect);
 
-				if (connectionSegments.isEmpty()) {
+				if (connectionEndpoints.isEmpty()) {
 					List<Node> nodesTillEnd = segment.getNodesTillEnd(nodeToConnect);
 					edges.add(nodesTillEnd);
 				}
 				else {
-					for (ISegment connectedSegment : connectionSegments) {
-						List<Node> nodesBetween = segment.getNodesBetween(nodeToConnect,
-								connectedSegment.getStartNodes());
+					for (Node endPoint : connectionEndpoints) {
+						List<Node> nodesBetween = segment.getNodesBetween(nodeToConnect, new ConnectableNode(endPoint));
 						edges.add(nodesBetween);
 					}
 				}
@@ -112,11 +185,11 @@ public class IntersectionNodeWebCreator {
 		return edges;
 	}
 
-	private List<ISegment> findConnectingSegmentsButNotMe(ConnectableNode endNode, ConnectableNode nodeToIgnore) {
-		List<ISegment> result = new ArrayList<ISegment>();
+	private Collection<Node> findConnectionEndpoints(ConnectableNode endNode, ConnectableNode nodeToIgnore) {
+		Set<Node> result = new HashSet<Node>();
 		for (ISegment segment : segments) {
-			if (segment.canConnectForwardOnly(endNode, nodeToIgnore))
-				result.add(segment);
+			if (segment.canConnectExcept(endNode, nodeToIgnore))
+				result.add(segment.getCommonNode(endNode));
 		}
 		return result;
 	}
@@ -126,7 +199,7 @@ public class IntersectionNodeWebCreator {
 
 		for (ISegment segment : segments) {
 			ConnectableNode startNodes = segment.getStartNodes();
-			if (startNodes.size() == 2) {
+			if (startNodes.size() <= 2) {
 				segmentToRemove = segment;
 
 				Node firstNode = startNodes.getNodesIterator().next();
