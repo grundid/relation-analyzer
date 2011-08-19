@@ -58,5 +58,4 @@ public class RelationMemberServiceTest extends TestBase {
 		}
 		return instances;
 	}
-
 }

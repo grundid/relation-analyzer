@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 
-import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.data.Node;
 
 public class ConnectableNode {
@@ -29,14 +28,6 @@ public class ConnectableNode {
 	 */
 	public boolean isConnectable(ConnectableNode node) {
 		return !Collections.disjoint(nodes, node.nodes);
-	}
-
-	public Node getCommonNode(ConnectableNode node) {
-		for (Node myNode : nodes) {
-			if (node.contains(myNode))
-				return myNode;
-		}
-		throw new AnalyzerException("no common node");
 	}
 
 	public boolean contains(Node node) {

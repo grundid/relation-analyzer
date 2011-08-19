@@ -17,15 +17,6 @@ public class Edge {
 		this.node2 = node2;
 	}
 
-	//	public List<Node> getNodesStartingWith(Node node) {
-	//		if (nodes.get(0).equals(node))
-	//			return nodes;
-	//		else {
-	//			Collections.reverse(nodes);
-	//			return nodes;
-	//		}
-	//	}
-
 	public List<Node> getNodesAfterNode(Node node) {
 		if (nodes.get(0).equals(node))
 			return nodes.subList(1, nodes.size());
