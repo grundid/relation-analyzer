@@ -1,11 +1,10 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.web;
 
 import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 import org.junit.Test;
 import org.osmsurround.ra.HelperService;
@@ -74,16 +73,16 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 		IntersectionNode node1 = it.next();
 		IntersectionNode node2 = it.next();
 
-		assertEquals(getNode(5), node1.getNode());
-		assertEquals(getNode(1), node2.getNode());
+		assertEquals(getNode(1), node1.getNode());
+		assertEquals(getNode(5), node2.getNode());
 
 		Edge edge1 = node1.getEdgesIterator().next();
-		assertEquals(getNode(5), edge1.node1.getNode());
-		assertEquals(getNode(4), edge1.node2.getNode());
+		assertEquals(getNode(1), edge1.node1.getNode());
+		assertEquals(getNode(2), edge1.node2.getNode());
 
 		Edge edge2 = node2.getEdgesIterator().next();
-		assertEquals(getNode(1), edge2.node1.getNode());
-		assertEquals(getNode(2), edge2.node2.getNode());
+		assertEquals(getNode(5), edge2.node1.getNode());
+		assertEquals(getNode(4), edge2.node2.getNode());
 
 	}
 
@@ -199,17 +198,10 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	@Test
 	public void testRelation12320() throws Exception {
 
-		AnalyzerContext analyzerContext = helperService.createAggregatedContext(RELATION_12320_NECKARTAL_WEG);
-		List<AggregatedSegment> list = analyzerContext.getAggregatedSegments();
-
-		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
-				.getSegments());
-		intersectionNodeWebCreator.createWeb();
-
-		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
-
+		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(RELATION_12320_NECKARTAL_WEG);
+		assertEquals(1, analyzerContext.getIntersectionWebs().size());
+		Collection<IntersectionNode> leaves = analyzerContext.getIntersectionWebs().get(0).getLeaves();
 		assertEquals(2, leaves.size());
-
 		helperService.exportGpx(leaves, RELATION_12320_NECKARTAL_WEG);
 
 	}
@@ -217,14 +209,9 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	@Test
 	public void testRelation959757() throws Exception {
 
-		AnalyzerContext analyzerContext = helperService.createAggregatedContext(RELATION_959757_LINE_10);
-		List<AggregatedSegment> list = analyzerContext.getAggregatedSegments();
-
-		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
-				.getSegments());
-		intersectionNodeWebCreator.createWeb();
-
-		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
+		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(RELATION_959757_LINE_10);
+		assertEquals(1, analyzerContext.getIntersectionWebs().size());
+		Collection<IntersectionNode> leaves = analyzerContext.getIntersectionWebs().get(0).getLeaves();
 
 		for (IntersectionNode intersectionNode : leaves) {
 			System.out.println(intersectionNode.getNode());

@@ -477,7 +477,6 @@
   <node id="1232804256" lat="49.1400506" lon="9.2212646" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:01Z"/>
   <node id="1232804272" lat="49.1391132" lon="9.2212032" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:01Z"/>
   <node id="1232804339" lat="49.1391206" lon="9.2213014" version="1" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:03Z"/>
-  <node id="640554967" lat="49.1391356" lon="9.2214366" version="2" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:06Z"/>
   <node id="26734145" lat="49.1391418" lon="9.2220334" version="6" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:10Z"/>
   <node id="249173786" lat="49.1399729" lon="9.2212008" version="5" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:11Z"/>
   <node id="23743141" lat="49.1391421" lon="9.2219954" version="7" changeset="7767847" user="Teddy73" uid="136321" visible="true" timestamp="2011-04-04T19:02:15Z"/>
@@ -1300,16 +1299,7 @@
     <tag k="maxspeed" v="50"/>
     <tag k="highway" v="tertiary"/>
   </way>
-  <way id="125611925" visible="true" timestamp="2011-08-11T11:46:16Z" version="1" changeset="8984780" user="nitegate" uid="18890">
-    <nd ref="1232804339"/>
-    <nd ref="640554967"/>
-    <nd ref="23743141"/>
-    <tag k="oneway" v="yes"/>
-    <tag k="name" v="Wollhausstraße"/>
-    <tag k="maxspeed" v="50"/>
-    <tag k="highway" v="tertiary"/>
-  </way>
-  <relation id="954995" visible="true" timestamp="2011-08-19T08:32:32Z" version="74" changeset="9063476" user="nitegate" uid="18890">
+  <relation id="954995" visible="true" timestamp="2011-08-11T13:09:33Z" version="73" changeset="8985443" user="nitegate" uid="18890">
     <member type="way" ref="106685174" role=""/>
     <member type="way" ref="106684760" role=""/>
     <member type="way" ref="4211618" role=""/>
@@ -1361,7 +1351,6 @@
     <member type="way" ref="4604898" role=""/>
     <member type="way" ref="61483745" role=""/>
     <member type="way" ref="29340900" role="forward"/>
-    <member type="way" ref="125611925" role=""/>
     <tag k="network" v="HNV"/>
     <tag k="ref" v="11"/>
     <tag k="route" v="bus"/>

@@ -7,9 +7,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.osmsurround.ra.AnalyzerException;
-import org.osmsurround.ra.analyzer.Edge;
-import org.osmsurround.ra.analyzer.IntersectionNode;
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.web.Edge;
+import org.osmsurround.ra.web.IntersectionNode;
 
 public class SingleRouteTraverser {
 

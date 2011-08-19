@@ -1,16 +1,6 @@
-/*
- * apps.midp
- * (c) Copyright by M.IT 2002-2005
- * www.emaitie.de 
- */
-package org.osmsurround.ra;
+package org.osmsurround.ra.utils;
 
-/**
- * @author adrian
- * @since 22.06.2005
- * @version $Id: $
- */
-public class MyMath {
+public class LonLatMath {
 
 	private static int[] sinTable = new int[201];
 	private static int[] cosTable = new int[201];
@@ -65,9 +55,6 @@ public class MyMath {
 		double sin = longDistance / hypo;
 
 		double raddeg = asin(sin);
-
-		//		System.out.println("latD: "+latDistance+" longD: "+longDistance+" hypo: "+hypo);
-		//		System.out.println("sin: "+sin+" cos: "+cos+" Grad sin: "+raddeg+ " Grad cos: "+raddegcos);
 
 		if (cpLat < posLat) {
 			if (cpLong > posLong) {

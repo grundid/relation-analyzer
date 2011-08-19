@@ -1,4 +1,4 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.web;
 
 import java.util.ArrayList;
 import java.util.Iterator;

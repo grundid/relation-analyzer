@@ -87,6 +87,6 @@ public class AggregationServiceTest extends TestBase {
 	public void testAggregate954995() throws Exception {
 		AnalyzerContext analyzerContext = helperService.createInitializedContext(954995);
 		aggregationService.aggregate(analyzerContext);
-		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 3, 43, 7, 1);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 2, 51, 1); // Im Gemmingstal node 21777761 => 21777762
 	}
 }

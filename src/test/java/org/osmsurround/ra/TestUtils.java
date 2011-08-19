@@ -10,14 +10,15 @@ import java.util.List;
 import java.util.Map;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
-import org.osmsurround.ra.analyzer.IntersectionNode;
-import org.osmsurround.ra.analyzer.IntersectionNodeWebCreator;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 import org.osmsurround.ra.segment.FixedOrderWay;
 import org.osmsurround.ra.segment.FlexibleOrderWay;
 import org.osmsurround.ra.segment.ISegment;
 import org.osmsurround.ra.segment.RoundaboutWay;
+import org.osmsurround.ra.web.IntersectionNode;
+import org.osmsurround.ra.web.IntersectionNodeWebCreator;
+import org.osmsurround.ra.web.IntersectionWeb;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -146,15 +147,12 @@ public abstract class TestUtils {
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(SegmentsBuilder segmentsBuilder) {
 		return executeAndGetLeaves(segmentsBuilder.getSegments());
-
 	}
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(List<ISegment> segments) {
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
-		intersectionNodeWebCreator.createWeb();
-
-		Collection<IntersectionNode> leaves = intersectionNodeWebCreator.getLeaves();
-		return leaves;
+		IntersectionWeb intersectionWeb = intersectionNodeWebCreator.createWeb();
+		return intersectionWeb.getLeaves();
 	}
 
 }

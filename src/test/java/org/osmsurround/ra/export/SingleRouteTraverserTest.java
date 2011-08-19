@@ -10,8 +10,8 @@ import java.util.List;
 import org.junit.Test;
 import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
-import org.osmsurround.ra.analyzer.IntersectionNode;
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.web.IntersectionNode;
 
 public class SingleRouteTraverserTest extends TestBase {
 
@@ -29,11 +29,11 @@ public class SingleRouteTraverserTest extends TestBase {
 		SingleRouteTraverser traverser = new SingleRouteTraverser(nodeA, nodeB);
 		List<Node> nodes = traverser.getNodes();
 
-		assertEquals(getNode(5), nodes.get(0));
-		assertEquals(getNode(4), nodes.get(1));
+		assertEquals(getNode(1), nodes.get(0));
+		assertEquals(getNode(2), nodes.get(1));
 		assertEquals(getNode(3), nodes.get(2));
-		assertEquals(getNode(2), nodes.get(3));
-		assertEquals(getNode(1), nodes.get(4));
+		assertEquals(getNode(4), nodes.get(3));
+		assertEquals(getNode(5), nodes.get(4));
 	}
 
 	@Test
@@ -50,10 +50,10 @@ public class SingleRouteTraverserTest extends TestBase {
 		SingleRouteTraverser traverser = new SingleRouteTraverser(nodeB, nodeA);
 		List<Node> nodes = traverser.getNodes();
 
-		assertEquals(getNode(1), nodes.get(0));
-		assertEquals(getNode(2), nodes.get(1));
+		assertEquals(getNode(5), nodes.get(0));
+		assertEquals(getNode(4), nodes.get(1));
 		assertEquals(getNode(3), nodes.get(2));
-		assertEquals(getNode(4), nodes.get(3));
-		assertEquals(getNode(5), nodes.get(4));
+		assertEquals(getNode(2), nodes.get(3));
+		assertEquals(getNode(1), nodes.get(4));
 	}
 }

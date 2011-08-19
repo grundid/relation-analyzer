@@ -6,6 +6,7 @@ import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.web.IntersectionWeb;
 
 public class AnalyzerContext {
 
@@ -13,6 +14,7 @@ public class AnalyzerContext {
 
 	private List<ISegment> segments;
 	private List<AggregatedSegment> aggregatedSegments;
+	private List<IntersectionWeb> intersectionWebs;
 
 	AnalyzerContext(Relation relation) {
 		this.relation = relation;
@@ -41,4 +43,15 @@ public class AnalyzerContext {
 	public void setAggregatedSegments(List<AggregatedSegment> aggregatedSegments) {
 		this.aggregatedSegments = aggregatedSegments;
 	}
+
+	public List<IntersectionWeb> getIntersectionWebs() {
+		if (intersectionWebs == null)
+			throw new AnalyzerException("Intersection web not initialized");
+		return intersectionWebs;
+	}
+
+	public void setIntersectionWebs(List<IntersectionWeb> intersectionWebs) {
+		this.intersectionWebs = intersectionWebs;
+	}
+
 }

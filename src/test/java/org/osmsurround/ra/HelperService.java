@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.analyzer.AggregationService;
-import org.osmsurround.ra.analyzer.IntersectionNode;
 import org.osmsurround.ra.analyzer.RelationMemberService;
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.context.AnalyzerContextService;
@@ -17,6 +16,8 @@ import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.export.TraverseService;
 import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.web.IntersectionNode;
+import org.osmsurround.ra.web.IntersectionWebService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -36,6 +37,8 @@ public class HelperService {
 	private TraverseService traverseService;
 	@Autowired
 	private GpxExport gpxExport;
+	@Autowired
+	private IntersectionWebService intersectionWebService;
 
 	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
@@ -45,10 +48,14 @@ public class HelperService {
 	}
 
 	public AnalyzerContext createAggregatedContext(long relationId) {
-
 		AnalyzerContext analyzerContext = createInitializedContext(relationId);
-
 		aggregationService.aggregate(analyzerContext);
+		return analyzerContext;
+	}
+
+	public AnalyzerContext createIntersectionWebContext(long relationId) {
+		AnalyzerContext analyzerContext = createAggregatedContext(relationId);
+		intersectionWebService.initIntersectionWeb(analyzerContext);
 		return analyzerContext;
 	}
 

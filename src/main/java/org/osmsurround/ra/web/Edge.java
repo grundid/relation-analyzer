@@ -1,4 +1,4 @@
-package org.osmsurround.ra.analyzer;
+package org.osmsurround.ra.web;
 
 import java.util.Collections;
 import java.util.List;
