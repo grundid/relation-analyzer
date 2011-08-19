@@ -5,14 +5,19 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.segment.ISegment;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AggregationService {
 
-	public List<AggregatedSegment> aggregate(List<ISegment> segments) {
+	public void aggregate(AnalyzerContext analyzerContext) {
+		List<AggregatedSegment> aggregatedSegments = aggregateSegments(analyzerContext.getSegments());
+		analyzerContext.setAggregatedSegments(aggregatedSegments);
+	}
 
+	List<AggregatedSegment> aggregateSegments(List<ISegment> segments) {
 		List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
 		for (Iterator<ISegment> it = segments.iterator(); it.hasNext();) {
 			ISegment segment = it.next();
@@ -21,7 +26,6 @@ public class AggregationService {
 			if (!canConnect(aggregatedSegments, newAggregatedSegment))
 				aggregatedSegments.add(newAggregatedSegment);
 		}
-
 		return aggregateMore(aggregatedSegments);
 	}
 

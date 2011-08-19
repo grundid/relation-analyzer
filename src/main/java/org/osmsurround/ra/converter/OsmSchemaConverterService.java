@@ -10,6 +10,7 @@ import org.openstreetmap.api._0._6.OsmNd;
 import org.openstreetmap.api._0._6.OsmNode;
 import org.openstreetmap.api._0._6.OsmRelation;
 import org.openstreetmap.api._0._6.OsmRoot;
+import org.openstreetmap.api._0._6.OsmTag;
 import org.openstreetmap.api._0._6.OsmType;
 import org.openstreetmap.api._0._6.OsmWay;
 import org.osmsurround.ra.data.Member;
@@ -33,11 +34,23 @@ public class OsmSchemaConverterService {
 
 		for (OsmRelation osmRelation : osmRoot.getRelation()) {
 			List<Member> members = createMembers(osmRelation, knownWays);
+			Map<String, String> tags = createTags(osmRelation);
+
 			relations.add(new Relation(osmRelation.getId().longValue(), members, osmRelation.getTimestamp()
-					.toGregorianCalendar(), osmRelation.getUser()));
+					.toGregorianCalendar(), osmRelation.getUser(), tags));
 		}
 
 		return relations;
+	}
+
+	private Map<String, String> createTags(OsmRelation osmRelation) {
+		Map<String, String> tags = new HashMap<String, String>();
+
+		for (OsmTag osmTag : osmRelation.getTag()) {
+			tags.put(osmTag.getK(), osmTag.getV());
+		}
+
+		return tags;
 	}
 
 	private List<Member> createMembers(OsmRelation osmRelation, Map<Long, Way> knownWays) {

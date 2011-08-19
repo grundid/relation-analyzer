@@ -5,14 +5,12 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osmsurround.ra.HelperService;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
+import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.segment.ISegment;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,74 +23,70 @@ public class AggregationServiceTest extends TestBase {
 	private HelperService helperService;
 
 	@Test
-	public void testAggregateEmpty() throws Exception {
-		List<AggregatedSegment> list = aggregationService.aggregate(Collections.EMPTY_LIST);
+	public void testAggregateSegmentsEmpty() throws Exception {
+		List<AggregatedSegment> list = aggregationService.aggregateSegments(Collections.EMPTY_LIST);
 		assertTrue(list.isEmpty());
 	}
 
 	@Test
-	public void testAggregateSingle() throws Exception {
+	public void testAggregateSegmentsSingle() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1));
 
-		List<AggregatedSegment> list = aggregationService.aggregate(segments);
+		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(1, list.size());
 	}
 
 	@Test
-	public void testAggregateTwoUnconnected() throws Exception {
+	public void testAggregateSegmentsTwoUnconnected() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(3, 4));
 
-		List<AggregatedSegment> list = aggregationService.aggregate(segments);
+		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(2, list.size());
 	}
 
 	@Test
-	public void testAggregateTwoConnected() throws Exception {
+	public void testAggregateSegmentsTwoConnected() throws Exception {
 		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(2, 3));
 
-		List<AggregatedSegment> list = aggregationService.aggregate(segments);
+		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(1, list.size());
 		assertEquals(AggregatedSegment.class, list.get(0).getClass());
 	}
 
-	@Test
-	public void testAggregate12320() throws Exception {
-		Map<String, List<ISegment>> relation = helperService
-				.loadSplittedRelation(TestUtils.RELATION_12320_NECKARTAL_WEG);
-		List<AggregatedSegment> list = aggregationService.aggregate(relation.get(""));
-		assertEquals(1, list.size());
+	private static void assertAggregatedSegments(List<AggregatedSegment> aggregatedSegments,
+			int expectedAggregatedSegemnts, int... segmentsPerEntry) {
+		assertEquals(expectedAggregatedSegemnts, aggregatedSegments.size());
+		for (int x = 0; x < expectedAggregatedSegemnts; x++) {
+			assertEquals(segmentsPerEntry[x], aggregatedSegments.get(x).getSegments().size());
+		}
 	}
 
 	@Test
-	@Ignore
+	public void testAggregate12320() throws Exception {
+		AnalyzerContext analyzerContext = helperService
+				.createInitializedContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
+		aggregationService.aggregate(analyzerContext);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 1, 931);
+	}
+
+	@Test
 	public void testAggregate37415() throws Exception {
-		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(TestUtils.RELATION_37415);
-		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
-			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
-			assertEquals(1, list.size());
-		}
+		AnalyzerContext analyzerContext = helperService.createInitializedContext(TestUtils.RELATION_37415);
+		aggregationService.aggregate(analyzerContext);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 4, 35, 34, 3, 1);
 	}
 
 	@Test
 	public void testAggregate959757() throws Exception {
-		long relationId = TestUtils.RELATION_959757_LINE_10;
-		int exptectedAggregatedSegemnts = 1;
-
-		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(relationId);
-		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
-			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
-			assertEquals(exptectedAggregatedSegemnts, list.size());
-			assertEquals(111, list.get(0).getSegments().size());
-		}
+		AnalyzerContext analyzerContext = helperService.createInitializedContext(TestUtils.RELATION_959757_LINE_10);
+		aggregationService.aggregate(analyzerContext);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 1, 111);
 	}
 
 	@Test
-	@Ignore
 	public void testAggregate954995() throws Exception {
-		Map<String, List<ISegment>> relation = helperService.loadSplittedRelation(954995);
-		for (Entry<String, List<ISegment>> entry : relation.entrySet()) {
-			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
-			assertEquals(1, list.size());
-		}
+		AnalyzerContext analyzerContext = helperService.createInitializedContext(954995);
+		aggregationService.aggregate(analyzerContext);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 3, 43, 7, 1);
 	}
 }

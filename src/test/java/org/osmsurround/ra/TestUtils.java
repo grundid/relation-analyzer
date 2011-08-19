@@ -32,6 +32,7 @@ public abstract class TestUtils {
 	public static final long RELATION_12320_NECKARTAL_WEG = 12320;
 	public static final long RELATION_37415 = 37415;
 	public static final long RELATION_959757_LINE_10 = 959757;
+	public static final long RELATION_954995_LINE_11 = 954995;
 
 	private static final Map<Long, Node> NODES = new HashMap<Long, Node>();
 
@@ -100,6 +101,21 @@ public abstract class TestUtils {
 				return;
 		}
 		fail("Node " + nodeId + " not found");
+	}
+
+	public static void assertContainsOnlyNodeIds(Collection<IntersectionNode> nodes, long... nodeIds) {
+		assertEquals(nodeIds.length, nodes.size());
+		for (IntersectionNode node : nodes) {
+
+			boolean found = false;
+			for (long nodeId : nodeIds) {
+				if (node.getNode().getId() == nodeId)
+					found = true;
+			}
+			if (!found) {
+				fail("Node " + node.getNode() + " was not expected");
+			}
+		}
 	}
 
 	public static void assertContainsNode(Node expected, ConnectableNode connectableNode) {

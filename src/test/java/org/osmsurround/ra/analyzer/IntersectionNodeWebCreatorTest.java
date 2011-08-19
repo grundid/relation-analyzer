@@ -6,12 +6,12 @@ import static org.osmsurround.ra.TestUtils.*;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import org.junit.Test;
 import org.osmsurround.ra.HelperService;
 import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
+import org.osmsurround.ra.context.AnalyzerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class IntersectionNodeWebCreatorTest extends TestBase {
@@ -25,8 +25,7 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 
 		assertEquals(2, leaves.size());
 
-		assertTrue(leaves.contains(new IntersectionNode(getNode(4))));
-		assertTrue(leaves.contains(new IntersectionNode(getNode(1))));
+		assertContainsOnlyNodeIds(leaves, 1, 4);
 	}
 
 	@Test
@@ -200,9 +199,8 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	@Test
 	public void testRelation12320() throws Exception {
 
-		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
-				.loadSplittedAndAggregatedRelation(RELATION_12320_NECKARTAL_WEG);
-		List<AggregatedSegment> list = aggregatedRelation.get("");
+		AnalyzerContext analyzerContext = helperService.createAggregatedContext(RELATION_12320_NECKARTAL_WEG);
+		List<AggregatedSegment> list = analyzerContext.getAggregatedSegments();
 
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
 				.getSegments());
@@ -219,9 +217,8 @@ public class IntersectionNodeWebCreatorTest extends TestBase {
 	@Test
 	public void testRelation959757() throws Exception {
 
-		Map<String, List<AggregatedSegment>> aggregatedRelation = helperService
-				.loadSplittedAndAggregatedRelation(RELATION_959757_LINE_10);
-		List<AggregatedSegment> list = aggregatedRelation.get("");
+		AnalyzerContext analyzerContext = helperService.createAggregatedContext(RELATION_959757_LINE_10);
+		List<AggregatedSegment> list = analyzerContext.getAggregatedSegments();
 
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(list.get(0)
 				.getSegments());

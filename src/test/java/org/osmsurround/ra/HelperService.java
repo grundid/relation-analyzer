@@ -3,17 +3,15 @@ package org.osmsurround.ra;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.analyzer.AggregationService;
 import org.osmsurround.ra.analyzer.IntersectionNode;
-import org.osmsurround.ra.analyzer.RoleService;
+import org.osmsurround.ra.analyzer.RelationMemberService;
+import org.osmsurround.ra.context.AnalyzerContext;
+import org.osmsurround.ra.context.AnalyzerContextService;
 import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.export.GpxExport;
 import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
@@ -27,9 +25,9 @@ import org.springframework.web.client.RestTemplate;
 public class HelperService {
 
 	@Autowired
-	private RoleService roleService;
+	private RelationMemberService relationMemberService;
 	@Autowired
-	private RelationLoaderService relationLoaderService;
+	private AnalyzerContextService analyzerContextService;
 	@Autowired
 	private RestTemplate restTemplate;
 	@Autowired
@@ -39,20 +37,19 @@ public class HelperService {
 	@Autowired
 	private GpxExport gpxExport;
 
-	public Map<String, List<ISegment>> loadSplittedRelation(long relationId) {
+	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
-		Relation osmRelation = relationLoaderService.loadRelation(relationId);
-		return roleService.splitRelationByRole(osmRelation);
+		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(relationId);
+		relationMemberService.initSegments(analyzerContext);
+		return analyzerContext;
 	}
 
-	public Map<String, List<AggregatedSegment>> loadSplittedAndAggregatedRelation(long relationId) {
-		Map<String, List<AggregatedSegment>> aggregatedRelation = new HashMap<String, List<AggregatedSegment>>();
-		Map<String, List<ISegment>> splittedRelation = loadSplittedRelation(relationId);
-		for (Entry<String, List<ISegment>> entry : splittedRelation.entrySet()) {
-			List<AggregatedSegment> list = aggregationService.aggregate(entry.getValue());
-			aggregatedRelation.put(entry.getKey(), list);
-		}
-		return aggregatedRelation;
+	public AnalyzerContext createAggregatedContext(long relationId) {
+
+		AnalyzerContext analyzerContext = createInitializedContext(relationId);
+
+		aggregationService.aggregate(analyzerContext);
+		return analyzerContext;
 	}
 
 	public static List<Section> convert(List<ISegment> segments) {
