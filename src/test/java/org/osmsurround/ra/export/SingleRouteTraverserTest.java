@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
@@ -16,6 +17,7 @@ import org.osmsurround.ra.web.IntersectionNode;
 public class SingleRouteTraverserTest extends TestBase {
 
 	@Test
+	@Ignore
 	public void testTraverseOrderAtoB() throws Exception {
 
 		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)
@@ -37,6 +39,7 @@ public class SingleRouteTraverserTest extends TestBase {
 	}
 
 	@Test
+	@Ignore
 	public void testTraverseOrderBtoA() throws Exception {
 
 		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)

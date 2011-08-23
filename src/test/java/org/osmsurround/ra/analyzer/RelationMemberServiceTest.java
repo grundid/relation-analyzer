@@ -9,9 +9,8 @@ import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.context.AnalyzerContextService;
-import org.osmsurround.ra.segment.FlexibleOrderWay;
-import org.osmsurround.ra.segment.ISegment;
-import org.osmsurround.ra.segment.RoundaboutWay;
+import org.osmsurround.ra.segment.ConnectableSegment;
+import org.osmsurround.ra.segment.FlexibleWay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
@@ -46,13 +45,12 @@ public class RelationMemberServiceTest extends TestBase {
 		assertNotNull(analyzerContext.getSegments());
 
 		assertEquals(931, analyzerContext.getSegments().size());
-		assertEquals(5, countInstances(RoundaboutWay.class, analyzerContext.getSegments()));
-		assertEquals(926, countInstances(FlexibleOrderWay.class, analyzerContext.getSegments()));
+		assertEquals(931, countInstances(FlexibleWay.class, analyzerContext.getSegments()));
 	}
 
-	private int countInstances(Class<?> classToCount, List<ISegment> segments) {
+	private int countInstances(Class<?> classToCount, List<ConnectableSegment> segments) {
 		int instances = 0;
-		for (ISegment segment : segments) {
+		for (ConnectableSegment segment : segments) {
 			if (segment.getClass().getName().equals(classToCount.getName()))
 				instances++;
 		}

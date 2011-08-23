@@ -5,18 +5,17 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 import org.osmsurround.ra.segment.ConnectableSegment;
-import org.osmsurround.ra.segment.FixedOrderWay;
-import org.osmsurround.ra.segment.FlexibleOrderWay;
-import org.osmsurround.ra.segment.ISegment;
-import org.osmsurround.ra.segment.RoundaboutWay;
+import org.osmsurround.ra.segment.FlexibleWay;
 import org.osmsurround.ra.web.IntersectionNode;
 import org.osmsurround.ra.web.IntersectionNodeWebCreator;
 import org.osmsurround.ra.web.IntersectionWeb;
@@ -62,10 +61,10 @@ public abstract class TestUtils {
 		return mockServer;
 	}
 
-	public static List<ISegment> asSegments(List<Node>... lists) {
-		List<ISegment> segments = new ArrayList<ISegment>();
+	public static List<ConnectableSegment> asSegments(List<Node>... lists) {
+		List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>();
 		for (List<Node> nodes : lists) {
-			segments.add(new FixedOrderWay(new Way(0, nodes), false));
+			segments.add(new FlexibleWay(new Way(0, nodes)));
 		}
 		return segments;
 	}
@@ -74,16 +73,18 @@ public abstract class TestUtils {
 		return new Way(0, asNodes(nodeIds));
 	}
 
-	public static ISegment asFixedOrderWay(long... nodeIds) {
-		return new FixedOrderWay(new Way(0, asNodes(nodeIds)), false);
+	public static FlexibleWay asFixedOrderWay(long... nodeIds) {
+		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
+		//		return new FixedOrderWay(new Way(0, asNodes(nodeIds)), false);
 	}
 
-	public static ISegment asFlexibleOrderWay(long... nodeIds) {
-		return new FlexibleOrderWay(new Way(0, asNodes(nodeIds)));
+	public static FlexibleWay asFlexibleOrderWay(long... nodeIds) {
+		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
 	}
 
-	public static RoundaboutWay asRoundaboutWay(long... nodeIds) {
-		return new RoundaboutWay(new Way(0, asNodes(nodeIds)));
+	public static ConnectableSegment asRoundaboutWay(long... nodeIds) {
+		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
+		//		return new RoundaboutWay(new Way(0, asNodes(nodeIds)));
 	}
 
 	public static List<Node> asNodes(long... nodeIds) {
@@ -120,16 +121,17 @@ public abstract class TestUtils {
 		}
 	}
 
-	public static void assertContainsNode(Node expected, ConnectableNode connectableNode) {
-		assertTrue(connectableNode.contains(expected));
-	}
+	public static void assertContainsNodeIds(Collection<ConnectableNode> connectableNodes, long... nodeIds) {
 
-	public static void assertContainsNode(Node expected, Collection<ConnectableNode> connectableNodes) {
-		boolean contains = false;
+		Set<Long> idSet = new HashSet<Long>();
+		for (long id : nodeIds)
+			idSet.add(id);
 		for (ConnectableNode connectableNode : connectableNodes) {
-			contains |= connectableNode.contains(expected);
+
+			for (Iterator<Node> it = connectableNode.getNodesIterator(); it.hasNext();) {
+				assertTrue(idSet.contains(it.next().getId()));
+			}
 		}
-		assertTrue(contains);
 	}
 
 	public static void assertNodesInOrder(long[] expected, Collection<Node> actual) {
@@ -144,8 +146,15 @@ public abstract class TestUtils {
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(List<ConnectableSegment> segments) {
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
-		IntersectionWeb intersectionWeb = intersectionNodeWebCreator.createWeb();
+		IntersectionWeb intersectionWeb = intersectionNodeWebCreator.createGraph();
 		return intersectionWeb.getLeaves();
+	}
+
+	public static List<ConnectableSegment> asList(Object... objects) {
+		List<ConnectableSegment> list = new ArrayList<ConnectableSegment>();
+		for (Object o : objects)
+			list.add((ConnectableSegment)o);
+		return list;
 	}
 
 }

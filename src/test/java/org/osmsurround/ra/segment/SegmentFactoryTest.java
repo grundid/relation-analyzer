@@ -16,28 +16,22 @@ public class SegmentFactoryTest extends TestBase {
 	@Test
 	public void testCreateMember() throws Exception {
 
-		assertEqualClass(FlexibleOrderWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), ""))
+		assertEqualClass(FlexibleWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), ""))
 				.getClass());
 
-		assertEqualClass(FixedOrderWay.class,
+		assertEqualClass(FlexibleWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward")).getClass());
-		assertEqualClass(FixedOrderWay.class,
+		assertEqualClass(FlexibleWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "backward")).getClass());
-		assertEqualClass(RoundaboutWay.class,
+		assertEqualClass(FlexibleWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "")).getClass());
-		assertEqualClass(RoundaboutWay.class,
+		assertEqualClass(FlexibleWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "forward")).getClass());
-		assertEqualClass(RoundaboutWay.class,
+		assertEqualClass(FlexibleWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "backward")).getClass());
 	}
 
 	private void assertEqualClass(Class<?> expected, Class<?> actual) {
 		assertEquals(expected.getName(), actual.getName());
 	}
-
-	@Test(expected = RuntimeException.class)
-	public void testCreateUnknownMember() throws Exception {
-		segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unknown"));
-	}
-
 }

@@ -52,14 +52,12 @@ public class AggregationService {
 	}
 
 	private boolean canConnect(List<AggregatedSegment> connectableSegments, AggregatedSegment segment) {
-		Collection<ConnectableNode> newSegmentStartNodes = segment.getStartNodes();
-		Collection<ConnectableNode> newSegmentEndNodes = segment.getEndNodes();
+		Collection<ConnectableNode> newSegmentEndpointNodes = segment.getEndpointNodes();
 
 		for (AggregatedSegment connectableSegment : connectableSegments) {
-			Collection<ConnectableNode> startNodes = connectableSegment.getStartNodes();
-			Collection<ConnectableNode> endNodes = connectableSegment.getEndNodes();
+			Collection<ConnectableNode> endpointNodes = connectableSegment.getEndpointNodes();
 
-			if (isConnectable(startNodes, newSegmentEndNodes) || isConnectable(endNodes, newSegmentStartNodes)) {
+			if (isConnectable(endpointNodes, newSegmentEndpointNodes)) {
 				connectableSegment.addSegment(segment);
 				return true;
 			}

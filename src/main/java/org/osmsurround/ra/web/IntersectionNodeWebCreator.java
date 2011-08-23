@@ -1,20 +1,22 @@
 package org.osmsurround.ra.web;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.osmsurround.ra.analyzer.ConnectableNode;
+import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.segment.ConnectableSegment;
+import org.osmsurround.ra.segment.SegmentNodes;
 
 /**
  * <p>
- * IntersectionNodeWebCreator creates a web of nodes and returns the leaves of this web. The leaves are nodes with only
- * one edge. They are basically the entry points to the web.
+ * IntersectionNodeWebCreator creates a graph of nodes and returns the leaves of this graph. The leaves are nodes with
+ * only one edge. They are basically the entry points to the graph.
  * </p>
  * 
  * <p>
@@ -43,45 +45,45 @@ public class IntersectionNodeWebCreator {
 
 	private Map<Node, IntersectionNode> knownNodes = new HashMap<Node, IntersectionNode>();
 	private List<ConnectableSegment> segments;
+	private Collection<Edge> edges = new ArrayList<Edge>();
 
 	public IntersectionNodeWebCreator(List<ConnectableSegment> segments) {
+		if (segments.size() <= 1)
+			throw new AnalyzerException("Cannot create web from one or less segments");
 		this.segments = segments;
 	}
 
-	public IntersectionWeb createWeb() {
+	public IntersectionWeb createGraph() {
 		for (ConnectableSegment segment : segments) {
 			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
-			if (connectingSegments.isEmpty()) {
-				List<Node> nodes = segment.getNodesTillEnd(segment.getStartNodes());
-				createLeafEdge(nodes);
+			if (connectingSegments.isEmpty())
+				throw new AnalyzerException("Cannot handle a segment without connections");
 
+			if (connectingSegments.size() == 1) {
+				createLeafEdge(segment);
 			}
 			else {
-				if (connectingSegments.size() == 1) {
-					Node commondNode = findCommonNode(segment, connectingSegments.iterator().next());
-					List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode));
-					createLeafEdge(nodes);
-				}
-				else {
-					for (ConnectableSegment firstSegment : connectingSegments) {
-						for (ConnectableSegment secondSegment : connectingSegments.subList(
-								connectingSegments.indexOf(firstSegment) + 1, connectingSegments.size())) {
-							Node commondNode1 = findCommonNode(segment, firstSegment);
-							Node commondNode2 = findCommonNode(segment, secondSegment);
-							if (commondNode1.equals(commondNode2)) {
-								List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode1));
-								createLeafEdge(segment, nodes);
-							}
-							else {
-								createEdge(commondNode1, commondNode2);
-							}
+				for (ConnectableSegment firstSegment : connectingSegments) {
+					for (ConnectableSegment secondSegment : connectingSegments.subList(
+							connectingSegments.indexOf(firstSegment) + 1, connectingSegments.size())) {
+						Node commonNode1 = findCommonNode(segment, firstSegment);
+						Node commondNode2 = findCommonNode(segment, secondSegment);
+						if (commonNode1.equals(commondNode2)) {
+							createLeafEdge(segment);
+						}
+						else {
+							createEdge(segment, commonNode1, commondNode2);
 						}
 					}
 				}
 			}
 		}
-
 		return initIntersetionWeb();
+	}
+
+	private void createLeafEdge(ConnectableSegment segment) {
+		SegmentNodes segmentNodes = segment.getSegmentNodes();
+		createEdge(segment, segmentNodes.getThisNode(), segmentNodes.getOtherNode());
 	}
 
 	private IntersectionWeb initIntersetionWeb() {
@@ -93,26 +95,30 @@ public class IntersectionNodeWebCreator {
 		if (leaves.isEmpty() && !knownNodes.isEmpty())
 			leaves.add(knownNodes.values().iterator().next());
 
-		return new IntersectionWeb(leaves);
+		return new IntersectionWeb(leaves, edges);
 	}
 
-	private void createEdge(Node firstNode, Node secondNode) {
+	private void createEdge(ConnectableSegment segment, Node firstNode, Node secondNode) {
 		IntersectionNode intersectionNode1 = createIntersectionNode(firstNode);
 		IntersectionNode intersectionNode2 = createIntersectionNode(secondNode);
 
 		intersectionNode1.addEdge(intersectionNode2);
 		intersectionNode2.addEdge(intersectionNode1);
+
+		Edge edge1 = new Edge(intersectionNode1, intersectionNode2);
+		Edge edge2 = new Edge(intersectionNode2, intersectionNode1);
+		edges.add(edge1);
+		edges.add(edge2);
 	}
 
 	private Node findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {
-		return segment.getCommonNode(segmentToConntent.getEndpointNodes());
+		return segment.getCommonNode(segmentToConntent);
 	}
 
 	private List<ConnectableSegment> findConnectingSegments(ConnectableSegment segmentToConnect) {
-		ConnectableNode endPoints = segmentToConnect.getEndpointNodes();
 		List<ConnectableSegment> result = new ArrayList<ConnectableSegment>();
 		for (ConnectableSegment segment : segments) {
-			if (segment != segmentToConnect && segment.canConnect(endPoints))
+			if (segment != segmentToConnect && segment.canConnect(segmentToConnect))
 				result.add(segment);
 		}
 		return result;

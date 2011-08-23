@@ -13,7 +13,7 @@ public class IntersectionWebService {
 	public void initIntersectionWeb(AnalyzerContext analyzerContext) {
 		List<AggregatedSegment> aggregatedSegments = analyzerContext.getAggregatedSegments();
 		List<IntersectionWeb> webList = createIntersectionWebs(aggregatedSegments);
-		analyzerContext.setIntersectionWebs(webList);
+		analyzerContext.setGraphs(webList);
 	}
 
 	private List<IntersectionWeb> createIntersectionWebs(List<AggregatedSegment> aggregatedSegments) {
@@ -21,7 +21,7 @@ public class IntersectionWebService {
 		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
 			IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(
 					aggregatedSegment.getSegments());
-			webList.add(intersectionNodeWebCreator.createWeb());
+			webList.add(intersectionNodeWebCreator.createGraph());
 		}
 		return webList;
 	}

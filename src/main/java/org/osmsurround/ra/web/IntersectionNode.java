@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.dijkstra.Vertex;
 
-public class IntersectionNode {
+public class IntersectionNode implements Vertex {
 
 	private Node node;
 
@@ -16,6 +17,7 @@ public class IntersectionNode {
 		this.node = node;
 	}
 
+	@Override
 	public Node getNode() {
 		return node;
 	}

@@ -5,16 +5,16 @@ import java.util.List;
 import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.data.Relation;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.osmsurround.ra.web.IntersectionWeb;
 
 public class AnalyzerContext {
 
 	private Relation relation;
 
-	private List<ISegment> segments;
+	private List<ConnectableSegment> segments;
 	private List<AggregatedSegment> aggregatedSegments;
-	private List<IntersectionWeb> intersectionWebs;
+	private List<IntersectionWeb> graphs;
 
 	AnalyzerContext(Relation relation) {
 		this.relation = relation;
@@ -24,13 +24,13 @@ public class AnalyzerContext {
 		return relation;
 	}
 
-	public List<ISegment> getSegments() {
+	public List<ConnectableSegment> getSegments() {
 		if (segments == null)
 			throw new AnalyzerException("Segments not initialized");
 		return segments;
 	}
 
-	public void setSegments(List<ISegment> segments) {
+	public void setSegments(List<ConnectableSegment> segments) {
 		this.segments = segments;
 	}
 
@@ -44,14 +44,14 @@ public class AnalyzerContext {
 		this.aggregatedSegments = aggregatedSegments;
 	}
 
-	public List<IntersectionWeb> getIntersectionWebs() {
-		if (intersectionWebs == null)
-			throw new AnalyzerException("Intersection web not initialized");
-		return intersectionWebs;
+	public List<IntersectionWeb> getGraphs() {
+		if (graphs == null)
+			throw new AnalyzerException("Graphs not initialized");
+		return graphs;
 	}
 
-	public void setIntersectionWebs(List<IntersectionWeb> intersectionWebs) {
-		this.intersectionWebs = intersectionWebs;
+	public void setGraphs(List<IntersectionWeb> graphs) {
+		this.graphs = graphs;
 	}
 
 }

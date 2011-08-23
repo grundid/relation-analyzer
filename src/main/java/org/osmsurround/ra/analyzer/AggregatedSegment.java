@@ -22,17 +22,10 @@ public class AggregatedSegment {
 		addSegment(aggregatedSegment);
 	}
 
-	public Collection<ConnectableNode> getStartNodes() {
+	public Collection<ConnectableNode> getEndpointNodes() {
 		Collection<ConnectableNode> nodes = new ArrayList<ConnectableNode>();
 		for (ConnectableSegment segment : segments)
-			nodes.add(segment.getStartNodes());
-		return nodes;
-	}
-
-	public Collection<ConnectableNode> getEndNodes() {
-		Collection<ConnectableNode> nodes = new ArrayList<ConnectableNode>();
-		for (ConnectableSegment segment : segments)
-			nodes.add(segment.getEndNodes());
+			nodes.add(segment.getEndpointNodes());
 		return nodes;
 	}
 

@@ -1,8 +1,8 @@
 package org.osmsurround.ra.analyzer;
 
 import static org.junit.Assert.*;
+import static org.osmsurround.ra.TestUtils.*;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.osmsurround.ra.HelperService;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @SuppressWarnings("unchecked")
@@ -30,7 +30,7 @@ public class AggregationServiceTest extends TestBase {
 
 	@Test
 	public void testAggregateSegmentsSingle() throws Exception {
-		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1));
+		List<ConnectableSegment> segments = asList(asFixedOrderWay(1));
 
 		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(1, list.size());
@@ -38,7 +38,7 @@ public class AggregationServiceTest extends TestBase {
 
 	@Test
 	public void testAggregateSegmentsTwoUnconnected() throws Exception {
-		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(3, 4));
+		List<ConnectableSegment> segments = asList(asFixedOrderWay(1, 2), asFixedOrderWay(3, 4));
 
 		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(2, list.size());
@@ -46,7 +46,7 @@ public class AggregationServiceTest extends TestBase {
 
 	@Test
 	public void testAggregateSegmentsTwoConnected() throws Exception {
-		List<ISegment> segments = Arrays.asList(TestUtils.asFixedOrderWay(1, 2), TestUtils.asFixedOrderWay(2, 3));
+		List<ConnectableSegment> segments = asList(asFixedOrderWay(1, 2), asFixedOrderWay(2, 3));
 
 		List<AggregatedSegment> list = aggregationService.aggregateSegments(segments);
 		assertEquals(1, list.size());
@@ -73,7 +73,7 @@ public class AggregationServiceTest extends TestBase {
 	public void testAggregate37415() throws Exception {
 		AnalyzerContext analyzerContext = helperService.createInitializedContext(TestUtils.RELATION_37415);
 		aggregationService.aggregate(analyzerContext);
-		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 4, 35, 34, 3, 1);
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 1, 73);
 	}
 
 	@Test
@@ -87,6 +87,6 @@ public class AggregationServiceTest extends TestBase {
 	public void testAggregate954995() throws Exception {
 		AnalyzerContext analyzerContext = helperService.createInitializedContext(954995);
 		aggregationService.aggregate(analyzerContext);
-		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 2, 51, 1); // Im Gemmingstal node 21777761 => 21777762
+		assertAggregatedSegments(analyzerContext.getAggregatedSegments(), 1, 52);
 	}
 }

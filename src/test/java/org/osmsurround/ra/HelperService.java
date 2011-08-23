@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.analyzer.AggregationService;
 import org.osmsurround.ra.analyzer.RelationMemberService;
 import org.osmsurround.ra.context.AnalyzerContext;
@@ -15,7 +14,6 @@ import org.osmsurround.ra.export.GpxExport;
 import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.export.TraverseService;
-import org.osmsurround.ra.segment.ConnectableSegment;
 import org.osmsurround.ra.web.IntersectionNode;
 import org.osmsurround.ra.web.IntersectionWebService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,37 +55,6 @@ public class HelperService {
 		AnalyzerContext analyzerContext = createAggregatedContext(relationId);
 		intersectionWebService.initIntersectionWeb(analyzerContext);
 		return analyzerContext;
-	}
-
-	public static List<Section> convert(List<ConnectableSegment> segments) {
-		List<Section> sectionList = new ArrayList<Section>();
-
-		appendSegments(sectionList, 0, segments);
-
-		return sectionList;
-
-	}
-
-	public static List<Section> convertAggregated(List<AggregatedSegment> aggregatedSegments) {
-		List<Section> sectionList = new ArrayList<Section>();
-
-		int y = 0;
-
-		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
-			List<ConnectableSegment> segments = aggregatedSegment.getSegments();
-			appendSegments(sectionList, y, segments);
-			y++;
-		}
-		return sectionList;
-
-	}
-
-	private static void appendSegments(List<Section> sectionList, int y, List<ConnectableSegment> segments) {
-		for (int x = 0; x < segments.size(); x++) {
-			ConnectableSegment segment = segments.get(x);
-			sectionList.add(new SectionContainer("Segment " + y + " | " + x, segment.getNodesBetween(
-					segment.getStartNodes(), segment.getEndNodes())));
-		}
 	}
 
 	public void exportGpx(Collection<IntersectionNode> leaves, long relationId) {
