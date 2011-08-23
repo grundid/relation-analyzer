@@ -137,14 +137,6 @@ public abstract class TestUtils {
 			assertEquals(TestUtils.getNode(id), it.next());
 	}
 
-	public static void assertOppositeNode(ISegment segment, long startNodeId, long... expectedOppositeNodeIds) {
-		ConnectableNode oppositeNode = segment.getOppositeNode(new ConnectableNode(getNode(startNodeId)));
-		for (Node node : asNodes(expectedOppositeNodeIds))
-			assertTrue(oppositeNode.contains(node));
-
-		assertFalse(oppositeNode.contains(getNode(startNodeId)));
-	}
-
 	public static Collection<IntersectionNode> executeAndGetLeaves(SegmentsBuilder segmentsBuilder) {
 		return executeAndGetLeaves(segmentsBuilder.getSegments());
 	}

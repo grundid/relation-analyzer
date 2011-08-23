@@ -75,37 +75,12 @@ public class FixedOrderWayTest {
 	}
 
 	@Test
-	public void testGetOppositeNode() throws Exception {
-		assertOppositeNode(fixedOrderWayNotReverse, 1, 4);
-		assertOppositeNode(fixedOrderWayNotReverse, 4, 1);
-		assertOppositeNode(fixedOrderWayReverse, 4, 1);
-		assertOppositeNode(fixedOrderWayReverse, 1, 4);
-	}
-
-	@Test
 	public void testCanConnect() throws Exception {
 		assertTrue(fixedOrderWayNotReverse.canConnect(new ConnectableNode(firstNode)));
 		assertTrue(fixedOrderWayNotReverse.canConnect(new ConnectableNode(lastNode)));
 
 		assertTrue(fixedOrderWayReverse.canConnect(new ConnectableNode(firstNode)));
 		assertTrue(fixedOrderWayReverse.canConnect(new ConnectableNode(lastNode)));
-	}
-
-	@Test
-	public void testCanConnectForwardOnly() throws Exception {
-		assertTrue(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(
-				getNode(10))));
-		assertFalse(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(
-				lastNode)));
-		assertFalse(fixedOrderWayNotReverse.canConnectExcept(new ConnectableNode(lastNode), new ConnectableNode(
-				firstNode)));
-
-		assertTrue(fixedOrderWayReverse.canConnectExcept(new ConnectableNode(lastNode),
-				new ConnectableNode(getNode(10))));
-		assertFalse(fixedOrderWayReverse
-				.canConnectExcept(new ConnectableNode(lastNode), new ConnectableNode(firstNode)));
-		assertFalse(fixedOrderWayReverse
-				.canConnectExcept(new ConnectableNode(firstNode), new ConnectableNode(lastNode)));
 	}
 
 	@Test

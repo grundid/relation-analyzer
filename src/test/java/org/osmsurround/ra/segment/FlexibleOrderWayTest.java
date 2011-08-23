@@ -45,12 +45,6 @@ public class FlexibleOrderWayTest {
 	}
 
 	@Test
-	public void testGetOppositeNode() throws Exception {
-		assertOppositeNode(flexibleOrderWay, 1, 4);
-		assertOppositeNode(flexibleOrderWay, 4, 1);
-	}
-
-	@Test
 	public void testCanConnect() throws Exception {
 		assertTrue(flexibleOrderWay.canConnect(new ConnectableNode(firstNode)));
 		assertTrue(flexibleOrderWay.canConnect(new ConnectableNode(lastNode)));

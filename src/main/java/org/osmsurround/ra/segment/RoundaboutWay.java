@@ -61,35 +61,8 @@ public class RoundaboutWay extends FlexibleOrderWay {
 	}
 
 	@Override
-	public ConnectableNode getOppositeNode(ConnectableNode startNode) {
-		List<Node> nodes = new ArrayList<Node>(getWayNodes());
-		int nodeIndex = findNodeIndex(startNode, nodes);
-
-		if (nodeIndex == 0)
-			nodes.remove(nodes.size() - 1); // first and last node are the same
-
-		nodes.remove(nodeIndex);
-		return new ConnectableNode(nodes);
-	}
-
-	@Override
 	public boolean canConnect(ConnectableNode node) {
 		return getCommonNodeInternal(node) != null;
-	}
-
-	@Override
-	public boolean canConnectExcept(ConnectableNode node, ConnectableNode endNodeToIgnore) {
-		if (node.isConnectable(endNodeToIgnore))
-			return false;
-
-		List<Node> nodes = getWayNodes();
-		int matchCount = 0;
-		for (Iterator<Node> it = node.getNodesIterator(); it.hasNext();) {
-			Node externalNode = it.next();
-			if (nodes.contains(externalNode))
-				matchCount++;
-		}
-		return matchCount == 1;
 	}
 
 	@Override

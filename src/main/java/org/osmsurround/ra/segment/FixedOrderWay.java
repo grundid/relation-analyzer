@@ -82,25 +82,8 @@ public class FixedOrderWay implements ISegment {
 	}
 
 	@Override
-	public ConnectableNode getOppositeNode(ConnectableNode startNode) {
-		if (startNode.contains(getSingleStartNode()))
-			return new ConnectableNode(getSingleEndNode());
-		else if (startNode.contains(getSingleEndNode()))
-			return new ConnectableNode(getSingleStartNode());
-
-		throw new AnalyzerException("Given node not a start or end node");
-	}
-
-	@Override
 	public boolean canConnect(ConnectableNode node) {
 		return node.contains(getSingleStartNode()) || node.contains(getSingleEndNode());
-	}
-
-	@Override
-	public boolean canConnectExcept(ConnectableNode node, ConnectableNode endNodeToIgnore) {
-
-		return getStartNodes().isConnectable(node) && !getEndNodes().isConnectable(endNodeToIgnore)
-				|| getEndNodes().isConnectable(node) && !getStartNodes().isConnectable(endNodeToIgnore);
 	}
 
 	@Override
