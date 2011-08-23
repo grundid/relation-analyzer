@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.RoundaboutService;
 import org.osmsurround.ra.data.Member;
 import org.osmsurround.ra.data.Node;
@@ -32,7 +33,7 @@ public class SegmentFactory {
 		else if ("backward".equals(memberRole))
 			return createFixedSegment(way, true);
 
-		throw new RuntimeException("Unknown member role");
+		throw new AnalyzerException("Unknown member role");
 	}
 
 	private ConnectableSegment createFlexibleSegment(Way way) {
@@ -40,8 +41,8 @@ public class SegmentFactory {
 	}
 
 	private ConnectableSegment createFixedSegment(Way way, boolean reverse) {
-		List<Node> nodes = new ArrayList<Node>(way.getNodes());
 		if (reverse) {
+			List<Node> nodes = new ArrayList<Node>(way.getNodes());
 			Collections.reverse(nodes);
 			return new FixedWay(nodes);
 		}

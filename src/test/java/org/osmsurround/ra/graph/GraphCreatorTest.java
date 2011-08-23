@@ -124,6 +124,7 @@ public class GraphCreatorTest extends TestBase {
 	}
 
 	@Test
+	@Ignore
 	public void testCreateGraphDoubleLaneHalfRoundabout() throws Exception {
 		// TODO CreateGraphDoubleLaneHalfRoundabout
 	}
