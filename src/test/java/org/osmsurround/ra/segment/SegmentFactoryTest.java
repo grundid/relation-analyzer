@@ -19,15 +19,15 @@ public class SegmentFactoryTest extends TestBase {
 		assertEqualClass(FlexibleWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), ""))
 				.getClass());
 
-		assertEqualClass(FlexibleWay.class,
-				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward")).getClass());
-		assertEqualClass(FlexibleWay.class,
-				segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "backward")).getClass());
-		assertEqualClass(FlexibleWay.class,
+		assertEqualClass(FixedWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward"))
+				.getClass());
+		assertEqualClass(FixedWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "backward"))
+				.getClass());
+		assertEqualClass(RoundaboutWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "")).getClass());
-		assertEqualClass(FlexibleWay.class,
+		assertEqualClass(RoundaboutWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "forward")).getClass());
-		assertEqualClass(FlexibleWay.class,
+		assertEqualClass(RoundaboutWay.class,
 				segmentFactory.createSegment(new Member(TestUtils.asWay(10, 11, 12, 13, 10), "backward")).getClass());
 	}
 

@@ -41,13 +41,13 @@ import org.osmsurround.ra.segment.SegmentNodes;
  * </p>
  * 
  */
-public class IntersectionNodeWebCreator {
+public class GraphCreator {
 
 	private Map<Node, IntersectionNode> knownNodes = new HashMap<Node, IntersectionNode>();
 	private List<ConnectableSegment> segments;
 	private Collection<Edge> edges = new ArrayList<Edge>();
 
-	public IntersectionNodeWebCreator(List<ConnectableSegment> segments) {
+	public GraphCreator(List<ConnectableSegment> segments) {
 		if (segments.size() <= 1)
 			throw new AnalyzerException("Cannot create web from one or less segments");
 		this.segments = segments;
@@ -99,16 +99,23 @@ public class IntersectionNodeWebCreator {
 	}
 
 	private void createEdge(ConnectableSegment segment, Node firstNode, Node secondNode) {
-		IntersectionNode intersectionNode1 = createIntersectionNode(firstNode);
-		IntersectionNode intersectionNode2 = createIntersectionNode(secondNode);
+		IntersectionNode firstIntersectionNode = createIntersectionNode(firstNode);
+		IntersectionNode secondIntersectionNode = createIntersectionNode(secondNode);
 
-		intersectionNode1.addEdge(intersectionNode2);
-		intersectionNode2.addEdge(intersectionNode1);
+		firstIntersectionNode.addEdge(secondIntersectionNode);
+		secondIntersectionNode.addEdge(firstIntersectionNode);
 
-		Edge edge1 = new Edge(intersectionNode1, intersectionNode2);
-		Edge edge2 = new Edge(intersectionNode2, intersectionNode1);
-		edges.add(edge1);
-		edges.add(edge2);
+		if (segment.canConnectNodesInDirection(firstNode, secondNode)) {
+			addEdge(firstIntersectionNode, secondIntersectionNode);
+		}
+		if (segment.canConnectNodesInDirection(secondNode, firstNode)) {
+			addEdge(secondIntersectionNode, firstIntersectionNode);
+		}
+	}
+
+	private void addEdge(IntersectionNode intersectionNode1, IntersectionNode intersectionNode2) {
+		Edge edge = new Edge(intersectionNode1, intersectionNode2);
+		edges.add(edge);
 	}
 
 	private Node findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {

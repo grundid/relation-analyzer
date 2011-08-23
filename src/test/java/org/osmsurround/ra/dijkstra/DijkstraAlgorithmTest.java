@@ -33,13 +33,6 @@ public class DijkstraAlgorithmTest extends TestBase {
 
 		List<Vertex> path = dijkstraAlgorithm.getPath(endNode);
 
-		//		for (Vertex vertex : path) {
-		//			System.out.println(vertex.getNode());
-		//		}
-		//		
-
-		System.out.println(path.size());
-
 		assertEquals(startNode, path.get(0));
 		assertEquals(endNode, path.get(path.size() - 1));
 

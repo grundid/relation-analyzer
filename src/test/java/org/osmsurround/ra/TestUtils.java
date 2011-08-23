@@ -15,9 +15,11 @@ import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
 import org.osmsurround.ra.segment.ConnectableSegment;
+import org.osmsurround.ra.segment.FixedWay;
 import org.osmsurround.ra.segment.FlexibleWay;
+import org.osmsurround.ra.segment.RoundaboutWay;
 import org.osmsurround.ra.web.IntersectionNode;
-import org.osmsurround.ra.web.IntersectionNodeWebCreator;
+import org.osmsurround.ra.web.GraphCreator;
 import org.osmsurround.ra.web.IntersectionWeb;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
@@ -64,7 +66,7 @@ public abstract class TestUtils {
 	public static List<ConnectableSegment> asSegments(List<Node>... lists) {
 		List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>();
 		for (List<Node> nodes : lists) {
-			segments.add(new FlexibleWay(new Way(0, nodes)));
+			segments.add(new FlexibleWay(nodes));
 		}
 		return segments;
 	}
@@ -74,17 +76,15 @@ public abstract class TestUtils {
 	}
 
 	public static FlexibleWay asFixedOrderWay(long... nodeIds) {
-		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
-		//		return new FixedOrderWay(new Way(0, asNodes(nodeIds)), false);
+		return new FixedWay(asNodes(nodeIds));
 	}
 
 	public static FlexibleWay asFlexibleOrderWay(long... nodeIds) {
-		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
+		return new FlexibleWay(asNodes(nodeIds));
 	}
 
 	public static ConnectableSegment asRoundaboutWay(long... nodeIds) {
-		return new FlexibleWay(new Way(0, asNodes(nodeIds)));
-		//		return new RoundaboutWay(new Way(0, asNodes(nodeIds)));
+		return new RoundaboutWay(asNodes(nodeIds));
 	}
 
 	public static List<Node> asNodes(long... nodeIds) {
@@ -145,7 +145,7 @@ public abstract class TestUtils {
 	}
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(List<ConnectableSegment> segments) {
-		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
+		GraphCreator intersectionNodeWebCreator = new GraphCreator(segments);
 		IntersectionWeb intersectionWeb = intersectionNodeWebCreator.createGraph();
 		return intersectionWeb.getLeaves();
 	}

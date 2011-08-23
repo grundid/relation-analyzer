@@ -19,7 +19,7 @@ public class IntersectionWebService {
 	private List<IntersectionWeb> createIntersectionWebs(List<AggregatedSegment> aggregatedSegments) {
 		List<IntersectionWeb> webList = new ArrayList<IntersectionWeb>();
 		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
-			IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(
+			GraphCreator intersectionNodeWebCreator = new GraphCreator(
 					aggregatedSegment.getSegments());
 			webList.add(intersectionNodeWebCreator.createGraph());
 		}

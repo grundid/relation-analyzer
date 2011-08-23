@@ -3,6 +3,9 @@ package org.osmsurround.ra.segment;
 import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.AnalyzerException;
@@ -69,5 +72,32 @@ public class FlexibleWayTest {
 		assertCanConnect(true, 5, 4, 7);
 		assertCanConnect(true, 5, 3, 7);
 		assertCanConnect(false, 7, 8, 9);
+	}
+
+	@Test
+	public void testAppendNodesBetween() throws Exception {
+		assertNodesInOrder(flexibleWay, firstNode, lastNode, 1, 2, 3, 4);
+		assertNodesInOrder(flexibleWay, lastNode, firstNode, 4, 3, 2, 1);
+	}
+
+	@Test
+	public void testContainsNodes() throws Exception {
+		assertTrue(flexibleWay.containsNodes(getNode(1), getNode(2), getNode(3), getNode(4)));
+		assertFalse(flexibleWay.containsNodes(getNode(5), getNode(6), getNode(7), getNode(8)));
+	}
+
+	@Test
+	public void testCanConnectNodesInDirection() throws Exception {
+		assertTrue(flexibleWay.canConnectNodesInDirection(firstNode, lastNode));
+		assertTrue(flexibleWay.canConnectNodesInDirection(lastNode, firstNode));
+	}
+
+	public static void assertNodesInOrder(ConnectableSegment segment, Node firstNode, Node lastNode, long... nodeIds) {
+		List<Node> nodes = new ArrayList<Node>();
+		nodes.add(firstNode);
+		segment.appendNodesBetween(nodes, firstNode, lastNode);
+		for (int x = 0; x < nodeIds.length; x++) {
+			assertEquals(nodeIds[x], nodes.get(x).getId());
+		}
 	}
 }

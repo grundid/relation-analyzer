@@ -19,5 +19,9 @@ public interface ConnectableSegment {
 	 */
 	boolean canConnect(ConnectableSegment otherSegment);
 
+	boolean canConnectNodesInDirection(Node startNode, Node endNode);
+
 	void appendNodesBetween(Collection<Node> nodes, Node startNode, Node endNode);
+
+	boolean containsNodes(Node... nodes);
 }

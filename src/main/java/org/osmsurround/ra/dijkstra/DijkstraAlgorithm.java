@@ -100,7 +100,25 @@ public class DijkstraAlgorithm {
 	 * This method returns the path from the source to the selected target. An empty list is returned if no path is
 	 * found.
 	 */
+
 	public List<Vertex> getPath(Vertex target) {
+		if (predecessors.containsKey(target)) {
+			LinkedList<Vertex> path = new LinkedList<Vertex>();
+			do {
+				path.add(target);
+				target = predecessors.get(target);
+
+			} while (target != null);
+
+			Collections.reverse(path);
+			return path;
+
+		}
+		else
+			return Collections.emptyList();
+	}
+
+	public List<Vertex> getPath2(Vertex target) {
 		LinkedList<Vertex> path = new LinkedList<Vertex>();
 		Vertex step = target;
 		// Check if a path exists
