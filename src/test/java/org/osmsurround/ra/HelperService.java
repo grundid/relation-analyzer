@@ -15,7 +15,7 @@ import org.osmsurround.ra.export.GpxExport;
 import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.export.TraverseService;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.osmsurround.ra.web.IntersectionNode;
 import org.osmsurround.ra.web.IntersectionWebService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class HelperService {
 		return analyzerContext;
 	}
 
-	public static List<Section> convert(List<ISegment> segments) {
+	public static List<Section> convert(List<ConnectableSegment> segments) {
 		List<Section> sectionList = new ArrayList<Section>();
 
 		appendSegments(sectionList, 0, segments);
@@ -74,7 +74,7 @@ public class HelperService {
 		int y = 0;
 
 		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
-			List<ISegment> segments = aggregatedSegment.getSegments();
+			List<ConnectableSegment> segments = aggregatedSegment.getSegments();
 			appendSegments(sectionList, y, segments);
 			y++;
 		}
@@ -82,9 +82,9 @@ public class HelperService {
 
 	}
 
-	private static void appendSegments(List<Section> sectionList, int y, List<ISegment> segments) {
+	private static void appendSegments(List<Section> sectionList, int y, List<ConnectableSegment> segments) {
 		for (int x = 0; x < segments.size(); x++) {
-			ISegment segment = segments.get(x);
+			ConnectableSegment segment = segments.get(x);
 			sectionList.add(new SectionContainer("Segment " + y + " | " + x, segment.getNodesBetween(
 					segment.getStartNodes(), segment.getEndNodes())));
 		}

@@ -3,11 +3,11 @@ package org.osmsurround.ra;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 
 public class SegmentsBuilder {
 
-	private List<ISegment> segments = new ArrayList<ISegment>();
+	private List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>();
 
 	public SegmentsBuilder appendFlexible(long... nodeIds) {
 		segments.add(TestUtils.asFlexibleOrderWay(nodeIds));
@@ -28,7 +28,7 @@ public class SegmentsBuilder {
 		return new SegmentsBuilder();
 	}
 
-	public List<ISegment> getSegments() {
+	public List<ConnectableSegment> getSegments() {
 		return segments;
 	}
 }

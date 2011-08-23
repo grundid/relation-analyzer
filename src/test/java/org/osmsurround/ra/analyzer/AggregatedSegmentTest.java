@@ -6,7 +6,7 @@ import java.util.Collection;
 
 import org.junit.Test;
 import org.osmsurround.ra.TestUtils;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 
 public class AggregatedSegmentTest {
 
@@ -45,7 +45,7 @@ public class AggregatedSegmentTest {
 		AggregatedSegment segment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(1, 2));
 		AggregatedSegment subSegment = new AggregatedSegment(TestUtils.asFlexibleOrderWay(2, 3));
 		segment.addSegment(subSegment);
-		for (ISegment innerSegment : segment.getSegments())
+		for (ConnectableSegment innerSegment : segment.getSegments())
 			assertFalse(innerSegment instanceof AggregatedSegment);
 
 	}

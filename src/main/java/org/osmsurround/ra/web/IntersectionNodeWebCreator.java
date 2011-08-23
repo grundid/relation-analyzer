@@ -9,7 +9,7 @@ import java.util.Set;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 
 /**
  * <p>
@@ -42,15 +42,15 @@ import org.osmsurround.ra.segment.ISegment;
 public class IntersectionNodeWebCreator {
 
 	private Map<Node, IntersectionNode> knownNodes = new HashMap<Node, IntersectionNode>();
-	private List<ISegment> segments;
+	private List<ConnectableSegment> segments;
 
-	public IntersectionNodeWebCreator(List<ISegment> segments) {
+	public IntersectionNodeWebCreator(List<ConnectableSegment> segments) {
 		this.segments = segments;
 	}
 
 	public IntersectionWeb createWeb() {
-		for (ISegment segment : segments) {
-			List<ISegment> connectingSegments = findConnectingSegments(segment);
+		for (ConnectableSegment segment : segments) {
+			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
 			if (connectingSegments.isEmpty()) {
 				List<Node> nodes = segment.getNodesTillEnd(segment.getStartNodes());
 				createEdge(nodes);
@@ -63,8 +63,8 @@ public class IntersectionNodeWebCreator {
 					createEdge(nodes);
 				}
 				else {
-					for (ISegment firstSegment : connectingSegments) {
-						for (ISegment secondSegment : connectingSegments.subList(
+					for (ConnectableSegment firstSegment : connectingSegments) {
+						for (ConnectableSegment secondSegment : connectingSegments.subList(
 								connectingSegments.indexOf(firstSegment) + 1, connectingSegments.size())) {
 							Node commondNode1 = findCommonNode(segment, firstSegment);
 							Node commondNode2 = findCommonNode(segment, secondSegment);
@@ -109,14 +109,14 @@ public class IntersectionNodeWebCreator {
 		intersectionNode2.addEdge(nodes, intersectionNode1);
 	}
 
-	private Node findCommonNode(ISegment segment, ISegment segmentToConntent) {
+	private Node findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {
 		return segment.getCommonNode(segmentToConntent.getEndpointNodes());
 	}
 
-	private List<ISegment> findConnectingSegments(ISegment segmentToConnect) {
+	private List<ConnectableSegment> findConnectingSegments(ConnectableSegment segmentToConnect) {
 		ConnectableNode endPoints = segmentToConnect.getEndpointNodes();
-		List<ISegment> result = new ArrayList<ISegment>();
-		for (ISegment segment : segments) {
+		List<ConnectableSegment> result = new ArrayList<ConnectableSegment>();
+		for (ConnectableSegment segment : segments) {
 			if (segment != segmentToConnect && segment.canConnect(endPoints))
 				result.add(segment);
 		}

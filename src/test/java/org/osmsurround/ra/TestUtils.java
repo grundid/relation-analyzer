@@ -12,6 +12,7 @@ import java.util.Map;
 import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.osmsurround.ra.segment.FixedOrderWay;
 import org.osmsurround.ra.segment.FlexibleOrderWay;
 import org.osmsurround.ra.segment.ISegment;
@@ -141,7 +142,7 @@ public abstract class TestUtils {
 		return executeAndGetLeaves(segmentsBuilder.getSegments());
 	}
 
-	public static Collection<IntersectionNode> executeAndGetLeaves(List<ISegment> segments) {
+	public static Collection<IntersectionNode> executeAndGetLeaves(List<ConnectableSegment> segments) {
 		IntersectionNodeWebCreator intersectionNodeWebCreator = new IntersectionNodeWebCreator(segments);
 		IntersectionWeb intersectionWeb = intersectionNodeWebCreator.createWeb();
 		return intersectionWeb.getLeaves();

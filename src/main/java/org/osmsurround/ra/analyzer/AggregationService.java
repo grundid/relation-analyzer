@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.segment.ISegment;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,10 +17,10 @@ public class AggregationService {
 		analyzerContext.setAggregatedSegments(aggregatedSegments);
 	}
 
-	List<AggregatedSegment> aggregateSegments(List<ISegment> segments) {
+	List<AggregatedSegment> aggregateSegments(List<? extends ConnectableSegment> segments) {
 		List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
-		for (Iterator<ISegment> it = segments.iterator(); it.hasNext();) {
-			ISegment segment = it.next();
+		for (Iterator<? extends ConnectableSegment> it = segments.iterator(); it.hasNext();) {
+			ConnectableSegment segment = it.next();
 
 			AggregatedSegment newAggregatedSegment = new AggregatedSegment(segment);
 			if (!canConnect(aggregatedSegments, newAggregatedSegment))
