@@ -13,10 +13,10 @@ public class RoundaboutWay extends FlexibleWay {
 
 	@Override
 	protected void appendNodesBackwards(Collection<Node> nodes, int startNodeIndex, int endNodeIndex) {
-		for (int x = startNodeIndex; x < wayNodes.size(); x++) {
+		for (int x = startNodeIndex + 1; x < wayNodes.size(); x++) {
 			nodes.add(wayNodes.get(x));
 		}
-		for (int x = 0; x < endNodeIndex + 1; x++) {
+		for (int x = 1; x < endNodeIndex + 1; x++) {
 			nodes.add(wayNodes.get(x));
 		}
 	}

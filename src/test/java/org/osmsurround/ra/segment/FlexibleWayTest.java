@@ -3,9 +3,6 @@ package org.osmsurround.ra.segment;
 import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.AnalyzerException;
@@ -76,8 +73,8 @@ public class FlexibleWayTest {
 
 	@Test
 	public void testAppendNodesBetween() throws Exception {
-		assertNodesInOrder(flexibleWay, firstNode, lastNode, 1, 2, 3, 4);
-		assertNodesInOrder(flexibleWay, lastNode, firstNode, 4, 3, 2, 1);
+		assertNodesInOrder(flexibleWay, firstNode, lastNode, 2, 3, 4);
+		assertNodesInOrder(flexibleWay, lastNode, firstNode, 3, 2, 1);
 	}
 
 	@Test
@@ -92,12 +89,4 @@ public class FlexibleWayTest {
 		assertTrue(flexibleWay.canConnectNodesInDirection(lastNode, firstNode));
 	}
 
-	public static void assertNodesInOrder(ConnectableSegment segment, Node firstNode, Node lastNode, long... nodeIds) {
-		List<Node> nodes = new ArrayList<Node>();
-		nodes.add(firstNode);
-		segment.appendNodesBetween(nodes, firstNode, lastNode);
-		for (int x = 0; x < nodeIds.length; x++) {
-			assertEquals(nodeIds[x], nodes.get(x).getId());
-		}
-	}
 }

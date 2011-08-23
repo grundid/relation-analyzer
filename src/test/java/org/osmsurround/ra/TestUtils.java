@@ -157,4 +157,12 @@ public abstract class TestUtils {
 		return list;
 	}
 
+	public static void assertNodesInOrder(ConnectableSegment segment, Node firstNode, Node lastNode, long... nodeIds) {
+		List<Node> nodes = new ArrayList<Node>();
+		segment.appendNodesBetween(nodes, firstNode, lastNode);
+		for (int x = 0; x < nodeIds.length; x++) {
+			assertEquals(nodeIds[x], nodes.get(x).getId());
+		}
+	}
+
 }

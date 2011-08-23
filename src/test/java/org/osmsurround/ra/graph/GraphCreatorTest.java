@@ -40,7 +40,6 @@ public class GraphCreatorTest extends TestBase {
 	}
 
 	@Test
-	@Ignore
 	public void testCreateGraphEdgeOrder() throws Exception {
 
 		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)

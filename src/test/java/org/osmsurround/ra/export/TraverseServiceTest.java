@@ -21,7 +21,7 @@ public class TraverseServiceTest extends TestBase {
 	@Test
 	public void testTraverse() throws Exception {
 
-		long relationId = TestUtils.RELATION_959757_LINE_10;
+		long relationId = TestUtils.RELATION_12320_NECKARTAL_WEG;
 
 		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(relationId);
 
