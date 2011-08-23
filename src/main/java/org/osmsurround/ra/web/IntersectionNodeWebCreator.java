@@ -53,14 +53,14 @@ public class IntersectionNodeWebCreator {
 			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
 			if (connectingSegments.isEmpty()) {
 				List<Node> nodes = segment.getNodesTillEnd(segment.getStartNodes());
-				createEdge(nodes);
+				createLeafEdge(nodes);
 
 			}
 			else {
 				if (connectingSegments.size() == 1) {
 					Node commondNode = findCommonNode(segment, connectingSegments.iterator().next());
 					List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode));
-					createEdge(nodes);
+					createLeafEdge(nodes);
 				}
 				else {
 					for (ConnectableSegment firstSegment : connectingSegments) {
@@ -70,12 +70,10 @@ public class IntersectionNodeWebCreator {
 							Node commondNode2 = findCommonNode(segment, secondSegment);
 							if (commondNode1.equals(commondNode2)) {
 								List<Node> nodes = segment.getNodesTillEnd(new ConnectableNode(commondNode1));
-								createEdge(nodes);
+								createLeafEdge(segment, nodes);
 							}
 							else {
-								List<Node> nodes = segment.getNodesBetween(new ConnectableNode(commondNode1),
-										new ConnectableNode(commondNode2));
-								createEdge(nodes);
+								createEdge(commondNode1, commondNode2);
 							}
 						}
 					}
@@ -89,7 +87,7 @@ public class IntersectionNodeWebCreator {
 	private IntersectionWeb initIntersetionWeb() {
 		Set<IntersectionNode> leaves = new HashSet<IntersectionNode>();
 		for (IntersectionNode node : knownNodes.values()) {
-			if (node.getEdgesAmount() == 1)
+			if (node.isLeaf())
 				leaves.add(node);
 		}
 		if (leaves.isEmpty() && !knownNodes.isEmpty())
@@ -98,15 +96,12 @@ public class IntersectionNodeWebCreator {
 		return new IntersectionWeb(leaves);
 	}
 
-	private void createEdge(List<Node> nodes) {
-		Node firstNode = nodes.get(0);
-		Node secondNode = nodes.get(nodes.size() - 1);
-
+	private void createEdge(Node firstNode, Node secondNode) {
 		IntersectionNode intersectionNode1 = createIntersectionNode(firstNode);
 		IntersectionNode intersectionNode2 = createIntersectionNode(secondNode);
 
-		intersectionNode1.addEdge(nodes, intersectionNode2);
-		intersectionNode2.addEdge(nodes, intersectionNode1);
+		intersectionNode1.addEdge(intersectionNode2);
+		intersectionNode2.addEdge(intersectionNode1);
 	}
 
 	private Node findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {

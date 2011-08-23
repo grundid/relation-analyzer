@@ -10,7 +10,7 @@ public class IntersectionNode {
 
 	private Node node;
 
-	private List<Edge> edges = new ArrayList<Edge>();
+	private List<IntersectionNode> edges = new ArrayList<IntersectionNode>();
 
 	public IntersectionNode(Node node) {
 		this.node = node;
@@ -20,16 +20,16 @@ public class IntersectionNode {
 		return node;
 	}
 
-	public void addEdge(List<Node> nodes, IntersectionNode endNode) {
-		edges.add(new Edge(this, nodes, endNode));
+	public void addEdge(IntersectionNode endNode) {
+		edges.add(endNode);
 	}
 
-	public Iterator<Edge> getEdgesIterator() {
+	public Iterator<IntersectionNode> getEdgesIterator() {
 		return edges.iterator();
 	}
 
-	public int getEdgesAmount() {
-		return edges.size();
+	public boolean isLeaf() {
+		return edges.size() == 1;
 	}
 
 	@Override
