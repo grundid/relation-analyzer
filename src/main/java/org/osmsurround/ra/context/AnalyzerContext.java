@@ -5,8 +5,8 @@ import java.util.List;
 import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.AggregatedSegment;
 import org.osmsurround.ra.data.Relation;
+import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.segment.ConnectableSegment;
-import org.osmsurround.ra.web.IntersectionWeb;
 
 public class AnalyzerContext {
 
@@ -14,7 +14,7 @@ public class AnalyzerContext {
 
 	private List<ConnectableSegment> segments;
 	private List<AggregatedSegment> aggregatedSegments;
-	private List<IntersectionWeb> graphs;
+	private List<Graph> graphs;
 
 	AnalyzerContext(Relation relation) {
 		this.relation = relation;
@@ -44,13 +44,13 @@ public class AnalyzerContext {
 		this.aggregatedSegments = aggregatedSegments;
 	}
 
-	public List<IntersectionWeb> getGraphs() {
+	public List<Graph> getGraphs() {
 		if (graphs == null)
 			throw new AnalyzerException("Graphs not initialized");
 		return graphs;
 	}
 
-	public void setGraphs(List<IntersectionWeb> graphs) {
+	public void setGraphs(List<Graph> graphs) {
 		this.graphs = graphs;
 	}
 

@@ -1,4 +1,4 @@
-package org.osmsurround.ra.web;
+package org.osmsurround.ra.graph;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -53,7 +53,7 @@ public class GraphCreator {
 		this.segments = segments;
 	}
 
-	public IntersectionWeb createGraph() {
+	public Graph createGraph() {
 		for (ConnectableSegment segment : segments) {
 			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
 			if (connectingSegments.isEmpty())
@@ -78,7 +78,7 @@ public class GraphCreator {
 				}
 			}
 		}
-		return initIntersetionWeb();
+		return initGraph();
 	}
 
 	private void createLeafEdge(ConnectableSegment segment) {
@@ -86,7 +86,7 @@ public class GraphCreator {
 		createEdge(segment, segmentNodes.getThisNode(), segmentNodes.getOtherNode());
 	}
 
-	private IntersectionWeb initIntersetionWeb() {
+	private Graph initGraph() {
 		Set<IntersectionNode> leaves = new HashSet<IntersectionNode>();
 		for (IntersectionNode node : knownNodes.values()) {
 			if (node.isLeaf())
@@ -95,7 +95,7 @@ public class GraphCreator {
 		if (leaves.isEmpty() && !knownNodes.isEmpty())
 			leaves.add(knownNodes.values().iterator().next());
 
-		return new IntersectionWeb(leaves, edges);
+		return new Graph(leaves, edges);
 	}
 
 	private void createEdge(ConnectableSegment segment, Node firstNode, Node secondNode) {

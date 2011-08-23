@@ -9,8 +9,8 @@ import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.web.IntersectionNode;
-import org.osmsurround.ra.web.IntersectionWeb;
+import org.osmsurround.ra.graph.Graph;
+import org.osmsurround.ra.graph.IntersectionNode;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TraverseServiceTest extends TestBase {
@@ -25,7 +25,7 @@ public class TraverseServiceTest extends TestBase {
 
 		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(relationId);
 
-		IntersectionWeb intersectionWeb = analyzerContext.getGraphs().get(0);
+		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
 
 		Iterator<IntersectionNode> it = intersectionWeb.getLeaves().iterator();
 

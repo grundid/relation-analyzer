@@ -9,23 +9,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class DijkstraAlgorithm {
+public class Dijkstra {
 
-	private final List<Edge> edges;
+	private final Iterable<Edge> edges;
 	private Set<Vertex> settledNodes;
 	private Set<Vertex> unSettledNodes;
 	private Map<Vertex, Vertex> predecessors;
 	private Map<Vertex, Integer> distance;
 
-	public DijkstraAlgorithm(Graph graph) {
-		this.edges = new ArrayList<Edge>(graph.getEdges());
+	public Dijkstra(Iterable<Edge> edges) {
+		this.edges = edges;
 	}
 
 	public void execute(Vertex source) {
-		settledNodes = new HashSet<Vertex>();
-		unSettledNodes = new HashSet<Vertex>();
-		distance = new HashMap<Vertex, Integer>();
-		predecessors = new HashMap<Vertex, Vertex>();
+		init();
 		distance.put(source, 0);
 		unSettledNodes.add(source);
 		while (unSettledNodes.size() > 0) {
@@ -34,6 +31,13 @@ public class DijkstraAlgorithm {
 			unSettledNodes.remove(node);
 			findMinimalDistances(node);
 		}
+	}
+
+	private void init() {
+		settledNodes = new HashSet<Vertex>();
+		unSettledNodes = new HashSet<Vertex>();
+		distance = new HashMap<Vertex, Integer>();
+		predecessors = new HashMap<Vertex, Vertex>();
 	}
 
 	private void findMinimalDistances(Vertex node) {
@@ -45,7 +49,6 @@ public class DijkstraAlgorithm {
 				unSettledNodes.add(target);
 			}
 		}
-
 	}
 
 	private int getDistance(Vertex node, Vertex target) {
@@ -112,27 +115,8 @@ public class DijkstraAlgorithm {
 
 			Collections.reverse(path);
 			return path;
-
 		}
 		else
 			return Collections.emptyList();
 	}
-
-	public List<Vertex> getPath2(Vertex target) {
-		LinkedList<Vertex> path = new LinkedList<Vertex>();
-		Vertex step = target;
-		// Check if a path exists
-		if (predecessors.get(step) == null) {
-			return Collections.emptyList();
-		}
-		path.add(step);
-		while (predecessors.get(step) != null) {
-			step = predecessors.get(step);
-			path.add(step);
-		}
-		// Put it into the correct order
-		Collections.reverse(path);
-		return path;
-	}
-
 }

@@ -7,17 +7,15 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.web.IntersectionNode;
+import org.osmsurround.ra.graph.IntersectionNode;
 
 public class SingleRouteTraverserTest extends TestBase {
 
 	@Test
-	@Ignore
 	public void testTraverseOrderAtoB() throws Exception {
 
 		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)
@@ -29,7 +27,7 @@ public class SingleRouteTraverserTest extends TestBase {
 		IntersectionNode nodeB = it.next();
 
 		SingleRouteTraverser traverser = new SingleRouteTraverser(nodeA, nodeB);
-		List<Node> nodes = traverser.getNodes();
+		List<Node> nodes = traverser.getPath();
 
 		assertEquals(getNode(1), nodes.get(0));
 		assertEquals(getNode(2), nodes.get(1));
@@ -39,7 +37,6 @@ public class SingleRouteTraverserTest extends TestBase {
 	}
 
 	@Test
-	@Ignore
 	public void testTraverseOrderBtoA() throws Exception {
 
 		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(4, 5)
@@ -51,7 +48,7 @@ public class SingleRouteTraverserTest extends TestBase {
 		IntersectionNode nodeB = it.next();
 
 		SingleRouteTraverser traverser = new SingleRouteTraverser(nodeB, nodeA);
-		List<Node> nodes = traverser.getNodes();
+		List<Node> nodes = traverser.getPath();
 
 		assertEquals(getNode(5), nodes.get(0));
 		assertEquals(getNode(4), nodes.get(1));

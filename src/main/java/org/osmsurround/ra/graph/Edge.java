@@ -1,4 +1,4 @@
-package org.osmsurround.ra.web;
+package org.osmsurround.ra.graph;
 
 import org.osmsurround.ra.dijkstra.Vertex;
 

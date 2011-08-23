@@ -9,10 +9,10 @@ import org.junit.Test;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.web.IntersectionNode;
-import org.osmsurround.ra.web.IntersectionWeb;
+import org.osmsurround.ra.graph.Graph;
+import org.osmsurround.ra.graph.IntersectionNode;
 
-public class DijkstraAlgorithmTest extends TestBase {
+public class DijkstraTest extends TestBase {
 
 	@Test
 	public void testRelation12320() throws Exception {
@@ -20,14 +20,14 @@ public class DijkstraAlgorithmTest extends TestBase {
 		AnalyzerContext analyzerContext = helperService
 				.createIntersectionWebContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
 
-		IntersectionWeb intersectionWeb = analyzerContext.getGraphs().get(0);
+		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
 
 		Iterator<IntersectionNode> it = intersectionWeb.getLeaves().iterator();
 
 		IntersectionNode startNode = it.next();
 		IntersectionNode endNode = it.next();
 
-		DijkstraAlgorithm dijkstraAlgorithm = new DijkstraAlgorithm(intersectionWeb);
+		Dijkstra dijkstraAlgorithm = new Dijkstra(intersectionWeb.getEdges());
 
 		dijkstraAlgorithm.execute(startNode);
 

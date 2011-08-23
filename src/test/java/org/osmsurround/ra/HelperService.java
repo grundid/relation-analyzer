@@ -14,8 +14,8 @@ import org.osmsurround.ra.export.GpxExport;
 import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.export.TraverseService;
-import org.osmsurround.ra.web.IntersectionNode;
-import org.osmsurround.ra.web.IntersectionWebService;
+import org.osmsurround.ra.graph.GraphService;
+import org.osmsurround.ra.graph.IntersectionNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -36,7 +36,7 @@ public class HelperService {
 	@Autowired
 	private GpxExport gpxExport;
 	@Autowired
-	private IntersectionWebService intersectionWebService;
+	private GraphService intersectionWebService;
 
 	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
@@ -53,10 +53,11 @@ public class HelperService {
 
 	public AnalyzerContext createIntersectionWebContext(long relationId) {
 		AnalyzerContext analyzerContext = createAggregatedContext(relationId);
-		intersectionWebService.initIntersectionWeb(analyzerContext);
+		intersectionWebService.initGraph(analyzerContext);
 		return analyzerContext;
 	}
 
+	@Deprecated
 	public void exportGpx(Collection<IntersectionNode> leaves, long relationId) {
 
 		List<Section> sectionList = new ArrayList<Section>();
