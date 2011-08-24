@@ -18,7 +18,7 @@ public class DijkstraTest extends TestBase {
 	public void testRelation12320() throws Exception {
 
 		AnalyzerContext analyzerContext = helperService
-				.createIntersectionWebContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
+				.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
 
 		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
 

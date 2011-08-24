@@ -21,7 +21,7 @@ public class GraphService {
 		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
 			GraphCreator graphCreator = new GraphCreator(
 					aggregatedSegment.getSegments());
-			graphList.add(graphCreator.createGraph());
+			graphList.add(graphCreator.getGraph());
 		}
 		return graphList;
 	}

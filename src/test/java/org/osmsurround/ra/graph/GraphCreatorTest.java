@@ -131,7 +131,7 @@ public class GraphCreatorTest extends TestBase {
 	@Test
 	public void testRelation12320() throws Exception {
 
-		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(RELATION_12320_NECKARTAL_WEG);
+		AnalyzerContext analyzerContext = helperService.createGraphContext(RELATION_12320_NECKARTAL_WEG);
 		assertEquals(1, analyzerContext.getGraphs().size());
 		Collection<IntersectionNode> leaves = analyzerContext.getGraphs().get(0).getLeaves();
 
@@ -141,7 +141,7 @@ public class GraphCreatorTest extends TestBase {
 	@Test
 	public void testRelation959757() throws Exception {
 
-		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(RELATION_959757_LINE_10);
+		AnalyzerContext analyzerContext = helperService.createGraphContext(RELATION_959757_LINE_10);
 		assertEquals(1, analyzerContext.getGraphs().size());
 		Collection<IntersectionNode> leaves = analyzerContext.getGraphs().get(0).getLeaves();
 

@@ -1,4 +1,4 @@
-package org.osmsurround.ra.export;
+package org.osmsurround.ra.traverse;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,6 +9,8 @@ import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.export.Section;
+import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
 import org.osmsurround.ra.traverse.TraverseService;
@@ -24,7 +26,7 @@ public class TraverseServiceTest extends TestBase {
 
 		long relationId = TestUtils.RELATION_12320_NECKARTAL_WEG;
 
-		AnalyzerContext analyzerContext = helperService.createIntersectionWebContext(relationId);
+		AnalyzerContext analyzerContext = helperService.createGraphContext(relationId);
 
 		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
 

@@ -146,7 +146,7 @@ public abstract class TestUtils {
 
 	public static Collection<IntersectionNode> executeAndGetLeaves(List<ConnectableSegment> segments) {
 		GraphCreator intersectionNodeWebCreator = new GraphCreator(segments);
-		Graph intersectionWeb = intersectionNodeWebCreator.createGraph();
+		Graph intersectionWeb = intersectionNodeWebCreator.getGraph();
 		return intersectionWeb.getLeaves();
 	}
 

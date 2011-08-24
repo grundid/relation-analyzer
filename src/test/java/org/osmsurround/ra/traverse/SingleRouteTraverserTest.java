@@ -1,4 +1,4 @@
-package org.osmsurround.ra.export;
+package org.osmsurround.ra.traverse;
 
 import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;

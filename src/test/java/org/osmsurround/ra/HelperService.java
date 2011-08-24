@@ -36,7 +36,7 @@ public class HelperService {
 	@Autowired
 	private GpxExport gpxExport;
 	@Autowired
-	private GraphService intersectionWebService;
+	private GraphService graphService;
 
 	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
@@ -51,9 +51,9 @@ public class HelperService {
 		return analyzerContext;
 	}
 
-	public AnalyzerContext createIntersectionWebContext(long relationId) {
+	public AnalyzerContext createGraphContext(long relationId) {
 		AnalyzerContext analyzerContext = createAggregatedContext(relationId);
-		intersectionWebService.initGraph(analyzerContext);
+		graphService.initGraph(analyzerContext);
 		return analyzerContext;
 	}
 

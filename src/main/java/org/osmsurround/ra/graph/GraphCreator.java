@@ -51,9 +51,22 @@ public class GraphCreator {
 		if (segments.size() <= 1)
 			throw new AnalyzerException("Cannot create web from one or less segments");
 		this.segments = segments;
+		generateGraph();
 	}
 
-	public Graph createGraph() {
+	public Graph getGraph() {
+		Set<IntersectionNode> leaves = new HashSet<IntersectionNode>();
+		for (IntersectionNode node : knownNodes.values()) {
+			if (node.isLeaf())
+				leaves.add(node);
+		}
+		if (leaves.isEmpty() && !knownNodes.isEmpty())
+			leaves.add(knownNodes.values().iterator().next());
+
+		return new Graph(leaves, edges);
+	}
+
+	private void generateGraph() {
 		for (ConnectableSegment segment : segments) {
 			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
 			if (connectingSegments.isEmpty())
@@ -78,24 +91,11 @@ public class GraphCreator {
 				}
 			}
 		}
-		return initGraph();
 	}
 
 	private void createLeafEdge(ConnectableSegment segment) {
 		SegmentNodes segmentNodes = segment.getSegmentNodes();
 		createEdge(segment, segmentNodes.getThisNode(), segmentNodes.getOtherNode());
-	}
-
-	private Graph initGraph() {
-		Set<IntersectionNode> leaves = new HashSet<IntersectionNode>();
-		for (IntersectionNode node : knownNodes.values()) {
-			if (node.isLeaf())
-				leaves.add(node);
-		}
-		if (leaves.isEmpty() && !knownNodes.isEmpty())
-			leaves.add(knownNodes.values().iterator().next());
-
-		return new Graph(leaves, edges);
 	}
 
 	private void createEdge(ConnectableSegment segment, Node firstNode, Node secondNode) {
