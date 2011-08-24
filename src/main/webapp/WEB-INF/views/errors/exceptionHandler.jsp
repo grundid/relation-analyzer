@@ -4,5 +4,6 @@
 <head>
 </head>
 <body>
+Error <%= exception %>
 </body>
 </html>

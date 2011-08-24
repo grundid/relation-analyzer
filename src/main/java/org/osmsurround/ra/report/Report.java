@@ -4,32 +4,32 @@ import java.util.List;
 
 public class Report {
 
-	private Rating rating = Rating.UNKNOWN;
-	private String messageCode;
-
+	private RelationRating relationRating;
+	private RelationInfo relationInfo;
 	private List<ReportItem> reportItems;
 
-	public void setRating(Rating rating) {
-		this.rating = rating;
+	public RelationRating getRelationRating() {
+		return relationRating;
 	}
 
-	public void setMessageCode(String messageCode) {
-		this.messageCode = messageCode;
+	public void setRelationRating(RelationRating relationRating) {
+		this.relationRating = relationRating;
+	}
+
+	public RelationInfo getRelationInfo() {
+		return relationInfo;
+	}
+
+	public void setRelationInfo(RelationInfo relationInfo) {
+		this.relationInfo = relationInfo;
+	}
+
+	public List<ReportItem> getReportItems() {
+		return reportItems;
 	}
 
 	public void setReportItems(List<ReportItem> reportItems) {
 		this.reportItems = reportItems;
 	}
 
-	public Rating getRating() {
-		return rating;
-	}
-
-	public String getMessageCode() {
-		return messageCode;
-	}
-
-	public List<ReportItem> getReportItems() {
-		return reportItems;
-	}
 }

@@ -2,14 +2,10 @@ package org.osmsurround.ra.report;
 
 import static org.junit.Assert.*;
 
-import java.util.Collection;
-import java.util.Map.Entry;
-
 import org.junit.Test;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.data.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ReportServiceTest extends TestBase {
@@ -24,21 +20,21 @@ public class ReportServiceTest extends TestBase {
 
 		Report report = reportService.generateReport(analyzerContext);
 		assertNotNull(report);
-		assertNotNull(report.getRating());
-		assertNotNull(report.getMessageCode());
+		assertNotNull(report.getRelationRating());
+		assertNotNull(report.getRelationInfo());
 		assertNotNull(report.getReportItems());
 
 		assertEquals(1, report.getReportItems().size());
 
 		ReportItem reportItem = report.getReportItems().get(0);
 
-		assertEquals(2, reportItem.getNodes().size());
+		assertEquals(2, reportItem.getEndNodeDistances().size());
 
-		for (Entry<Node, Collection<NodeDistance>> entry : reportItem.getNodes().entrySet()) {
+		for (EndNodeDistances endNodeDistances : reportItem.getEndNodeDistances()) {
 
-			for (NodeDistance nodeDistance : entry.getValue()) {
-				System.out.println(entry.getKey() + " => " + nodeDistance.getNode() + " (" + nodeDistance.getDistance()
-						+ ")");
+			for (NodeDistance nodeDistance : endNodeDistances.getDistances()) {
+				System.out.println(endNodeDistances.getNode() + " => " + nodeDistance.getNode() + " ("
+						+ nodeDistance.getDistance() + ")");
 			}
 		}
 

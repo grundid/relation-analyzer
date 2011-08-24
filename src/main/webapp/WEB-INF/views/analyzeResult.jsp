@@ -10,31 +10,31 @@
 <link href="ra.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-<c:forEach items="${analyzerReport.reportItems}" var="reportItem">
 
-<h3>${reportItem.role}</h3>
-
-<c:forEach items="${reportItem.relationItems}" var="relationItem">
-<div class="relation-item">
-
-<div class="start-nodes">
-<c:forEach items="${relationItem.startNodes}" var="node">
-${node.id}, 
-</c:forEach>
+<div>
+<spring:bind path="report.relationInfo.timestamp">
+<p>Relation ID: ${report.relationInfo.relationId}, Last modified: <spring:transform value="${report.relationInfo.timestamp}"></spring:transform>, by User: ${report.relationInfo.user}</p>
+<p>${report.relationRating.rating}</p>
+<p><spring:message code="${report.relationRating.messageCode}"></spring:message></p>
+</spring:bind>
 </div>
 
-<div class="end-nodes">
-<c:forEach items="${relationItem.endNodes}" var="node">
-${node.id}, 
+<c:forEach items="${report.reportItems}" var="reportItems">
+<div>
+<c:forEach items="${reportItems.endNodeDistances}" var="endNode">
+<div>
+<p>NodeId: ${endNode.node.id}</p>
+
+<c:forEach items="${endNode.distances}" var="distanceNode">
+${distanceNode.node.id} (${distanceNode.distance})
+</c:forEach>
+
+
+</div>
 </c:forEach>
 </div>
-
-</div>
-
 </c:forEach>
 
 
-
-</c:forEach>
 </body>
 </html>

@@ -17,6 +17,6 @@ public class AnalyzeRelationController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView get(AnalyzeRelationModel analyzeRelationModel) {
 
-		return new ModelAndView("analyzeResult");
+		return new ModelAndView("analyzeResult", "report", analyzeRelationService.analyzeRelation(analyzeRelationModel));
 	}
 }

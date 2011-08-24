@@ -1,16 +1,14 @@
 package org.osmsurround.ra.report;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
 import org.osmsurround.ra.utils.LonLatMath;
@@ -22,14 +20,27 @@ public class ReportService {
 	private static final String RELATION_IN_ONE_PIECE = "relation.in.one.piece";
 	private static final String RELATION_DISCONNECTED = "relation.disconnect";
 	private static final int MAX_DISTANCES = 3;
+	private static final String RELATION_NO_RATING = null;
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
 
 		initReportItems(report, analyzerContext);
-		initRating(report, analyzerContext);
+		initRelationRating(report, analyzerContext);
+		initRelationInfo(report, analyzerContext);
 
 		return report;
+	}
+
+	private void initRelationInfo(Report report, AnalyzerContext analyzerContext) {
+
+		Relation relation = analyzerContext.getRelation();
+
+		RelationInfo relationInfo = new RelationInfo(relation.getRelationId(), relation.getTimestamp(),
+				relation.getUser());
+
+		report.setRelationInfo(relationInfo);
+
 	}
 
 	private void initReportItems(Report report, AnalyzerContext analyzerContext) {
@@ -40,17 +51,17 @@ public class ReportService {
 		for (Graph graph : graphs) {
 			Set<IntersectionNode> leaves = graph.getLeaves();
 
-			Map<Node, Collection<NodeDistance>> nodes = new HashMap<Node, Collection<NodeDistance>>();
+			List<EndNodeDistances> endNodeDistances = new ArrayList<EndNodeDistances>();
 
 			for (IntersectionNode intersectionNode : leaves) {
 				Node node = intersectionNode.getNode();
 				Set<NodeDistance> distances = getDistances(graphs, node);
 				filterDistances(distances);
 
-				nodes.put(node, distances);
+				endNodeDistances.add(new EndNodeDistances(node, distances));
 			}
 
-			reportItems.add(new ReportItem(nodes));
+			reportItems.add(new ReportItem(endNodeDistances));
 		}
 
 		report.setReportItems(reportItems);
@@ -63,9 +74,7 @@ public class ReportService {
 			count++;
 			if (count > MAX_DISTANCES)
 				it.remove();
-
 		}
-
 	}
 
 	private Set<NodeDistance> getDistances(List<Graph> graphs, Node distantNode) {
@@ -86,17 +95,18 @@ public class ReportService {
 		return distances;
 	}
 
-	private void initRating(Report report, AnalyzerContext analyzerContext) {
+	private void initRelationRating(Report report, AnalyzerContext analyzerContext) {
 		String relationType = analyzerContext.getRelation().getTags().get("type");
 		if (relationType.equals("route")) {
 			if (analyzerContext.getGraphs().size() == 1) {
-				report.setRating(Rating.OK);
-				report.setMessageCode(RELATION_IN_ONE_PIECE);
+				report.setRelationRating(new RelationRating(Rating.OK, RELATION_IN_ONE_PIECE));
 			}
 			else {
-				report.setRating(Rating.DISCONNECTED);
-				report.setMessageCode(RELATION_DISCONNECTED);
+				report.setRelationRating(new RelationRating(Rating.DISCONNECTED, RELATION_DISCONNECTED));
 			}
+		}
+		else {
+			report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_RATING));
 		}
 	}
 
