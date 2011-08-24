@@ -11,6 +11,7 @@ import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
+import org.osmsurround.ra.traverse.TraverseService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TraverseServiceTest extends TestBase {

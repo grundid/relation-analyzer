@@ -12,6 +12,7 @@ import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.graph.IntersectionNode;
+import org.osmsurround.ra.traverse.SingleRouteTraverser;
 
 public class SingleRouteTraverserTest extends TestBase {
 

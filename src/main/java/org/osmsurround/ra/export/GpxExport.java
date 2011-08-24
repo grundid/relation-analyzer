@@ -7,6 +7,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.topografix.gpx._1._1.GpxType;
@@ -18,11 +20,20 @@ import com.topografix.gpx._1._1.WptType;
 @Service
 public class GpxExport {
 
+	private String appName = "relation-analyzer";
+	private String appVersion = "1.1";
+
+	@Autowired
+	public GpxExport(@Value("${app.name}") String appName, @Value("${app.version}") String appVersion) {
+		this.appName = appName;
+		this.appVersion = appVersion;
+	}
+
 	public void export(Iterable<Section> container, OutputStream os) throws JAXBException {
 		ObjectFactory of = new ObjectFactory();
 		GpxType gpxType = of.createGpxType();
-		gpxType.setCreator("relation-analyzer");
-		gpxType.setVersion("1.1");
+		gpxType.setCreator(appName);
+		gpxType.setVersion(appVersion);
 		for (Section dataContainer : container) {
 			TrkType trkType = of.createTrkType();
 			gpxType.getTrk().add(trkType);
