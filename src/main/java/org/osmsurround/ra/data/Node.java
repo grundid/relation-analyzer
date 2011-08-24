@@ -2,6 +2,8 @@ package org.osmsurround.ra.data;
 
 import java.io.Serializable;
 
+import javax.annotation.Generated;
+
 import org.osmsurround.ra.export.LonLat;
 
 public class Node implements Serializable, LonLat {
@@ -31,6 +33,7 @@ public class Node implements Serializable, LonLat {
 	}
 
 	@Override
+	@Generated("eclipse")
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -41,6 +44,7 @@ public class Node implements Serializable, LonLat {
 	}
 
 	@Override
+	@Generated("eclipse")
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
