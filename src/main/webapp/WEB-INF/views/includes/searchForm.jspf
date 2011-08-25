@@ -1,0 +1,26 @@
+<h3><spring:message code="title.search" /></h3>
+
+<form:form action="searchRelation" modelAttribute="searchModel" method="get">
+
+<table>
+<tr>
+	<td><spring:message code="label.name" /></td>
+	<td><form:input path="name"/></td>
+	<td><spring:message code="label.type" /></td>
+	<td><form:input path="relationType"/></td>
+	<td><spring:message code="label.route" /></td>
+	<td><form:input path="route"/></td>
+</tr>
+<tr>
+	<td><spring:message code="label.ref" /></td>
+	<td><form:input path="ref"/></td>
+	<td><spring:message code="label.network" /></td>
+	<td><form:input path="network"/></td>
+	<td><spring:message code="label.operator" /></td>
+	<td><form:input path="operator"/></td>
+</tr>
+
+</table>
+
+<button><spring:message code="button.search" /></button>
+</form:form>

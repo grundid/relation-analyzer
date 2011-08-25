@@ -1,0 +1,5 @@
+<h3><spring:message code="title.analyze" /></h3>
+<form:form action="analyzeRelation" modelAttribute="analyzeRelationModel" method="get">
+<div>Relation ID: <form:input path="relationId"/></div>
+<p><button><spring:message code="button.analyze" /></button></p>
+</form:form>

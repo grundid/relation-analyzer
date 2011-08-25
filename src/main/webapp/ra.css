@@ -4,6 +4,10 @@ body {
 	margin: 10px;
 }
 
+.odd {
+	background-color: #F0F0F0;
+}
+
 span.step {
 	font-size: 18px;
 	font-weight: bold;
@@ -145,6 +149,6 @@ div.result2 {
 }
 
 .end-nodes {
-	float:left;	
+	float: left;
 	width: 400px;
 }
