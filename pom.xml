@@ -31,6 +31,7 @@
 			<id>build-prd</id>
 			<properties>
 				<config.build.type>PRD</config.build.type>
+				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
 			</properties>
 			<build>
 				<finalName>ROOT</finalName>
@@ -40,6 +41,7 @@
 			<id>build-test</id>
 			<properties>
 				<config.build.type>TEST</config.build.type>
+				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
 			</properties>
 			<build>
 				<finalName>TEST</finalName>

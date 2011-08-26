@@ -32,6 +32,8 @@ public class AnalyzeRelationService {
 		aggregationService.aggregate(analyzerContext);
 		graphService.initGraph(analyzerContext);
 
-		return reportService.generateReport(analyzerContext);
+		Report report = reportService.generateReport(analyzerContext);
+
+		return report;
 	}
 }
