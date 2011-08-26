@@ -26,7 +26,7 @@ public class AnalyzeRelationService {
 	public Report analyzeRelation(AnalyzeRelationModel analyzeRelationModel) {
 
 		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(analyzeRelationModel
-				.getRelationId().longValue());
+				.getRelationId().longValue(), analyzeRelationModel.isNoCache());
 
 		relationMemberService.initSegments(analyzerContext);
 		aggregationService.aggregate(analyzerContext);

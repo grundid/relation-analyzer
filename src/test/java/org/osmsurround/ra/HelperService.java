@@ -40,7 +40,7 @@ public class HelperService {
 
 	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
-		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(relationId);
+		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(relationId, false);
 		relationMemberService.initSegments(analyzerContext);
 		return analyzerContext;
 	}

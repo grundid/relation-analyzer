@@ -10,8 +10,8 @@ public class NodeDistanceComparatorTest {
 	@Test
 	public void testCompare() throws Exception {
 
-		NodeDistance nd1 = new NodeDistance(new Node(1, 0, 0), 10);
-		NodeDistance nd2 = new NodeDistance(new Node(2, 0, 0), 20);
+		NodeDistance nd1 = new NodeDistance(new Node(2, 0, 0), 0.01);
+		NodeDistance nd2 = new NodeDistance(new Node(1, 0, 0), 0.02);
 
 		NodeDistanceComparator comparator = new NodeDistanceComparator();
 

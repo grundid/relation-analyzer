@@ -12,7 +12,7 @@
 <div class="maindiv">
 <%@ include file="includes/header.jspf" %>
 <%@ include file="includes/searchForm.jspf" %>
-<hr>
+<div class="content-box">
 
 <p><spring:message code="label.showing.relation" /> ${result.displayAmount}/${result.totalAmount}. <spring:message code="label.click.to.analyse" /></p>
 <c:if test="${result.displayAmount < result.totalAmount}">
@@ -42,7 +42,7 @@
 </tr>	
 </c:forEach>
 </table>
-
+</div>
 <%@ include file="includes/footer.jspf" %>
 </div>
 </div>

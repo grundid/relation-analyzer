@@ -4,16 +4,12 @@ body {
 	margin: 10px;
 }
 
-.odd {
-	background-color: #F0F0F0;
+a {
+	text-decoration: none;
 }
 
-span.step {
-	font-size: 18px;
-	font-weight: bold;
-	padding: 3px;
-	display: block;
-	font-style: italic;
+a:ACTIVE,a:VISITED {
+	color: blue;	
 }
 
 div.maindiv {
@@ -27,21 +23,76 @@ div.maindiv {
 	text-align: left;
 }
 
-div.step {
-	border-bottom: 1px dashed #000000;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+.odd {
+	background-color: #F0F0F0;
 }
 
-div.introduction {
+div.content-box {
 	border-bottom: 1px dashed #000000;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
+}
+
+div.graph {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	padding: 5px;
 }
 
 h2 {
 	background-color: #effcff;
 	border-top: 1px solid #317486;
+}
+
+th {
+	text-align: center;
+}
+
+#tags {
+	border: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.relation-rating {
+	font-weight: bold;
+	color: #fff;
+	padding: 5px;
+}
+
+.rating-WARNING {
+	background-color: #ff7200;
+}
+
+.rating-OK {
+	background-color: #007f00;
+}
+
+.rating-DISCONNECTED {
+	background-color: #800000;
+}
+
+.rating-UNKNOWN {
+	background-color: #9b9b9b;
+}
+
+.node-highlight {
+	background-color: #ffff00;
+}
+
+/* ------------------------- */
+span.step {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 3px;
+	display: block;
+	font-style: italic;
+}
+
+div.step {
+	border-bottom: 1px dashed #000000;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 #jsrequired {

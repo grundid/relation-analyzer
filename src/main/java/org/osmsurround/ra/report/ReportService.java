@@ -3,6 +3,7 @@ package org.osmsurround.ra.report;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,10 +18,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReportService {
 
+	private static final NodeDistanceComparator NODE_DISTANCE_COMPARATOR = new NodeDistanceComparator();
 	private static final String RELATION_IN_ONE_PIECE = "relation.in.one.piece";
 	private static final String RELATION_DISCONNECTED = "relation.disconnect";
+	private static final String RELATION_NO_RATING = "relation.no.rating";
+
 	private static final int MAX_DISTANCES = 3;
-	private static final String RELATION_NO_RATING = null;
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
@@ -36,8 +39,18 @@ public class ReportService {
 
 		Relation relation = analyzerContext.getRelation();
 
-		RelationInfo relationInfo = new RelationInfo(relation.getRelationId(), relation.getTimestamp(),
-				relation.getUser());
+		RelationInfo relationInfo = new RelationInfo();
+		relationInfo.setRelationId(relation.getRelationId());
+		relationInfo.setTimestamp(relation.getTimestamp());
+		relationInfo.setUser(relation.getUser());
+		relationInfo.setName(relation.getTags().get("name"));
+		relationInfo.setType(relation.getTags().get("type"));
+
+		List<RelationTag> tags = new ArrayList<RelationTag>();
+		for (Entry<String, String> entry : relation.getTags().entrySet()) {
+			tags.add(new RelationTag(entry.getKey(), entry.getValue()));
+		}
+		relationInfo.setTags(tags);
 
 		report.setRelationInfo(relationInfo);
 
@@ -78,7 +91,7 @@ public class ReportService {
 	}
 
 	private Set<NodeDistance> getDistances(List<Graph> graphs, Node distantNode) {
-		Set<NodeDistance> distances = new TreeSet<NodeDistance>(new NodeDistanceComparator());
+		Set<NodeDistance> distances = new TreeSet<NodeDistance>(NODE_DISTANCE_COMPARATOR);
 		for (Graph graph : graphs) {
 			Set<IntersectionNode> leaves = graph.getLeaves();
 

@@ -19,9 +19,10 @@ public class RelationSearch extends MappingSqlQuery<Relation> {
 	@Autowired
 	public RelationSearch(DataSource dataSource) {
 		setDataSource(dataSource);
-		setSql("SELECT relation_id,relation_type,name,route,ref,network,operator FROM relation WHERE relation_type ILIKE ? AND "
-				+ "(name ILIKE ?) AND (route ILIKE ?) AND (ref ILIKE ?) AND "
-				+ "(network ILIKE ?) AND (operator ILIKE ?) " + "ORDER BY name, relation_type, route");
+		setSql("SELECT relation_id,relation_type,name,route,ref,network,operator FROM relation WHERE "
+				+ "(LOWER(relation_type) LIKE ?) AND "
+				+ "(LOWER(name) LIKE ?) AND (LOWER(route) LIKE ?) AND (LOWER(ref) LIKE ?) AND "
+				+ "(LOWER(network) LIKE ?) AND (LOWER(operator) LIKE ?) " + "ORDER BY name, relation_type, route");
 		setTypes(new int[] { Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR });
 	}
 
@@ -49,7 +50,7 @@ public class RelationSearch extends MappingSqlQuery<Relation> {
 
 	private String prepareParam(String param) {
 		if (StringUtils.hasText(param))
-			return param + "%";
+			return (param + "%").toLowerCase();
 		else
 			return "%";
 	}

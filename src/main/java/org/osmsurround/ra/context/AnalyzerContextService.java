@@ -11,8 +11,9 @@ public class AnalyzerContextService {
 	@Autowired
 	private RelationLoaderService relationLoaderService;
 
-	public AnalyzerContext createAnalyzerContext(long relationId) {
-		Relation relation = relationLoaderService.loadRelation(relationId);
+	public AnalyzerContext createAnalyzerContext(long relationId, boolean reload) {
+		Relation relation = reload ? relationLoaderService.reloadRelation(relationId) : relationLoaderService
+				.loadRelation(relationId);
 		return new AnalyzerContext(relation);
 	}
 }

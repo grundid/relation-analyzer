@@ -1,3 +1,4 @@
+<div class="content-box">
 <h3><spring:message code="title.search" /></h3>
 
 <form:form action="searchRelation" modelAttribute="searchModel" method="get">
@@ -24,3 +25,4 @@
 
 <button><spring:message code="button.search" /></button>
 </form:form>
+</div>

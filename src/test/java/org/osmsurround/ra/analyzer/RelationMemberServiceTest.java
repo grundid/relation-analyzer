@@ -27,7 +27,7 @@ public class RelationMemberServiceTest extends TestBase {
 	@Test
 	public void testSplitRelationByRole() throws Exception {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, TestUtils.RELATION_37415);
-		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(TestUtils.RELATION_37415);
+		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(TestUtils.RELATION_37415, false);
 
 		relationMemberService.initSegments(analyzerContext);
 		assertNotNull(analyzerContext.getSegments());
@@ -39,8 +39,8 @@ public class RelationMemberServiceTest extends TestBase {
 	public void testSplitRelationByRoleEmpty() throws Exception {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, TestUtils.RELATION_12320_NECKARTAL_WEG);
 
-		AnalyzerContext analyzerContext = analyzerContextService
-				.createAnalyzerContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
+		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(
+				TestUtils.RELATION_12320_NECKARTAL_WEG, false);
 
 		relationMemberService.initSegments(analyzerContext);
 		assertNotNull(analyzerContext.getSegments());

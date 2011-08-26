@@ -11,11 +11,10 @@
 <div style="text-align:center;width:100%">
 <div class="maindiv">
 <%@ include file="includes/header.jspf" %>
-<div class="introduction">
+<div class="content-box">
 <spring:message code="ra.intro" htmlEscape="false"/>
 </div>
 <%@ include file="includes/analyzeForm.jspf" %>
-<hr>
 <%@ include file="includes/searchForm.jspf" %>
 <%@ include file="includes/footer.jspf" %>
 </div>
