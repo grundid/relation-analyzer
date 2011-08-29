@@ -8,7 +8,6 @@ import java.util.Iterator;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.HelperService;
 import org.osmsurround.ra.SegmentsBuilder;
 import org.osmsurround.ra.TestBase;
@@ -20,9 +19,10 @@ public class GraphCreatorTest extends TestBase {
 	@Autowired
 	private HelperService helperService;
 
-	@Test(expected = AnalyzerException.class)
+	@Test
 	public void testCreateGraphOneSegment() throws Exception {
-		executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 2, 3, 4));
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 2, 3, 4));
+		assertContainsOnlyNodeIds(leaves, 1, 4);
 	}
 
 	@Test

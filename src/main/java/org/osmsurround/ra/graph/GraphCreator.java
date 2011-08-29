@@ -25,19 +25,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.segment.ConnectableSegment;
 import org.osmsurround.ra.segment.SegmentNodes;
 
 /**
  * <p>
- * IntersectionNodeWebCreator creates a graph of nodes and returns the leaves of this graph. The leaves are nodes with
- * only one edge. They are basically the entry points to the graph.
+ * GraphCreator creates a graph of nodes and returns the leaves of this graph. The leaves are nodes with only one edge.
+ * They are basically the entry points to the graph.
  * </p>
  * 
  * <p>
- * The edges of the web contain only the nodes that are needed to connect the two nodes of the edge. This has only a
+ * The edges of graph contain only the nodes that are needed to connect the two nodes of the edge. This has only a
  * meaning if one deals with a roundabout. The edge will only contain the nodes between the entry and exit point of the
  * roundabout.
  * </p>
@@ -65,8 +64,6 @@ public class GraphCreator {
 	private Collection<Edge> edges = new ArrayList<Edge>();
 
 	public GraphCreator(List<ConnectableSegment> segments) {
-		if (segments.size() <= 1)
-			throw new AnalyzerException("Cannot create web from one or less segments");
 		this.segments = segments;
 		generateGraph();
 	}
@@ -87,9 +84,8 @@ public class GraphCreator {
 		for (ConnectableSegment segment : segments) {
 			List<ConnectableSegment> connectingSegments = findConnectingSegments(segment);
 			if (connectingSegments.isEmpty())
-				throw new AnalyzerException("Cannot handle a segment without connections");
-
-			if (connectingSegments.size() == 1) {
+				handleSingleSegmentGraph(segment);
+			else if (connectingSegments.size() == 1) {
 				createLeafEdge(segment);
 			}
 			else {
@@ -108,6 +104,11 @@ public class GraphCreator {
 				}
 			}
 		}
+	}
+
+	private void handleSingleSegmentGraph(ConnectableSegment segment) {
+		SegmentNodes segmentNodes = segment.getSegmentNodes();
+		createEdge(segment, segmentNodes.getThisNode(), segmentNodes.getOtherNode());
 	}
 
 	private void createLeafEdge(ConnectableSegment segment) {

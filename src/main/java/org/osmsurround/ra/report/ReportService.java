@@ -39,6 +39,7 @@ public class ReportService {
 	private static final String RELATION_IN_ONE_PIECE = "relation.in.one.piece";
 	private static final String RELATION_DISCONNECTED = "relation.disconnect";
 	private static final String RELATION_NO_RATING = "relation.no.rating";
+	private static final String RELATION_NO_WAYS = "relation.no.ways";
 
 	private static final int MAX_DISTANCES = 3;
 
@@ -126,17 +127,22 @@ public class ReportService {
 	}
 
 	private void initRelationRating(Report report, AnalyzerContext analyzerContext) {
-		String relationType = analyzerContext.getRelation().getTags().get("type");
-		if (relationType.equals("route")) {
-			if (analyzerContext.getGraphs().size() == 1) {
-				report.setRelationRating(new RelationRating(Rating.OK, RELATION_IN_ONE_PIECE));
-			}
-			else {
-				report.setRelationRating(new RelationRating(Rating.DISCONNECTED, RELATION_DISCONNECTED));
-			}
+		if (analyzerContext.getGraphs().isEmpty()) {
+			report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_WAYS));
 		}
 		else {
-			report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_RATING));
+			String relationType = analyzerContext.getRelation().getTags().get("type");
+			if (relationType.equals("route")) {
+				if (analyzerContext.getGraphs().size() == 1) {
+					report.setRelationRating(new RelationRating(Rating.OK, RELATION_IN_ONE_PIECE));
+				}
+				else {
+					report.setRelationRating(new RelationRating(Rating.DISCONNECTED, RELATION_DISCONNECTED));
+				}
+			}
+			else {
+				report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_RATING));
+			}
 		}
 	}
 
