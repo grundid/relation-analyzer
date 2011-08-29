@@ -3,7 +3,7 @@
 This project contains the source code for the Relation Analyzer 
 which is available online at http://ra.osmsurround.org.
 
-The Relation Analyzer in written in Java. It is build using the 
+The Relation Analyzer is written in Java. It is build using the 
 SpringFramework http://www.springframework.org/.
 Apache Maven http://maven.apache.org is used as the build system.
 
