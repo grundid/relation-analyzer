@@ -64,14 +64,9 @@
 	</mvc:interceptors>
 
 	<!-- Locale resolver with supported and default locales -->
-	<!-- <bean id="localeResolver" class="de.emaitie.webtools.spring.RequestAndSessionLocaleResolver"> 
-		<constructor-arg index="0"> <bean class="java.util.Locale"> <constructor-arg 
-		value="en" index="0" /> <constructor-arg value="US" index="1" /> </bean> 
-		</constructor-arg> <constructor-arg index="1"> <map> <entry key="de"> <bean 
-		class="java.util.Locale"> <constructor-arg value="de" index="0" /> <constructor-arg 
-		value="DE" index="1" /> </bean> </entry> <entry key="en"> <bean class="java.util.Locale"> 
-		<constructor-arg value="en" index="0" /> <constructor-arg value="US" index="1" 
-		/> </bean> </entry> </map> </constructor-arg> </bean> -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver">
+	</bean>
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
