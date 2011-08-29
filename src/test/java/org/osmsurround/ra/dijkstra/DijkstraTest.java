@@ -17,20 +17,20 @@ public class DijkstraTest extends TestBase {
 	@Test
 	public void testRelation12320() throws Exception {
 
-		AnalyzerContext analyzerContext = helperService
-				.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
+		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
 
+		// We know this relation. Only two end nodes available.
 		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
-
 		Iterator<IntersectionNode> it = intersectionWeb.getLeaves().iterator();
-
 		IntersectionNode startNode = it.next();
 		IntersectionNode endNode = it.next();
 
+		// Init dijkstra with the edges
 		Dijkstra dijkstraAlgorithm = new Dijkstra(intersectionWeb.getEdges());
 
 		dijkstraAlgorithm.execute(startNode);
 
+		// get the Path to endNode
 		List<Vertex> path = dijkstraAlgorithm.getPath(endNode);
 
 		assertEquals(startNode, path.get(0));
