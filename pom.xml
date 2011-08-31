@@ -285,6 +285,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<forceRegenerate>true</forceRegenerate><!-- required because of the two goals -->
 					<schemaDirectory>src/main/schema</schemaDirectory>
 				</configuration>
 			</plugin>
