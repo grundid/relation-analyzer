@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.osmsurround</groupId>
 	<artifactId>relation-analyzer</artifactId>
 	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.6</java-version>
@@ -13,14 +12,14 @@
 		<org.slf4j-version>1.5.10</org.slf4j-version>
 		<postgresql-version>8.4-702.jdbc4</postgresql-version>
 		<config.build.type>DEV</config.build.type>
-		<config.site.name></config.site.name>
+		<config.site.name />
 		<config.db.driver.class.name>org.postgresql.Driver</config.db.driver.class.name>
 		<config.db.url>jdbc:postgresql://ubuntu-vmware/osm</config.db.url>
 		<config.db.username>osm</config.db.username>
 		<config.db.password>osm</config.db.password>
-		<config.mail.hostname></config.mail.hostname>
-		<config.mail.username></config.mail.username>
-		<config.mail.password></config.mail.password>
+		<config.mail.hostname />
+		<config.mail.username />
+		<config.mail.password />
 	</properties>
 
 	<profiles>
