@@ -1,0 +1,1 @@
+<% response.sendRedirect("analyzeRelation?relationId="+request.getParameter("relationId")); %>
