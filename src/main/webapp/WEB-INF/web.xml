@@ -61,6 +61,11 @@
 	</filter-mapping>
 
 	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/errors/404.jsp</location>
+	</error-page>
+
+	<error-page>
 		<exception-type>javax.servlet.ServletException</exception-type>
 		<location>/WEB-INF/views/errors/exceptionHandler.jsp</location>
 	</error-page>
