@@ -14,8 +14,8 @@
 	</tag>
 
 	<tag>
-		<name>rc</name>
-		<tag-class>org.osmsurround.tags.RemoteControlTag</tag-class>
+		<name>editLinks</name>
+		<tag-class>org.osmsurround.tags.NodeEditLinksTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<name>node1</name>

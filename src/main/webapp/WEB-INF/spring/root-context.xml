@@ -73,6 +73,7 @@
 		<property name="basenames">
 			<list>
 				<value>WEB-INF/messages/content</value>
+				<value>WEB-INF/messages/content-generic</value>
 			</list>
 		</property>
 		<property name="cacheSeconds" value="5" />

@@ -25,10 +25,11 @@
 <spring:message code="label.byuser" />: <strong><a href="http://www.openstreetmap.org/user/<spring:escapeBody>${report.relationInfo.user}</spring:escapeBody>"><spring:escapeBody>${report.relationInfo.user}</spring:escapeBody></a></strong></p>
 </spring:bind>
 
-<button type="button" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></button>
-<button type="button" onclick="window.location.href='http://www.openstreetmap.org/?relation=${report.relationInfo.relationId}';"><spring:message code="button.show.on.osm" /></button>
-<button type="button" onclick="window.location.href='http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}';"><spring:message code="button.browse" /></button>
-
+<div style="height: 30px">
+<a class="button-link" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
+<a class="button-link" href="http://www.openstreetmap.org/?relation=${report.relationInfo.relationId}"><spring:message code="button.show.on.osm" /></a>
+<a class="button-link" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
+</div>
 <table id="tags" style="display:none">
 <c:forEach items="${report.relationInfo.tags}" var="tag">
 <tr><td><spring:escapeBody>${tag.name}</spring:escapeBody></td>
@@ -48,7 +49,7 @@
 <div class="content-box">
 <spring:message code="how.it.works" htmlEscape="false"/>
 
-<button type="button" onclick="$('#more-info').toggle();"><spring:message code="button.more.info" /></button>
+<div style="height:30px"><a class="button-link" onclick="$('#more-info').toggle();"><spring:message code="button.more.info" /></a></div>
 <div id="more-info" style="display:none">
 <spring:message code="how.it.works.more" htmlEscape="false"/>
 </div>
@@ -58,14 +59,14 @@
 <div class="content-box">
 <c:forEach items="${report.reportItems}" var="reportItems" varStatus="itemStatus">
 <div class="graph">
-<p><spring:message code="label.graph"/>&nbsp;${itemStatus.index}</p><spring:message code=""/>
+<p><spring:message code="label.graph"/>&nbsp;${itemStatus.index+1}</p>
 <c:forEach items="${reportItems.endNodeDistances}" var="endNode">
 <div>
 <p><spring:message code="label.end.node.id"/>: <osm:node>${endNode.node.id}</osm:node></p>
 
 <spring:message code="label.closest.nodes"/>:
 <c:forEach items="${endNode.distances}" var="distanceNode">
-<osm:node>${distanceNode.node.id}</osm:node>&nbsp;[<osm:rc node1="${endNode.node}" node2="${distanceNode.node}"/>]&nbsp;(<fmt:formatNumber pattern="#,##0.000">${distanceNode.distance}</fmt:formatNumber>)
+<osm:node>${distanceNode.node.id}</osm:node>&nbsp;[<osm:editLinks node1="${endNode.node}" node2="${distanceNode.node}"/>]&nbsp;(<fmt:formatNumber pattern="#,##0.000">${distanceNode.distance}</fmt:formatNumber>)
 </c:forEach>
 
 </div>
