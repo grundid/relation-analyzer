@@ -19,6 +19,10 @@ public class SegmentFactoryTest extends TestBase {
 
 		assertEqualClass(FlexibleWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), ""))
 				.getClass());
+		assertEqualClass(FlexibleWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "inner"))
+				.getClass());
+		assertEqualClass(FlexibleWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "outer"))
+				.getClass());
 
 		assertEqualClass(FixedWay.class, segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "forward"))
 				.getClass());
@@ -38,6 +42,6 @@ public class SegmentFactoryTest extends TestBase {
 
 	@Test(expected = AnalyzerException.class)
 	public void testCreateMemberUnknown() throws Exception {
-		segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unkown"));
+		segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unknown"));
 	}
 }

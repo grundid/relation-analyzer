@@ -15,7 +15,7 @@
 <h1><spring:message code="error.message" htmlEscape="false"/></h1>
 
 <spring:message code="error.message.exception" />:
-<p><%= exception %></p>
+<p><spring:escapeBody><%= exception %></spring:escapeBody></p>
 
 </div>
 <%@ include file="../includes/footer.jspf" %>

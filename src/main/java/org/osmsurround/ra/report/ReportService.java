@@ -20,6 +20,7 @@ package org.osmsurround.ra.report;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
@@ -30,18 +31,20 @@ import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
 import org.osmsurround.ra.utils.LonLatMath;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ReportService {
 
 	private static final NodeDistanceComparator NODE_DISTANCE_COMPARATOR = new NodeDistanceComparator();
-	private static final String RELATION_IN_ONE_PIECE = "relation.in.one.piece";
-	private static final String RELATION_DISCONNECTED = "relation.disconnect";
 	private static final String RELATION_NO_RATING = "relation.no.rating";
 	private static final String RELATION_NO_WAYS = "relation.no.ways";
 
 	private static final int MAX_DISTANCES = 3;
+
+	@Autowired
+	private List<RatingJuror> ratingJurors;
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
@@ -131,18 +134,19 @@ public class ReportService {
 			report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_WAYS));
 		}
 		else {
-			String relationType = analyzerContext.getRelation().getTags().get("type");
-			if (relationType.equals("route")) {
-				if (analyzerContext.getGraphs().size() == 1) {
-					report.setRelationRating(new RelationRating(Rating.OK, RELATION_IN_ONE_PIECE));
-				}
-				else {
-					report.setRelationRating(new RelationRating(Rating.DISCONNECTED, RELATION_DISCONNECTED));
+			Map<String, String> tags = analyzerContext.getRelation().getTags();
+			String relationType = tags.get("type");
+
+			RelationRating relationRating = new RelationRating(Rating.UNKNOWN, RELATION_NO_RATING);
+
+			for (RatingJuror ratingJuror : ratingJurors) {
+				if (ratingJuror.canRate(relationType, tags)) {
+					relationRating = ratingJuror.getRating(analyzerContext);
+					break;
 				}
 			}
-			else {
-				report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_RATING));
-			}
+
+			report.setRelationRating(relationRating);
 		}
 	}
 
