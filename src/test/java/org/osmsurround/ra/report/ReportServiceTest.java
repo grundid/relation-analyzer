@@ -29,14 +29,5 @@ public class ReportServiceTest extends TestBase {
 		ReportItem reportItem = report.getReportItems().get(0);
 
 		assertEquals(2, reportItem.getEndNodeDistances().size());
-
-		for (EndNodeDistances endNodeDistances : reportItem.getEndNodeDistances()) {
-
-			for (NodeDistance nodeDistance : endNodeDistances.getDistances()) {
-				System.out.println(endNodeDistances.getNode() + " => " + nodeDistance.getNode() + " ("
-						+ nodeDistance.getDistance() + ")");
-			}
-		}
-
 	}
 }

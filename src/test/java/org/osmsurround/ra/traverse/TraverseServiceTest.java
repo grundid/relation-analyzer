@@ -13,7 +13,6 @@ import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
-import org.osmsurround.ra.traverse.TraverseService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TraverseServiceTest extends TestBase {
@@ -35,7 +34,7 @@ public class TraverseServiceTest extends TestBase {
 		IntersectionNode startNode = it.next();
 		IntersectionNode endNode = it.next();
 
-		List<Node> traverse = traverseService.traverse(analyzerContext, startNode, endNode);
+		List<Node> traverse = traverseService.traverse(intersectionWeb, startNode, endNode);
 
 		List<Section> sections = new ArrayList<Section>();
 		sections.add(new SectionContainer("test", traverse));

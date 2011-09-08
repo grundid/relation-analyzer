@@ -24,6 +24,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+import org.osmsurround.ra.AnalyzerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -46,7 +47,7 @@ public class GpxExport {
 		this.appVersion = appVersion;
 	}
 
-	public void export(Iterable<Section> container, OutputStream os) throws JAXBException {
+	public void export(Iterable<Section> container, OutputStream os) {
 		ObjectFactory of = new ObjectFactory();
 		GpxType gpxType = of.createGpxType();
 		gpxType.setCreator(appName);
@@ -66,10 +67,15 @@ public class GpxExport {
 				trksegType.getTrkpt().add(wptType);
 			}
 		}
-		JAXBContext jaxbContext = JAXBContext.newInstance(GpxType.class);
-		Marshaller marshaller = jaxbContext.createMarshaller();
-		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-		marshaller.marshal(of.createGpx(gpxType), os);
+		try {
+			JAXBContext jaxbContext = JAXBContext.newInstance(GpxType.class);
+			Marshaller marshaller = jaxbContext.createMarshaller();
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			marshaller.marshal(of.createGpx(gpxType), os);
+		}
+		catch (JAXBException e) {
+			throw new AnalyzerException(e);
+		}
 	}
 
 }

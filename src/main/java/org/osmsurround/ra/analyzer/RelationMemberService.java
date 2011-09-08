@@ -37,13 +37,17 @@ public class RelationMemberService {
 	public void initSegments(AnalyzerContext analyzerContext) {
 
 		Relation relation = analyzerContext.getRelation();
+		List<ConnectableSegment> segments = createSegmentsOutOfRelationMembers(relation);
+		analyzerContext.setSegments(segments);
+	}
+
+	private List<ConnectableSegment> createSegmentsOutOfRelationMembers(Relation relation) {
 		List<Member> members = relation.getMembers();
 
 		List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>(members.size());
 		for (Member member : members) {
 			segments.add(segmentFactory.createSegment(member));
 		}
-
-		analyzerContext.setSegments(segments);
+		return segments;
 	}
 }

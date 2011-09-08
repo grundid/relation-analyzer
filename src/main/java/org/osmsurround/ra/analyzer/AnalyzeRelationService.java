@@ -19,8 +19,6 @@ package org.osmsurround.ra.analyzer;
 
 import org.osmsurround.ra.AnalyzeRelationModel;
 import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.context.AnalyzerContextService;
-import org.osmsurround.ra.graph.GraphService;
 import org.osmsurround.ra.report.Report;
 import org.osmsurround.ra.report.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,24 +28,14 @@ import org.springframework.stereotype.Service;
 public class AnalyzeRelationService {
 
 	@Autowired
-	private RelationMemberService relationMemberService;
-	@Autowired
-	private AnalyzerContextService analyzerContextService;
-	@Autowired
-	private AggregationService aggregationService;
-	@Autowired
-	private GraphService graphService;
-	@Autowired
 	private ReportService reportService;
+	@Autowired
+	private AnalyzerService analyzerService;
 
 	public Report analyzeRelation(AnalyzeRelationModel analyzeRelationModel) {
 
-		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(analyzeRelationModel
-				.getRelationId().longValue(), analyzeRelationModel.isNoCache());
-
-		relationMemberService.initSegments(analyzerContext);
-		aggregationService.aggregate(analyzerContext);
-		graphService.initGraph(analyzerContext);
+		AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
+				analyzeRelationModel.isNoCache());
 
 		Report report = reportService.generateReport(analyzerContext);
 

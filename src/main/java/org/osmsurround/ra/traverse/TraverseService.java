@@ -37,33 +37,44 @@ public class TraverseService {
 		return traverser.getPath();
 	}
 
-	public List<Node> traverse(AnalyzerContext analyzerContext, IntersectionNode startNode, IntersectionNode endNode) {
+	public List<Node> traverse(Graph graph, IntersectionNode startNode, IntersectionNode endNode) {
 
-		Graph intersectionWeb = analyzerContext.getGraphs().get(0);
-		Dijkstra dijkstraAlgorithm = new Dijkstra(intersectionWeb.getEdges());
+		Dijkstra dijkstraAlgorithm = new Dijkstra(graph.getEdges());
 		dijkstraAlgorithm.execute(startNode);
 		List<Vertex> path = dijkstraAlgorithm.getPath(endNode);
 
 		List<Node> result = new ArrayList<Node>();
+		for (Vertex vertex : path)
+			result.add(vertex.getNode());
 
-		if (!path.isEmpty()) {
-			Vertex startVertex = path.get(0);
-			result.add(startVertex.getNode());
-			for (int x = 1; x < path.size(); x++) {
-
-				Vertex currentVertex = path.get(x);
-
-				for (ConnectableSegment connectableSegment : analyzerContext.getSegments()) {
-					if (connectableSegment.containsNodes(startVertex.getNode(), currentVertex.getNode())) {
-						connectableSegment.appendNodesBetween(result, startVertex.getNode(), currentVertex.getNode());
-						break;
-					}
-				}
-
-				startVertex = currentVertex;
-
-			}
-		}
 		return result;
+	}
+
+	public List<Node> fillInNodes(List<Node> path, AnalyzerContext analyzerContext) {
+
+		if (path.isEmpty())
+			return path;
+
+		List<Node> result = new ArrayList<Node>();
+
+		Node startNode = path.get(0);
+		result.add(startNode);
+		for (int x = 1; x < path.size(); x++) {
+
+			Node currentNode = path.get(x);
+
+			for (ConnectableSegment connectableSegment : analyzerContext.getSegments()) {
+				if (connectableSegment.containsNodes(startNode, currentNode)) {
+					connectableSegment.appendNodesBetween(result, startNode, currentNode);
+					break;
+				}
+			}
+
+			startNode = currentNode;
+
+		}
+
+		return result;
+
 	}
 }
