@@ -29,6 +29,7 @@
 <a class="button-link" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
 <a class="button-link" href="http://www.openstreetmap.org/?relation=${report.relationInfo.relationId}"><spring:message code="button.show.on.osm" /></a>
 <a class="button-link" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
+<a class="button-link" href="analyzeMap?relationId=${report.relationInfo.relationId}" title="<spring:message code="button.analyze.map.hint" />"><spring:message code="button.analyze.map" /></a>
 </div>
 <table id="tags" style="display:none">
 <c:forEach items="${report.relationInfo.tags}" var="tag">

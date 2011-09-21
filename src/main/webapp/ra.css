@@ -1,7 +1,8 @@
-body {
+body, html {
 	font-family: Verdana, Arial;
 	font-size: 12px;
 	margin: 10px;
+	height: 100%;
 }
 
 a {

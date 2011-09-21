@@ -181,10 +181,20 @@ OpenLayers.Layer.GPX.prototype =
 //            }
 //        }
     },
+    
+    possibleColors : ["#FF0000", "#0000FF", "#00FF00", "#FFAE00"],
+    currentColor : 0,
+    randomColor : function()
+    {
+    	this.currentColor = (this.currentColor + 1) % this.possibleColors.length;
+    	return this.possibleColors[this.currentColor];
+    },
+    
+    
     /**
      * @param {Event} evt
      */
-    randomColor: function() {
+    randomColorOld: function() {
 	var hex=new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
 	var color = '#';
 	for (i=0;i<6;i++){
