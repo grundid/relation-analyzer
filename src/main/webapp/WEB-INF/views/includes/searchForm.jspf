@@ -1,8 +1,9 @@
+<%@ include file="taglibs.jspf" %>
 <div class="content-box">
 <h3><spring:message code="title.search" /></h3>
 
 <form:form action="searchRelation" modelAttribute="searchModel" method="get">
-
+<form:errors path="*"><div class="form-error"><spring:message code="form.errors" /></div></form:errors>
 <table>
 <tr>
 	<td><spring:message code="label.name" /></td>

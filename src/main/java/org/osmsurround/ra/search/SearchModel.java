@@ -17,6 +17,7 @@
  */
 package org.osmsurround.ra.search;
 
+@ValidSearchModel
 public class SearchModel {
 
 	private String relationType;

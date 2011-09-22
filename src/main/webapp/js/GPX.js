@@ -186,8 +186,9 @@ OpenLayers.Layer.GPX.prototype =
     currentColor : 0,
     randomColor : function()
     {
+    	var color = this.possibleColors[this.currentColor];
     	this.currentColor = (this.currentColor + 1) % this.possibleColors.length;
-    	return this.possibleColors[this.currentColor];
+    	return color;
     },
     
     

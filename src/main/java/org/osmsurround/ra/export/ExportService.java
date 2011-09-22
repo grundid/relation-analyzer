@@ -23,18 +23,34 @@ public class ExportService {
 	public void export(AnalyzerContext analyzerContext, OutputStream out) {
 
 		List<Section> containers = new ArrayList<Section>();
-		for (Graph graph : analyzerContext.getGraphs()) {
+
+		List<Graph> graphs = analyzerContext.getGraphs();
+
+		for (int graphIndex = 0; graphIndex < graphs.size(); graphIndex++) {
+
+			Graph graph = graphs.get(graphIndex);
 
 			IntersectionNode[] intersectionNodes = graph.getLeaves().toArray(new IntersectionNode[0]);
-			if (intersectionNodes.length == 2) {
-				List<Node> list = traverseService.traverse(intersectionNodes[0], intersectionNodes[1]);
+			if (intersectionNodes.length == 2 || intersectionNodes.length == 1) {
+
+				IntersectionNode startNode = intersectionNodes[0];
+				IntersectionNode endNode = intersectionNodes.length == 1 ? startNode : intersectionNodes[1];
+
+				List<Node> list = traverseService.traverse(startNode, endNode);
 				List<Node> completeNodeList = traverseService.fillInNodes(list, analyzerContext);
-				SectionContainer sectionContainer = new SectionContainer("Graph X", completeNodeList);
+				SectionContainer sectionContainer = new SectionContainer("Graph " + (graphIndex + 1));
+				sectionContainer.addCoordinates(completeNodeList);
 				containers.add(sectionContainer);
 			}
 		}
 
 		gpxExport.export(containers, out);
 
+	}
+
+	public void exportForDisplay(AnalyzerContext analyzerContext, OutputStream out) {
+		SimpleSegmentConverter converter = new SimpleSegmentConverter();
+		List<Section> containers = converter.convert(analyzerContext);
+		gpxExport.export(containers, out);
 	}
 }

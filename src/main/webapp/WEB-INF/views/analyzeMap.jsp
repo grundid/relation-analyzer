@@ -9,8 +9,6 @@
 <script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
 <script type="text/javascript" src="js/GPX.js"></script>
 <script type="text/javascript">
-	var lat = 49.3;
-	var lon = 9.3;
 	var zoom = 10;
 	
 	var markerRotation = ["img/marker-red.png","img/marker-blue.png","img/marker-green.png","img/marker-gold.png",];
@@ -34,11 +32,16 @@
 		} );
 
 		var layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+		layerMapnik.attribution = null;
 		map.addLayer(layerMapnik);
+		var layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
+		layerCycleMap.attribution = null;
+		map.addLayer(layerCycleMap);
+		
 		var layerMarkers = new OpenLayers.Layer.Markers("Markers");
 		map.addLayer(layerMarkers);
 
-		map.addLayer(new OpenLayers.Layer.GPX("Relation", "exportRelation/gpx?relationId=${report.relationInfo.relationId}", ""));
+		map.addLayer(new OpenLayers.Layer.GPX("Relation", "showRelation?relationId=${report.relationInfo.relationId}", ""));
 
 		var lastMarkerPosition = null;
 		<c:forEach items="${report.reportItems}" var="reportItems" varStatus="itemStatus">
@@ -61,9 +64,9 @@
 <body onload="init();" style="height:100%">
 	<div style="text-align: center; overflow:hidden;height: 100%">
 		<div class="maindiv" style="height:100%">
-			<%@ include file="includes/header.jspf"%>
-			<div id="map" style="height: 70%;"></div>
-			<%@ include file="includes/footer.jspf"%>
+			<div style="height:10%"><%@ include file="includes/header.jspf"%></div>
+			<div id="map" style="height:80%;"></div>
+			<div style="height:10%"><%@ include file="includes/footer.jspf"%></div>
 		</div>
 	</div>
 </body>

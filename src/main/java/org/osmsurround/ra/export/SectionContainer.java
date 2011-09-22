@@ -17,14 +17,16 @@
  */
 package org.osmsurround.ra.export;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SectionContainer implements Section {
 
 	private String name;
-	private Iterable<? extends LonLat> coordinates;
+	private List<Iterable<? extends LonLat>> coordinateLists = new ArrayList<Iterable<? extends LonLat>>();
 
-	public SectionContainer(String name, Iterable<? extends LonLat> coordinates) {
+	public SectionContainer(String name) {
 		this.name = name;
-		this.coordinates = coordinates;
 	}
 
 	@Override
@@ -32,10 +34,12 @@ public class SectionContainer implements Section {
 		return name;
 	}
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public Iterable<LonLat> getCoordinates() {
-		return (Iterable<LonLat>)coordinates;
+	public void addCoordinates(Iterable<? extends LonLat> coordinates) {
+		coordinateLists.add(coordinates);
 	}
 
+	@Override
+	public List<Iterable<? extends LonLat>> getCoordinateLists() {
+		return coordinateLists;
+	}
 }

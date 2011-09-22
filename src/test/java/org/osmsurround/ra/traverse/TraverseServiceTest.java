@@ -37,7 +37,9 @@ public class TraverseServiceTest extends TestBase {
 		List<Node> traverse = traverseService.traverse(intersectionWeb, startNode, endNode);
 
 		List<Section> sections = new ArrayList<Section>();
-		sections.add(new SectionContainer("test", traverse));
+		SectionContainer sectionContainer = new SectionContainer("test");
+		sectionContainer.addCoordinates(traverse);
+		sections.add(sectionContainer);
 
 		helperService.exportSimple(sections, relationId);
 

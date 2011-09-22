@@ -17,12 +17,16 @@
  */
 package org.osmsurround.ra.search;
 
+import java.util.Collections;
 import java.util.List;
+
+import javax.validation.Valid;
 
 import org.osmsurround.ra.dao.Relation;
 import org.osmsurround.ra.dao.RelationSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -35,10 +39,14 @@ public class SearchRelationController {
 	private RelationSearch relationSearch;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView get(SearchModel searchModel) {
+	public ModelAndView get(@Valid SearchModel searchModel, Errors errors) {
 
-		List<Relation> list = relationSearch.search(searchModel);
-
-		return new ModelAndView("searchResult", "result", new SearchResult(list));
+		if (errors.hasErrors()) {
+			return new ModelAndView("searchResult", "result", new SearchResult(Collections.EMPTY_LIST));
+		}
+		else {
+			List<Relation> list = relationSearch.search(searchModel);
+			return new ModelAndView("searchResult", "result", new SearchResult(list));
+		}
 	}
 }

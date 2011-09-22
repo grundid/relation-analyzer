@@ -44,23 +44,37 @@ public class SingleRouteTraverser {
 
 	private void traverseNodes(IntersectionNode startNode) {
 		path.add(startNode.getNode());
-		while (!startNode.equals(endNode)) {
+		do {
 			visitedNodes.add(startNode);
+			IntersectionNode nextNode = getNextNode(startNode);
 
-			Iterator<IntersectionNode> edgeIterator = startNode.getEdgesIterator();
+			path.add(nextNode.getNode());
+			startNode = nextNode;
+		} while (!startNode.equals(endNode));
+	}
 
-			IntersectionNode nextNode = edgeIterator.next();
+	private IntersectionNode getNextNode(IntersectionNode startNode) {
+		Iterator<IntersectionNode> edgeIterator = startNode.getEdgesIterator();
+		IntersectionNode nextNode = edgeIterator.next();
 
-			while (visitedNodes.contains(nextNode)) {
-				if (edgeIterator.hasNext()) {
-					nextNode = edgeIterator.next();
+		IntersectionNode possibleEndNode = nextNode.equals(endNode) ? nextNode : null;
+		while (visitedNodes.contains(nextNode)) {
+			if (edgeIterator.hasNext()) {
+				nextNode = edgeIterator.next();
+				if (nextNode.equals(endNode))
+					possibleEndNode = nextNode;
+			}
+			else {
+				if (nextNode.equals(endNode)) {
+					break;
+				}
+				else if (possibleEndNode != null) {
+					nextNode = possibleEndNode;
 				}
 				else
 					throw new AnalyzerException("No way to go. All nodes visited before.");
 			}
-
-			path.add(nextNode.getNode());
-			startNode = nextNode;
 		}
+		return nextNode;
 	}
 }

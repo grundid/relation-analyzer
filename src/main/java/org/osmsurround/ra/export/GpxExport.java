@@ -19,6 +19,7 @@ package org.osmsurround.ra.export;
 
 import java.io.OutputStream;
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -40,6 +41,7 @@ public class GpxExport {
 
 	private String appName = "relation-analyzer";
 	private String appVersion = "1.1";
+	private ObjectFactory of = new ObjectFactory();
 
 	@Autowired
 	public GpxExport(@Value("${app.name}") String appName, @Value("${app.version}") String appVersion) {
@@ -48,7 +50,6 @@ public class GpxExport {
 	}
 
 	public void export(Iterable<Section> container, OutputStream os) {
-		ObjectFactory of = new ObjectFactory();
 		GpxType gpxType = of.createGpxType();
 		gpxType.setCreator(appName);
 		gpxType.setVersion(appVersion);
@@ -57,16 +58,27 @@ public class GpxExport {
 			gpxType.getTrk().add(trkType);
 			trkType.setName(dataContainer.getName());
 
-			TrksegType trksegType = of.createTrksegType();
-			trkType.getTrkseg().add(trksegType);
+			for (Iterable<? extends LonLat> coordinates : dataContainer.getCoordinateLists()) {
+				TrksegType trksegType = of.createTrksegType();
+				trkType.getTrkseg().add(trksegType);
 
-			for (LonLat point : dataContainer.getCoordinates()) {
-				WptType wptType = of.createWptType();
-				wptType.setLat(new BigDecimal(point.getLat()));
-				wptType.setLon(new BigDecimal(point.getLon()));
-				trksegType.getTrkpt().add(wptType);
+				List<WptType> trkpt = trksegType.getTrkpt();
+				addTrackpoints(trkpt, coordinates);
 			}
 		}
+		marshalData(gpxType, os);
+	}
+
+	private void addTrackpoints(List<WptType> trkpt, Iterable<? extends LonLat> coordinates) {
+		for (LonLat point : coordinates) {
+			WptType wptType = of.createWptType();
+			wptType.setLat(new BigDecimal(point.getLat()));
+			wptType.setLon(new BigDecimal(point.getLon()));
+			trkpt.add(wptType);
+		}
+	}
+
+	private void marshalData(GpxType gpxType, OutputStream os) {
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(GpxType.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();

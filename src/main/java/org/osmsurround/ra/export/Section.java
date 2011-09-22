@@ -17,10 +17,11 @@
  */
 package org.osmsurround.ra.export;
 
+import java.util.List;
 
 public interface Section {
 
 	String getName();
 
-	Iterable<LonLat> getCoordinates();
+	List<Iterable<? extends LonLat>> getCoordinateLists();
 }

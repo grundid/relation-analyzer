@@ -68,8 +68,12 @@ public class HelperService {
 					try {
 						List<Node> traverse = traverseService.traverse(startNode, endNode);
 
-						sectionList.add(new SectionContainer("Route - " + startNode.getNode() + " - "
-								+ endNode.getNode(), traverse));
+						SectionContainer sectionContainer = new SectionContainer("Route - " + startNode.getNode()
+								+ " - " + endNode.getNode());
+						sectionContainer.addCoordinates(traverse);
+
+						sectionList.add(sectionContainer);
+
 					}
 					catch (AnalyzerException e) {
 						System.out.println("cannot create route - " + startNode.getNode() + " - " + endNode.getNode());
