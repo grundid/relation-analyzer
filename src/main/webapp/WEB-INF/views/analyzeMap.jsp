@@ -9,7 +9,7 @@
 <script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
 <script type="text/javascript" src="js/GPX.js"></script>
 <script type="text/javascript">
-	var zoom = 10;
+	var zoom = 12;
 	
 	var markerRotation = ["img/marker-red.png","img/marker-blue.png","img/marker-green.png","img/marker-gold.png",];
 	var markerIndex = 0;
