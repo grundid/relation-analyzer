@@ -32,6 +32,7 @@ public class RelationInfo {
 
 	private String name;
 	private String type;
+	private double length;
 
 	private Collection<RelationTag> tags = new ArrayList<RelationTag>();
 
@@ -81,6 +82,14 @@ public class RelationInfo {
 
 	public String getUser() {
 		return user;
+	}
+
+	public double getLength() {
+		return length;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
 	}
 
 }

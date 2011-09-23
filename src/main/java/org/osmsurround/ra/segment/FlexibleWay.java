@@ -24,6 +24,7 @@ import java.util.List;
 import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
+import org.osmsurround.ra.utils.LonLatMath;
 
 public class FlexibleWay implements ConnectableSegment {
 
@@ -110,4 +111,18 @@ public class FlexibleWay implements ConnectableSegment {
 	public boolean canConnectNodesInDirection(Node startNode, Node endNode) {
 		return containsNodes(startNode, endNode);
 	}
+
+	@Override
+	public double getLength() {
+		double sum = 0;
+		Node startNode = wayNodes.get(0);
+		for (int x = 1; x < wayNodes.size(); x++) {
+			Node endNode = wayNodes.get(x);
+			sum += LonLatMath.distance(startNode.getLon(), startNode.getLat(), endNode.getLon(), endNode.getLat());
+			startNode = endNode;
+		}
+
+		return sum;
+	}
+
 }

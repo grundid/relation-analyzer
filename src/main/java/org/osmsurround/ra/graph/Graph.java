@@ -26,10 +26,12 @@ public class Graph {
 
 	private Set<IntersectionNode> leaves;
 	private Collection<Edge> edges;
+	private double length;
 
 	@SuppressWarnings("unchecked")
-	public Graph(Set<IntersectionNode> leaves, Collection<? extends Edge> edges) {
+	public Graph(Set<IntersectionNode> leaves, Collection<? extends Edge> edges, double length) {
 		this.leaves = leaves;
+		this.length = length;
 		this.edges = (Collection<Edge>)edges;
 	}
 
@@ -39,5 +41,9 @@ public class Graph {
 
 	public Collection<Edge> getEdges() {
 		return edges;
+	}
+
+	public double getLength() {
+		return length;
 	}
 }

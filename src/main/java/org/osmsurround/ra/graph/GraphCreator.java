@@ -77,7 +77,16 @@ public class GraphCreator {
 		if (leaves.isEmpty() && !knownNodes.isEmpty())
 			leaves.add(knownNodes.values().iterator().next());
 
-		return new Graph(leaves, edges);
+		double length = sumSegmentLength();
+		return new Graph(leaves, edges, length);
+	}
+
+	private double sumSegmentLength() {
+		double sum = 0;
+		for (ConnectableSegment connectableSegment : segments) {
+			sum += connectableSegment.getLength();
+		}
+		return sum;
 	}
 
 	private void generateGraph() {

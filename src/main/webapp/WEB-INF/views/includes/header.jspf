@@ -1,2 +1,2 @@
 <h2>OSM Relation Analyzer</h2>
-<p>Version ${version} - <a href="index">Home</a></p>
+<p>Version ${version} - <a href="index"><spring:message code="label.home" /></a></p>

@@ -73,6 +73,12 @@ public class ReportService {
 		}
 		relationInfo.setTags(tags);
 
+		double length = 0;
+		for (ReportItem reportItem : report.getReportItems()) {
+			length += reportItem.getLength();
+		}
+		relationInfo.setLength(length);
+
 		report.setRelationInfo(relationInfo);
 
 	}
@@ -95,7 +101,7 @@ public class ReportService {
 				endNodeDistances.add(new EndNodeDistances(node, distances));
 			}
 
-			reportItems.add(new ReportItem(endNodeDistances));
+			reportItems.add(new ReportItem(endNodeDistances, graph.getLength()));
 		}
 
 		report.setReportItems(reportItems);

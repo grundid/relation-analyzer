@@ -41,4 +41,10 @@ public interface ConnectableSegment {
 	void appendNodesBetween(Collection<Node> nodes, Node startNode, Node endNode);
 
 	boolean containsNodes(Node... nodes);
+
+	/**
+	 * 
+	 * @return the length of the segment in KM.
+	 */
+	double getLength();
 }

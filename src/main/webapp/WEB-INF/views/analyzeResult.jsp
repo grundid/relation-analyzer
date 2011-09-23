@@ -19,7 +19,8 @@
 <p>
 <spring:message code="label.id" />: <strong>${report.relationInfo.relationId}</strong>, 
 <spring:message code="label.name" />: <strong>${report.relationInfo.name}</strong>, 
-<spring:message code="label.type" />: <strong>${report.relationInfo.type}</strong>
+<spring:message code="label.type" />: <strong>${report.relationInfo.type}</strong>,
+<spring:message code="label.relation.length" />: <strong><fmt:formatNumber pattern="#,##0.000">${report.relationInfo.length}</fmt:formatNumber></strong>
 </p>
 <p><spring:message code="label.lastmodified" />: <strong><spring:transform value="${report.relationInfo.timestamp}"></spring:transform></strong>, 
 <spring:message code="label.byuser" />: <strong><a href="http://www.openstreetmap.org/user/<spring:escapeBody>${report.relationInfo.user}</spring:escapeBody>"><spring:escapeBody>${report.relationInfo.user}</spring:escapeBody></a></strong></p>
@@ -27,9 +28,8 @@
 
 <div style="height: 30px">
 <a class="button-link" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
-<a class="button-link" href="http://www.openstreetmap.org/?relation=${report.relationInfo.relationId}"><spring:message code="button.show.on.osm" /></a>
-<a class="button-link" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
 <a class="button-link" href="analyzeMap?relationId=${report.relationInfo.relationId}" title="<spring:message code="button.analyze.map.hint" />"><spring:message code="button.analyze.map" /></a>
+<a class="button-link" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
 </div>
 <table id="tags" style="display:none">
 <c:forEach items="${report.relationInfo.tags}" var="tag">
@@ -58,10 +58,10 @@
 
 <h3><spring:message code="title.report"/></h3>
 <div class="content-box">
-<c:forEach items="${report.reportItems}" var="reportItems" varStatus="itemStatus">
+<c:forEach items="${report.reportItems}" var="reportItem" varStatus="itemStatus">
 <div class="graph">
-<p><spring:message code="label.graph"/>&nbsp;${itemStatus.index+1}</p>
-<c:forEach items="${reportItems.endNodeDistances}" var="endNode">
+<p><spring:message code="label.graph"/>&nbsp;${itemStatus.index+1} (<spring:message code="label.graph.length" />: <fmt:formatNumber pattern="#,##0.000">${reportItem.length}</fmt:formatNumber>)</p>
+<c:forEach items="${reportItem.endNodeDistances}" var="endNode">
 <div>
 <p><spring:message code="label.end.node.id"/>: <osm:node>${endNode.node.id}</osm:node></p>
 

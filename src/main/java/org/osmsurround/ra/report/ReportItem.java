@@ -22,13 +22,19 @@ import java.util.Collection;
 public class ReportItem {
 
 	private Collection<EndNodeDistances> endNodeDistances;
+	private double length;
 
-	public ReportItem(Collection<EndNodeDistances> endNodeDistances) {
+	public ReportItem(Collection<EndNodeDistances> endNodeDistances, double length) {
 		this.endNodeDistances = endNodeDistances;
+		this.length = length;
 	}
 
 	public Collection<EndNodeDistances> getEndNodeDistances() {
 		return endNodeDistances;
+	}
+
+	public double getLength() {
+		return length;
 	}
 
 }
