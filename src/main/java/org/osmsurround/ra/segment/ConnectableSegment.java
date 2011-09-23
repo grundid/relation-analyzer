@@ -18,6 +18,7 @@
 package org.osmsurround.ra.segment;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.osmsurround.ra.analyzer.ConnectableNode;
 import org.osmsurround.ra.data.Node;
@@ -28,7 +29,7 @@ public interface ConnectableSegment {
 
 	ConnectableNode getEndpointNodes();
 
-	Node getCommonNode(ConnectableSegment otherSegment);
+	Set<Node> getCommonNode(ConnectableSegment otherSegment);
 
 	/**
 	 * Returns true if the given node can connect to this segment's start or end nodes.

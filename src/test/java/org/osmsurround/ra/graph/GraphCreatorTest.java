@@ -123,6 +123,14 @@ public class GraphCreatorTest extends TestBase {
 	}
 
 	@Test
+	public void testCreateSingleLaneHalfRoundabout() throws Exception {
+
+		Collection<IntersectionNode> leaves = executeAndGetLeaves(SegmentsBuilder.create().appendFlexible(1, 2)
+				.appendFlexible(3, 2, 6).appendFlexible(6, 4, 3).appendFlexible(4, 5));
+		assertContainsOnlyNodeIds(leaves, 1, 5);
+	}
+
+	@Test
 	@Ignore
 	public void testCreateGraphDoubleLaneHalfRoundabout() throws Exception {
 		// TODO CreateGraphDoubleLaneHalfRoundabout

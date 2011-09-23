@@ -101,17 +101,35 @@ public class GraphCreator {
 				for (ConnectableSegment firstSegment : connectingSegments) {
 					for (ConnectableSegment secondSegment : connectingSegments.subList(
 							connectingSegments.indexOf(firstSegment) + 1, connectingSegments.size())) {
-						Node commonNode1 = findCommonNode(segment, firstSegment);
-						Node commondNode2 = findCommonNode(segment, secondSegment);
-						if (commonNode1.equals(commondNode2)) {
+						Set<Node> commonNodes1 = findCommonNode(segment, firstSegment);
+						Set<Node> commonNodes2 = findCommonNode(segment, secondSegment);
+						if (commonNodes1.containsAll(commonNodes2) && commonNodes1.size() == 1) {
 							createLeafEdge(segment);
 						}
 						else {
-							createEdge(segment, commonNode1, commondNode2);
+							if (commonNodes1.size() == 1) {
+								createEdges(segment, commonNodes1.iterator().next(), commonNodes2);
+							}
+							else if (commonNodes2.size() == 1) {
+								createEdges(segment, commonNodes2.iterator().next(), commonNodes1);
+							}
+							else {
+								// TODO: cannot handle this.
+								/* Multiple common nodes from several segments. We would need to get the 
+								 * common nodes in order along the current segment and then chop the 
+								 * segment from node to node. Avoid creating edges that "jump" across 
+								 * common nodes */
+							}
 						}
 					}
 				}
 			}
+		}
+	}
+
+	private void createEdges(ConnectableSegment segment, Node node, Set<Node> commonNodes) {
+		for (Node commonNode : commonNodes) {
+			createEdge(segment, node, commonNode);
 		}
 	}
 
@@ -145,7 +163,7 @@ public class GraphCreator {
 		edges.add(edge);
 	}
 
-	private Node findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {
+	private Set<Node> findCommonNode(ConnectableSegment segment, ConnectableSegment segmentToConntent) {
 		return segment.getCommonNode(segmentToConntent);
 	}
 

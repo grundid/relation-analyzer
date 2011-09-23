@@ -18,8 +18,10 @@
 package org.osmsurround.ra.segment;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.ConnectableNode;
@@ -47,27 +49,28 @@ public class FlexibleWay implements ConnectableSegment {
 	}
 
 	@Override
-	public Node getCommonNode(ConnectableSegment otherSegment) {
-		Node commonNode = getCommonNodeInternal(otherSegment);
-		if (commonNode == null)
+	public Set<Node> getCommonNode(ConnectableSegment otherSegment) {
+		Set<Node> commonNodes = getCommonNodesInternal(otherSegment);
+		if (commonNodes.isEmpty())
 			throw new AnalyzerException("No common nodes");
 
-		return commonNode;
+		return commonNodes;
 	}
 
 	@Override
 	public boolean canConnect(ConnectableSegment otherSegment) {
-		Node commonNode = getCommonNodeInternal(otherSegment);
-		return commonNode != null;
+		Set<Node> commonNodes = getCommonNodesInternal(otherSegment);
+		return !commonNodes.isEmpty();
 	}
 
-	private Node getCommonNodeInternal(ConnectableSegment otherSegment) {
+	private Set<Node> getCommonNodesInternal(ConnectableSegment otherSegment) {
+		Set<Node> commonNodes = new HashSet<Node>();
 		for (Iterator<Node> it = otherSegment.getEndpointNodes().getNodesIterator(); it.hasNext();) {
 			Node externalNode = it.next();
 			if (wayNodes.contains(externalNode))
-				return externalNode;
+				commonNodes.add(externalNode);
 		}
-		return null;
+		return commonNodes;
 	}
 
 	@Override

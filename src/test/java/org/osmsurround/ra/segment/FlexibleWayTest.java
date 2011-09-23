@@ -3,6 +3,8 @@ package org.osmsurround.ra.segment;
 import static org.junit.Assert.*;
 import static org.osmsurround.ra.TestUtils.*;
 
+import java.util.Set;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ra.AnalyzerException;
@@ -20,11 +22,6 @@ public class FlexibleWayTest {
 		firstNode = getNode(1);
 		lastNode = getNode(4);
 		flexibleWay = asFlexibleOrderWay(1, 2, 3, 4);
-	}
-
-	private void assertCommonNode(long expectedNodeId, long... otherWayNodeIds) {
-		Node commonNode = flexibleWay.getCommonNode(asFlexibleOrderWay(otherWayNodeIds));
-		assertEquals(getNode(expectedNodeId), commonNode);
 	}
 
 	private void assertCanConnect(boolean expected, long... otherWayNodeIds) {
@@ -54,6 +51,12 @@ public class FlexibleWayTest {
 		assertCommonNode(4, 4, 6, 7);
 		assertCommonNode(4, 5, 4, 7);
 		assertCommonNode(3, 5, 3, 7);
+		assertCommonNode(3, 3, 8, 7);
+	}
+
+	private void assertCommonNode(long expectedNodeId, long... otherWayNodeIds) {
+		Set<Node> commonNodes = flexibleWay.getCommonNode(asFlexibleOrderWay(otherWayNodeIds));
+		assertTrue(commonNodes.contains(getNode(expectedNodeId)));
 	}
 
 	@Test(expected = AnalyzerException.class)

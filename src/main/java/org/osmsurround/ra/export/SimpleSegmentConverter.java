@@ -31,8 +31,10 @@ public class SimpleSegmentConverter {
 				nodes.add(startNode);
 				for (ConnectableSegment connectableSegment : analyzerContext.getSegments()) {
 					if (connectableSegment.containsNodes(startNode, currentNode)) {
+						int prevSize = nodes.size();
 						connectableSegment.appendNodesBetween(nodes, startNode, currentNode);
-						break;
+						if (prevSize < nodes.size())
+							break;
 					}
 				}
 				sectionContainer.addCoordinates(nodes);
