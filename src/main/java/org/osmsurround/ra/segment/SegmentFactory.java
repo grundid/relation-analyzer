@@ -19,11 +19,8 @@ package org.osmsurround.ra.segment;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.analyzer.RoundaboutService;
 import org.osmsurround.ra.data.Member;
 import org.osmsurround.ra.data.Node;
@@ -37,18 +34,6 @@ public class SegmentFactory {
 	@Autowired
 	private RoundaboutService roundaboutService;
 
-	private static final Set<String> flexibleMemberRoles = new HashSet<String>();
-	static {
-		flexibleMemberRoles.add("");
-		flexibleMemberRoles.add("inner");
-		flexibleMemberRoles.add("outer");
-		flexibleMemberRoles.add("subarea");
-		flexibleMemberRoles.add("device");
-		flexibleMemberRoles.add("from");
-		flexibleMemberRoles.add("to");
-		flexibleMemberRoles.add("via");
-	}
-
 	public ConnectableSegment createSegment(Member member) {
 		Way way = member.getWay();
 
@@ -57,14 +42,12 @@ public class SegmentFactory {
 
 		String memberRole = member.getRole();
 
-		if (flexibleMemberRoles.contains(memberRole))
-			return createFlexibleSegment(way);
-		else if ("forward".equals(memberRole))
+		if ("forward".equals(memberRole))
 			return createFixedSegment(way, false);
 		else if ("backward".equals(memberRole))
 			return createFixedSegment(way, true);
-
-		throw new AnalyzerException("Unknown member role [" + memberRole + "]");
+		else
+			return createFlexibleSegment(way);
 	}
 
 	private ConnectableSegment createFlexibleSegment(Way way) {

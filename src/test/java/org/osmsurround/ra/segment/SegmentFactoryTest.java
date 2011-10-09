@@ -3,7 +3,6 @@ package org.osmsurround.ra.segment;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.osmsurround.ra.AnalyzerException;
 import org.osmsurround.ra.TestBase;
 import org.osmsurround.ra.TestUtils;
 import org.osmsurround.ra.data.Member;
@@ -40,8 +39,9 @@ public class SegmentFactoryTest extends TestBase {
 		assertEquals(expected.getName(), actual.getName());
 	}
 
-	@Test(expected = AnalyzerException.class)
+	@Test
 	public void testCreateMemberUnknown() throws Exception {
-		segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unknown"));
+		ConnectableSegment segment = segmentFactory.createSegment(new Member(TestUtils.asWay(1, 2, 3), "unknown"));
+		assertTrue(segment instanceof FlexibleWay);
 	}
 }
