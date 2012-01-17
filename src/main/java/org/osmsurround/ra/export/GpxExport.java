@@ -44,9 +44,8 @@ public class GpxExport {
 	private ObjectFactory of = new ObjectFactory();
 
 	@Autowired
-	public GpxExport(@Value("${app.name}") String appName, @Value("${app.version}") String appVersion) {
+	public GpxExport(@Value("${app.name}") String appName) {
 		this.appName = appName;
-		this.appVersion = appVersion;
 	}
 
 	public void export(Iterable<Section> container, OutputStream os) {
