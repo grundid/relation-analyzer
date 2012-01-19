@@ -16,10 +16,18 @@ public class ExportServiceTest extends TestBase {
 	private ExportService exportService;
 
 	@Test
-	public void testExport() throws Exception {
+	public void testExportGpx() throws Exception {
 		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
 		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-		exportService.export(analyzerContext, byteArrayOutputStream);
+		exportService.export(analyzerContext, byteArrayOutputStream, "gpx");
+		assertTrue(byteArrayOutputStream.size() > 0);
+	}
+
+	@Test
+	public void testExportJson() throws Exception {
+		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		exportService.export(analyzerContext, byteArrayOutputStream, "json");
 		assertTrue(byteArrayOutputStream.size() > 0);
 	}
 }

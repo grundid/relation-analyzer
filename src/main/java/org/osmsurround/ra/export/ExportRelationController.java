@@ -28,10 +28,19 @@ public class ExportRelationController {
 		AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
 				analyzeRelationModel.isNoCache());
 
-		response.setContentType("application/xml");
-		response.setHeader("Content-Disposition", "attachment; filename=\"relation_"
-				+ analyzerContext.getRelation().getRelationId() + ".gpx\"");
+		if ("gpx".equals(exportFormat)) {
+			response.setContentType("application/xml");
+			response.setHeader("Content-Disposition", "attachment; filename=\"relation_"
+					+ analyzerContext.getRelation().getRelationId() + ".gpx\"");
 
-		exportService.export(analyzerContext, out);
+			exportService.export(analyzerContext, out, exportFormat);
+		}
+		else if ("json".equals(exportFormat)) {
+			response.setContentType("application/json");
+			response.setHeader("Content-Disposition", "attachment; filename=\"relation_"
+					+ analyzerContext.getRelation().getRelationId() + ".json\"");
+
+			exportService.export(analyzerContext, out, exportFormat);
+		}
 	}
 }

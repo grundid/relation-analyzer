@@ -19,8 +19,10 @@ public class ExportService {
 	private TraverseService traverseService;
 	@Autowired
 	private GpxExport gpxExport;
+	@Autowired
+	private GeoJsonExport geoJsonExport;
 
-	public void export(AnalyzerContext analyzerContext, OutputStream out) {
+	public void export(AnalyzerContext analyzerContext, OutputStream out, String format) {
 
 		List<Section> containers = new ArrayList<Section>();
 
@@ -43,8 +45,10 @@ public class ExportService {
 				containers.add(sectionContainer);
 			}
 		}
-
-		gpxExport.export(containers, out);
+		if ("gpx".equals(format))
+			gpxExport.export(containers, out);
+		else if ("json".equals(format))
+			geoJsonExport.export(containers, out);
 
 	}
 
