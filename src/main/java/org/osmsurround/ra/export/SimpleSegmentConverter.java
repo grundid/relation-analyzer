@@ -8,6 +8,7 @@ import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.dijkstra.Edge;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.segment.ConnectableSegment;
+import org.osmsurround.ra.traverse.TraverseService;
 
 public class SimpleSegmentConverter {
 
@@ -16,6 +17,7 @@ public class SimpleSegmentConverter {
 		List<Section> containers = new ArrayList<Section>();
 
 		List<Graph> graphs = analyzerContext.getGraphs();
+		List<ConnectableSegment> modifyableSegments = new ArrayList<ConnectableSegment>(analyzerContext.getSegments());
 
 		for (int graphIndex = 0; graphIndex < graphs.size(); graphIndex++) {
 
@@ -29,14 +31,7 @@ public class SimpleSegmentConverter {
 
 				List<Node> nodes = new ArrayList<Node>();
 				nodes.add(startNode);
-				for (ConnectableSegment connectableSegment : analyzerContext.getSegments()) {
-					if (connectableSegment.containsNodes(startNode, currentNode)) {
-						int prevSize = nodes.size();
-						connectableSegment.appendNodesBetween(nodes, startNode, currentNode);
-						if (prevSize < nodes.size())
-							break;
-					}
-				}
+				TraverseService.fillInNodesBetweenNodes(modifyableSegments, nodes, startNode, currentNode);
 				sectionContainer.addCoordinates(nodes);
 			}
 			containers.add(sectionContainer);

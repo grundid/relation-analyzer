@@ -1,5 +1,7 @@
 package org.osmsurround.ra.traverse;
 
+import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -13,6 +15,7 @@ import org.osmsurround.ra.export.Section;
 import org.osmsurround.ra.export.SectionContainer;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
+import org.osmsurround.ra.segment.ConnectableSegment;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TraverseServiceTest extends TestBase {
@@ -42,6 +45,18 @@ public class TraverseServiceTest extends TestBase {
 		sections.add(sectionContainer);
 
 		helperService.exportSimple(sections, relationId);
+	}
+
+	@Test
+	public void testFillInNodes() throws Exception {
+		List<Node> list = TestUtils.asNodes(1, 3, 1);
+		List<ConnectableSegment> segments = TestUtils
+				.asSegments(TestUtils.asNodes(1, 2, 3), TestUtils.asNodes(3, 4, 1));
+
+		List<Node> nodes = traverseService.fillInNodes(list, segments);
+
+		for (int x = 1; x <= 4; x++)
+			assertTrue("should contain node id: " + x, nodes.contains(TestUtils.getNode(x)));
 
 	}
 

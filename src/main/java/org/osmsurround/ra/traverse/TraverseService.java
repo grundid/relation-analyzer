@@ -18,9 +18,10 @@
 package org.osmsurround.ra.traverse;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
-import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.dijkstra.Dijkstra;
 import org.osmsurround.ra.dijkstra.Vertex;
@@ -50,31 +51,43 @@ public class TraverseService {
 		return result;
 	}
 
-	public List<Node> fillInNodes(List<Node> path, AnalyzerContext analyzerContext) {
+	public List<Node> fillInNodes(List<Node> path, Collection<ConnectableSegment> segments) {
 
 		if (path.isEmpty())
 			return path;
 
+		List<ConnectableSegment> modifyableSegments = new ArrayList<ConnectableSegment>(segments);
 		List<Node> result = new ArrayList<Node>();
 
 		Node startNode = path.get(0);
 		result.add(startNode);
 		for (int x = 1; x < path.size(); x++) {
-
 			Node currentNode = path.get(x);
-
-			for (ConnectableSegment connectableSegment : analyzerContext.getSegments()) {
-				if (connectableSegment.containsNodes(startNode, currentNode)) {
-					connectableSegment.appendNodesBetween(result, startNode, currentNode);
-					break;
-				}
-			}
-
+			fillInNodesBetweenNodes(modifyableSegments, result, startNode, currentNode);
 			startNode = currentNode;
-
 		}
 
 		return result;
 
+	}
+
+	public static void fillInNodesBetweenNodes(List<ConnectableSegment> modifyableSegments, List<Node> resultNodes,
+			Node startNode, Node currentNode) {
+		for (Iterator<ConnectableSegment> it = modifyableSegments.iterator(); it.hasNext();) {
+			ConnectableSegment connectableSegment = it.next();
+
+			if (connectableSegment.containsNodes(startNode, currentNode)) {
+				int prevSize = resultNodes.size();
+				connectableSegment.appendNodesBetween(resultNodes, startNode, currentNode);
+				// If the segment list is only 2 elements we must make sure 
+				// that we not reuse the same segment again
+				// Scenario: A => B => A
+				if (modifyableSegments.size() <= 2) {
+					it.remove();
+				}
+				if (prevSize < resultNodes.size())
+					break;
+			}
+		}
 	}
 }

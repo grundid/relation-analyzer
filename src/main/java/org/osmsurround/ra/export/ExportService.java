@@ -39,7 +39,7 @@ public class ExportService {
 				IntersectionNode endNode = intersectionNodes.length == 1 ? startNode : intersectionNodes[1];
 
 				List<Node> list = traverseService.traverse(startNode, endNode);
-				List<Node> completeNodeList = traverseService.fillInNodes(list, analyzerContext);
+				List<Node> completeNodeList = traverseService.fillInNodes(list, analyzerContext.getSegments());
 				SectionContainer sectionContainer = new SectionContainer("Graph " + (graphIndex + 1));
 				sectionContainer.addCoordinates(completeNodeList);
 				containers.add(sectionContainer);
