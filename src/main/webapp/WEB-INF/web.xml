@@ -5,7 +5,8 @@
 
 	<display-name>Relation Analyzer</display-name>
 
-	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<!-- The definition of the Root Spring Container shared by all Servlets 
+		and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
@@ -32,7 +33,7 @@
 		<filter-name>charsetFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -79,7 +80,7 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/WEB-INF/views/errors/exceptionHandler.jsp</location>
 	</error-page>
-	
+
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
@@ -90,10 +91,17 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-		
+
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://www.grundid.de/osmtools</taglib-uri>
+			<taglib-location>/WEB-INF/osmtags.tld</taglib-location>
+		</taglib>
+	</jsp-config>
 
 </web-app>
