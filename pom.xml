@@ -228,6 +228,16 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>maven.grundid.de</id>
+			<url>scp://maven.grundid.de/repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven.grundid.de</id>
+			<url>scp://maven.grundid.de/repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<scm>
 		<developerConnection>scm:git:ssh://git@github/grundid/relation-analyzer.git</developerConnection>
@@ -237,7 +247,7 @@
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-ssh</artifactId>
-				<version>1.0-beta-7</version>
+				<version>2.2</version>
 			</extension>
 		</extensions>
 		<plugins>
@@ -253,10 +263,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>2.2.2</version>
 				<configuration>
-					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
-					<goals>package</goals>
 					<useReleaseProfile>false</useReleaseProfile>
 				</configuration>
 			</plugin>
