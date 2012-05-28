@@ -38,9 +38,9 @@
 </tr>
 </c:forEach>
 </table>
-
-
 </div>
+
+<c:if test="${report.relationStatistics.length > 0}">
 <div class="content-box relation-info">
 <h3><spring:message code="title.statistics"/></h3>
 <div style="overflow:hidden">
@@ -50,8 +50,9 @@
 </div>
 <div style="clear:both;margin-top:10px"><spring:message code="info.statistics"/><br/>
 <spring:message code="legend.statistics"/></div>
-
 </div>
+</c:if>
+
 <h3><spring:message code="title.rating"/></h3>
 <div class="content-box relation-rating rating-${report.relationRating.rating}">
 <p><spring:message code="rating.${report.relationRating.rating}"/></p>
