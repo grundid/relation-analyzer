@@ -18,16 +18,38 @@
 package org.osmsurround.ra.data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Way implements Serializable {
 
 	private long id;
 	private List<Node> nodes;
+	private Map<String, String> tags = new HashMap<String, String>();
 
 	public Way(long id, List<Node> nodes) {
 		this.id = id;
 		this.nodes = nodes;
+	}
+
+	public Way(long id, int nodeCapacity) {
+		this.id = id;
+		nodes = new ArrayList<Node>(nodeCapacity);
+	}
+
+	public Way(long id) {
+		this.id = id;
+		nodes = new ArrayList<Node>();
+	}
+
+	public void addNode(Node node) {
+		nodes.add(node);
+	}
+
+	public void setTag(String key, String value) {
+		tags.put(key, value);
 	}
 
 	public long getId() {
@@ -38,4 +60,7 @@ public class Way implements Serializable {
 		return nodes;
 	}
 
+	public Map<String, String> getTags() {
+		return tags;
+	}
 }

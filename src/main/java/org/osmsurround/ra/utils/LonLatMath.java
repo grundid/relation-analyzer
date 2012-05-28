@@ -17,6 +17,8 @@
  */
 package org.osmsurround.ra.utils;
 
+import org.osmsurround.ra.export.LonLat;
+
 public class LonLatMath {
 
 	private static int[] sinTable = new int[201];
@@ -45,6 +47,10 @@ public class LonLatMath {
 
 	public static double rotateY(double x, double y, double sin, double cos) {
 		return -sin * x + cos * y;
+	}
+
+	public static double distance(LonLat lonLat1, LonLat lonLat2) {
+		return distance(lonLat1.getLon(), lonLat1.getLat(), lonLat2.getLon(), lonLat2.getLat());
 	}
 
 	public static double distance(double long1, double lat1, double long2, double lat2) {

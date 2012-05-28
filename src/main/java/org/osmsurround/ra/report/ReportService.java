@@ -30,6 +30,7 @@ import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Relation;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
+import org.osmsurround.ra.stats.StatisticsService;
 import org.osmsurround.ra.utils.LonLatMath;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,8 @@ public class ReportService {
 
 	@Autowired
 	private List<RatingJuror> ratingJurors;
+	@Autowired
+	private StatisticsService statisticsService;
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
@@ -52,8 +55,13 @@ public class ReportService {
 		initReportItems(report, analyzerContext);
 		initRelationRating(report, analyzerContext);
 		initRelationInfo(report, analyzerContext);
+		initReportStatistics(report, analyzerContext);
 
 		return report;
+	}
+
+	private void initReportStatistics(Report report, AnalyzerContext analyzerContext) {
+		report.setRelationStatistics(statisticsService.createRelationStatistics(analyzerContext.getRelation()));
 	}
 
 	private void initRelationInfo(Report report, AnalyzerContext analyzerContext) {

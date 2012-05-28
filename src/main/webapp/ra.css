@@ -223,3 +223,86 @@ div.result2 {
 	font-weight: bold;
 	padding: 5px;
 }
+
+.dist-motorway {
+	background-color: #FF0000;
+}
+.dist-trunk {
+	background-color: #FF0000;
+}
+.dist-primary {
+	background-color: #EE0000;
+}
+.dist-secondary {
+	background-color: #CD0000;
+}
+.dist-tertiary {
+	background-color: #CD2626;
+}
+
+.dist-residential {
+	background-color: #00BFFF;
+}
+.dist-living_street {
+	background-color: #00B2EE;
+}
+.dist-service {
+	background-color: #009ACD;
+}
+.dist-unclassified {
+	background-color: #1C86EE;
+}
+.dist-bus_guideway {
+	background-color: #1874CD;
+}
+
+
+
+.dist-track-g1 {
+	background-color: #FFA54F;
+}
+.dist-track-g2 {
+	background-color: #EE9A49;
+}
+.dist-track-g3 {
+	background-color: #CD853F;
+}
+.dist-track-g4 {
+	background-color: #EE7621;
+}
+.dist-track-g5 {
+	background-color: #CD661D;
+}
+.dist-track-unknown {
+	background-color: #8B2323;
+}
+
+
+.dist-pedestrian {
+	background-color: #7FFF00;
+}
+.dist-path {
+	background-color: #76EE00;
+}
+.dist-footway {
+	background-color: #66CD00;
+}
+.dist-cycleway {
+	background-color: #00FF7F;
+}
+.dist-steps {
+	background-color: #00EE76;
+}
+.dist-bridleway {
+	background-color: #00CD66;
+}
+.dist- {
+	background-color: #008B45;
+}
+
+
+
+
+.dist-unknown {
+	background-color: #EEE;
+}

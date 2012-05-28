@@ -41,6 +41,17 @@
 
 
 </div>
+<div class="content-box relation-info">
+<h3><spring:message code="title.statistics"/></h3>
+<div style="overflow:hidden">
+<c:forEach items="${report.relationStatistics.distributions}" var="item">
+<div style="float:left;width:${item.percent*100}%;height:24px" class="dist-${item.name}" title="${item.name}, <fmt:formatNumber pattern="#,##0.0">${item.percent*100}</fmt:formatNumber>%, length: <fmt:formatNumber pattern="#,##0.00">${item.length}</fmt:formatNumber> KM, ways: ${item.wayCount}"></div>
+</c:forEach>
+</div>
+<div style="clear:both;margin-top:10px"><spring:message code="info.statistics"/><br/>
+<spring:message code="legend.statistics"/></div>
+
+</div>
 <h3><spring:message code="title.rating"/></h3>
 <div class="content-box relation-rating rating-${report.relationRating.rating}">
 <p><spring:message code="rating.${report.relationRating.rating}"/></p>

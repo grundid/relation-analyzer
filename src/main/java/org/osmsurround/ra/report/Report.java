@@ -19,11 +19,14 @@ package org.osmsurround.ra.report;
 
 import java.util.List;
 
+import org.osmsurround.ra.stats.RelationStatistics;
+
 public class Report {
 
 	private RelationRating relationRating;
 	private RelationInfo relationInfo;
 	private List<ReportItem> reportItems;
+	private RelationStatistics relationStatistics;
 
 	public RelationRating getRelationRating() {
 		return relationRating;
@@ -47,6 +50,14 @@ public class Report {
 
 	public void setReportItems(List<ReportItem> reportItems) {
 		this.reportItems = reportItems;
+	}
+
+	public RelationStatistics getRelationStatistics() {
+		return relationStatistics;
+	}
+
+	public void setRelationStatistics(RelationStatistics relationStatistics) {
+		this.relationStatistics = relationStatistics;
 	}
 
 }

@@ -88,11 +88,17 @@ public class OsmSchemaConverterService {
 	}
 
 	private Way createWay(OsmWay way, Map<Long, Node> knownNodes) {
-		List<Node> nodes = new ArrayList<Node>(way.getNd().size());
+		Way newWay = new Way(way.getId().longValue(), way.getNd().size());
+
 		for (OsmNd nd : way.getNd()) {
-			nodes.add(knownNodes.get(nd.getRef().longValue()));
+			newWay.addNode(knownNodes.get(nd.getRef().longValue()));
 		}
-		return new Way(way.getId().longValue(), nodes);
+
+		for (OsmTag tag : way.getTag()) {
+			newWay.setTag(tag.getK(), tag.getV());
+		}
+
+		return newWay;
 	}
 
 	private Map<Long, Node> createNodes(OsmRoot osmRoot) {
