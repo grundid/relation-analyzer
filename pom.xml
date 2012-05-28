@@ -266,6 +266,7 @@
 				<version>2.2.2</version>
 				<configuration>
 					<useReleaseProfile>false</useReleaseProfile>
+					<releaseProfiles>build-prd</releaseProfiles>
 				</configuration>
 			</plugin>
 			<plugin>
