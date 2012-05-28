@@ -240,7 +240,7 @@
 	</distributionManagement>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github/grundid/relation-analyzer.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/grundid/relation-analyzer.git</developerConnection>
 	</scm>
 	<build>
 		<extensions>
