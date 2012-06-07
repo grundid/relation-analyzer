@@ -27,6 +27,15 @@ public class Report {
 	private RelationInfo relationInfo;
 	private List<ReportItem> reportItems;
 	private RelationStatistics relationStatistics;
+	private String elevationProfileJson;
+
+	public String getElevationProfileJson() {
+		return elevationProfileJson;
+	}
+
+	public void setElevationProfileJson(String elevationProfileJson) {
+		this.elevationProfileJson = elevationProfileJson;
+	}
 
 	public RelationRating getRelationRating() {
 		return relationRating;

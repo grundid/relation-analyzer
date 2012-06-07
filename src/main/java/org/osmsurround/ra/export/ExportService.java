@@ -23,9 +23,15 @@ public class ExportService {
 	private GeoJsonExport geoJsonExport;
 
 	public void export(AnalyzerContext analyzerContext, OutputStream out, String format) {
+		List<Section> containers = convertToSections(analyzerContext);
+		if ("gpx".equals(format))
+			gpxExport.export(containers, out);
+		else if ("json".equals(format))
+			geoJsonExport.export(containers, out);
+	}
 
+	public List<Section> convertToSections(AnalyzerContext analyzerContext) {
 		List<Section> containers = new ArrayList<Section>();
-
 		List<Graph> graphs = analyzerContext.getGraphs();
 
 		for (int graphIndex = 0; graphIndex < graphs.size(); graphIndex++) {
@@ -45,11 +51,7 @@ public class ExportService {
 				containers.add(sectionContainer);
 			}
 		}
-		if ("gpx".equals(format))
-			gpxExport.export(containers, out);
-		else if ("json".equals(format))
-			geoJsonExport.export(containers, out);
-
+		return containers;
 	}
 
 	public void exportForDisplay(AnalyzerContext analyzerContext, OutputStream out) {

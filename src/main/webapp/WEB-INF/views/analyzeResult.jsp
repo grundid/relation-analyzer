@@ -39,6 +39,12 @@
 </c:forEach>
 </table>
 </div>
+<c:if test="${not empty report.elevationProfileJson}">
+<div class="content-box relation-info">
+<h3>Höhenprofil</h3>
+<div id="elevationChart" style="width: 100%;height:250px;"></div>
+</div>
+</c:if>
 
 <c:if test="${report.relationStatistics.length > 0}">
 <div class="content-box relation-info">
@@ -91,5 +97,16 @@
 <%@ include file="includes/footer.jspf" %>
 </div>
 </div>
+<c:if test="${not empty report.elevationProfileJson}">
+<script type="text/javascript" src="js/jqPlot/jquery.jqplot.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/qjPlot/jquery.jqplot.css" />
+<script>
+var options = {axesDefaults: {pad:1},seriesDefaults: {showMarker:false},grid: { background: '#fff' }};
+var dataArray = [${report.elevationProfileJson}];
+
+$.jqplot('elevationChart',  dataArray, options);
+</script>
+</c:if>
+
 </body>
 </html>

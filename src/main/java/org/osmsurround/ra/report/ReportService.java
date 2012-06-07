@@ -25,18 +25,24 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Relation;
+import org.osmsurround.ra.elevation.ElevationService;
 import org.osmsurround.ra.graph.Graph;
 import org.osmsurround.ra.graph.IntersectionNode;
 import org.osmsurround.ra.stats.StatisticsService;
 import org.osmsurround.ra.utils.LonLatMath;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ReportService {
+
+	private Logger log = LoggerFactory.getLogger(getClass());
 
 	private static final NodeDistanceComparator NODE_DISTANCE_COMPARATOR = new NodeDistanceComparator();
 	private static final String RELATION_NO_RATING = "relation.no.rating";
@@ -48,6 +54,10 @@ public class ReportService {
 	private List<RatingJuror> ratingJurors;
 	@Autowired
 	private StatisticsService statisticsService;
+	@Autowired
+	private ElevationService elevationService;
+
+	private ObjectMapper objectMapper = new ObjectMapper();
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
@@ -56,8 +66,18 @@ public class ReportService {
 		initRelationRating(report, analyzerContext);
 		initRelationInfo(report, analyzerContext);
 		initReportStatistics(report, analyzerContext);
-
+		initElevationProfile(report, analyzerContext);
 		return report;
+	}
+
+	private void initElevationProfile(Report report, AnalyzerContext analyzerContext) {
+		try {
+			List<double[]> elevationProfile = elevationService.createElevationProfile(analyzerContext);
+			report.setElevationProfileJson(objectMapper.writeValueAsString(elevationProfile));
+		}
+		catch (Exception e) {
+			log.info(e.getMessage());
+		}
 	}
 
 	private void initReportStatistics(Report report, AnalyzerContext analyzerContext) {
