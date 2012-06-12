@@ -30,14 +30,8 @@
 			<properties>
 				<config.build.type>PRD</config.build.type>
 				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
+				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3</config.srtmDataDirectory>
 			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>postgresql</groupId>
-					<artifactId>postgresql</artifactId>
-					<version>${postgresql-version}</version>
-				</dependency>
-			</dependencies>
 			<build>
 				<finalName>ROOT</finalName>
 			</build>
@@ -47,14 +41,8 @@
 			<properties>
 				<config.build.type>TEST</config.build.type>
 				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
+				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3</config.srtmDataDirectory>
 			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>postgresql</groupId>
-					<artifactId>postgresql</artifactId>
-					<version>${postgresql-version}</version>
-				</dependency>
-			</dependencies>
 			<build>
 				<finalName>TEST</finalName>
 			</build>
