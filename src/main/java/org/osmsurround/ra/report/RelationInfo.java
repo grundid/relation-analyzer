@@ -22,6 +22,7 @@ import java.util.Calendar;
 import java.util.Collection;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.util.StringUtils;
 
 public class RelationInfo {
 
@@ -34,7 +35,13 @@ public class RelationInfo {
 	private String type;
 	private double length;
 
+	private ModifiedModel modifiedModel;
+
 	private Collection<RelationTag> tags = new ArrayList<RelationTag>();
+
+	public String getLabel() {
+		return StringUtils.hasText(name) ? name : "Relation ID " + relationId;
+	}
 
 	public String getName() {
 		return name;
@@ -90,6 +97,14 @@ public class RelationInfo {
 
 	public void setLength(double length) {
 		this.length = length;
+	}
+
+	public ModifiedModel getModifiedModel() {
+		return modifiedModel;
+	}
+
+	public void setModifiedModel(ModifiedModel modifiedModel) {
+		this.modifiedModel = modifiedModel;
 	}
 
 }

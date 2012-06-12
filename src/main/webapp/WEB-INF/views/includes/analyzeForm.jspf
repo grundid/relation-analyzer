@@ -1,10 +1,20 @@
-<%@ include file="../includes/taglibs.jspf" %><div class="content-box">
-<h3><spring:message code="title.analyze" /></h3>
-<form:form action="analyzeRelation" modelAttribute="analyzeRelationModel" method="get">
-<div><spring:message code="label.id" />: <form:input path="relationId"/>
-<label><form:checkbox path="noCache" />&nbsp;<spring:message code="label.no.cache" /></label>
+<%@ include file="../includes/taglibs.jspf"%><div class="content-box">
+	<h3>
+		<spring:message code="title.analyze" />
+	</h3>
+	<form:form action="analyzeRelation" modelAttribute="analyzeRelationModel" method="get" cssClass="well form-search">
+		<div class="controls">
 
-</div>
-<p><button><spring:message code="button.analyze" /></button></p>
-</form:form>
+			<spring:message code="label.id" />
+			:
+			<form:input path="relationId" class="input-medium search-query" />
+			<button class="btn btn-primary">
+				<spring:message code="button.analyze" />
+			</button>
+		</div>
+		<div class="controls">
+			<label class="checkbox"> <form:checkbox path="noCache" />&nbsp;<spring:message code="label.no.cache" />
+			</label>
+		</div>
+	</form:form>
 </div>

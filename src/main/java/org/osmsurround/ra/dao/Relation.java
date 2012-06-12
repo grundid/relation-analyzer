@@ -17,6 +17,7 @@
  */
 package org.osmsurround.ra.dao;
 
+
 public class Relation {
 
 	private long relationId;

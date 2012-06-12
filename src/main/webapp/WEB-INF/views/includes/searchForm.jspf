@@ -2,28 +2,28 @@
 <div class="content-box">
 <h3><spring:message code="title.search" /></h3>
 
-<form:form action="searchRelation" modelAttribute="searchModel" method="get">
-<form:errors path="*"><div class="form-error"><spring:message code="form.errors" /></div></form:errors>
-<table>
+<form:form action="searchRelation" modelAttribute="searchModel" method="get" cssClass="well form-inline">
+<form:errors path="*"><div class="alert alert-error"><spring:message code="form.errors" /></div></form:errors>
+<table style="width:100%">
 <tr>
-	<td><spring:message code="label.name" /></td>
-	<td><form:input path="name"/></td>
-	<td><spring:message code="label.type" /></td>
-	<td><form:input path="relationType"/></td>
-	<td><spring:message code="label.route" /></td>
-	<td><form:input path="route"/></td>
+	<td><spring:message code="label.name" />:</td>
+	<td><form:input path="name" cssClass="span3"/></td>
+	<td><spring:message code="label.type" />:</td>
+	<td><form:input path="relationType" cssClass="span2"/></td>
+	<td><spring:message code="label.route" />:</td>
+	<td><form:input path="route" cssClass="span2"/></td>
 </tr>
 <tr>
-	<td><spring:message code="label.ref" /></td>
-	<td><form:input path="ref"/></td>
-	<td><spring:message code="label.network" /></td>
-	<td><form:input path="network"/></td>
-	<td><spring:message code="label.operator" /></td>
-	<td><form:input path="operator"/></td>
+	<td><spring:message code="label.ref" />:</td>
+	<td><form:input path="ref" cssClass="span3"/></td>
+	<td><spring:message code="label.network" />:</td>
+	<td><form:input path="network" cssClass="span2"/></td>
+	<td><spring:message code="label.operator" />:</td>
+	<td><form:input path="operator" cssClass="span2"/></td>
 </tr>
 
 </table>
 
-<button><spring:message code="button.search" /></button>
+<button class="btn btn-primary"><spring:message code="button.search" /></button>
 </form:form>
 </div>

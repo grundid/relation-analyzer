@@ -17,58 +17,34 @@
  */
 package org.osmsurround.ra.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Types;
 import java.util.List;
-
-import javax.sql.DataSource;
 
 import org.osmsurround.ra.search.SearchModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.object.MappingSqlQuery;
+import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.StringUtils;
 
 @Repository
-public class RelationSearch extends MappingSqlQuery<Relation> {
+public class RelationSearch {
 
 	@Autowired
-	public RelationSearch(DataSource dataSource) {
-		setDataSource(dataSource);
-		setSql("SELECT relation_id,relation_type,name,route,ref,network,operator FROM relation WHERE "
-				+ "(LOWER(relation_type) LIKE ?) AND "
-				+ "(LOWER(name) LIKE ?) AND (LOWER(route) LIKE ?) AND (LOWER(ref) LIKE ?) AND "
-				+ "(LOWER(network) LIKE ?) AND (LOWER(operator) LIKE ?) " + "ORDER BY name, relation_type, route");
-		setTypes(new int[] { Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR });
-	}
-
-	@Override
-	protected Relation mapRow(ResultSet rs, int rowNum) throws SQLException {
-		int c = 1;
-		Relation relation = new Relation();
-		relation.setRelationId(rs.getLong(c++));
-		relation.setRelationType(rs.getString(c++));
-		relation.setName(rs.getString(c++));
-		relation.setRoute(rs.getString(c++));
-		relation.setRef(rs.getString(c++));
-		relation.setNetwork(rs.getString(c++));
-		relation.setOperator(rs.getString(c++));
-
-		return relation;
-	}
+	private RelationRowMapper relationRowMapper;
+	@Autowired
+	private JdbcOperations jdbcOperations;
 
 	public List<Relation> search(SearchModel searchModel) {
+		SearchQueryBuilder queryBuilder = new SearchQueryBuilder();
+		queryBuilder.append("relation_type", searchModel.getRelationType());
+		queryBuilder.append("name", searchModel.getName(), true);
+		queryBuilder.append("route", searchModel.getRoute());
+		queryBuilder.append("ref", searchModel.getRef());
+		queryBuilder.append("network", searchModel.getNetwork());
+		queryBuilder.append("operator", searchModel.getOperator());
 
-		return execute(prepareParam(searchModel.getRelationType()), prepareParam(searchModel.getName()),
-				prepareParam(searchModel.getRoute()), prepareParam(searchModel.getRef()),
-				prepareParam(searchModel.getNetwork()), prepareParam(searchModel.getOperator()));
-	}
+		Object[] args = queryBuilder.getValues();
+		String sql = queryBuilder.getSql();
 
-	private String prepareParam(String param) {
-		if (StringUtils.hasText(param))
-			return (param + "%").toLowerCase();
-		else
-			return "%";
+		List<Relation> list = jdbcOperations.query(sql, args, relationRowMapper);
+		return list;
 	}
 }

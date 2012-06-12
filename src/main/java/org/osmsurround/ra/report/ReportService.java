@@ -56,6 +56,8 @@ public class ReportService {
 	private StatisticsService statisticsService;
 	@Autowired
 	private ElevationService elevationService;
+	@Autowired
+	private ModifiedService modifiedService;
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -73,7 +75,10 @@ public class ReportService {
 	private void initElevationProfile(Report report, AnalyzerContext analyzerContext) {
 		try {
 			List<double[]> elevationProfile = elevationService.createElevationProfile(analyzerContext);
-			report.setElevationProfileJson(objectMapper.writeValueAsString(elevationProfile));
+			if (!elevationProfile.isEmpty()) {
+				String json = objectMapper.writeValueAsString(elevationProfile);
+				report.setElevationProfileJson(json);
+			}
 		}
 		catch (Exception e) {
 			log.info(e.getMessage());
@@ -106,6 +111,8 @@ public class ReportService {
 			length += reportItem.getLength();
 		}
 		relationInfo.setLength(length);
+
+		relationInfo.setModifiedModel(modifiedService.calculateModified(relation.getTimestamp().getTimeInMillis()));
 
 		report.setRelationInfo(relationInfo);
 

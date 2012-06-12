@@ -1,2 +1,19 @@
-<h2>OSM Relation Analyzer</h2>
-<p>Version ${version} - <a href="index"><spring:message code="label.home" /></a></p>
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span>
+			</a> <a class="brand" href="index" title="Version ${version}">OSM Relation Analyzer</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="index">Home</a></li>
+					<li><a href="searchRelation">Search</a></li>
+				</ul>
+			</div>
+			<form class="navbar-search pull-left" action="quickSearch" method="get">
+				<input type="text" name="query" class="search-query" placeholder="Search by relation Id or name">
+			</form>
+		</div>
+	</div>
+</div>

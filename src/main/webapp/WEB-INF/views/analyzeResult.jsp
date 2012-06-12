@@ -1,53 +1,83 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ include file="includes/taglibs.jspf" %>
-<!DOCTYPE html >
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="includes/taglibs.jspf"%>
+<!DOCTYPE html>
 <html>
 <head>
-<title>OSM Relation Analyzer</title>
-<link href="ra.css" rel="stylesheet" type="text/css"> 
-<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-<%@ include file="includes/metaData.jspf" %>
+<%@ include file="includes/head.jspf"%>
+<link href="rs/ra.css" rel="stylesheet">
 </head>
+
 <body>
-<div style="text-align:center;width:100%">
-<div class="maindiv">
-<%@ include file="includes/header.jspf" %>
+	<%@ include file="includes/header.jspf"%>
+	<div class="container">
+
 <%@ include file="includes/analyzeForm.jspf" %>
 
-<div class="content-box relation-info">
+<div class="well">
 <spring:bind path="report.relationInfo.timestamp">
 <p>
-<spring:message code="label.id" />: <strong>${report.relationInfo.relationId}</strong>, 
-<spring:message code="label.name" />: <strong>${report.relationInfo.name}</strong>, 
-<spring:message code="label.type" />: <strong>${report.relationInfo.type}</strong>,
-<spring:message code="label.relation.length" />: <strong><fmt:formatNumber pattern="#,##0.000">${report.relationInfo.length}</fmt:formatNumber></strong>
+<spring:message code="label.id" />: <span class="label label-info">${report.relationInfo.relationId}</span>, 
+<spring:message code="label.name" />: <span class="label label-info">${report.relationInfo.name}</span>, 
+<spring:message code="label.type" />: <span class="label label-info">${report.relationInfo.type}</span>,
+<spring:message code="label.relation.length" />: <span class="label label-info"><fmt:formatNumber pattern="#,##0.000">${report.relationInfo.length}</fmt:formatNumber></span>
 </p>
-<p><spring:message code="label.lastmodified" />: <strong><spring:transform value="${report.relationInfo.timestamp}"></spring:transform></strong>, 
+<p><spring:message code="label.lastmodified" />: <span class="label label-info" title="<spring:transform value="${report.relationInfo.timestamp}"></spring:transform>"><spring:message code="${report.relationInfo.modifiedModel.messageCode}" arguments="${report.relationInfo.modifiedModel.amount}" /></span>, 
 <spring:message code="label.byuser" />: <strong><a href="http://www.openstreetmap.org/user/<spring:escapeBody>${report.relationInfo.user}</spring:escapeBody>"><spring:escapeBody>${report.relationInfo.user}</spring:escapeBody></a></strong></p>
 </spring:bind>
 
 <div style="height: 30px">
-<a class="button-link" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
-<a class="button-link" href="analyzeMap?relationId=${report.relationInfo.relationId}" title="<spring:message code="button.analyze.map.hint" />"><spring:message code="button.analyze.map" /></a>
-<a class="button-link" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
+<a class="btn" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
+<a class="btn" href="analyzeMap?relationId=${report.relationInfo.relationId}" title="<spring:message code="button.analyze.map.hint" />"><spring:message code="button.analyze.map" /></a>
+<a class="btn" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
 </div>
-<table id="tags" style="display:none">
+</div>
+
+<div class="well" id="tags" style="display:none">
+<form action="" class="form-horizontal" >
+<fieldset>
+<legend>Relation tags</legend>
 <c:forEach items="${report.relationInfo.tags}" var="tag">
-<tr><td><spring:escapeBody>${tag.name}</spring:escapeBody></td>
-<td><spring:escapeBody>${tag.value}</spring:escapeBody></td>
-</tr>
-</c:forEach>
-</table>
+<div class="control-group">
+<label class="control-label" for="input01"><spring:escapeBody>${tag.name}</spring:escapeBody></label>
+<div class="controls">
+<input type="text" class="input-xlarge" id="input01" value="<spring:escapeBody>${tag.value}</spring:escapeBody>">
 </div>
+</div>
+</c:forEach>
+</fieldset>
+<div class="form-actions">
+     <button class="btn btn-primary" type="submit" disabled="disabled">Save changes</button>
+     <button class="btn" type="button" disabled="disabled">+ Tag</button>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger"  type="button" disabled="disabled">Delete relation</button>
+</div>
+</form>
+</div>
+
+
+<div class="alert alert-${report.relationRating.rating.cssClass}">
+<h4 class="alert-heading"><spring:message code="rating.${report.relationRating.rating}"/></h4>
+<p><spring:message code="${report.relationRating.messageCode}"></spring:message></p>
+<p><a class="btn" onclick="$('#more-info').toggle();"><spring:message code="button.more.info" /></a></p>
+</div>
+
+
+<div id="more-info" style="display:none" class="well">
+<h3><spring:message code="title.rating"/></h3>
+<spring:message code="how.it.works" htmlEscape="false"/>
+<spring:message code="how.it.works.more" htmlEscape="false"/>
+</div>
+
+
+
 <c:if test="${not empty report.elevationProfileJson}">
-<div class="content-box relation-info">
+<div class="well">
 <h3>Höhenprofil</h3>
 <div id="elevationChart" style="width: 100%;height:250px;"></div>
 </div>
 </c:if>
 
 <c:if test="${report.relationStatistics.length > 0}">
-<div class="content-box relation-info">
+<div class="well">
 <h3><spring:message code="title.statistics"/></h3>
 <div style="overflow:hidden">
 <c:forEach items="${report.relationStatistics.distributions}" var="item">
@@ -59,23 +89,9 @@
 </div>
 </c:if>
 
-<h3><spring:message code="title.rating"/></h3>
-<div class="content-box relation-rating rating-${report.relationRating.rating}">
-<p><spring:message code="rating.${report.relationRating.rating}"/></p>
-<p><spring:message code="${report.relationRating.messageCode}"></spring:message></p>
 
-</div>
-<div class="content-box">
-<spring:message code="how.it.works" htmlEscape="false"/>
-
-<div style="height:30px"><a class="button-link" onclick="$('#more-info').toggle();"><spring:message code="button.more.info" /></a></div>
-<div id="more-info" style="display:none">
-<spring:message code="how.it.works.more" htmlEscape="false"/>
-</div>
-</div>
-
+<div class="well">
 <h3><spring:message code="title.report"/></h3>
-<div class="content-box">
 <c:forEach items="${report.reportItems}" var="reportItem" varStatus="itemStatus">
 <div class="graph">
 <p><spring:message code="label.graph"/>&nbsp;${itemStatus.index+1} (<spring:message code="label.graph.length" />: <fmt:formatNumber pattern="#,##0.000">${reportItem.length}</fmt:formatNumber>)</p>
@@ -95,8 +111,10 @@
 </div>
 
 <%@ include file="includes/footer.jspf" %>
-</div>
-</div>
+	</div>
+	<!-- /container -->
+
+	<%@ include file="includes/javascript.jspf"%>
 <c:if test="${not empty report.elevationProfileJson}">
 <script type="text/javascript" src="js/jqPlot/jquery.jqplot.min.js"></script>
 <link rel="stylesheet" type="text/css" href="js/qjPlot/jquery.jqplot.css" />
@@ -107,6 +125,7 @@ var dataArray = [${report.elevationProfileJson}];
 $.jqplot('elevationChart',  dataArray, options);
 </script>
 </c:if>
-
+	
 </body>
 </html>
+

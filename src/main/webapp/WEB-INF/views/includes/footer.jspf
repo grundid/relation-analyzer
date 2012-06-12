@@ -1,1 +1,11 @@
-<p>Contact: as(a t)nitegate(d o t)de, Made by <a href="http://www.grundid.de">GrundID GmbH</a> - Data by <a href="http://www.openstreetmap.org/">OpenStreetMap</a>, Source code: <a href="https://github.com/grundid/relation-analyzer">@GitHub</a></p>
+<footer class="footer">
+	<p class="pull-right">
+		<a href="#">Back to top</a>
+	</p>
+	<p>
+		Contact: as(a t)nitegate(d o t)de, Made by <a href="http://www.grundid.de">GrundID GmbH</a> - Data by <a
+			href="http://www.openstreetmap.org/">OpenStreetMap</a>, Source code: <a
+			href="https://github.com/grundid/relation-analyzer">@GitHub</a>
+	</p>
+</footer>
+

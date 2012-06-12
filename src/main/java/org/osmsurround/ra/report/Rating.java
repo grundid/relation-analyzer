@@ -18,5 +18,16 @@
 package org.osmsurround.ra.report;
 
 public enum Rating {
-	OK, WARNING, DISCONNECTED, UNKNOWN;
+	OK("success"), WARNING("block"), DISCONNECTED("error"), UNKNOWN("info");
+
+	private String cssClass;
+
+	private Rating(String cssClass) {
+		this.cssClass = cssClass;
+	}
+
+	public String getCssClass() {
+		return cssClass;
+	}
+
 }

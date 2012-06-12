@@ -91,6 +91,10 @@
 		<property name="password" value="${db.password}" />
 	</bean>
 
+	<bean class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
 	<!-- Mailing -->
 	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
 		<property name="host" value="${mail.hostname}"></property> <property name="username" 
