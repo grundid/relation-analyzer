@@ -32,8 +32,10 @@ public class ElevationService implements InitializingBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		srtmService = new SrtmService();
-		log.info("Scanning dir for Srtm Data... " + srtmDataDirectory);
-		srtmService.scanDirectory(srtmDataDirectory);
+		if (srtmDataDirectory != null) {
+			log.info("Scanning dir for Srtm Data... " + srtmDataDirectory);
+			srtmService.scanDirectory(srtmDataDirectory);
+		}
 	}
 
 	public List<double[]> createElevationProfile(AnalyzerContext context) {
