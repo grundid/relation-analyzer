@@ -17,6 +17,9 @@
 	<logger name="org.osmsurround">
 		<level value="info" />
 	</logger>
+	<logger name="org.osmtools">
+		<level value="info" />
+	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">

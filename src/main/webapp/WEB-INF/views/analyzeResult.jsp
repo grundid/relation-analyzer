@@ -35,7 +35,7 @@
 <div class="well" id="tags" style="display:none">
 <form action="" class="form-horizontal" >
 <fieldset>
-<legend>Relation tags</legend>
+<legend><spring:message code="edit.tags" /></legend>
 <c:forEach items="${report.relationInfo.tags}" var="tag">
 <div class="control-group">
 <label class="control-label" for="input01"><spring:escapeBody>${tag.name}</spring:escapeBody></label>
@@ -45,18 +45,17 @@
 </div>
 </c:forEach>
 </fieldset>
-<div class="form-actions">
-     <button class="btn btn-primary" type="submit" disabled="disabled">Save changes</button>
-     <button class="btn" type="button" disabled="disabled">+ Tag</button>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger"  type="button" disabled="disabled">Delete relation</button>
+<div class="form-actions" title="<spring:message code="not.implemented.yet" />">
+     <button class="btn btn-primary" type="submit" disabled="disabled"><spring:message code="edit.button.save.changes" /></button>
+     <button class="btn" type="button" disabled="disabled"><spring:message code="edit.button.add.tag" /></button>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger"  type="button" disabled="disabled"><spring:message code="edit.button.delete.relation" /></button>
 </div>
 </form>
 </div>
 
-
 <div class="alert alert-${report.relationRating.rating.cssClass}">
 <h4 class="alert-heading"><spring:message code="rating.${report.relationRating.rating}"/></h4>
-<p><spring:message code="${report.relationRating.messageCode}"></spring:message></p>
+<p><spring:message code="${report.relationRating.messageCode}" /></p>
 <p><a class="btn" onclick="$('#more-info').toggle();"><spring:message code="button.more.info" /></a></p>
 </div>
 
@@ -71,7 +70,7 @@
 
 <c:if test="${not empty report.elevationProfileJson}">
 <div class="well">
-<h3>Höhenprofil</h3>
+<h3><spring:message code="title.elevation.profile" /></h3>
 <div id="elevationChart" style="width: 100%;height:250px;"></div>
 </div>
 </c:if>

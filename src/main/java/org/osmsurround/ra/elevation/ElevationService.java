@@ -54,8 +54,6 @@ public class ElevationService implements InitializingBean {
 
 					int height = srtmService.getElevation(lon, lat);
 
-					//					System.out.println(lon + "\t" + lat + "\t" + height);
-
 					if (lastLonLat != null) {
 						double distance = LonLatMath.distance(lastLonLat.getLon(), lastLonLat.getLat(),
 								lonLat.getLon(), lonLat.getLat());

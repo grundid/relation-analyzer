@@ -9,19 +9,19 @@
 }
 
 .dist-motorway {
-	background-color: #FF0000;
+	background-color: #FF0DFF;
 }
 .dist-trunk {
-	background-color: #FF0000;
+	background-color: #E80C7A;
 }
 .dist-primary {
-	background-color: #EE0000;
+	background-color: #FF0000;
 }
 .dist-secondary {
-	background-color: #CD0000;
+	background-color: #FF530D;
 }
 .dist-tertiary {
-	background-color: #CD2626;
+	background-color: #E82B0C;
 }
 
 .dist-residential {

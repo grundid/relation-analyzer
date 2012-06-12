@@ -11,4 +11,5 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+<script src="rs/jquery-1.7.2.min.js"></script>
 

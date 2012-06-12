@@ -24,6 +24,7 @@ import javax.validation.Valid;
 
 import org.osmsurround.ra.dao.Relation;
 import org.osmsurround.ra.dao.RelationSearch;
+import org.osmsurround.ra.taginfo.TagInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -37,16 +38,22 @@ public class SearchRelationController {
 
 	@Autowired
 	private RelationSearch relationSearch;
+	@Autowired
+	private TagInfoService tagInfoService;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView get(@Valid SearchModel searchModel, Errors errors) {
+		ModelAndView modelAndView = new ModelAndView("searchResult");
+		modelAndView.addObject("tagInfos", tagInfoService.getTagInfos());
 
 		if (errors.hasErrors()) {
-			return new ModelAndView("searchResult", "result", new SearchResult(Collections.EMPTY_LIST));
+			modelAndView.addObject("result", new SearchResult(Collections.EMPTY_LIST));
 		}
 		else {
 			List<Relation> list = relationSearch.search(searchModel);
-			return new ModelAndView("searchResult", "result", new SearchResult(list));
+			modelAndView.addObject("result", new SearchResult(list));
 		}
+
+		return modelAndView;
 	}
 }

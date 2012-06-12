@@ -9,17 +9,17 @@
 	<td><spring:message code="label.name" />:</td>
 	<td><form:input path="name" cssClass="span3"/></td>
 	<td><spring:message code="label.type" />:</td>
-	<td><form:input path="relationType" cssClass="span2"/></td>
+	<td><form:input path="relationType" cssClass="span2"  autocomplete="off"/></td>
 	<td><spring:message code="label.route" />:</td>
-	<td><form:input path="route" cssClass="span2"/></td>
+	<td><form:input path="route" cssClass="span2" autocomplete="off"/></td>
 </tr>
 <tr>
 	<td><spring:message code="label.ref" />:</td>
 	<td><form:input path="ref" cssClass="span3"/></td>
 	<td><spring:message code="label.network" />:</td>
-	<td><form:input path="network" cssClass="span2"/></td>
+	<td><form:input path="network" cssClass="span2" autocomplete="off"/></td>
 	<td><spring:message code="label.operator" />:</td>
-	<td><form:input path="operator" cssClass="span2"/></td>
+	<td><form:input path="operator" cssClass="span2" autocomplete="off"/></td>
 </tr>
 
 </table>
@@ -27,3 +27,11 @@
 <button class="btn btn-primary"><spring:message code="button.search" /></button>
 </form:form>
 </div>
+<script>
+$(function() {
+	$('#network').typeahead({source:${tagInfos.network}});
+	$('#route').typeahead({source:${tagInfos.route}});
+	$('#relationType').typeahead({source:${tagInfos.type}});
+	$('#operator').typeahead({source:${tagInfos.operator}});
+});
+</script>
