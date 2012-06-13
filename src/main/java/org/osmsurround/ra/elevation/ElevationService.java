@@ -18,6 +18,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ElevationService {
 
+	private static final int VOID = -32768;
+
 	private Logger log = LoggerFactory.getLogger(getClass());
 
 	@Value("${srtmDataDirectory}")
@@ -57,14 +59,16 @@ public class ElevationService {
 						double lat = lonLat.getLat();
 
 						int height = srtmService.getElevation(lon, lat);
+						if (height != VOID) {
 
-						if (lastLonLat != null) {
-							double distance = LonLatMath.distance(lastLonLat.getLon(), lastLonLat.getLat(),
-									lonLat.getLon(), lonLat.getLat());
-							length += distance;
-							list.add(new double[] { length, height });
+							if (lastLonLat != null) {
+								double distance = LonLatMath.distance(lastLonLat.getLon(), lastLonLat.getLat(),
+										lonLat.getLon(), lonLat.getLat());
+								length += distance;
+								list.add(new double[] { length, height });
+							}
+							lastLonLat = lonLat;
 						}
-						lastLonLat = lonLat;
 					}
 				}
 			}
