@@ -7,12 +7,12 @@
 			</a> <a class="brand" href="index" title="Version ${version}">OSM Relation Analyzer</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li class="active"><a href="index">Home</a></li>
-					<li><a href="searchRelation">Search</a></li>
+					<li class="active"><a href="index"><spring:message code="label.home" /></a></li>
+					<li><a href="searchRelation"><spring:message code="label.search" /></a></li>
 				</ul>
 			</div>
 			<form class="navbar-search pull-left" action="quickSearch" method="get">
-				<input type="text" name="query" class="search-query" placeholder="Search by relation Id or name">
+				<input type="text" name="query" class="search-query" placeholder="<spring:message code="label.search.placeholder" />">
 			</form>
 		</div>
 	</div>
