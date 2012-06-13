@@ -29,7 +29,7 @@
 			<properties>
 				<config.build.type>PRD</config.build.type>
 				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
-				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3</config.srtmDataDirectory>
+				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia</config.srtmDataDirectory>
 			</properties>
 			<build>
 				<finalName>ROOT</finalName>
@@ -40,7 +40,7 @@
 			<properties>
 				<config.build.type>TEST</config.build.type>
 				<config.db.url>jdbc:postgresql://localhost/ra</config.db.url>
-				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3</config.srtmDataDirectory>
+				<config.srtmDataDirectory>/storage/srtm/dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia</config.srtmDataDirectory>
 			</properties>
 			<build>
 				<finalName>TEST</finalName>
