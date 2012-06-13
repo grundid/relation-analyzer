@@ -21,12 +21,12 @@ public class StatisticsServiceTest extends TestBase {
 
 		for (Distribution distribution : relationStatistics.getDistributions()) {
 
-			System.out.println(distribution.getName() + " => " + distribution.getLength() + " % => "
-					+ distribution.getPercent());
+			//			System.out.println(distribution.getName() + " => " + distribution.getLength() + " % => "
+			//					+ distribution.getPercent());
 
 		}
 
-		System.out.println("Total: " + relationStatistics.getLength());
+		//		System.out.println("Total: " + relationStatistics.getLength());
 
 	}
 }
