@@ -23,11 +23,20 @@ import org.osmsurround.ra.stats.RelationStatistics;
 
 public class Report {
 
+	private boolean validRelation;
+	private boolean gone;
 	private RelationRating relationRating;
 	private RelationInfo relationInfo;
 	private List<ReportItem> reportItems;
 	private RelationStatistics relationStatistics;
 	private String elevationProfileJson;
+
+	public Report() {
+	}
+
+	public Report(boolean gone) {
+		this.gone = gone;
+	}
 
 	public String getElevationProfileJson() {
 		return elevationProfileJson;
@@ -69,4 +78,15 @@ public class Report {
 		this.relationStatistics = relationStatistics;
 	}
 
+	public boolean isValidRelation() {
+		return validRelation;
+	}
+
+	public void setValidRelation(boolean validRelation) {
+		this.validRelation = validRelation;
+	}
+
+	public boolean isGone() {
+		return gone;
+	}
 }

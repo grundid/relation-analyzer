@@ -25,7 +25,9 @@ import org.osmsurround.ra.data.Relation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestOperations;
 
 @Service
@@ -40,15 +42,25 @@ public class RelationLoaderService {
 
 	@Cacheable("relation")
 	public Relation loadRelation(long relationId) {
-		OsmRoot osmRoot = restOperations.getForObject(GET_RELATION_URL, OsmRoot.class, String.valueOf(relationId));
+		try {
+			OsmRoot osmRoot = restOperations.getForObject(GET_RELATION_URL, OsmRoot.class, String.valueOf(relationId));
+			List<Relation> list = converterService.convert(osmRoot);
+			for (Relation relation : list) {
+				if (relationId == relation.getRelationId())
+					return relation;
+			}
 
-		List<Relation> list = converterService.convert(osmRoot);
-		for (Relation relation : list) {
-			if (relationId == relation.getRelationId())
-				return relation;
+			throw new RuntimeException("Relation ID " + relationId + " not found");
+
+		}
+		catch (HttpClientErrorException e) {
+			if (e.getStatusCode() == HttpStatus.GONE) {
+				throw new RelationGoneException();
+			}
+			else
+				throw e;
 		}
 
-		throw new RuntimeException("Relation ID " + relationId + " not found");
 	}
 
 	@CacheEvict("relation")

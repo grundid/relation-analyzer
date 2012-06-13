@@ -12,7 +12,14 @@
 	<div class="container">
 
 <%@ include file="includes/analyzeForm.jspf" %>
+<c:if test="${report.gone}">
+<div class="alert alert-error">
+<h4 class="alert-heading"><spring:message code="relation.gone"/></h4>
+<p><spring:message code="relation.gone.desc" /></p>
+</div>
+</c:if>
 
+<c:if test="${report.validRelation}">
 <div class="well">
 <spring:bind path="report.relationInfo.timestamp">
 <p>
@@ -108,7 +115,7 @@
 </div>
 </c:forEach>
 </div>
-
+</c:if>
 <%@ include file="includes/footer.jspf" %>
 	</div>
 	<!-- /container -->

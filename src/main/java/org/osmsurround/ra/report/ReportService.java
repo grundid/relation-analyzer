@@ -63,7 +63,7 @@ public class ReportService {
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
 		Report report = new Report();
-
+		report.setValidRelation(true);
 		initReportItems(report, analyzerContext);
 		initRelationRating(report, analyzerContext);
 		initRelationInfo(report, analyzerContext);

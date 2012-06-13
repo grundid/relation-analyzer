@@ -17,9 +17,13 @@
  */
 package org.osmsurround.ra;
 
+import javax.validation.Valid;
+
 import org.osmsurround.ra.analyzer.AnalyzeRelationService;
+import org.osmsurround.ra.report.Report;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -32,8 +36,13 @@ public class AnalyzeRelationController {
 	private AnalyzeRelationService analyzeRelationService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView get(AnalyzeRelationModel analyzeRelationModel) {
-
-		return new ModelAndView("analyzeResult", "report", analyzeRelationService.analyzeRelation(analyzeRelationModel));
+	public ModelAndView get(@Valid AnalyzeRelationModel analyzeRelationModel, Errors errors) {
+		try {
+			return new ModelAndView("analyzeResult", "report",
+					analyzeRelationService.analyzeRelation(analyzeRelationModel));
+		}
+		catch (RelationGoneException e) {
+			return new ModelAndView("analyzeResult", "report", new Report(true));
+		}
 	}
 }

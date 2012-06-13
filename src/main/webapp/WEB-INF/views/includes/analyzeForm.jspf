@@ -3,6 +3,7 @@
 		<spring:message code="title.analyze" />
 	</h3>
 	<form:form action="analyzeRelation" modelAttribute="analyzeRelationModel" method="get" cssClass="well form-search">
+	<form:errors path="*"><div class="alert alert-error"><spring:message code="relationId.errors" /></div></form:errors>
 		<div class="controls">
 
 			<spring:message code="label.id" />

@@ -34,11 +34,13 @@ public class AnalyzeRelationService {
 
 	public Report analyzeRelation(AnalyzeRelationModel analyzeRelationModel) {
 
-		AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
-				analyzeRelationModel.isNoCache());
+		if (analyzeRelationModel.getRelationId() != null) {
+			AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
+					analyzeRelationModel.isNoCache());
 
-		Report report = reportService.generateReport(analyzerContext);
-
-		return report;
+			return reportService.generateReport(analyzerContext);
+		}
+		else
+			return new Report();
 	}
 }

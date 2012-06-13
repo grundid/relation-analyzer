@@ -1,5 +1,5 @@
 <%@ include file="taglibs.jspf" %>
-<div class="content-box">
+<div>
 <h3><spring:message code="title.search" /></h3>
 
 <form:form action="searchRelation" modelAttribute="searchModel" method="get" cssClass="well form-inline">
