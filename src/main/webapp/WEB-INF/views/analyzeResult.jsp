@@ -92,6 +92,7 @@
 </div>
 <div style="clear:both;margin-top:10px"><spring:message code="info.statistics"/><br/>
 <spring:message code="legend.statistics"/></div>
+<a class="btn" href="relationStatistics?relationId=${report.relationInfo.relationId}" ><spring:message code="button.download.statistics" /></a>
 </div>
 </c:if>
 
