@@ -3,12 +3,14 @@ package org.osmsurround.ra.export;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.dijkstra.Edge;
-import org.osmsurround.ra.graph.Graph;
-import org.osmsurround.ra.segment.ConnectableSegment;
-import org.osmsurround.ra.traverse.TraverseService;
+import org.osmtools.api.Section;
+import org.osmtools.ra.context.AnalyzerContext;
+import org.osmtools.ra.data.Node;
+import org.osmtools.ra.dijkstra.Edge;
+import org.osmtools.ra.export.SectionContainer;
+import org.osmtools.ra.graph.Graph;
+import org.osmtools.ra.segment.ConnectableSegment;
+import org.osmtools.ra.traverse.TraverseService;
 
 public class SimpleSegmentConverter {
 

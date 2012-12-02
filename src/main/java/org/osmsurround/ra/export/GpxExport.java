@@ -25,7 +25,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.osmsurround.ra.AnalyzerException;
+import org.osmtools.api.LonLat;
+import org.osmtools.api.Section;
+import org.osmtools.ra.AnalyzerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

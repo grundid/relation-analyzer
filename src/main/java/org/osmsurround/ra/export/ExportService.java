@@ -4,11 +4,13 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.data.Node;
-import org.osmsurround.ra.graph.Graph;
-import org.osmsurround.ra.graph.IntersectionNode;
-import org.osmsurround.ra.traverse.TraverseService;
+import org.osmtools.api.Section;
+import org.osmtools.ra.context.AnalyzerContext;
+import org.osmtools.ra.data.Node;
+import org.osmtools.ra.export.SectionContainer;
+import org.osmtools.ra.graph.Graph;
+import org.osmtools.ra.graph.IntersectionNode;
+import org.osmtools.ra.traverse.TraverseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

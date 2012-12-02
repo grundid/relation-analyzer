@@ -1,8 +1,10 @@
 package org.osmsurround.ra.analyzer;
 
-import org.osmsurround.ra.context.AnalyzerContext;
-import org.osmsurround.ra.context.AnalyzerContextService;
-import org.osmsurround.ra.graph.GraphService;
+import org.osmtools.ra.analyzer.AggregationService;
+import org.osmtools.ra.analyzer.RelationMemberService;
+import org.osmtools.ra.context.AnalyzerContext;
+import org.osmtools.ra.context.AnalyzerContextService;
+import org.osmtools.ra.graph.GraphService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

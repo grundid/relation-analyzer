@@ -23,10 +23,10 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.TagSupport;
 
-import org.osmsurround.ra.data.Node;
 import org.osmsurround.tags.builder.JosmRemoteControlLinkBuilder;
 import org.osmsurround.tags.builder.LinkBuilder;
 import org.osmsurround.tags.builder.PotlatchLinkBuilder;
+import org.osmtools.ra.data.Node;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.osmsurround.ra.data.Way;
+import org.osmtools.ra.data.Way;
 
 public class HighwayHierarchy {
 

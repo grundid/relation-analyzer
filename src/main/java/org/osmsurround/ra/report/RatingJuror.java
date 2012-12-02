@@ -2,7 +2,7 @@ package org.osmsurround.ra.report;
 
 import java.util.Map;
 
-import org.osmsurround.ra.context.AnalyzerContext;
+import org.osmtools.ra.context.AnalyzerContext;
 
 public interface RatingJuror {
 

@@ -3,12 +3,12 @@ package org.osmsurround.ra.elevation;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.export.ExportService;
-import org.osmsurround.ra.export.LonLat;
-import org.osmsurround.ra.export.Section;
-import org.osmsurround.ra.utils.LonLatMath;
+import org.osmtools.api.LonLat;
+import org.osmtools.api.Section;
+import org.osmtools.ra.context.AnalyzerContext;
 import org.osmtools.srtm.SrtmService;
+import org.osmtools.utils.LonLatMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

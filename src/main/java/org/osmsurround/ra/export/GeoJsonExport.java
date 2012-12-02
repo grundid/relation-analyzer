@@ -4,6 +4,8 @@ import java.io.OutputStream;
 import java.util.Iterator;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.osmtools.api.LonLat;
+import org.osmtools.api.Section;
 import org.osmtools.geojson.Feature;
 import org.osmtools.geojson.FeatureCollection;
 import org.osmtools.geojson.MultiLineString;

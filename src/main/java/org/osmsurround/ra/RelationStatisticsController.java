@@ -3,9 +3,10 @@ package org.osmsurround.ra;
 import javax.validation.Valid;
 
 import org.osmsurround.ra.analyzer.AnalyzerService;
-import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.stats.RelationStatistics;
 import org.osmsurround.ra.stats.StatisticsService;
+import org.osmtools.ra.RelationGoneException;
+import org.osmtools.ra.context.AnalyzerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;

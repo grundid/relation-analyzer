@@ -1,8 +1,8 @@
 package org.osmsurround.ra.report.juror;
 
-import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.report.Rating;
 import org.osmsurround.ra.report.RelationRating;
+import org.osmtools.ra.context.AnalyzerContext;
 import org.springframework.stereotype.Component;
 
 @Component

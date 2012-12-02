@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="org.osmsurround.ra,org.osmtools.taginfo" />
+	<context:component-scan base-package="org.osmsurround.ra,org.osmtools.taginfo,org.osmtools.ra" />
 	<context:property-placeholder location="classpath:config.properties" />
 	<context:property-override location="classpath:config-inject.properties" />
 

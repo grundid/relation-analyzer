@@ -19,7 +19,7 @@ package org.osmsurround.ra.report;
 
 import java.util.Collection;
 
-import org.osmsurround.ra.data.Node;
+import org.osmtools.ra.data.Node;
 
 public class EndNodeDistances {
 

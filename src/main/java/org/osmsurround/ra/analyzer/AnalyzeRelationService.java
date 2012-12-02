@@ -18,9 +18,9 @@
 package org.osmsurround.ra.analyzer;
 
 import org.osmsurround.ra.AnalyzeRelationModel;
-import org.osmsurround.ra.context.AnalyzerContext;
 import org.osmsurround.ra.report.Report;
 import org.osmsurround.ra.report.ReportService;
+import org.osmtools.ra.context.AnalyzerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

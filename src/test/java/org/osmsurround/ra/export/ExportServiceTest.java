@@ -6,8 +6,8 @@ import java.io.ByteArrayOutputStream;
 
 import org.junit.Test;
 import org.osmsurround.ra.TestBase;
-import org.osmsurround.ra.TestUtils;
-import org.osmsurround.ra.context.AnalyzerContext;
+import org.osmtools.ra.TestUtils;
+import org.osmtools.ra.context.AnalyzerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ExportServiceTest extends TestBase {

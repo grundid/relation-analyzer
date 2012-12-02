@@ -21,6 +21,7 @@ import javax.validation.Valid;
 
 import org.osmsurround.ra.analyzer.AnalyzeRelationService;
 import org.osmsurround.ra.report.Report;
+import org.osmtools.ra.RelationGoneException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;

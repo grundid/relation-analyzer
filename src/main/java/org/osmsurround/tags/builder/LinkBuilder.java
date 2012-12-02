@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
-import org.osmsurround.ra.data.Node;
+import org.osmtools.ra.data.Node;
 
 public abstract class LinkBuilder {
 

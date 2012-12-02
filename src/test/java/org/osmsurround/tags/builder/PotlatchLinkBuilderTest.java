@@ -3,7 +3,7 @@ package org.osmsurround.tags.builder;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.osmsurround.ra.data.Node;
+import org.osmtools.ra.data.Node;
 
 public class PotlatchLinkBuilderTest {
 

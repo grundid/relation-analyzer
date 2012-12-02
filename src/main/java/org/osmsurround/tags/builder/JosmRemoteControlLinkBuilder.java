@@ -2,7 +2,7 @@ package org.osmsurround.tags.builder;
 
 import java.text.DecimalFormat;
 
-import org.osmsurround.ra.data.Node;
+import org.osmtools.ra.data.Node;
 
 public class JosmRemoteControlLinkBuilder extends LinkBuilder {
 

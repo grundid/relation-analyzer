@@ -17,7 +17,7 @@
  */
 package org.osmsurround.ra.report;
 
-import org.osmsurround.ra.data.Node;
+import org.osmtools.ra.data.Node;
 import org.springframework.format.annotation.NumberFormat;
 
 public class NodeDistance {
