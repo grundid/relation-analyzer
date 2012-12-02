@@ -21,9 +21,7 @@ import java.util.List;
 
 import org.osmsurround.ra.data.Node;
 import org.osmsurround.ra.data.Way;
-import org.springframework.stereotype.Service;
 
-@Service
 public class RoundaboutService {
 
 	public boolean isRoundabout(Way way) {

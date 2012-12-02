@@ -31,8 +31,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class RelationMemberService {
 
-	@Autowired
 	private SegmentFactory segmentFactory;
+
+	@Autowired
+	public RelationMemberService(SegmentFactory segmentFactory) {
+		this.segmentFactory = segmentFactory;
+	}
 
 	public void initSegments(AnalyzerContext analyzerContext) {
 
@@ -41,7 +45,7 @@ public class RelationMemberService {
 		analyzerContext.setSegments(segments);
 	}
 
-	private List<ConnectableSegment> createSegmentsOutOfRelationMembers(Relation relation) {
+	public List<ConnectableSegment> createSegmentsOutOfRelationMembers(Relation relation) {
 		List<Member> members = relation.getMembers();
 
 		List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>(members.size());

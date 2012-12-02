@@ -31,8 +31,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class SegmentFactory {
 
-	@Autowired
 	private RoundaboutService roundaboutService;
+
+	@Autowired
+	public SegmentFactory(RoundaboutService roundaboutService) {
+		this.roundaboutService = roundaboutService;
+	}
 
 	public ConnectableSegment createSegment(Member member) {
 		Way way = member.getWay();

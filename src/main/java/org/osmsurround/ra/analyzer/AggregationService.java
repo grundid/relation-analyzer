@@ -34,7 +34,7 @@ public class AggregationService {
 		analyzerContext.setAggregatedSegments(aggregatedSegments);
 	}
 
-	List<AggregatedSegment> aggregateSegments(List<? extends ConnectableSegment> segments) {
+	public List<AggregatedSegment> aggregateSegments(List<? extends ConnectableSegment> segments) {
 		List<AggregatedSegment> aggregatedSegments = new ArrayList<AggregatedSegment>();
 		for (Iterator<? extends ConnectableSegment> it = segments.iterator(); it.hasNext();) {
 			ConnectableSegment segment = it.next();

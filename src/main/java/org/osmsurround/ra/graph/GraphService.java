@@ -33,11 +33,10 @@ public class GraphService {
 		analyzerContext.setGraphs(graphList);
 	}
 
-	private List<Graph> createGraphs(List<AggregatedSegment> aggregatedSegments) {
+	public List<Graph> createGraphs(List<AggregatedSegment> aggregatedSegments) {
 		List<Graph> graphList = new ArrayList<Graph>();
 		for (AggregatedSegment aggregatedSegment : aggregatedSegments) {
-			GraphCreator graphCreator = new GraphCreator(
-					aggregatedSegment.getSegments());
+			GraphCreator graphCreator = new GraphCreator(aggregatedSegment.getSegments());
 			graphList.add(graphCreator.getGraph());
 		}
 		return graphList;

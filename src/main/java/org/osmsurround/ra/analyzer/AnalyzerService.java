@@ -20,11 +20,13 @@ public class AnalyzerService {
 
 	public AnalyzerContext analyzeRelation(long relationId, boolean noCache) {
 		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(relationId, noCache);
+		analyzeContext(analyzerContext);
+		return analyzerContext;
+	}
 
+	public void analyzeContext(AnalyzerContext analyzerContext) {
 		relationMemberService.initSegments(analyzerContext);
 		aggregationService.aggregate(analyzerContext);
 		graphService.initGraph(analyzerContext);
-
-		return analyzerContext;
 	}
 }
