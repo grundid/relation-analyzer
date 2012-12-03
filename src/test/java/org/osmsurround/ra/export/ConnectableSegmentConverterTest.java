@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 import org.osmsurround.ra.TestBase;
+import org.osmsurround.ra.TestUtils;
 import org.osmtools.api.Section;
-import org.osmtools.ra.TestUtils;
 import org.osmtools.ra.context.AnalyzerContext;
 
 public class ConnectableSegmentConverterTest extends TestBase {

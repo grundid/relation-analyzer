@@ -1,6 +1,5 @@
 package org.osmsurround.ra;
 
-import org.osmtools.ra.TestUtils;
 import org.osmtools.ra.analyzer.AggregationService;
 import org.osmtools.ra.analyzer.RelationMemberService;
 import org.osmtools.ra.context.AnalyzerContext;

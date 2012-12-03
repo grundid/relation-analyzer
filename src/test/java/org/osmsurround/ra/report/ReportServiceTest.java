@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.osmsurround.ra.TestBase;
-import org.osmtools.ra.TestUtils;
+import org.osmsurround.ra.TestUtils;
 import org.osmtools.ra.context.AnalyzerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
