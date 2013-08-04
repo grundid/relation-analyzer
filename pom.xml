@@ -278,6 +278,7 @@
 				<configuration>
 					<useReleaseProfile>false</useReleaseProfile>
 					<releaseProfiles>build-prd</releaseProfiles>
+					<arguments>-Pbuild-prd</arguments>
 				</configuration>
 			</plugin>
 			<plugin>
