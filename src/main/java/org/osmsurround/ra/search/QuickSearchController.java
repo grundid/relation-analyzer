@@ -12,15 +12,19 @@ public class QuickSearchController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView get(String query) {
+		ModelAndView mav = new ModelAndView();
 		RedirectView view = null;
 		try {
-			long relationId = Long.parseLong(query);
-			view = new RedirectView("analyzeRelation?relationId=" + relationId, true);
+			Long.parseLong(query);
+			view = new RedirectView("analyzeRelation", true);
+			mav.addObject("relationId", query);
 		}
 		catch (NumberFormatException e) {
-			view = new RedirectView("searchRelation?name=" + query, true);
+			view = new RedirectView("searchRelation", true);
+			mav.addObject("name", query);
 		}
 		view.setEncodingScheme("utf8");
-		return new ModelAndView(view);
+		mav.setView(view);
+		return mav;
 	}
 }
