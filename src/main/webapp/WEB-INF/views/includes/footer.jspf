@@ -5,7 +5,7 @@
 	<p>
 		Contact: as(a t)nitegate(d o t)de, Made by <a href="http://www.grundid.de">GrundID GmbH</a> - Data by <a
 			href="http://www.openstreetmap.org/">OpenStreetMap</a>, Source code: <a
-			href="https://github.com/grundid/relation-analyzer">@GitHub</a>
+			href="https://github.com/grundid/relation-analyzer">@GitHub</a> - Ver. ${version}
 	</p>
 	<div class="g-plus" data-href="https://plus.google.com/104853427339662862228" rel="author" data-height="69" data-width="170"></div>	
 </footer>
