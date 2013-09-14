@@ -3,6 +3,9 @@ package org.osmsurround.ra.export;
 import java.util.List;
 import java.util.Locale;
 
+import org.geojson.Feature;
+import org.geojson.FeatureCollection;
+import org.geojson.Point;
 import org.osmsurround.ra.AnalyzeRelationModel;
 import org.osmsurround.ra.analyzer.AnalyzerService;
 import org.osmsurround.ra.report.EndNodeDistances;
@@ -13,9 +16,6 @@ import org.osmsurround.tags.builder.JosmRemoteControlLinkBuilder;
 import org.osmsurround.tags.builder.LinkBuilder;
 import org.osmsurround.tags.builder.PotlatchLinkBuilder;
 import org.osmtools.api.Section;
-import org.osmtools.geojson.Feature;
-import org.osmtools.geojson.FeatureCollection;
-import org.osmtools.geojson.Point;
 import org.osmtools.ra.context.AnalyzerContext;
 import org.osmtools.ra.data.Node;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,27 +44,24 @@ public class ShowRelationController {
 	FeatureCollection get(AnalyzeRelationModel analyzeRelationModel) {
 		AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
 				analyzeRelationModel.isNoCache());
-
 		Report report = reportService.generateReport(analyzerContext);
-
 		SimpleSegmentConverter converter = new SimpleSegmentConverter();
 		List<Section> containers = converter.convert(analyzerContext);
-
 		FeatureCollection featureCollection = geoJsonExport.export(containers);
 		Locale locale = LocaleContextHolder.getLocale();
-
 		for (int itemIndex = 0; itemIndex < report.getReportItems().size(); itemIndex++) {
 			ReportItem reportItem = report.getReportItems().get(itemIndex);
 			for (EndNodeDistances node : reportItem.getEndNodeDistances()) {
-				Feature feature = new Feature(new Point(node.getNode().getLon(), node.getNode().getLat()));
+				Point point = new Point(node.getNode().getLon(), node.getNode().getLat());
+				Feature feature = new Feature();
+				feature.setGeometry(point);
 				String popupContent = "<p>" + messageSource.getMessage("label.graph", null, locale) + "&nbsp;"
 						+ itemIndex + "</p>" + messageSource.getMessage("editor.links", null, locale) + "<br/>"
 						+ createLinks(node.getNode(), node.getNode());
 				feature.setProperty("popup", popupContent);
-				featureCollection.addFeature(feature);
+				featureCollection.add(feature);
 			}
 		}
-
 		return featureCollection;
 	}
 
@@ -92,9 +89,7 @@ public class ShowRelationController {
 
 	private String createLinks(Node prevNode, Node nextNode) {
 		StringBuilder sb = new StringBuilder();
-
 		for (int x = 0; x < LINK_BUILDERS.length; x++) {
-
 			LinkBuilderDefinition linkBuilderDefinition = LINK_BUILDERS[x];
 			sb.append("<a class=\"").append(linkBuilderDefinition.cssClass).append("\" ");
 			sb.append("href=\"").append(linkBuilderDefinition.linkBuilder.buildLinkForNodes(prevNode, nextNode))
@@ -106,11 +101,9 @@ public class ShowRelationController {
 			sb.append(messageSource.getMessage(linkBuilderDefinition.labelMessageCode, null,
 					LocaleContextHolder.getLocale()));
 			sb.append("</a>");
-
 			if (x + 1 < LINK_BUILDERS.length)
 				sb.append("&nbsp;");
 		}
 		return sb.toString();
 	}
-
 }

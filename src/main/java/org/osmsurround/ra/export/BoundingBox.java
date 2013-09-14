@@ -63,4 +63,7 @@ public class BoundingBox {
 		north = Math.max(north, lat);
 	}
 
+	public double[] toArray() {
+		return new double[] { getWest(), getSouth(), getEast(), getNorth() };
+	}
 }
