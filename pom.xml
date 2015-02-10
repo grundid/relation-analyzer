@@ -4,7 +4,7 @@
 	<groupId>org.osmsurround</groupId>
 	<artifactId>relation-analyzer</artifactId>
 	<packaging>war</packaging>
-	<version>1.5.17-SNAPSHOT</version>
+	<version>1.5.17</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.6</java-version>
@@ -262,7 +262,8 @@
 
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/grundid/relation-analyzer.git</developerConnection>
-	</scm>
+	  <tag>relation-analyzer-1.5.17</tag>
+  </scm>
 	<build>
 		<extensions>
 			<extension>
