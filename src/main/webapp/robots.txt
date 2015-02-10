@@ -1,3 +1,7 @@
 User-agent: *
 Disallow: /resources/*
 Disallow: /rs/*
+Disallow: /analyzeRelation
+Disallow: /analyzeMap
+Disallow: /showRelation
+
