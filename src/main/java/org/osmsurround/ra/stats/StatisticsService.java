@@ -1,8 +1,5 @@
 package org.osmsurround.ra.stats;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.osmtools.ra.data.Member;
 import org.osmtools.ra.data.Node;
 import org.osmtools.ra.data.Relation;
@@ -10,15 +7,15 @@ import org.osmtools.ra.data.Way;
 import org.osmtools.utils.LonLatMath;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class StatisticsService {
 
 	private List<HighwayCategory> knownCategories = new ArrayList<HighwayCategory>();
 
 	public StatisticsService() {
-
-		createHierarchy();
-
 		knownCategories.add(new HighwayCategory("motorway", "motorway", "motorway_link", "trunk", "trunk_link",
 				"primary", "primary_link"));
 		knownCategories
@@ -79,7 +76,7 @@ public class StatisticsService {
 		hierarchy.addSubHierarchy(humans);
 
 		HighwayHierarchy unknown = new HighwayHierarchy("unknown");
-		humans.addSubHierarchy(new HighwayHierarchy("unknown", "highway", "*"));
+		unknown.addSubHierarchy(new HighwayHierarchy("unknown", "highway", "*"));
 
 		hierarchy.addSubHierarchy(unknown);
 
