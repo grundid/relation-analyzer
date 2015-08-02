@@ -81,6 +81,63 @@
 	background-color: #00CD66;
 }
 
+.dist-paved {
+	background-color: red;
+}
+.dist-asphalt {
+	background-color: black;
+}
+.dist-paving_stones {
+	background-color: gray;
+}
+.dist-concrete {
+	background-color: lightgray;
+}
+.dist-wood {
+	background-color: yellow;
+}
+
+.dist-unpaved {
+	background-color: red;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+}
+.dist-compacted {
+	background-color: darkgray;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+}
+.dist-gravel {
+	background-color: gray;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+.dist-grass_paver {
+	background-color: lightgray;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+.dist-grass {
+	background-color: green;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+.dist-ground,
+.dist-earth {
+	background-color: brown;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+.dist-dirt,
+.dist-mud {
+	background-color: saddlebrown;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+}
+.dist-sand,
+.dist-salt {
+	background-color: wheat;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+
+.dist-untagged {
+	background-color: blue;
+}
+
 .dist-unknown {
-	background-color: #EEE;
+	background-color: #DDD;
 }

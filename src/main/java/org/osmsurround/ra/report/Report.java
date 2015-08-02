@@ -28,65 +28,91 @@ public class Report {
 	private RelationRating relationRating;
 	private RelationInfo relationInfo;
 	private List<ReportItem> reportItems;
-	private RelationStatistics relationStatistics;
+	private RelationStatistics highwayStatistics;
+	private RelationStatistics surfaceStatistics;
 	private String elevationProfileJson;
 
 	public Report() {
+
 	}
 
 	public Report(boolean gone) {
+
 		this.gone = gone;
 	}
 
 	public String getElevationProfileJson() {
+
 		return elevationProfileJson;
 	}
 
 	public void setElevationProfileJson(String elevationProfileJson) {
+
 		this.elevationProfileJson = elevationProfileJson;
 	}
 
 	public RelationRating getRelationRating() {
+
 		return relationRating;
 	}
 
 	public void setRelationRating(RelationRating relationRating) {
+
 		this.relationRating = relationRating;
 	}
 
 	public RelationInfo getRelationInfo() {
+
 		return relationInfo;
 	}
 
 	public void setRelationInfo(RelationInfo relationInfo) {
+
 		this.relationInfo = relationInfo;
 	}
 
 	public List<ReportItem> getReportItems() {
+
 		return reportItems;
 	}
 
 	public void setReportItems(List<ReportItem> reportItems) {
+
 		this.reportItems = reportItems;
 	}
 
-	public RelationStatistics getRelationStatistics() {
-		return relationStatistics;
+	public RelationStatistics getHighwayStatistics() {
+
+		return highwayStatistics;
 	}
 
-	public void setRelationStatistics(RelationStatistics relationStatistics) {
-		this.relationStatistics = relationStatistics;
+	public void setHighwayStatistics(RelationStatistics highwayStatistics) {
+
+		this.highwayStatistics = highwayStatistics;
+	}
+
+	public RelationStatistics getSurfaceStatistics() {
+
+		return surfaceStatistics;
+	}
+
+	public void setSurfaceStatistics(RelationStatistics surfaceStatistics) {
+
+		this.surfaceStatistics = surfaceStatistics;
 	}
 
 	public boolean isValidRelation() {
+
 		return validRelation;
 	}
 
 	public void setValidRelation(boolean validRelation) {
+
 		this.validRelation = validRelation;
 	}
 
 	public boolean isGone() {
+
 		return gone;
 	}
 }

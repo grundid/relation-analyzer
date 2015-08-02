@@ -82,20 +82,33 @@
 </div>
 </c:if>
 
-<c:if test="${report.relationStatistics.length > 0}">
+<c:if test="${report.highwayStatistics.length > 0}">
 <div class="well">
-<h3><spring:message code="title.statistics"/></h3>
+<h3><spring:message code="title.statistics.highway"/></h3>
 <div style="overflow:hidden">
-<c:forEach items="${report.relationStatistics.distributions}" var="item">
+<c:forEach items="${report.highwayStatistics.distributions}" var="item">
 <div style="float:left;width:${item.percent*100}%;height:24px" class="dist-${item.name}" title="${item.name}, <fmt:formatNumber pattern="#,##0.0">${item.percent*100}</fmt:formatNumber>%, length: <fmt:formatNumber pattern="#,##0.00">${item.length}</fmt:formatNumber> KM, ways: ${item.wayCount}"></div>
 </c:forEach>
 </div>
-<div style="clear:both;margin-top:10px"><spring:message code="info.statistics"/><br/>
-<spring:message code="legend.statistics"/></div>
+<div style="clear:both;margin-top:10px"><spring:message code="info.statistics.highway"/><br/>
+<spring:message code="legend.statistics.highway"/></div>
 <a class="btn" href="relationStatistics?relationId=${report.relationInfo.relationId}" ><spring:message code="button.download.statistics" /></a>
 </div>
 </c:if>
 
+<c:if test="${report.surfaceStatistics.length > 0}">
+<div class="well">
+<h3><spring:message code="title.statistics.surface"/></h3>
+<div style="overflow:hidden">
+<c:forEach items="${report.surfaceStatistics.distributions}" var="item">
+<div style="float:left;width:${item.percent*100}%;height:24px" class="dist-${item.name}" title="${item.name}, <fmt:formatNumber pattern="#,##0.0">${item.percent*100}</fmt:formatNumber>%, length: <fmt:formatNumber pattern="#,##0.00">${item.length}</fmt:formatNumber> KM, ways: ${item.wayCount}"></div>
+</c:forEach>
+</div>
+<div style="clear:both;margin-top:10px"><spring:message code="info.statistics.surface"/><br/>
+<spring:message code="legend.statistics.surface"/></div>
+<!--<a class="btn" href="relationStatistics?relationId=${report.relationInfo.relationId}" ><spring:message code="button.download.statistics" /></a>-->
+</div>
+</c:if>
 
 <div class="well">
 <h3><spring:message code="title.report"/></h3>
