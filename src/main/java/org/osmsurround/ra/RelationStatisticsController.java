@@ -31,7 +31,7 @@ public class RelationStatisticsController {
 				AnalyzerContext analyzerContext = analyzerService.analyzeRelation(analyzeRelationModel.getRelationId(),
 						analyzeRelationModel.isNoCache());
 
-				return statisticsService.createRelationStatistics(analyzerContext.getRelation());
+				return statisticsService.createRelationStatisticsHighway(analyzerContext.getRelation());
 			}
 		}
 		catch (RelationGoneException e) {

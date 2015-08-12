@@ -16,7 +16,7 @@ public class StatisticsServiceTest extends TestBase {
 
 		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_12320_NECKARTAL_WEG);
 
-		RelationStatistics relationStatistics = statisticsService.createRelationStatistics(analyzerContext
+		RelationStatistics relationStatistics = statisticsService.createRelationStatisticsHighway(analyzerContext
 				.getRelation());
 
 		for (Distribution distribution : relationStatistics.getDistributions()) {

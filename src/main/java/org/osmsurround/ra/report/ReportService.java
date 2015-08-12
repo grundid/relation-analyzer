@@ -62,6 +62,7 @@ public class ReportService {
 	private ObjectMapper objectMapper = new ObjectMapper();
 
 	public Report generateReport(AnalyzerContext analyzerContext) {
+
 		Report report = new Report();
 		report.setValidRelation(true);
 		initReportItems(report, analyzerContext);
@@ -73,20 +74,22 @@ public class ReportService {
 	}
 
 	private void initElevationProfile(Report report, AnalyzerContext analyzerContext) {
+
 		try {
 			List<double[]> elevationProfile = elevationService.createElevationProfile(analyzerContext);
 			if (!elevationProfile.isEmpty()) {
 				String json = objectMapper.writeValueAsString(elevationProfile);
 				report.setElevationProfileJson(json);
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			log.info(e.getMessage());
 		}
 	}
 
 	private void initReportStatistics(Report report, AnalyzerContext analyzerContext) {
-		report.setRelationStatistics(statisticsService.createRelationStatistics(analyzerContext.getRelation()));
+
+		report.setHighwayStatistics(statisticsService.createRelationStatisticsHighway(analyzerContext.getRelation()));
+		report.setSurfaceStatistics(statisticsService.createRelationStatisticsSurface(analyzerContext.getRelation()));
 	}
 
 	private void initRelationInfo(Report report, AnalyzerContext analyzerContext) {
@@ -143,16 +146,19 @@ public class ReportService {
 	}
 
 	private void filterDistances(Set<NodeDistance> distances) {
+
 		int count = 0;
 		for (Iterator<NodeDistance> it = distances.iterator(); it.hasNext();) {
 			it.next();
 			count++;
-			if (count > MAX_DISTANCES)
+			if (count > MAX_DISTANCES) {
 				it.remove();
+			}
 		}
 	}
 
 	private Set<NodeDistance> getDistances(List<Graph> graphs, Node distantNode) {
+
 		Set<NodeDistance> distances = new TreeSet<NodeDistance>(NODE_DISTANCE_COMPARATOR);
 		for (Graph graph : graphs) {
 			Set<IntersectionNode> leaves = graph.getLeaves();
@@ -171,10 +177,10 @@ public class ReportService {
 	}
 
 	private void initRelationRating(Report report, AnalyzerContext analyzerContext) {
+
 		if (analyzerContext.getGraphs().isEmpty()) {
 			report.setRelationRating(new RelationRating(Rating.UNKNOWN, RELATION_NO_WAYS));
-		}
-		else {
+		} else {
 			Map<String, String> tags = analyzerContext.getRelation().getTags();
 			String relationType = tags.get("type");
 

@@ -3,12 +3,12 @@ package org.osmsurround.ra.stats;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HighwayCategory {
+public class Category {
 
 	private String name;
 	private Set<String> values = new HashSet<String>();
 
-	public HighwayCategory(String name, String... values) {
+	public Category(String name, String... values) {
 		this.name = name;
 		for (String value : values)
 			this.values.add(value);

@@ -9,23 +9,23 @@ import java.util.Map.Entry;
 
 import org.osmtools.ra.data.Way;
 
-public class HighwayHierarchy {
+public class Hierarchy {
 
-	private Collection<HighwayHierarchy> subHierarchies = new ArrayList<HighwayHierarchy>();
+	private Collection<Hierarchy> subHierarchies = new ArrayList<Hierarchy>();
 
 	private String name;
 	private double length;
 	private int wayCount;
 	private Map<String, String> pattern = new HashMap<String, String>();
 
-	public HighwayHierarchy(String name, String... patterns) {
+	public Hierarchy(String name, String... patterns) {
 		this.name = name;
 		for (int x = 0; x < patterns.length; x += 2) {
 			pattern.put(patterns[x], patterns[x + 1]);
 		}
 	}
 
-	public void addSubHierarchy(HighwayHierarchy hierarchy) {
+	public void addSubHierarchy(Hierarchy hierarchy) {
 		subHierarchies.add(hierarchy);
 	}
 
@@ -39,7 +39,7 @@ public class HighwayHierarchy {
 		}
 
 		if (!added) {
-			for (HighwayHierarchy hierarchy : subHierarchies) {
+			for (Hierarchy hierarchy : subHierarchies) {
 				added = hierarchy.addWay(way, length);
 				if (added) {
 					this.length += length;
@@ -74,12 +74,12 @@ public class HighwayHierarchy {
 
 	private void appendDistributions(List<Distribution> distributions, int targetLayer, int currentLayer) {
 		if (targetLayer == currentLayer) {
-			for (HighwayHierarchy hierarchy : subHierarchies) {
+			for (Hierarchy hierarchy : subHierarchies) {
 				distributions.add(hierarchy.createDistribution());
 			}
 		}
 		else {
-			for (HighwayHierarchy hierarchy : subHierarchies) {
+			for (Hierarchy hierarchy : subHierarchies) {
 				hierarchy.appendDistributions(distributions, targetLayer, currentLayer + 1);
 			}
 		}
