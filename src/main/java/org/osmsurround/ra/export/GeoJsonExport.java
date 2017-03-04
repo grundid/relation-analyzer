@@ -23,7 +23,7 @@ public class GeoJsonExport {
     public void export(Iterable<Section> container, Relation relation, OutputStream os) {
         FeatureCollection featureCollection = export(container, relation);
         try {
-            objectMapper.writeValue(os, featureCollection);
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(os, featureCollection);
         }
         catch (Exception e) {
             e.printStackTrace();
