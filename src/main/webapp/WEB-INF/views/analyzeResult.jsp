@@ -32,11 +32,13 @@
 <spring:message code="label.byuser" />: <strong><a href="http://www.openstreetmap.org/user/<spring:escapeBody>${report.relationInfo.user}</spring:escapeBody>"><spring:escapeBody>${report.relationInfo.user}</spring:escapeBody></a></strong></p>
 </spring:bind>
 
-<div style="height: 30px">
+	< style="height: 30px">
 <a class="btn" href="#" onclick="$('#tags').toggle();"><spring:message code="button.showtags" /></a>
 <a class="btn" href="analyzeMap?relationId=${report.relationInfo.relationId}" title="<spring:message code="button.analyze.map.hint" />"><spring:message code="button.analyze.map" /></a>
 <a class="btn" href="http://www.openstreetmap.org/browse/relation/${report.relationInfo.relationId}"><spring:message code="button.browse" /></a>
-</div>
+	<c:if test="${report.validForExport}"><a class="btn"
+											 href="exportRelation/json?relationId=${report.relationInfo.relationId}"><spring:message
+			code="title.download.json"/></a></c:if>
 </div>
 
 <div class="well" id="tags" style="display:none">
