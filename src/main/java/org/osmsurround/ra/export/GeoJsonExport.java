@@ -5,9 +5,9 @@ import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.LngLatAlt;
 import org.geojson.MultiLineString;
-import org.osmsurround.ra.dao.Relation;
 import org.osmtools.api.LonLat;
 import org.osmtools.api.Section;
+import org.osmtools.ra.data.Relation;
 import org.springframework.stereotype.Service;
 
 import java.io.OutputStream;
@@ -38,9 +38,7 @@ public class GeoJsonExport {
             Feature feature = new Feature();
             featureCollection.add(feature);
             feature.setProperty("name", dataContainer.getName());
-            feature.setProperty("relationName", relation.getName());
-            feature.setProperty("relationRef", relation.getRef());
-            feature.setProperty("relationType", relation.getRelationType());
+            feature.getProperties().putAll(relation.getTags());
             MultiLineString lineString = new MultiLineString();
             feature.setGeometry(lineString);
             for (Iterator<Iterable<? extends LonLat>> itC = dataContainer.getCoordinateLists().iterator(); itC

@@ -1,9 +1,5 @@
 package org.osmsurround.ra.export;
 
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.osmtools.api.Section;
 import org.osmtools.ra.context.AnalyzerContext;
 import org.osmtools.ra.data.Node;
@@ -13,6 +9,10 @@ import org.osmtools.ra.graph.IntersectionNode;
 import org.osmtools.ra.traverse.TraverseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ExportService {
@@ -29,7 +29,7 @@ public class ExportService {
 		if ("gpx".equals(format))
 			gpxExport.export(containers, out);
 		else if ("json".equals(format))
-			geoJsonExport.export(containers, out);
+			geoJsonExport.export(containers, analyzerContext.getRelation(), out);
 	}
 
 	public List<Section> convertToSections(AnalyzerContext analyzerContext) {

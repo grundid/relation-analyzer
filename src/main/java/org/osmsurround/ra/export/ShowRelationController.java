@@ -1,8 +1,5 @@
 package org.osmsurround.ra.export;
 
-import java.util.List;
-import java.util.Locale;
-
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.Point;
@@ -26,6 +23,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+import java.util.Locale;
+
 @Controller
 @RequestMapping("/showRelation")
 public class ShowRelationController {
@@ -47,7 +47,7 @@ public class ShowRelationController {
 		Report report = reportService.generateReport(analyzerContext);
 		SimpleSegmentConverter converter = new SimpleSegmentConverter();
 		List<Section> containers = converter.convert(analyzerContext);
-		FeatureCollection featureCollection = geoJsonExport.export(containers);
+		FeatureCollection featureCollection = geoJsonExport.export(containers, analyzerContext.getRelation());
 		Locale locale = LocaleContextHolder.getLocale();
 		for (int itemIndex = 0; itemIndex < report.getReportItems().size(); itemIndex++) {
 			ReportItem reportItem = report.getReportItems().get(itemIndex);
