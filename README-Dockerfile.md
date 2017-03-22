@@ -1,4 +1,5 @@
-== How to use Dockerfile ==
+# How to use Dockerfile
+
 Dockerfile in this repository creates Relation Analyzer instance running on port
 8080.
 
@@ -18,7 +19,7 @@ You can build the image using command:
 docker build -t relation-analyzer .
 ```
 
-== Using docker-compose ==
+# Using docker-compose
 `docker-compose.yml` provides full environment for Relation Analyzer including
 database. It exposes Relation Analyzer on Docker host port 80. It creates
 separate volume that will hold database data. Before relation analyzer can
