@@ -4,10 +4,13 @@ services:
 
   postgres:
     image: postgres:9-alpine
+    volumes:
+       - relation_analyzer_db:/var/lib/mysql
     restart: always
     environment:
       POSTGRES_USER: ra
       POSTGRES_PASSWORD: example
+      PGDATA: /var/lib/postgresql/data/pgdata
 
 
   relation-analyzer:
@@ -22,3 +25,5 @@ services:
       DB_PASSWORD: example
       DB_NAME: postgres
 
+volumes:
+  relation_analyzer_db:
