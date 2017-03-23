@@ -27,8 +27,10 @@ start you need to create the table `relation` and populate it with data (see
 
 To startup your environent use:
 ```
-docker-compose up -d .
+docker-compose up .
 ```
+
+Add `-d` option if you want the docker containers to run in background.
 
 If you have updated any files within repository running:
 ```
