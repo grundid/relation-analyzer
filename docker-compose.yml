@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres:9-alpine
+    volumes:
+       - relation_analyzer_db:/var/lib/mysql
+    restart: always
+    environment:
+      POSTGRES_USER: ra
+      POSTGRES_PASSWORD: example
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+
+  relation-analyzer:
+    depends_on: 
+        - db
+    restart: always
+    build: .
+    ports:
+      - 80:8080
+    environment:
+      DB_URL: jdbc:postgresql://db/postgres
+      DB_USER: ra
+      DB_PASSWORD: example
+
+volumes:
+  relation_analyzer_db:
