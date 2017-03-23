@@ -10,7 +10,7 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="org.osmsurround.ra,org.osmtools.taginfo,org.osmtools.ra" />
-	<context:property-placeholder location="classpath:config.properties" />
+	<context:property-placeholder location="classpath:config.properties" system-properties-mode="OVERRIDE"/>
 	<context:property-override location="classpath:config-inject.properties" />
 
 	<cache:annotation-driven />
