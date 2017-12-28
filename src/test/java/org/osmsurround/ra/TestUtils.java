@@ -20,8 +20,7 @@ public abstract class TestUtils {
 		MockRestServiceServer mockServer = MockRestServiceServer.createServer(restTemplate);
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.setContentType(MediaType.APPLICATION_XML);
-		mockServer
-				.expect(RequestMatchers.requestTo("http://api.openstreetmap.org/api/0.6/relation/" + relationId
+		mockServer.expect(RequestMatchers.requestTo("https://api.openstreetmap.org/api/0.6/relation/" + relationId
 						+ "/full"))
 				.andExpect(RequestMatchers.method(HttpMethod.GET))
 				.andRespond(
