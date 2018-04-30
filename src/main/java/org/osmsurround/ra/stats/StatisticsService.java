@@ -146,8 +146,12 @@ public class StatisticsService {
 
 		for (Member member : relation.getMembers()) {
 			Way way = member.getWay();
-			List<Node> nodes = way.getNodes();
-			double length = LonLatMath.distance(nodes.get(0), nodes.get(nodes.size() - 1));
+                        List<Node> nodes = way.getNodes();
+			double length = 0;
+                        for (int i=0; i < nodes.size()-1 ; i++) {
+                            length += LonLatMath.distance(nodes.get(i), nodes.get(i+1));
+                        }
+                        
 			highwayHierarchy.addWay(way, length);
 		}
 
@@ -180,8 +184,12 @@ public class StatisticsService {
 		for (Member member : relation.getMembers()) {
 			Way way = member.getWay();
 			List<Node> nodes = way.getNodes();
-			double length = LonLatMath.distance(nodes.get(0), nodes.get(nodes.size() - 1));
-			if (!way.getTags().containsKey("surface")) {
+			double length = 0;
+                        for (int i=0; i < nodes.size()-1 ; i++) {
+                            length += LonLatMath.distance(nodes.get(i), nodes.get(i+1));
+                        }
+                        
+                        if (!way.getTags().containsKey("surface")) {
 				way.getTags().put("surface", "untagged");
 			}
 			surfaceHierarchy.addWay(way, length);
