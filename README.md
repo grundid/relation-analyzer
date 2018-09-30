@@ -1,4 +1,4 @@
-== Relation Analyzer for OSM ==
+# Relation Analyzer for OSM
 
 This project contains the source code for the Relation Analyzer 
 which is available online at http://ra.osmsurround.org.
@@ -7,7 +7,7 @@ The Relation Analyzer is written in Java. It is build using the
 SpringFramework http://www.springframework.org/.
 Apache Maven http://maven.apache.org is used as the build system.
 
-== Building ==
+## Building
 
 To build the Relation Analyzer launch:
 
@@ -21,7 +21,7 @@ You can then access the Relation Analyzer with
 
 http://localhost:8080/relation-analyzer
 
-== Hacking ==
+## Hacking
 
 The source code has some test case coverage so you should be fine to be 
 able to do some hacking without braking major functionality.
@@ -55,12 +55,8 @@ Now you should be able to run the tests:
 
 Is the bar green? Good.
 
-== Running in Eclipse ==
+## Running in Eclipse
 
 You can launch the Relation Analyzer directly in Eclipse. You will need to have a Servlet Container setup.
 If everything is OK, you can right click on the project and choose "Run As... > Run on Server". Then open this link:
 http://localhost:8080/relation-analyzer
-
-
-
-
