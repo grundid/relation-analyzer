@@ -27,6 +27,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -44,6 +45,16 @@ public class AnalyzeRelationController {
 		}
 		catch (RelationGoneException e) {
 			return new ModelAndView("analyzeResult", "report", new Report(true));
+		}
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/json")
+	public @ResponseBody Report getJson(@Valid AnalyzeRelationModel analyzeRelationModel, Errors errors) {
+		try {
+			return analyzeRelationService.analyzeRelation(analyzeRelationModel);
+		}
+		catch (RelationGoneException e) {
+			return new Report(true);
 		}
 	}
 }
