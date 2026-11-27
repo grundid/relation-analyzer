@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.1 (480744 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="27481926" visible="true" version="13" changeset="55186436" timestamp="2018-01-05T13:10:59Z" user="d_berger" uid="1234273" lat="47.3674597" lon="8.5451292"/>
+ <node id="27481927" visible="true" version="7" changeset="74196494" timestamp="2019-09-07T01:46:13Z" user="sovereign_ch" uid="5755216" lat="47.3675448" lon="8.5450841"/>
+ <node id="94583344" visible="true" version="20" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767194" lon="8.5435274">
+  <tag k="ele" v="408"/>
+  <tag k="local_ref" v="F"/>
+  <tag k="name" v="Central"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="619"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Central"/>
+  <tag k="uic_ref" v="8588078"/>
+  <tag k="wheelchair" v="limited"/>
+  <tag k="wheelchair:description" v="Keine erhöhte Kante, dritte Türe mit Faltrampe (Fahrpersonal) nutzbar"/>
+ </node>
+ <node id="300383857" visible="true" version="14" changeset="74196494" timestamp="2019-09-07T01:46:14Z" user="sovereign_ch" uid="5755216" lat="47.3671283" lon="8.5453771"/>
+ <node id="300386940" visible="true" version="7" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3669645" lon="8.5455317">
+  <tag k="railway" v="switch"/>
+ </node>
+ <node id="300387605" visible="true" version="8" changeset="107546080" timestamp="2021-07-07T08:38:55Z" user="Dominik Dachs" uid="1436733" lat="47.3672069" lon="8.5453074"/>
+ <node id="300688537" visible="true" version="16" changeset="74196494" timestamp="2019-09-07T01:46:14Z" user="sovereign_ch" uid="5755216" lat="47.3672592" lon="8.5452643">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+ </node>
+ <node id="413357283" visible="true" version="7" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3673743" lon="8.5451772">
+  <tag k="railway" v="railway_crossing"/>
+ </node>
+ <node id="439184034" visible="true" version="4" changeset="74196494" timestamp="2019-09-07T01:46:15Z" user="sovereign_ch" uid="5755216" lat="47.3670114" lon="8.5454847"/>
+ <node id="442522941" visible="true" version="9" changeset="173813812" timestamp="2025-10-26T21:56:58Z" user="nleanba" uid="22665091" lat="47.3658643" lon="8.5470056">
+  <tag k="railway" v="railway_crossing"/>
+  <tag k="ref" v="6902"/>
+ </node>
+ <node id="674098904" visible="true" version="8" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3766037" lon="8.5435996"/>
+ <node id="1239655923" visible="true" version="4" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505128" lon="8.5609680"/>
+ <node id="1239655972" visible="true" version="5" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506319" lon="8.5609356"/>
+ <node id="1239656008" visible="true" version="6" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508660" lon="8.5603869">
+  <tag k="railway" v="switch"/>
+  <tag k="ref" v="356"/>
+ </node>
+ <node id="1239656094" visible="true" version="4" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504049" lon="8.5606757"/>
+ <node id="1239656167" visible="true" version="4" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504492" lon="8.5609132"/>
+ <node id="1239656263" visible="true" version="5" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504306" lon="8.5605979"/>
+ <node id="1239656269" visible="true" version="3" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3506136" lon="8.5609694"/>
+ <node id="1239656516" visible="true" version="5" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504265" lon="8.5608745"/>
+ <node id="1239656574" visible="true" version="5" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505689" lon="8.5609794"/>
+ <node id="1239656624" visible="true" version="5" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506876" lon="8.5608705"/>
+ <node id="1239656745" visible="true" version="4" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3503993" lon="8.5607664"/>
+ <node id="1291615891" visible="true" version="4" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506656" lon="8.5609041"/>
+ <node id="1291615894" visible="true" version="3" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505896" lon="8.5609774"/>
+ <node id="1291615900" visible="true" version="7" changeset="115517531" timestamp="2021-12-29T14:22:12Z" user="wheelmap_visitor" uid="290680" lat="47.3505894" lon="8.5609542">
+  <tag k="ele" v="408"/>
+  <tag k="name" v="Bahnhof Tiefenbrunnen"/>
+  <tag k="nat_name" v="Zürich, Bahnhof Tiefenbrunnen"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="3041"/>
+  <tag k="ref_name" v="Zürich, Bahnhof Tiefenbrunnen"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich Tiefenbrunnen, Bahnhof"/>
+  <tag k="uic_ref" v="8576182"/>
+  <tag k="wheelchair" v="limited"/>
+ </node>
+ <node id="1291615904" visible="true" version="6" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507329" lon="8.5606919">
+  <tag k="railway" v="switch"/>
+  <tag k="ref" v="357"/>
+ </node>
+ <node id="1493666329" visible="true" version="8" changeset="74197215" timestamp="2019-09-07T03:33:36Z" user="sovereign_ch" uid="5755216" lat="47.3759992" lon="8.5435539">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+  <tag k="ref" v="71"/>
+ </node>
+ <node id="1721549088" visible="true" version="4" changeset="132051496" timestamp="2023-02-03T17:34:08Z" user="d_berger" uid="1234273" lat="47.3626439" lon="8.5502655"/>
+ <node id="1721549089" visible="true" version="3" changeset="132051496" timestamp="2023-02-03T17:34:08Z" user="d_berger" uid="1234273" lat="47.3629383" lon="8.5500091"/>
+ <node id="1750109095" visible="true" version="7" changeset="150436826" timestamp="2024-04-24T10:09:54Z" user="d_berger" uid="1234273" lat="47.3530355" lon="8.5590539"/>
+ <node id="1750109097" visible="true" version="6" changeset="150436826" timestamp="2024-04-24T10:09:54Z" user="d_berger" uid="1234273" lat="47.3533935" lon="8.5587126"/>
+ <node id="1750109100" visible="true" version="3" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3551142" lon="8.5570694"/>
+ <node id="1750109101" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:20Z" user="sovereign_ch" uid="5755216" lat="47.3554399" lon="8.5567576"/>
+ <node id="1750109102" visible="true" version="3" changeset="49865500" timestamp="2017-06-27T15:39:40Z" user="d_berger" uid="1234273" lat="47.3599656" lon="8.5525753"/>
+ <node id="1750109104" visible="true" version="2" changeset="49865500" timestamp="2017-06-27T15:39:40Z" user="d_berger" uid="1234273" lat="47.3602987" lon="8.5522887"/>
+ <node id="1750128477" visible="true" version="2" changeset="49567510" timestamp="2017-06-15T15:58:37Z" user="d_berger" uid="1234273" lat="47.3578832" lon="8.5544159"/>
+ <node id="1750128482" visible="true" version="2" changeset="49567510" timestamp="2017-06-15T15:58:37Z" user="d_berger" uid="1234273" lat="47.3581904" lon="8.5541242"/>
+ <node id="2266782849" visible="true" version="5" changeset="71738907" timestamp="2019-06-29T15:59:43Z" user="sovereign_ch" uid="5755216" lat="47.3764261" lon="8.5436309"/>
+ <node id="2275466607" visible="true" version="8" changeset="181595600" timestamp="2026-04-20T17:54:21Z" user="Jacob Rosendal Kristensen" uid="730016" lat="47.3741090" lon="8.5429665">
+  <tag k="ele" v="407"/>
+  <tag k="name" v="Rudolf-Brun-Brücke"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="network:wikidata" v="Q201977"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="2113"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Rudolf-Brun-Brücke"/>
+  <tag k="uic_ref" v="8591327"/>
+ </node>
+ <node id="2275466610" visible="true" version="3" changeset="176403112" timestamp="2025-12-25T17:14:45Z" user="d_berger" uid="1234273" lat="47.3741418" lon="8.5429741"/>
+ <node id="2275466611" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:38Z" user="sovereign_ch" uid="5755216" lat="47.3749998" lon="8.5432313"/>
+ <node id="2275466613" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:38Z" user="sovereign_ch" uid="5755216" lat="47.3758612" lon="8.5435083"/>
+ <node id="2295038190" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3689313" lon="8.5436431"/>
+ <node id="2295038192" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3690185" lon="8.5435807"/>
+ <node id="2295038195" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3691034" lon="8.5435458"/>
+ <node id="2295038197" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3691911" lon="8.5435250"/>
+ <node id="2295038198" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3692738" lon="8.5435257"/>
+ <node id="2295038201" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3693687" lon="8.5435391"/>
+ <node id="2295038204" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3694749" lon="8.5435405"/>
+ <node id="2295038206" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3696144" lon="8.5435291"/>
+ <node id="2295038209" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3696966" lon="8.5435096"/>
+ <node id="2295038214" visible="true" version="6" changeset="181595600" timestamp="2026-04-20T17:54:21Z" user="Jacob Rosendal Kristensen" uid="730016" lat="47.3699472" lon="8.5434231">
+  <tag k="ele" v="409"/>
+  <tag k="name" v="Helmhaus"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="network:wikidata" v="Q201977"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="1157"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Helmhaus"/>
+  <tag k="uic_ref" v="8591183"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="2295038216" visible="true" version="3" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3700717" lon="8.5433634"/>
+ <node id="2295038218" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3703083" lon="8.5432199"/>
+ <node id="2295038221" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3704827" lon="8.5431348"/>
+ <node id="2295038223" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3705898" lon="8.5430939"/>
+ <node id="2295038225" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:40Z" user="sovereign_ch" uid="5755216" lat="47.3708051" lon="8.5430268"/>
+ <node id="2295038228" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3714904" lon="8.5428954"/>
+ <node id="2295038230" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3719023" lon="8.5428438"/>
+ <node id="2295038232" visible="true" version="6" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3722320" lon="8.5428183">
+  <tag k="ele" v="409"/>
+  <tag k="name" v="Rathaus"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="2030"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Rathaus"/>
+  <tag k="uic_ref" v="8591309"/>
+ </node>
+ <node id="2295038235" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3724994" lon="8.5427975"/>
+ <node id="2295038236" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:09Z" user="sovereign_ch" uid="5755216" lat="47.3728042" lon="8.5427901"/>
+ <node id="2295038238" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:09Z" user="sovereign_ch" uid="5755216" lat="47.3731679" lon="8.5428015"/>
+ <node id="2295038240" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:09Z" user="sovereign_ch" uid="5755216" lat="47.3734508" lon="8.5428169"/>
+ <node id="2295038243" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3736364" lon="8.5428488"/>
+ <node id="2295088384" visible="true" version="5" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3661061" lon="8.5466845">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+  <tag k="ref" v="316"/>
+ </node>
+ <node id="2295088387" visible="true" version="5" changeset="74196494" timestamp="2019-09-07T01:46:22Z" user="sovereign_ch" uid="5755216" lat="47.3661619" lon="8.5466253"/>
+ <node id="2295088389" visible="true" version="5" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662600" lon="8.5465415"/>
+ <node id="2295088400" visible="true" version="4" changeset="74196494" timestamp="2019-09-07T01:46:22Z" user="sovereign_ch" uid="5755216" lat="47.3666088" lon="8.5461020"/>
+ <node id="2295088463" visible="true" version="4" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3668329" lon="8.5457053">
+  <tag k="railway" v="switch"/>
+ </node>
+ <node id="2295088487" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:22Z" user="sovereign_ch" uid="5755216" lat="47.3676647" lon="8.5450036"/>
+ <node id="2295088488" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:22Z" user="sovereign_ch" uid="5755216" lat="47.3677642" lon="8.5449070"/>
+ <node id="2295131164" visible="true" version="3" changeset="74196494" timestamp="2019-09-07T01:46:23Z" user="sovereign_ch" uid="5755216" lat="47.3658909" lon="8.5469623"/>
+ <node id="2295131171" visible="true" version="3" changeset="74196494" timestamp="2019-09-07T01:46:23Z" user="sovereign_ch" uid="5755216" lat="47.3659679" lon="8.5468573"/>
+ <node id="2295131192" visible="true" version="5" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3660901" lon="8.5467038">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+  <tag k="ref" v="317"/>
+ </node>
+ <node id="2295159516" visible="true" version="6" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662933" lon="8.5465064"/>
+ <node id="2296902974" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507098" lon="8.5608167"/>
+ <node id="2296902975" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507354" lon="8.5606650"/>
+ <node id="2296902977" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507467" lon="8.5606014"/>
+ <node id="2296902980" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507765" lon="8.5605148"/>
+ <node id="2296902982" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508126" lon="8.5604517"/>
+ <node id="2296902986" visible="true" version="2" changeset="90082325" timestamp="2020-08-28T12:39:32Z" user="sovereign_ch" uid="5755216" lat="47.3509183" lon="8.5603387"/>
+ <node id="2296902988" visible="true" version="3" changeset="90113729" timestamp="2020-08-29T09:55:28Z" user="Tungmar" uid="427807" lat="47.3510058" lon="8.5602646"/>
+ <node id="2296902990" visible="true" version="4" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3510970" lon="8.5602027"/>
+ <node id="2296902994" visible="true" version="3" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3512091" lon="8.5601459"/>
+ <node id="2296902998" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3518621" lon="8.5598747"/>
+ <node id="2296903004" visible="true" version="3" changeset="150436826" timestamp="2024-04-24T10:09:54Z" user="d_berger" uid="1234273" lat="47.3521521" lon="8.5597824"/>
+ <node id="2296903009" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3523360" lon="8.5596705"/>
+ <node id="2296903013" visible="true" version="4" changeset="150436826" timestamp="2024-04-24T10:09:54Z" user="d_berger" uid="1234273" lat="47.3524949" lon="8.5595241">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="2296903018" visible="true" version="9" changeset="173813812" timestamp="2025-10-26T21:56:58Z" user="nleanba" uid="22665091" lat="47.3533780" lon="8.5586994">
+  <tag k="ele" v="408"/>
+  <tag k="name" v="Wildbachstrasse"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="2907"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Wildbachstrasse"/>
+  <tag k="uic_ref" v="8576200"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="2296903027" visible="true" version="9" changeset="173813812" timestamp="2025-10-26T21:56:58Z" user="nleanba" uid="22665091" lat="47.3554164" lon="8.5567593">
+  <tag k="ele" v="415"/>
+  <tag k="name" v="Fröhlichstrasse"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="917"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Fröhlichstrasse"/>
+  <tag k="uic_ref" v="8576199"/>
+  <tag k="wheelchair" v="no"/>
+ </node>
+ <node id="2296903033" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3561528" lon="8.5560379"/>
+ <node id="2296903038" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3569421" lon="8.5552861"/>
+ <node id="2296903042" visible="true" version="3" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3576556" lon="8.5546066"/>
+ <node id="2296903047" visible="true" version="8" changeset="178409778" timestamp="2026-02-11T14:33:17Z" user="d_berger" uid="1234273" lat="47.3581717" lon="8.5541216">
+  <tag k="ele" v="415"/>
+  <tag k="name" v="Höschgasse"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="1286"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Höschgasse"/>
+  <tag k="uic_ref" v="8576198"/>
+ </node>
+ <node id="2296903052" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3582588" lon="8.5540380"/>
+ <node id="2296903056" visible="true" version="3" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3597607" lon="8.5527336"/>
+ <node id="2296903061" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3622082" lon="8.5506098"/>
+ <node id="2296903063" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3627505" lon="8.5501455"/>
+ <node id="2296903066" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3632797" lon="8.5496699"/>
+ <node id="2296903075" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3637781" lon="8.5492384"/>
+ <node id="2296903082" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3641535" lon="8.5488358"/>
+ <node id="2296903086" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:23Z" user="sovereign_ch" uid="5755216" lat="47.3651300" lon="8.5479866"/>
+ <node id="2296903090" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:24Z" user="sovereign_ch" uid="5755216" lat="47.3652642" lon="8.5478518"/>
+ <node id="2296903096" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:24Z" user="sovereign_ch" uid="5755216" lat="47.3654508" lon="8.5476204"/>
+ <node id="2296903098" visible="true" version="4" changeset="130125086" timestamp="2022-12-15T17:42:46Z" user="d_berger" uid="1234273" lat="47.3655558" lon="8.5474939">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+  <tag k="ref" v="321"/>
+ </node>
+ <node id="2296903106" visible="true" version="3" changeset="74196494" timestamp="2019-09-07T01:46:24Z" user="sovereign_ch" uid="5755216" lat="47.3656629" lon="8.5473505"/>
+ <node id="2296903107" visible="true" version="3" changeset="130125086" timestamp="2022-12-15T17:42:46Z" user="d_berger" uid="1234273" lat="47.3657018" lon="8.5472860">
+  <tag k="railway" v="railway_crossing"/>
+  <tag k="ref" v="6901"/>
+ </node>
+ <node id="2296910030" visible="true" version="6" changeset="181595600" timestamp="2026-04-20T17:54:21Z" user="Jacob Rosendal Kristensen" uid="730016" lat="47.3602646" lon="8.5522997">
+  <tag k="ele" v="415"/>
+  <tag k="name" v="Feldeggstrasse"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="network:wikidata" v="Q201977"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="832"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Feldeggstrasse"/>
+  <tag k="uic_ref" v="8576197"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="2296910032" visible="true" version="6" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3629136" lon="8.5500037">
+  <tag k="ele" v="415"/>
+  <tag k="name" v="Kreuzstrasse"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="1456"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Kreuzstrasse"/>
+  <tag k="uic_ref" v="8576196"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="2825990437" visible="true" version="3" changeset="107546080" timestamp="2021-07-07T08:38:55Z" user="Dominik Dachs" uid="1436733" lat="47.3672468" lon="8.5452742">
+  <tag k="railway" v="switch"/>
+  <tag k="railway:switch:heated" v="yes"/>
+ </node>
+ <node id="3517933358" visible="true" version="2" changeset="51100797" timestamp="2017-08-14T07:17:21Z" user="d_berger" uid="1234273" lat="47.3764775" lon="8.5436260"/>
+ <node id="4883672597" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766550" lon="8.5435751"/>
+ <node id="4883794023" visible="true" version="7" changeset="190408041" timestamp="2026-10-12T15:17:29Z" user="map_evq" uid="3615280" lat="47.3655926" lon="8.5474497">
+  <tag k="ele" v="415"/>
+  <tag k="local_ref" v="E"/>
+  <tag k="name" v="Opernhaus"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="1845"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Opernhaus"/>
+  <tag k="uic_ref" v="8576195"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="4883794024" visible="true" version="7" changeset="181595600" timestamp="2026-04-20T17:54:21Z" user="Jacob Rosendal Kristensen" uid="730016" lat="47.3672318" lon="8.5452863">
+  <tag k="ele" v="408"/>
+  <tag k="name" v="Bellevue"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="network:wikidata" v="Q201977"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="railway" v="tram_stop"/>
+  <tag k="ref" v="440"/>
+  <tag k="tram" v="yes"/>
+  <tag k="uic_name" v="Zürich, Bellevue"/>
+  <tag k="uic_ref" v="8576193"/>
+ </node>
+ <node id="4896466735" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:31Z" user="sovereign_ch" uid="5755216" lat="47.3670806" lon="8.5454183"/>
+ <node id="4912995178" visible="true" version="4" changeset="74196494" timestamp="2019-09-07T01:46:31Z" user="sovereign_ch" uid="5755216" lat="47.3664920" lon="8.5462582"/>
+ <node id="4917184196" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:32Z" user="sovereign_ch" uid="5755216" lat="47.3656523" lon="8.5474586"/>
+ <node id="4917184197" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:32Z" user="sovereign_ch" uid="5755216" lat="47.3656363" lon="8.5474632"/>
+ <node id="4917184198" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:32Z" user="sovereign_ch" uid="5755216" lat="47.3656107" lon="8.5474724"/>
+ <node id="4917184199" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:32Z" user="sovereign_ch" uid="5755216" lat="47.3655862" lon="8.5474896"/>
+ <node id="4917184200" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:32Z" user="sovereign_ch" uid="5755216" lat="47.3653396" lon="8.5477901"/>
+ <node id="4922412059" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3763451" lon="8.5436523"/>
+ <node id="4922412060" visible="true" version="4" changeset="109261212" timestamp="2021-08-06T12:47:11Z" user="ngoetti" uid="9598662" lat="47.3767460" lon="8.5435316"/>
+ <node id="4922412062" visible="true" version="4" changeset="109261212" timestamp="2021-08-06T12:47:11Z" user="ngoetti" uid="9598662" lat="47.3767443" lon="8.5435281"/>
+ <node id="4922412063" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3767419" lon="8.5435293"/>
+ <node id="4922412064" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3767377" lon="8.5435332"/>
+ <node id="4922412066" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766878" lon="8.5435721"/>
+ <node id="4922412067" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766697" lon="8.5435828"/>
+ <node id="4922412068" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766472" lon="8.5435977"/>
+ <node id="4922412069" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766286" lon="8.5436064"/>
+ <node id="4922412070" visible="true" version="6" changeset="120403585" timestamp="2022-05-01T01:18:50Z" user="d_berger" uid="1234273" lat="47.3766125" lon="8.5436116"/>
+ <node id="4922412073" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3765580" lon="8.5436290"/>
+ <node id="4922412074" visible="true" version="2" changeset="51100797" timestamp="2017-08-14T07:17:22Z" user="d_berger" uid="1234273" lat="47.3764494" lon="8.5436448"/>
+ <node id="4922412075" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3763431" lon="8.5436548"/>
+ <node id="4922412076" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3763426" lon="8.5436575"/>
+ <node id="4922412077" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3763436" lon="8.5436605"/>
+ <node id="4922412078" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3763458" lon="8.5436624"/>
+ <node id="4922412081" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3765296" lon="8.5437004"/>
+ <node id="4922412083" visible="true" version="3" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766242" lon="8.5437130"/>
+ <node id="4922412085" visible="true" version="4" changeset="120245174" timestamp="2022-04-27T07:42:55Z" user="CJJ2501" uid="8922202" lat="47.3766489" lon="8.5437199"/>
+ <node id="4922412092" visible="true" version="4" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767013" lon="8.5437491"/>
+ <node id="4922412093" visible="true" version="4" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767075" lon="8.5437500"/>
+ <node id="4922412094" visible="true" version="4" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767098" lon="8.5437470"/>
+ <node id="4922412095" visible="true" version="4" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767102" lon="8.5437400"/>
+ <node id="4922412096" visible="true" version="2" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3767108" lon="8.5437263"/>
+ <node id="4922412097" visible="true" version="2" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3767152" lon="8.5436744"/>
+ <node id="4922412098" visible="true" version="3" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767227" lon="8.5436283"/>
+ <node id="4922412099" visible="true" version="1" changeset="49637927" timestamp="2017-06-18T15:48:01Z" user="d_berger" uid="1234273" lat="47.3767371" lon="8.5435732"/>
+ <node id="4938694345" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3739325" lon="8.5429433"/>
+ <node id="4938694349" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3737451" lon="8.5428980"/>
+ <node id="4938694350" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3741221" lon="8.5429960"/>
+ <node id="4938694351" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3738904" lon="8.5429041"/>
+ <node id="4938694354" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:09Z" user="sovereign_ch" uid="5755216" lat="47.3722513" lon="8.5428381"/>
+ <node id="4938694355" visible="true" version="2" changeset="72483454" timestamp="2019-07-21T13:54:09Z" user="sovereign_ch" uid="5755216" lat="47.3718625" lon="8.5428702"/>
+ <node id="4938694356" visible="true" version="2" changeset="74197215" timestamp="2019-09-07T03:33:43Z" user="sovereign_ch" uid="5755216" lat="47.3697992" lon="8.5434794"/>
+ <node id="4938694365" visible="true" version="4" changeset="150171014" timestamp="2024-04-18T11:38:15Z" user="d_berger" uid="1234273" lat="47.3699888" lon="8.5434315"/>
+ <node id="4938694366" visible="true" version="4" changeset="150171014" timestamp="2024-04-18T11:38:15Z" user="d_berger" uid="1234273" lat="47.3698451" lon="8.5434887"/>
+ <node id="4938694367" visible="true" version="3" changeset="150171014" timestamp="2024-04-18T11:38:15Z" user="d_berger" uid="1234273" lat="47.3697335" lon="8.5435262"/>
+ <node id="4938694368" visible="true" version="4" changeset="150171014" timestamp="2024-04-18T11:38:15Z" user="d_berger" uid="1234273" lat="47.3696591" lon="8.5435476"/>
+ <node id="4938694389" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:33Z" user="sovereign_ch" uid="5755216" lat="47.3672639" lon="8.5452893"/>
+ <node id="4938694390" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:33Z" user="sovereign_ch" uid="5755216" lat="47.3671442" lon="8.5453882"/>
+ <node id="4938694391" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:33Z" user="sovereign_ch" uid="5755216" lat="47.3670527" lon="8.5454703"/>
+ <node id="4938694392" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:33Z" user="sovereign_ch" uid="5755216" lat="47.3669819" lon="8.5455424"/>
+ <node id="4938694393" visible="true" version="2" changeset="74196494" timestamp="2019-09-07T01:46:33Z" user="sovereign_ch" uid="5755216" lat="47.3669480" lon="8.5455799"/>
+ <node id="4938694464" visible="true" version="3" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505476" lon="8.5609784"/>
+ <node id="4938694465" visible="true" version="3" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504839" lon="8.5609501"/>
+ <node id="4938694466" visible="true" version="3" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504134" lon="8.5606412"/>
+ <node id="4938694467" visible="true" version="2" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3503992" lon="8.5607165"/>
+ <node id="4938694468" visible="true" version="2" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504082" lon="8.5608225"/>
+ <node id="4938694478" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:14Z" user="d_berger" uid="1234273" lat="47.3573287" lon="8.5549169"/>
+ <node id="5033804232" visible="true" version="1" changeset="51100797" timestamp="2017-08-14T07:17:19Z" user="d_berger" uid="1234273" lat="47.3765029" lon="8.5436391"/>
+ <node id="5033804233" visible="true" version="2" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3765585" lon="8.5436106"/>
+ <node id="5033804234" visible="true" version="2" changeset="71738907" timestamp="2019-06-29T15:59:44Z" user="sovereign_ch" uid="5755216" lat="47.3766878" lon="8.5435526"/>
+ <node id="5321972840" visible="true" version="4" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662036" lon="8.5465902"/>
+ <node id="5321972841" visible="true" version="4" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3663269" lon="8.5464659"/>
+ <node id="5321972842" visible="true" version="3" changeset="74196494" timestamp="2019-09-07T01:46:38Z" user="sovereign_ch" uid="5755216" lat="47.3666733" lon="8.5460041"/>
+ <node id="5321972843" visible="true" version="3" changeset="74196494" timestamp="2019-09-07T01:46:38Z" user="sovereign_ch" uid="5755216" lat="47.3667682" lon="8.5458264"/>
+ <node id="5569153444" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:15Z" user="d_berger" uid="1234273" lat="47.3613896" lon="8.5513196"/>
+ <node id="5569153467" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:15Z" user="d_berger" uid="1234273" lat="47.3594677" lon="8.5529875"/>
+ <node id="5888735644" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3739034" lon="8.5429358"/>
+ <node id="5888735645" visible="true" version="2" changeset="71705764" timestamp="2019-06-28T12:14:55Z" user="sovereign_ch" uid="5755216" lat="47.3737791" lon="8.5429055"/>
+ <node id="6311321919" visible="true" version="3" changeset="88293475" timestamp="2020-07-21T12:02:20Z" user="brainwad" uid="12203" lat="47.3667284" lon="8.5459132"/>
+ <node id="6578644257" visible="true" version="1" changeset="71738907" timestamp="2019-06-29T15:59:42Z" user="sovereign_ch" uid="5755216" lat="47.3764636" lon="8.5436916"/>
+ <node id="6578644274" visible="true" version="3" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3762709" lon="8.5436272"/>
+ <node id="6578648251" visible="true" version="1" changeset="71738907" timestamp="2019-06-29T15:59:41Z" user="sovereign_ch" uid="5755216" lat="47.3762296" lon="8.5436221"/>
+ <node id="6578648260" visible="true" version="1" changeset="71738907" timestamp="2019-06-29T15:59:41Z" user="sovereign_ch" uid="5755216" lat="47.3766317" lon="8.5435870"/>
+ <node id="6578648276" visible="true" version="1" changeset="71738907" timestamp="2019-06-29T15:59:41Z" user="sovereign_ch" uid="5755216" lat="47.3763791" lon="8.5436733"/>
+ <node id="6578648279" visible="true" version="1" changeset="71738907" timestamp="2019-06-29T15:59:41Z" user="sovereign_ch" uid="5755216" lat="47.3762888" lon="8.5436278"/>
+ <node id="6578667297" visible="true" version="3" changeset="175855872" timestamp="2025-12-12T17:12:59Z" user="nleanba" uid="22665091" lat="47.3763627" lon="8.5436331"/>
+ <node id="6578667306" visible="true" version="2" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3764151" lon="8.5436832"/>
+ <node id="6635185160" visible="true" version="1" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3726284" lon="8.5427921"/>
+ <node id="6635185161" visible="true" version="1" changeset="72483454" timestamp="2019-07-21T13:54:08Z" user="sovereign_ch" uid="5755216" lat="47.3733586" lon="8.5428082"/>
+ <node id="6635191155" visible="true" version="1" changeset="72483454" timestamp="2019-07-21T13:54:07Z" user="sovereign_ch" uid="5755216" lat="47.3716970" lon="8.5428679"/>
+ <node id="6778436375" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3552140" lon="8.5569738"/>
+ <node id="6778512239" visible="true" version="2" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3667877" lon="8.5457840"/>
+ <node id="6778512240" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3668679" lon="8.5456547"/>
+ <node id="6778512241" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3669008" lon="8.5456095"/>
+ <node id="6778512246" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3661423" lon="8.5466438"/>
+ <node id="6778512247" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3658544" lon="8.5470213"/>
+ <node id="6778514412" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3655687" lon="8.5475071"/>
+ <node id="6778514414" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3653555" lon="8.5477405"/>
+ <node id="6778514452" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3656232" lon="8.5474079"/>
+ <node id="6778514453" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:07Z" user="sovereign_ch" uid="5755216" lat="47.3657122" lon="8.5472687"/>
+ <node id="6778517419" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3672986" lon="8.5452279"/>
+ <node id="6778517420" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3673418" lon="8.5451967"/>
+ <node id="6778517421" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3674226" lon="8.5451508"/>
+ <node id="6778517422" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3676088" lon="8.5450432"/>
+ <node id="6778517423" visible="true" version="1" changeset="74196494" timestamp="2019-09-07T01:46:02Z" user="sovereign_ch" uid="5755216" lat="47.3677024" lon="8.5449714"/>
+ <node id="6778578961" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3755215" lon="8.5433996"/>
+ <node id="6778578962" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3747114" lon="8.5431415"/>
+ <node id="6778578964" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3707206" lon="8.5430496"/>
+ <node id="6778578965" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3703914" lon="8.5431777"/>
+ <node id="6778578973" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3695562" lon="8.5435391"/>
+ <node id="6778578974" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3689749" lon="8.5436089"/>
+ <node id="6778578976" visible="true" version="1" changeset="74197215" timestamp="2019-09-07T03:33:35Z" user="sovereign_ch" uid="5755216" lat="47.3688777" lon="8.5436901"/>
+ <node id="7853479695" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3510570" lon="8.5602281"/>
+ <node id="7853479698" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507395" lon="8.5606368"/>
+ <node id="7853479699" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507618" lon="8.5605510"/>
+ <node id="7853479700" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507873" lon="8.5604926"/>
+ <node id="7853479701" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508347" lon="8.5604216"/>
+ <node id="7853479702" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507256" lon="8.5607465"/>
+ <node id="7853479703" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507182" lon="8.5607840"/>
+ <node id="7853479704" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506971" lon="8.5608511"/>
+ <node id="7853479705" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506773" lon="8.5608880"/>
+ <node id="7853479706" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506459" lon="8.5609247"/>
+ <node id="7853479707" visible="true" version="1" changeset="90082325" timestamp="2020-08-28T12:38:30Z" user="sovereign_ch" uid="5755216" lat="47.3506102" lon="8.5609476"/>
+ <node id="7856246457" visible="true" version="4" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3511629" lon="8.5601671"/>
+ <node id="9296058197" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3572492" lon="8.5549940"/>
+ <node id="9706251707" visible="true" version="4" changeset="133056846" timestamp="2023-02-26T19:35:54Z" user="jvoisin" uid="1805167" lat="47.3767410" lon="8.5435549">
+  <tag k="barrier" v="kerb"/>
+  <tag k="kerb" v="lowered"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9726822398" visible="true" version="3" changeset="175855872" timestamp="2025-12-12T17:12:59Z" user="nleanba" uid="22665091" lat="47.3767154" lon="8.5435514">
+  <tag k="barrier" v="kerb"/>
+  <tag k="kerb" v="lowered"/>
+  <tag k="tactile_paving" v="yes"/>
+ </node>
+ <node id="9733487193" visible="true" version="6" changeset="175855872" timestamp="2025-12-12T17:12:59Z" user="nleanba" uid="22665091" lat="47.3763627" lon="8.5436509"/>
+ <node id="9733487194" visible="true" version="6" changeset="175855872" timestamp="2025-12-12T17:12:59Z" user="nleanba" uid="22665091" lat="47.3763626" lon="8.5436685"/>
+ <node id="9741192837" visible="true" version="3" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3766858" lon="8.5437363">
+  <tag k="barrier" v="kerb"/>
+  <tag k="kerb" v="lowered"/>
+  <tag k="tactile_paving" v="no"/>
+ </node>
+ <node id="9942105403" visible="true" version="3" changeset="167189626" timestamp="2025-06-04T17:35:47Z" user="wheelmap_visitor" uid="290680" lat="47.3578424" lon="8.5544341">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105414" visible="true" version="3" changeset="167189632" timestamp="2025-06-04T17:35:59Z" user="wheelmap_visitor" uid="290680" lat="47.3560981" lon="8.5560896">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105418" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3557563" lon="8.5564179">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105421" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3555063" lon="8.5566729">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105422" visible="true" version="4" changeset="167189651" timestamp="2025-06-04T17:36:20Z" user="wheelmap_visitor" uid="290680" lat="47.3554585" lon="8.5567189">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105427" visible="true" version="3" changeset="167189704" timestamp="2025-06-04T17:37:21Z" user="wheelmap_visitor" uid="290680" lat="47.3544053" lon="8.5577215">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105429" visible="true" version="3" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3543239" lon="8.5577986">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105430" visible="true" version="3" changeset="167189741" timestamp="2025-06-04T17:38:00Z" user="wheelmap_visitor" uid="290680" lat="47.3542643" lon="8.5578553">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105438" visible="true" version="4" changeset="150436826" timestamp="2024-04-24T10:09:54Z" user="d_berger" uid="1234273" lat="47.3529890" lon="8.5590689">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="9942105444" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3520923" lon="8.5598072">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105445" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3519846" lon="8.5598368">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105447" visible="true" version="4" changeset="167189992" timestamp="2025-06-04T17:43:50Z" user="wheelmap_visitor" uid="290680" lat="47.3518880" lon="8.5598654">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105449" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3595604" lon="8.5529059">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="9942105450" visible="true" version="3" changeset="167189581" timestamp="2025-06-04T17:34:46Z" user="wheelmap_visitor" uid="290680" lat="47.3603204" lon="8.5522516">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="limited"/>
+ </node>
+ <node id="9942105451" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3610476" lon="8.5516160">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105455" visible="true" version="3" changeset="167189566" timestamp="2025-06-04T17:34:35Z" user="wheelmap_visitor" uid="290680" lat="47.3604328" lon="8.5521517">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="limited"/>
+ </node>
+ <node id="9942105460" visible="true" version="3" changeset="167190486" timestamp="2025-06-04T17:55:50Z" user="wheelmap_visitor" uid="290680" lat="47.3614898" lon="8.5512327">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9942105463" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3619426" lon="8.5508400">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105465" visible="true" version="2" changeset="132015237" timestamp="2023-02-02T18:54:16Z" user="d_berger" uid="1234273" lat="47.3623370" lon="8.5504974">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="9942105466" visible="true" version="3" changeset="132051496" timestamp="2023-02-03T17:34:09Z" user="d_berger" uid="1234273" lat="47.3625646" lon="8.5503048">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="10601918643" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3584153" lon="8.5538992"/>
+ <node id="10601918666" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3599622" lon="8.5525624"/>
+ <node id="10601918667" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3607702" lon="8.5518567"/>
+ <node id="10601918669" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3604895" lon="8.5521002"/>
+ <node id="10601918672" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3630258" lon="8.5499028"/>
+ <node id="10601918673" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3631155" lon="8.5498189"/>
+ <node id="10601918680" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3642514" lon="8.5487456"/>
+ <node id="10601918681" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3640323" lon="8.5489638"/>
+ <node id="10601918682" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3639490" lon="8.5490606"/>
+ <node id="10601918683" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3638582" lon="8.5491583"/>
+ <node id="10601918685" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3651935" lon="8.5479256"/>
+ <node id="10601918688" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3550176" lon="8.5571387"/>
+ <node id="10601918691" visible="true" version="2" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3528248" lon="8.5592137"/>
+ <node id="10601918692" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3524212" lon="8.5595947"/>
+ <node id="10601918695" visible="true" version="1" changeset="132015237" timestamp="2023-02-02T18:54:12Z" user="d_berger" uid="1234273" lat="47.3522520" lon="8.5597300"/>
+ <node id="10860575852" visible="true" version="2" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3762127" lon="8.5436182">
+  <tag k="railway" v="railway_crossing"/>
+  <tag k="ref" v="5804"/>
+ </node>
+ <node id="11242266930" visible="true" version="1" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662314" lon="8.5465673"/>
+ <node id="11242266931" visible="true" version="1" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662458" lon="8.5465548"/>
+ <node id="11242266932" visible="true" version="1" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3662786" lon="8.5465225"/>
+ <node id="11242266933" visible="true" version="1" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3663077" lon="8.5464891"/>
+ <node id="11242266934" visible="true" version="1" changeset="142207484" timestamp="2023-10-05T21:16:44Z" user="Marc Mongenet" uid="74847" lat="47.3661272" lon="8.5466598"/>
+ <node id="11247313775" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507278" lon="8.5607332"/>
+ <node id="11247313776" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507299" lon="8.5607172"/>
+ <node id="11247313777" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507230" lon="8.5607616"/>
+ <node id="11247313778" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507152" lon="8.5607961"/>
+ <node id="11247313779" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507209" lon="8.5607726"/>
+ <node id="11247313780" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507127" lon="8.5608063"/>
+ <node id="11247313781" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507064" lon="8.5608267"/>
+ <node id="11247313782" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507032" lon="8.5608358"/>
+ <node id="11247313783" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506922" lon="8.5608614"/>
+ <node id="11247313784" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506826" lon="8.5608795"/>
+ <node id="11247313785" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506717" lon="8.5608961"/>
+ <node id="11247313786" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506592" lon="8.5609113"/>
+ <node id="11247313787" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506533" lon="8.5609175"/>
+ <node id="11247313788" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506389" lon="8.5609306"/>
+ <node id="11247313789" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506229" lon="8.5609413"/>
+ <node id="11247313790" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506157" lon="8.5609450"/>
+ <node id="11247313791" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3506024" lon="8.5609507"/>
+ <node id="11247313792" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3505957" lon="8.5609526"/>
+ <node id="11247313807" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3512324" lon="8.5601362"/>
+ <node id="11247313808" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3511861" lon="8.5601562"/>
+ <node id="11247313809" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3511418" lon="8.5601776"/>
+ <node id="11247313810" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3511181" lon="8.5601903"/>
+ <node id="11247313811" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3510784" lon="8.5602139"/>
+ <node id="11247313812" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3510375" lon="8.5602416"/>
+ <node id="11247313813" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3510200" lon="8.5602543"/>
+ <node id="11247313814" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3509627" lon="8.5602999"/>
+ <node id="11247313815" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3509850" lon="8.5602810"/>
+ <node id="11247313816" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508895" lon="8.5603652"/>
+ <node id="11247313817" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508495" lon="8.5604053"/>
+ <node id="11247313818" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508229" lon="8.5604368"/>
+ <node id="11247313819" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3508019" lon="8.5604677"/>
+ <node id="11247313820" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507945" lon="8.5604801"/>
+ <node id="11247313821" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507814" lon="8.5605048"/>
+ <node id="11247313822" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507690" lon="8.5605323"/>
+ <node id="11247313823" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507559" lon="8.5605689"/>
+ <node id="11247313824" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507508" lon="8.5605855"/>
+ <node id="11247313825" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507427" lon="8.5606192"/>
+ <node id="11247313826" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3507371" lon="8.5606516"/>
+ <node id="11247313833" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3523743" lon="8.5596376"/>
+ <node id="11247313834" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3522921" lon="8.5597035"/>
+ <node id="11247313835" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3522070" lon="8.5597560"/>
+ <node id="11247313836" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3527666" lon="8.5592664"/>
+ <node id="11247317137" visible="true" version="1" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847" lat="47.3527122" lon="8.5593174"/>
+ <node id="11250994910" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504239" lon="8.5606128"/>
+ <node id="11250994911" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504186" lon="8.5606262"/>
+ <node id="11250994912" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504083" lon="8.5606594"/>
+ <node id="11250994913" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504009" lon="8.5606997"/>
+ <node id="11250994914" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3503988" lon="8.5607339"/>
+ <node id="11250994915" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3503987" lon="8.5607504"/>
+ <node id="11250994916" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504010" lon="8.5607806"/>
+ <node id="11250994917" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504031" lon="8.5607965"/>
+ <node id="11250994918" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504052" lon="8.5608089"/>
+ <node id="11250994919" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504116" lon="8.5608347"/>
+ <node id="11250994920" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504155" lon="8.5608467"/>
+ <node id="11250994921" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504211" lon="8.5608614"/>
+ <node id="11250994922" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504338" lon="8.5608889"/>
+ <node id="11250994923" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504419" lon="8.5609029"/>
+ <node id="11250994924" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504571" lon="8.5609233"/>
+ <node id="11250994925" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504656" lon="8.5609329"/>
+ <node id="11250994926" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504744" lon="8.5609422"/>
+ <node id="11250994927" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3504935" lon="8.5609569"/>
+ <node id="11250994928" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505029" lon="8.5609632"/>
+ <node id="11250994929" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505235" lon="8.5609724"/>
+ <node id="11250994930" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505330" lon="8.5609756"/>
+ <node id="11250994931" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505586" lon="8.5609789"/>
+ <node id="11250994932" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3505790" lon="8.5609791"/>
+ <node id="11250994933" visible="true" version="1" changeset="142350123" timestamp="2023-10-09T13:23:29Z" user="Marc Mongenet" uid="74847" lat="47.3506014" lon="8.5609737"/>
+ <node id="11828021900" visible="true" version="1" changeset="150171014" timestamp="2024-04-18T11:38:14Z" user="d_berger" uid="1234273" lat="47.3696019" lon="8.5435576"/>
+ <node id="11843562094" visible="true" version="1" changeset="150436826" timestamp="2024-04-24T10:09:53Z" user="d_berger" uid="1234273" lat="47.3534054" lon="8.5586734">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="12542061262" visible="true" version="2" changeset="167189675" timestamp="2025-06-04T17:36:48Z" user="wheelmap_visitor" uid="290680" lat="47.3550792" lon="8.5570801">
+  <tag k="railway" v="tram_crossing"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="12775524184" visible="true" version="3" changeset="176403112" timestamp="2025-12-25T17:14:46Z" user="d_berger" uid="1234273" lat="47.3747491" lon="8.5431532"/>
+ <node id="13144477611" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3565671" lon="8.5556433">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13144477612" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3560181" lon="8.5561665">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13144477613" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3552070" lon="8.5569586">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13144477614" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3547510" lon="8.5573924">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13144477615" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3538481" lon="8.5582517">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="13144477616" visible="true" version="1" changeset="171964471" timestamp="2025-09-15T12:50:16Z" user="RV2001" uid="10933721" lat="47.3529077" lon="8.5591406">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13261978493" visible="true" version="1" changeset="173851573" timestamp="2025-10-27T18:16:25Z" user="osm-pt-account 😎" uid="12419182" lat="47.3567397" lon="8.5554789"/>
+ <node id="13327307976" visible="true" version="1" changeset="175048082" timestamp="2025-11-24T01:46:40Z" user="Pingvin40" uid="22431818" lat="47.3675595" lon="8.5450747">
+  <tag k="railway" v="tram_crossing"/>
+ </node>
+ <node id="13327332591" visible="true" version="1" changeset="175047936" timestamp="2025-11-24T01:35:59Z" user="Pingvin40" uid="22431818" lat="47.3744586" lon="8.5430678">
+  <tag k="railway" v="tram_level_crossing"/>
+ </node>
+ <node id="13372268502" visible="true" version="1" changeset="175853722" timestamp="2025-12-12T16:14:32Z" user="nleanba" uid="22665091" lat="47.3767045" lon="8.5437508"/>
+ <node id="13403486368" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3673871" lon="8.5451703">
+  <tag k="railway" v="railway_crossing"/>
+ </node>
+ <node id="13403486370" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3669308" lon="8.5455714"/>
+ <node id="13403486373" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3668016" lon="8.5457579"/>
+ <node id="13403486374" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3668154" lon="8.5457328"/>
+ <node id="13403486381" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3761248" lon="8.5435937"/>
+ <node id="13403486382" visible="true" version="1" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273" lat="47.3761781" lon="8.5436089"/>
+ <node id="13532996374" visible="true" version="1" changeset="178247210" timestamp="2026-02-07T22:28:58Z" user="Taktaal" uid="2921287" lat="47.3639016" lon="8.5491116"/>
+ <way id="107959810" visible="true" version="11" changeset="153274965" timestamp="2024-06-28T05:30:56Z" user="perenniallylate" uid="20833062">
+  <nd ref="1239656263"/>
+  <nd ref="11250994910"/>
+  <nd ref="11250994911"/>
+  <nd ref="4938694466"/>
+  <nd ref="11250994912"/>
+  <nd ref="1239656094"/>
+  <nd ref="11250994913"/>
+  <nd ref="4938694467"/>
+  <nd ref="11250994914"/>
+  <nd ref="11250994915"/>
+  <nd ref="1239656745"/>
+  <nd ref="11250994916"/>
+  <nd ref="11250994917"/>
+  <nd ref="11250994918"/>
+  <nd ref="4938694468"/>
+  <nd ref="11250994919"/>
+  <nd ref="11250994920"/>
+  <nd ref="11250994921"/>
+  <nd ref="1239656516"/>
+  <nd ref="11250994922"/>
+  <nd ref="11250994923"/>
+  <nd ref="1239656167"/>
+  <nd ref="11250994924"/>
+  <nd ref="11250994925"/>
+  <nd ref="11250994926"/>
+  <nd ref="4938694465"/>
+  <nd ref="11250994927"/>
+  <nd ref="11250994928"/>
+  <nd ref="1239655923"/>
+  <nd ref="11250994929"/>
+  <nd ref="11250994930"/>
+  <nd ref="4938694464"/>
+  <nd ref="11250994931"/>
+  <nd ref="1239656574"/>
+  <nd ref="11250994932"/>
+  <nd ref="1291615894"/>
+  <nd ref="11250994933"/>
+  <nd ref="1239656269"/>
+  <tag k="bench" v="no"/>
+  <tag k="bin" v="no"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Bahnhof Tiefenbrunnen"/>
+  <tag k="passenger_information_display" v="yes"/>
+  <tag k="passenger_information_display:speech_output" v="no"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="no"/>
+  <tag k="surface" v="asphalt"/>
+  <tag k="tactile_paving" v="no"/>
+  <tag k="tram" v="yes"/>
+  <tag k="wheelchair" v="limited"/>
+  <tag k="wheelchair:description" v="Keine erhöhte Kante, dritte Türe mit Faltrampe (Fahrpersonal) nutzbar"/>
+ </way>
+ <way id="160080666" visible="true" version="7" changeset="127452695" timestamp="2022-10-13T07:39:39Z" user="fss2smk3orrc1y675tf8pxk6" uid="9650136">
+  <nd ref="1721549088"/>
+  <nd ref="1721549089"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="highway" v="platform"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Kreuzstrasse"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Teilerhöhte Kante, dritte Türe nutzbar"/>
+ </way>
+ <way id="163273493" visible="true" version="9" changeset="149308970" timestamp="2024-03-29T11:59:15Z" user="perenniallylate" uid="20833062">
+  <nd ref="1750109095"/>
+  <nd ref="1750109097"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="bus" v="yes"/>
+  <tag k="check_date:shelter" v="2023-10-14"/>
+  <tag k="highway" v="platform"/>
+  <tag k="kerb" v="raised"/>
+  <tag k="kerb:approach_aid" v="no"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Wildbachstrasse"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="tram" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Teilerhöhte Kante, dritte Türe nutzbar"/>
+ </way>
+ <way id="163273495" visible="true" version="7" changeset="127452695" timestamp="2022-10-13T07:49:41Z" user="fss2smk3orrc1y675tf8pxk6" uid="9650136">
+  <nd ref="1750109102"/>
+  <nd ref="1750109104"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="highway" v="platform"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Feldeggstrasse"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Teilerhöhte Kante, dritte Türe nutzbar"/>
+ </way>
+ <way id="163273497" visible="true" version="8" changeset="127112533" timestamp="2022-10-06T17:49:05Z" user="philipp-rupert" uid="6818744">
+  <nd ref="1750109100"/>
+  <nd ref="6778436375"/>
+  <nd ref="1750109101"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="highway" v="platform"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Fröhlichstrasse"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="no"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="limited"/>
+  <tag k="wheelchair:description" v="Keine erhöhte Kante, dritte Türe mit Faltrampe (Fahrpersonal) nutzbar"/>
+ </way>
+ <way id="163278106" visible="true" version="7" changeset="127452695" timestamp="2022-10-13T07:53:56Z" user="fss2smk3orrc1y675tf8pxk6" uid="9650136">
+  <nd ref="1750128477"/>
+  <nd ref="1750128482"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="highway" v="platform"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Höschgasse"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Teilerhöhte Kante, dritte Türe nutzbar"/>
+ </way>
+ <way id="217408193" visible="true" version="12" changeset="176380229" timestamp="2025-12-25T01:12:24Z" user="d_berger" uid="1234273">
+  <nd ref="1493666329"/>
+  <nd ref="13403486381"/>
+  <nd ref="13403486382"/>
+  <nd ref="10860575852"/>
+  <nd ref="6578648251"/>
+  <nd ref="6578644274"/>
+  <nd ref="6578648279"/>
+  <nd ref="6578667297"/>
+  <nd ref="2266782849"/>
+  <nd ref="3517933358"/>
+  <nd ref="5033804233"/>
+  <nd ref="674098904"/>
+  <nd ref="6578648260"/>
+  <nd ref="4883672597"/>
+  <nd ref="5033804234"/>
+  <nd ref="94583344"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="220379331" visible="true" version="14" changeset="176380229" timestamp="2025-12-25T01:12:55Z" user="d_berger" uid="1234273">
+  <nd ref="2295088384"/>
+  <nd ref="11242266934"/>
+  <nd ref="6778512246"/>
+  <nd ref="2295088387"/>
+  <nd ref="5321972840"/>
+  <nd ref="11242266930"/>
+  <nd ref="11242266931"/>
+  <nd ref="2295088389"/>
+  <nd ref="11242266932"/>
+  <nd ref="2295159516"/>
+  <nd ref="11242266933"/>
+  <nd ref="5321972841"/>
+  <nd ref="4912995178"/>
+  <nd ref="2295088400"/>
+  <nd ref="5321972842"/>
+  <nd ref="6311321919"/>
+  <nd ref="5321972843"/>
+  <nd ref="6778512239"/>
+  <nd ref="13403486373"/>
+  <nd ref="13403486374"/>
+  <nd ref="2295088463"/>
+  <nd ref="6778512240"/>
+  <nd ref="6778512241"/>
+  <nd ref="13403486370"/>
+  <nd ref="300386940"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="220388176" visible="true" version="2" changeset="53642270" timestamp="2017-11-09T15:48:04Z" user="d_berger" uid="1234273">
+  <nd ref="2295131192"/>
+  <nd ref="2295088384"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="373181616" visible="true" version="3" changeset="53611265" timestamp="2017-11-08T13:41:24Z" user="VBZDistel" uid="4321227">
+  <nd ref="300386940"/>
+  <nd ref="439184034"/>
+  <nd ref="4896466735"/>
+  <nd ref="300383857"/>
+  <nd ref="300387605"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="373181617" visible="true" version="17" changeset="176403112" timestamp="2025-12-25T17:14:46Z" user="d_berger" uid="1234273">
+  <nd ref="300387605"/>
+  <nd ref="4883794024"/>
+  <nd ref="2825990437"/>
+  <nd ref="300688537"/>
+  <nd ref="6778517419"/>
+  <nd ref="6778517420"/>
+  <nd ref="413357283"/>
+  <nd ref="13403486368"/>
+  <nd ref="6778517421"/>
+  <nd ref="27481926"/>
+  <nd ref="27481927"/>
+  <nd ref="13327307976"/>
+  <nd ref="6778517422"/>
+  <nd ref="2295088487"/>
+  <nd ref="6778517423"/>
+  <nd ref="2295088488"/>
+  <nd ref="6778578976"/>
+  <nd ref="2295038190"/>
+  <nd ref="6778578974"/>
+  <nd ref="2295038192"/>
+  <nd ref="2295038195"/>
+  <nd ref="2295038197"/>
+  <nd ref="2295038198"/>
+  <nd ref="2295038201"/>
+  <nd ref="2295038204"/>
+  <nd ref="6778578973"/>
+  <nd ref="2295038206"/>
+  <nd ref="2295038209"/>
+  <nd ref="4938694356"/>
+  <nd ref="2295038214"/>
+  <nd ref="2295038216"/>
+  <nd ref="2295038218"/>
+  <nd ref="6778578965"/>
+  <nd ref="2295038221"/>
+  <nd ref="2295038223"/>
+  <nd ref="6778578964"/>
+  <nd ref="2295038225"/>
+  <nd ref="2295038228"/>
+  <nd ref="6635191155"/>
+  <nd ref="2295038230"/>
+  <nd ref="2295038232"/>
+  <nd ref="2295038235"/>
+  <nd ref="6635185160"/>
+  <nd ref="2295038236"/>
+  <nd ref="2295038238"/>
+  <nd ref="6635185161"/>
+  <nd ref="2295038240"/>
+  <nd ref="2295038243"/>
+  <nd ref="4938694351"/>
+  <nd ref="2275466607"/>
+  <nd ref="2275466610"/>
+  <nd ref="13327332591"/>
+  <nd ref="6778578962"/>
+  <nd ref="12775524184"/>
+  <nd ref="2275466611"/>
+  <nd ref="6778578961"/>
+  <nd ref="2275466613"/>
+  <nd ref="1493666329"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="405101923" visible="true" version="4" changeset="142288718" timestamp="2023-10-08T02:26:30Z" user="Marc Mongenet" uid="74847">
+  <nd ref="1291615900"/>
+  <nd ref="11247313792"/>
+  <nd ref="11247313791"/>
+  <nd ref="7853479707"/>
+  <nd ref="11247313790"/>
+  <nd ref="11247313789"/>
+  <nd ref="1239655972"/>
+  <nd ref="11247313788"/>
+  <nd ref="7853479706"/>
+  <nd ref="11247313787"/>
+  <nd ref="11247313786"/>
+  <nd ref="1291615891"/>
+  <nd ref="11247313785"/>
+  <nd ref="7853479705"/>
+  <nd ref="11247313784"/>
+  <nd ref="1239656624"/>
+  <nd ref="11247313783"/>
+  <nd ref="7853479704"/>
+  <nd ref="11247313782"/>
+  <nd ref="11247313781"/>
+  <nd ref="2296902974"/>
+  <nd ref="11247313780"/>
+  <nd ref="11247313778"/>
+  <nd ref="7853479703"/>
+  <nd ref="11247313779"/>
+  <nd ref="11247313777"/>
+  <nd ref="7853479702"/>
+  <nd ref="11247313775"/>
+  <nd ref="11247313776"/>
+  <nd ref="1291615904"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="500735142" visible="true" version="7" changeset="190408041" timestamp="2026-10-12T15:17:29Z" user="map_evq" uid="3615280">
+  <nd ref="4917184200"/>
+  <nd ref="6778514412"/>
+  <nd ref="4917184199"/>
+  <nd ref="4917184198"/>
+  <nd ref="4917184197"/>
+  <nd ref="4917184196"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="check_date:bin" v="2023-09-09"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="highway" v="platform"/>
+  <tag k="lit" v="yes"/>
+  <tag k="local_ref" v="E"/>
+  <tag k="name" v="Opernhaus"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="tram" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Teilerhöhte Kante, dritte Türe nutzbar"/>
+ </way>
+ <way id="501426082" visible="true" version="13" changeset="177426882" timestamp="2026-01-19T12:55:47Z" user="glaesel" uid="8129382">
+  <nd ref="4922412060"/>
+  <nd ref="9706251707"/>
+  <nd ref="4922412099"/>
+  <nd ref="4922412098"/>
+  <nd ref="4922412097"/>
+  <nd ref="4922412096"/>
+  <nd ref="4922412095"/>
+  <nd ref="4922412094"/>
+  <nd ref="4922412093"/>
+  <nd ref="13372268502"/>
+  <nd ref="4922412092"/>
+  <nd ref="9741192837"/>
+  <nd ref="4922412085"/>
+  <nd ref="4922412083"/>
+  <nd ref="4922412081"/>
+  <nd ref="6578644257"/>
+  <nd ref="6578667306"/>
+  <nd ref="6578648276"/>
+  <nd ref="9733487194"/>
+  <nd ref="4922412078"/>
+  <nd ref="4922412077"/>
+  <nd ref="4922412076"/>
+  <nd ref="4922412075"/>
+  <nd ref="4922412059"/>
+  <nd ref="9733487193"/>
+  <nd ref="4922412074"/>
+  <nd ref="5033804232"/>
+  <nd ref="4922412073"/>
+  <nd ref="4922412070"/>
+  <nd ref="4922412069"/>
+  <nd ref="4922412068"/>
+  <nd ref="4922412067"/>
+  <nd ref="4922412066"/>
+  <nd ref="9726822398"/>
+  <nd ref="4922412064"/>
+  <nd ref="4922412063"/>
+  <nd ref="4922412062"/>
+  <nd ref="4922412060"/>
+  <tag k="area" v="yes"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="lit" v="yes"/>
+  <tag k="local_ref" v="E, F"/>
+  <tag k="name" v="Central"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="asphalt"/>
+  <tag k="tactile_paving" v="no"/>
+  <tag k="tram" v="yes"/>
+  <tag k="wheelchair" v="limited"/>
+  <tag k="wheelchair:description" v="Keine erhöhte Kante, dritte Türe mit Faltrampe (Fahrpersonal) nutzbar"/>
+ </way>
+ <way id="503589432" visible="true" version="6" changeset="141421801" timestamp="2023-09-18T12:02:52Z" user="Mihaell" uid="1963335">
+  <nd ref="4938694349"/>
+  <nd ref="5888735645"/>
+  <nd ref="5888735644"/>
+  <nd ref="4938694345"/>
+  <nd ref="4938694350"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="check_date:shelter" v="2023-09-18"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Rudolf-Brun-Brücke"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="no"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Durchgehend erhöhte Kante"/>
+ </way>
+ <way id="503589436" visible="true" version="5" changeset="150171014" timestamp="2024-04-18T11:38:15Z" user="d_berger" uid="1234273">
+  <nd ref="11828021900"/>
+  <nd ref="4938694368"/>
+  <nd ref="4938694367"/>
+  <nd ref="4938694366"/>
+  <nd ref="4938694365"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Helmhaus"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="no"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="limited"/>
+  <tag k="wheelchair:description" v="Keine erhöhte Kante, dritte Türe mit Faltrampe (Fahrpersonal) nutzbar"/>
+ </way>
+ <way id="503589439" visible="true" version="8" changeset="186157583" timestamp="2026-07-22T06:01:56Z" user="captain_slow" uid="2110714">
+  <nd ref="4938694393"/>
+  <nd ref="4938694392"/>
+  <nd ref="4938694391"/>
+  <nd ref="4938694390"/>
+  <nd ref="4938694389"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="check_date:shelter" v="2024-01-30"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="lit" v="yes"/>
+  <tag k="local_ref" v="A"/>
+  <tag k="name" v="Bellevue"/>
+  <tag k="passenger_information_display" v="yes"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="no"/>
+  <tag k="tram" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Durchgehend erhöhte Kante"/>
+ </way>
+ <way id="623571876" visible="true" version="4" changeset="157834720" timestamp="2024-10-13T13:15:53Z" user="clamemmel" uid="21864105">
+  <nd ref="4938694355"/>
+  <nd ref="4938694354"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="departures_board" v="timetable"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Rathaus"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="surface" v="paved"/>
+  <tag k="tactile_paving" v="yes"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wheelchair:description" v="Durchgehend erhöhte Kante"/>
+ </way>
+ <way id="1429957996" visible="true" version="2" changeset="173813812" timestamp="2025-10-26T21:56:58Z" user="nleanba" uid="22665091">
+  <nd ref="1291615904"/>
+  <nd ref="2296902975"/>
+  <nd ref="11247313826"/>
+  <nd ref="7853479698"/>
+  <nd ref="11247313825"/>
+  <nd ref="2296902977"/>
+  <nd ref="11247313824"/>
+  <nd ref="11247313823"/>
+  <nd ref="7853479699"/>
+  <nd ref="11247313822"/>
+  <nd ref="2296902980"/>
+  <nd ref="11247313821"/>
+  <nd ref="7853479700"/>
+  <nd ref="11247313820"/>
+  <nd ref="11247313819"/>
+  <nd ref="2296902982"/>
+  <nd ref="11247313818"/>
+  <nd ref="7853479701"/>
+  <nd ref="11247313817"/>
+  <nd ref="1239656008"/>
+  <nd ref="11247313816"/>
+  <nd ref="2296902986"/>
+  <nd ref="11247313814"/>
+  <nd ref="11247313815"/>
+  <nd ref="2296902988"/>
+  <nd ref="11247313813"/>
+  <nd ref="11247313812"/>
+  <nd ref="7853479695"/>
+  <nd ref="11247313811"/>
+  <nd ref="2296902990"/>
+  <nd ref="11247313810"/>
+  <nd ref="11247313809"/>
+  <nd ref="7856246457"/>
+  <nd ref="11247313808"/>
+  <nd ref="2296902994"/>
+  <nd ref="11247313807"/>
+  <nd ref="2296902998"/>
+  <nd ref="9942105447"/>
+  <nd ref="9942105445"/>
+  <nd ref="9942105444"/>
+  <nd ref="2296903004"/>
+  <nd ref="11247313835"/>
+  <nd ref="10601918695"/>
+  <nd ref="11247313834"/>
+  <nd ref="2296903009"/>
+  <nd ref="11247313833"/>
+  <nd ref="10601918692"/>
+  <nd ref="2296903013"/>
+  <nd ref="11247317137"/>
+  <nd ref="11247313836"/>
+  <nd ref="10601918691"/>
+  <nd ref="13144477616"/>
+  <nd ref="9942105438"/>
+  <nd ref="2296903018"/>
+  <nd ref="11843562094"/>
+  <nd ref="13144477615"/>
+  <nd ref="9942105430"/>
+  <nd ref="9942105429"/>
+  <nd ref="9942105427"/>
+  <nd ref="13144477614"/>
+  <nd ref="10601918688"/>
+  <nd ref="12542061262"/>
+  <nd ref="13144477613"/>
+  <nd ref="2296903027"/>
+  <nd ref="9942105422"/>
+  <nd ref="9942105421"/>
+  <nd ref="9942105418"/>
+  <nd ref="13144477612"/>
+  <nd ref="9942105414"/>
+  <nd ref="2296903033"/>
+  <nd ref="13144477611"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <way id="1445474546" visible="true" version="2" changeset="178247210" timestamp="2026-02-07T22:28:58Z" user="Taktaal" uid="2921287">
+  <nd ref="13144477611"/>
+  <nd ref="13261978493"/>
+  <nd ref="2296903038"/>
+  <nd ref="9296058197"/>
+  <nd ref="4938694478"/>
+  <nd ref="2296903042"/>
+  <nd ref="9942105403"/>
+  <nd ref="2296903047"/>
+  <nd ref="2296903052"/>
+  <nd ref="10601918643"/>
+  <nd ref="5569153467"/>
+  <nd ref="9942105449"/>
+  <nd ref="2296903056"/>
+  <nd ref="10601918666"/>
+  <nd ref="2296910030"/>
+  <nd ref="9942105450"/>
+  <nd ref="9942105455"/>
+  <nd ref="10601918669"/>
+  <nd ref="10601918667"/>
+  <nd ref="9942105451"/>
+  <nd ref="5569153444"/>
+  <nd ref="9942105460"/>
+  <nd ref="9942105463"/>
+  <nd ref="2296903061"/>
+  <nd ref="9942105465"/>
+  <nd ref="9942105466"/>
+  <nd ref="2296903063"/>
+  <nd ref="2296910032"/>
+  <nd ref="10601918672"/>
+  <nd ref="10601918673"/>
+  <nd ref="2296903066"/>
+  <nd ref="2296903075"/>
+  <nd ref="10601918683"/>
+  <nd ref="13532996374"/>
+  <nd ref="10601918682"/>
+  <nd ref="10601918681"/>
+  <nd ref="2296903082"/>
+  <nd ref="10601918680"/>
+  <nd ref="2296903086"/>
+  <nd ref="10601918685"/>
+  <nd ref="2296903090"/>
+  <nd ref="6778514414"/>
+  <nd ref="2296903096"/>
+  <nd ref="2296903098"/>
+  <nd ref="4883794023"/>
+  <nd ref="6778514452"/>
+  <nd ref="2296903106"/>
+  <nd ref="2296903107"/>
+  <nd ref="6778514453"/>
+  <nd ref="6778512247"/>
+  <nd ref="442522941"/>
+  <nd ref="2295131164"/>
+  <nd ref="2295131171"/>
+  <nd ref="2295131192"/>
+  <tag k="electrified" v="contact_line"/>
+  <tag k="frequency" v="0"/>
+  <tag k="gauge" v="1000"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="railway" v="tram"/>
+  <tag k="tracks" v="1"/>
+  <tag k="voltage" v="600"/>
+ </way>
+ <relation id="2807115" visible="true" version="57" changeset="176183835" timestamp="2025-12-20T14:47:24Z" user="d_berger" uid="1234273">
+  <member type="node" ref="1291615900" role="stop"/>
+  <member type="way" ref="107959810" role="platform"/>
+  <member type="node" ref="2296903018" role="stop"/>
+  <member type="way" ref="163273493" role="platform"/>
+  <member type="node" ref="2296903027" role="stop"/>
+  <member type="way" ref="163273497" role="platform"/>
+  <member type="node" ref="2296903047" role="stop"/>
+  <member type="way" ref="163278106" role="platform"/>
+  <member type="node" ref="2296910030" role="stop"/>
+  <member type="way" ref="163273495" role="platform"/>
+  <member type="node" ref="2296910032" role="stop"/>
+  <member type="way" ref="160080666" role="platform"/>
+  <member type="node" ref="4883794023" role="stop"/>
+  <member type="way" ref="500735142" role="platform"/>
+  <member type="node" ref="4883794024" role="stop"/>
+  <member type="way" ref="503589439" role="platform"/>
+  <member type="node" ref="2295038214" role="stop"/>
+  <member type="way" ref="503589436" role="platform"/>
+  <member type="node" ref="2295038232" role="stop"/>
+  <member type="way" ref="623571876" role="platform"/>
+  <member type="node" ref="2275466607" role="stop"/>
+  <member type="way" ref="503589432" role="platform"/>
+  <member type="node" ref="94583344" role="stop"/>
+  <member type="way" ref="501426082" role="platform"/>
+  <member type="way" ref="405101923" role=""/>
+  <member type="way" ref="1429957996" role=""/>
+  <member type="way" ref="1445474546" role=""/>
+  <member type="way" ref="220388176" role=""/>
+  <member type="way" ref="220379331" role=""/>
+  <member type="way" ref="373181616" role=""/>
+  <member type="way" ref="373181617" role=""/>
+  <member type="way" ref="217408193" role=""/>
+  <tag k="colour" v="#CB0A25"/>
+  <tag k="entrance:height" v="0.35"/>
+  <tag k="from" v="Zürich, Bahnhof Tiefenbrunnen"/>
+  <tag k="gtfs:feed" v="CH-Alle"/>
+  <tag k="gtfs:release_date" v="2025-12-18"/>
+  <tag k="gtfs:route_id" v="91-15-E-j26-1"/>
+  <tag k="gtfs:trip_id:like" v="%91-15-E-j26-1.24.R"/>
+  <tag k="gtfs:trip_id:sample" v="1008.TA.91-15-E-j26-1.24.R"/>
+  <tag k="name" v="Tram 15: Bahnhof Tiefenbrunnen → Central"/>
+  <tag k="nat_ref" v="70.015"/>
+  <tag k="network" v="ZVV"/>
+  <tag k="network:wikidata" v="Q201977"/>
+  <tag k="operator" v="VBZ"/>
+  <tag k="operator:wikidata" v="Q682070"/>
+  <tag k="public_transport:version" v="2"/>
+  <tag k="ref" v="15"/>
+  <tag k="ref_trips" v="91-15-E-j26-1.24.R"/>
+  <tag k="route" v="tram"/>
+  <tag k="to" v="Zürich, Central"/>
+  <tag k="type" v="route"/>
+  <tag k="wheelchair" v="yes"/>
+  <tag k="wikidata" v="Q70707977"/>
+ </relation>
+</osm>

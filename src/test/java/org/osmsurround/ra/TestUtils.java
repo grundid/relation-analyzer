@@ -15,6 +15,10 @@ public abstract class TestUtils {
 	public static final long RELATION_37415 = 37415;
 	public static final long RELATION_959757_LINE_10 = 959757;
 	public static final long RELATION_954995_LINE_11 = 954995;
+	public static final long RELATION_5504331_EP_EXPRESS = 5504331;
+	public static final long RELATION_2807115_TRAM_15 = 2807115;
+	public static final long RELATION_73714_BUS = 73714;
+	public static final long RELATION_1903644_FERRY_F2 = 1903644;
 
 	public static MockRestServiceServer prepareRestTemplateForRelation(RestTemplate restTemplate, long relationId) {
 		MockRestServiceServer mockServer = MockRestServiceServer.createServer(restTemplate);

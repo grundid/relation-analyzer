@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.1 (443802 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="26604224" visible="true" version="9" changeset="118530222" timestamp="2022-03-15T23:11:24Z" user="Freek Bes" uid="3180459" lat="52.3791789" lon="4.9061929"/>
+ <node id="26604235" visible="true" version="9" changeset="180408725" timestamp="2026-03-25T13:52:55Z" user="e_w_c" uid="6455505" lat="52.3812800" lon="4.9084736"/>
+ <node id="46434756" visible="true" version="21" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589" lat="52.3816386" lon="4.9085707">
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="check_date" v="2023-08-30"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="name" v="IJplein"/>
+  <tag k="operator" v="GVB"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:S:30009911"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="695157423" visible="true" version="4" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816305" lon="4.9086577"/>
+ <node id="695159246" visible="true" version="4" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817493" lon="4.9086874"/>
+ <node id="1767930057" visible="true" version="4" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817536" lon="4.9086885"/>
+ <node id="1767930061" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816766" lon="4.9083406"/>
+ <node id="1767930064" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816926" lon="4.9081682"/>
+ <node id="1767930065" visible="true" version="4" changeset="142244468" timestamp="2023-10-06T18:38:23Z" user="OttoR" uid="4123522" lat="52.3817979" lon="4.9081861"/>
+ <node id="1767930066" visible="true" version="4" changeset="142244468" timestamp="2023-10-06T18:38:23Z" user="OttoR" uid="4123522" lat="52.3818004" lon="4.9081867"/>
+ <node id="2848707258" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817007" lon="4.9083466"/>
+ <node id="2848707264" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817115" lon="4.9081578"/>
+ <node id="2848707267" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817185" lon="4.9081596"/>
+ <node id="2848707268" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817215" lon="4.9083518"/>
+ <node id="2848707274" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817391" lon="4.9081715"/>
+ <node id="8362642268" visible="true" version="3" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817884" lon="4.9083151"/>
+ <node id="8362642273" visible="true" version="7" changeset="122463923" timestamp="2022-06-16T13:00:44Z" user="TWHB" uid="6556551" lat="52.3787098" lon="4.9056394"/>
+ <node id="8362642274" visible="true" version="7" changeset="122463923" timestamp="2022-06-16T13:00:44Z" user="TWHB" uid="6556551" lat="52.3786506" lon="4.9060987"/>
+ <node id="8362642275" visible="true" version="7" changeset="182624266" timestamp="2026-05-13T23:52:15Z" user="Allroads" uid="388804" lat="52.3785335" lon="4.9060584"/>
+ <node id="8933353515" visible="true" version="6" changeset="182624266" timestamp="2026-05-13T23:52:15Z" user="Allroads" uid="388804" lat="52.3785958" lon="4.9055978"/>
+ <node id="9548252027" visible="true" version="4" changeset="182624266" timestamp="2026-05-13T23:52:15Z" user="Allroads" uid="388804" lat="52.3785490" lon="4.9059452"/>
+ <node id="9548252062" visible="true" version="2" changeset="118530222" timestamp="2022-03-15T23:11:24Z" user="Freek Bes" uid="3180459" lat="52.3796632" lon="4.9065542"/>
+ <node id="9548252064" visible="true" version="3" changeset="180408725" timestamp="2026-03-25T13:52:55Z" user="e_w_c" uid="6455505" lat="52.3809440" lon="4.9082375"/>
+ <node id="9548252070" visible="true" version="7" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589" lat="52.3786651" lon="4.9059863">
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="name" v="Centraal Station"/>
+  <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
+  <tag k="panoramax" v="4c084255-2ae6-41ab-b2d7-41281f5dc9c4"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:Q:30009910"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9740300607" visible="true" version="5" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589" lat="52.3786952" lon="4.9057531">
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="name" v="Centraal Station"/>
+  <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
+  <tag k="panoramax" v="ac1aea8f-ef6d-4d77-885b-7cec38d94b21"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:Q:30009910"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9822621309" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817932" lon="4.9082637"/>
+ <node id="9822621312" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817640" lon="4.9086011"/>
+ <node id="9822621313" visible="true" version="2" changeset="180408725" timestamp="2026-03-25T13:52:55Z" user="e_w_c" uid="6455505" lat="52.3810839" lon="4.9083718"/>
+ <node id="9822656223" visible="true" version="7" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589" lat="52.3816808" lon="4.9082950">
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="check_date" v="2023-08-30"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="name" v="IJplein"/>
+  <tag k="public_transport" v="stop_position"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:S:30009911"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="9822656225" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817558" lon="4.9086890"/>
+ <node id="9822656226" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817702" lon="4.9085114"/>
+ <node id="9822656232" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817662" lon="4.9085046"/>
+ <node id="9822656233" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816468" lon="4.9084831"/>
+ <node id="9822656234" visible="true" version="2" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817723" lon="4.9085119"/>
+ <node id="9822656241" visible="true" version="1" changeset="122463923" timestamp="2022-06-16T13:00:44Z" user="TWHB" uid="6556551" lat="52.3785806" lon="4.9057115"/>
+ <node id="11243972722" visible="true" version="2" changeset="170985760" timestamp="2025-08-25T16:15:17Z" user="kOSMofant" uid="6522565" lat="52.3817064" lon="4.9083473"/>
+ <node id="11243972723" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817837" lon="4.9083663"/>
+ <node id="11243972733" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817997" lon="4.9081943"/>
+ <node id="11243972734" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817431" lon="4.9081728"/>
+ <node id="11243972736" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817101" lon="4.9081726"/>
+ <node id="11243989241" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816700" lon="4.9086676"/>
+ <node id="11243989246" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3816879" lon="4.9084934"/>
+ <node id="11243989247" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817785" lon="4.9083724"/>
+ <node id="11243989248" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817209" lon="4.9083580"/>
+ <node id="11243989252" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817384" lon="4.9081785"/>
+ <node id="11243989255" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817173" lon="4.9081732"/>
+ <node id="11243989256" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817082" lon="4.9084985"/>
+ <node id="11243989257" visible="true" version="1" changeset="142238900" timestamp="2023-10-06T15:45:30Z" user="OttoR" uid="4123522" lat="52.3817090" lon="4.9084903"/>
+ <node id="13678408318" visible="true" version="1" changeset="180408725" timestamp="2026-03-25T13:52:55Z" user="e_w_c" uid="6455505" lat="52.3794029" lon="4.9063525"/>
+ <way id="291738771" visible="true" version="20" changeset="180408725" timestamp="2026-03-25T13:52:55Z" user="e_w_c" uid="6455505">
+  <nd ref="46434756"/>
+  <nd ref="26604235"/>
+  <nd ref="9822621313"/>
+  <nd ref="9548252064"/>
+  <nd ref="9548252062"/>
+  <nd ref="13678408318"/>
+  <nd ref="26604224"/>
+  <nd ref="9548252070"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="duration" v="00:05"/>
+  <tag k="foot" v="yes"/>
+  <tag k="mofa" v="yes"/>
+  <tag k="moped" v="yes"/>
+  <tag k="motor_vehicle" v="no"/>
+  <tag k="name" v="IJpleinveer"/>
+  <tag k="opening_hours" v="Mo-Sa 06:30-24:00; Su,PH 09:00-24:00"/>
+  <tag k="operator" v="GVB"/>
+  <tag k="ref" v="F2"/>
+  <tag k="route" v="ferry"/>
+  <tag k="website" v="https://reisinfo.gvb.nl/en/lijnen/902"/>
+ </way>
+ <way id="900151104" visible="true" version="11" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589">
+  <nd ref="9822656232"/>
+  <nd ref="11243989247"/>
+  <nd ref="11243989248"/>
+  <nd ref="2848707268"/>
+  <nd ref="11243972722"/>
+  <nd ref="2848707258"/>
+  <nd ref="1767930061"/>
+  <nd ref="9822656223"/>
+  <nd ref="1767930064"/>
+  <nd ref="11243972736"/>
+  <nd ref="2848707264"/>
+  <nd ref="2848707267"/>
+  <nd ref="11243989255"/>
+  <nd ref="11243989252"/>
+  <nd ref="2848707274"/>
+  <nd ref="11243972734"/>
+  <nd ref="1767930065"/>
+  <nd ref="1767930066"/>
+  <nd ref="11243972733"/>
+  <nd ref="9822621309"/>
+  <nd ref="8362642268"/>
+  <nd ref="11243972723"/>
+  <nd ref="9822656226"/>
+  <nd ref="9822656234"/>
+  <nd ref="9822621312"/>
+  <nd ref="9822656225"/>
+  <nd ref="1767930057"/>
+  <nd ref="695159246"/>
+  <nd ref="11243989241"/>
+  <nd ref="695157423"/>
+  <nd ref="46434756"/>
+  <nd ref="9822656233"/>
+  <nd ref="11243989246"/>
+  <nd ref="11243989256"/>
+  <nd ref="11243989257"/>
+  <nd ref="9822656232"/>
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="foot" v="yes"/>
+  <tag k="lit" v="yes"/>
+  <tag k="man_made" v="pier"/>
+  <tag k="mofa" v="yes"/>
+  <tag k="moped" v="yes"/>
+  <tag k="name" v="IJplein"/>
+  <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
+  <tag k="operator:short" v="GVB"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="source" v="PDOK aerial imagery Beeldmateriaal.nl 7,5cm latest"/>
+  <tag k="tactile_paving" v="no"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:S:30009911"/>
+  <tag k="wheelchair" v="yes"/>
+ </way>
+ <way id="900151105" visible="true" version="17" changeset="171227060" timestamp="2025-08-30T13:12:01Z" user="tg4567" uid="12500589">
+  <nd ref="8362642275"/>
+  <nd ref="8362642274"/>
+  <nd ref="9548252070"/>
+  <nd ref="9740300607"/>
+  <nd ref="8362642273"/>
+  <nd ref="8933353515"/>
+  <nd ref="9822656241"/>
+  <nd ref="9548252027"/>
+  <nd ref="8362642275"/>
+  <tag k="amenity" v="ferry_terminal"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="ferry" v="yes"/>
+  <tag k="lit" v="yes"/>
+  <tag k="man_made" v="pier"/>
+  <tag k="name" v="Centraal Station"/>
+  <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
+  <tag k="operator:short" v="GVB"/>
+  <tag k="panoramax" v="ddbdc728-2c8c-4f28-ba67-0888fb4c6347"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="tactile_paving" v="no"/>
+  <tag k="website" v="https://www.gvb.nl/en/travel-information/stop/NL:Q:30009910"/>
+  <tag k="wheelchair" v="yes"/>
+ </way>
+ <relation id="1903644" visible="true" version="24" changeset="188332701" timestamp="2026-08-31T21:56:08Z" user="A67-A67" uid="553736">
+  <member type="node" ref="9548252070" role="stop"/>
+  <member type="way" ref="900151105" role="platform"/>
+  <member type="node" ref="46434756" role="stop"/>
+  <member type="way" ref="900151104" role="platform"/>
+  <member type="way" ref="291738771" role=""/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="colour" v="#4F9AD3"/>
+  <tag k="foot" v="yes"/>
+  <tag k="from" v="Amsterdam Centraal Station"/>
+  <tag k="hgv" v="no"/>
+  <tag k="loc_name" v="IJpleinveer"/>
+  <tag k="motor_vehicle" v="no"/>
+  <tag k="name" v="Veer F2: Amsterdam Centraal Station → Amsterdam IJplein"/>
+  <tag k="network" v="IJ- en Noordzeekanaalveren"/>
+  <tag k="network:wikidata" v="Q108720424"/>
+  <tag k="operator" v="GVB"/>
+  <tag k="operator:wikidata" v="Q1808041"/>
+  <tag k="public_transport:version" v="2"/>
+  <tag k="ref" v="F2"/>
+  <tag k="route" v="ferry"/>
+  <tag k="to" v="Amsterdam, IJplein"/>
+  <tag k="type" v="route"/>
+ </relation>
+</osm>
