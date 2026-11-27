@@ -32,4 +32,27 @@ public class ReportServiceTest extends TestBase {
 
 		assertEquals(17.732, report.getRelationInfo().getLength(), 0.001);
 	}
+
+	@Test
+	public void testGenerateReportIgnorePlatforms() throws Exception {
+		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_5504331_EP_EXPRESS);
+		Report report = reportService.generateReport(analyzerContext);
+		assertEquals(1, report.getReportItems().size());
+		assertEquals(2.345, report.getRelationInfo().getLength(), 0.001);
+	}
+
+	@Test
+	public void testGenerateReportIgnoreHighwayPlatforms() throws Exception {
+		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_2807115_TRAM_15);
+		Report report = reportService.generateReport(analyzerContext);
+		assertEquals(1, report.getReportItems().size());
+	}
+
+	@Test
+	public void testGenerateReportIgnoreConnectedPlatforms() throws Exception {
+		AnalyzerContext analyzerContext = helperService.createGraphContext(TestUtils.RELATION_1903644_FERRY_F2);
+		Report report = reportService.generateReport(analyzerContext);
+		assertEquals(1, report.getReportItems().size());
+		assertEquals(0.380, report.getRelationInfo().getLength(), 0.001);
+	}
 }

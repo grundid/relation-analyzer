@@ -1,10 +1,15 @@
 package org.osmsurround.ra.analyzer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.osmtools.ra.analyzer.AggregationService;
-import org.osmtools.ra.analyzer.RelationMemberService;
 import org.osmtools.ra.context.AnalyzerContext;
 import org.osmtools.ra.context.AnalyzerContextService;
+import org.osmtools.ra.data.Member;
 import org.osmtools.ra.graph.GraphService;
+import org.osmtools.ra.segment.ConnectableSegment;
+import org.osmtools.ra.segment.SegmentFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class AnalyzerService {
 
 	@Autowired
-	private RelationMemberService relationMemberService;
+	private SegmentFactory segmentFactory;
 	@Autowired
 	private AnalyzerContextService analyzerContextService;
 	@Autowired
@@ -27,8 +32,17 @@ public class AnalyzerService {
 	}
 
 	public void analyzeContext(AnalyzerContext analyzerContext) {
-		relationMemberService.initSegments(analyzerContext);
+		initSegments(analyzerContext);
 		aggregationService.aggregate(analyzerContext);
 		graphService.initGraph(analyzerContext);
+	}
+
+	public void initSegments(AnalyzerContext analyzerContext) {
+		List<ConnectableSegment> segments = new ArrayList<ConnectableSegment>();
+		for (Member member : analyzerContext.getRelation().getMembers()) {
+			if (RouteMemberFilter.isRouteMember(member))
+				segments.add(segmentFactory.createSegment(member));
+		}
+		analyzerContext.setSegments(segments);
 	}
 }

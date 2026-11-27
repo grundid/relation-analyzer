@@ -1,7 +1,7 @@
 package org.osmsurround.ra;
 
+import org.osmsurround.ra.analyzer.AnalyzerService;
 import org.osmtools.ra.analyzer.AggregationService;
-import org.osmtools.ra.analyzer.RelationMemberService;
 import org.osmtools.ra.context.AnalyzerContext;
 import org.osmtools.ra.context.AnalyzerContextService;
 import org.osmtools.ra.graph.GraphService;
@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 public class HelperService {
 
 	@Autowired
-	private RelationMemberService relationMemberService;
+	private AnalyzerService analyzerService;
 	@Autowired
 	private AnalyzerContextService analyzerContextService;
 	@Autowired
@@ -26,7 +26,7 @@ public class HelperService {
 	public AnalyzerContext createInitializedContext(long relationId) {
 		TestUtils.prepareRestTemplateForRelation(restTemplate, relationId);
 		AnalyzerContext analyzerContext = analyzerContextService.createAnalyzerContext(relationId, false);
-		relationMemberService.initSegments(analyzerContext);
+		analyzerService.initSegments(analyzerContext);
 		return analyzerContext;
 	}
 

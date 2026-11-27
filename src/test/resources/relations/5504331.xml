@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.1 (480744 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="463938317" visible="true" version="14" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792" lat="48.2688980" lon="7.7219004">
+  <tag k="access" v="customers"/>
+  <tag k="layer" v="1"/>
+  <tag k="monorail" v="yes"/>
+  <tag k="name" v="EP-Express Station &quot;Alexanderplatz&quot;"/>
+  <tag k="public_transport" v="station"/>
+  <tag k="railway" v="halt"/>
+  <tag k="usage" v="leisure"/>
+  <tag k="wheelchair" v="limited"/>
+ </node>
+ <node id="463938321" visible="true" version="5" changeset="51731194" timestamp="2017-09-04T20:48:06Z" user="ferrero2" uid="121235" lat="48.2690031" lon="7.7219695"/>
+ <node id="463938327" visible="true" version="7" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2692538" lon="7.7222867"/>
+ <node id="463938332" visible="true" version="6" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2692453" lon="7.7226283"/>
+ <node id="463938335" visible="true" version="5" changeset="51730451" timestamp="2017-09-04T20:15:43Z" user="ferrero2" uid="121235" lat="48.2691325" lon="7.7230580"/>
+ <node id="463938340" visible="true" version="6" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2690342" lon="7.7232832"/>
+ <node id="463938363" visible="true" version="6" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2683550" lon="7.7232912"/>
+ <node id="463938366" visible="true" version="5" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2677418" lon="7.7235259"/>
+ <node id="463938373" visible="true" version="5" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2675953" lon="7.7235813"/>
+ <node id="463938379" visible="true" version="4" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2672942" lon="7.7235801"/>
+ <node id="463938384" visible="true" version="5" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2671918" lon="7.7235055"/>
+ <node id="463938389" visible="true" version="5" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2669673" lon="7.7231799"/>
+ <node id="463938393" visible="true" version="4" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2668618" lon="7.7230653"/>
+ <node id="463938399" visible="true" version="4" changeset="110328863" timestamp="2021-08-27T09:10:50Z" user="Lejun" uid="8085973" lat="48.2666993" lon="7.7229360"/>
+ <node id="463938404" visible="true" version="5" changeset="110328863" timestamp="2021-08-27T09:10:50Z" user="Lejun" uid="8085973" lat="48.2664940" lon="7.7227899"/>
+ <node id="463938408" visible="true" version="5" changeset="110328863" timestamp="2021-08-27T09:10:50Z" user="Lejun" uid="8085973" lat="48.2663458" lon="7.7226759"/>
+ <node id="463938413" visible="true" version="5" changeset="128011042" timestamp="2022-10-24T19:05:43Z" user="floquet nicolas" uid="934949" lat="48.2662470" lon="7.7225696"/>
+ <node id="463938417" visible="true" version="4" changeset="128011042" timestamp="2022-10-24T19:05:43Z" user="floquet nicolas" uid="934949" lat="48.2659256" lon="7.7221419"/>
+ <node id="463938423" visible="true" version="3" changeset="128011042" timestamp="2022-10-24T19:05:43Z" user="floquet nicolas" uid="934949" lat="48.2658545" lon="7.7220794"/>
+ <node id="463938427" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2656801" lon="7.7220193"/>
+ <node id="463938431" visible="true" version="4" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2654910" lon="7.7219989"/>
+ <node id="463938434" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2653038" lon="7.7219762"/>
+ <node id="463938438" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2650852" lon="7.7219489"/>
+ <node id="463938442" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2649925" lon="7.7219985"/>
+ <node id="463938445" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2646025" lon="7.7223054"/>
+ <node id="463938450" visible="true" version="4" changeset="128102744" timestamp="2022-10-26T21:33:08Z" user="floquet nicolas" uid="934949" lat="48.2641950" lon="7.7224920"/>
+ <node id="463938485" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2635776" lon="7.7227935"/>
+ <node id="463938493" visible="true" version="4" changeset="128102744" timestamp="2022-10-26T21:33:08Z" user="floquet nicolas" uid="934949" lat="48.2628470" lon="7.7231297"/>
+ <node id="463938498" visible="true" version="4" changeset="128102744" timestamp="2022-10-26T21:33:08Z" user="floquet nicolas" uid="934949" lat="48.2625673" lon="7.7231315"/>
+ <node id="463938504" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2623551" lon="7.7231080"/>
+ <node id="463938510" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2621707" lon="7.7231456"/>
+ <node id="463938513" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2619839" lon="7.7232418"/>
+ <node id="463938518" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2618285" lon="7.7233442"/>
+ <node id="463938523" visible="true" version="5" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2615376" lon="7.7233468"/>
+ <node id="463938527" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2612140" lon="7.7231211"/>
+ <node id="463938531" visible="true" version="11" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792" lat="48.2604435" lon="7.7225568">
+  <tag k="access" v="customers"/>
+  <tag k="monorail" v="yes"/>
+  <tag k="name" v="EP-Express Station &quot;Hotels&quot;"/>
+  <tag k="note" v="der reguläre E.P.-Express fährt hier durch"/>
+  <tag k="public_transport" v="station"/>
+  <tag k="railway" v="station"/>
+  <tag k="usage" v="leisure"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="463938536" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2603167" lon="7.7224511"/>
+ <node id="463938542" visible="true" version="5" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2602389" lon="7.7223095"/>
+ <node id="463938548" visible="true" version="5" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2601980" lon="7.7220879"/>
+ <node id="463938553" visible="true" version="6" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2602393" lon="7.7219011"/>
+ <node id="463938559" visible="true" version="6" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2603410" lon="7.7217738"/>
+ <node id="463938562" visible="true" version="4" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2605160" lon="7.7216394"/>
+ <node id="463938567" visible="true" version="6" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2607890" lon="7.7214489"/>
+ <node id="463938600" visible="true" version="2" changeset="2682926" timestamp="2009-09-29T23:08:06Z" user="detbar" uid="62644" lat="48.2616242" lon="7.7213011"/>
+ <node id="463938605" visible="true" version="16" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792" lat="48.2619137" lon="7.7216892">
+  <tag k="access" v="customers"/>
+  <tag k="layer" v="1"/>
+  <tag k="level" v="1"/>
+  <tag k="monorail" v="yes"/>
+  <tag k="name" v="EP-Express Station &quot;Spanien&quot;"/>
+  <tag k="public_transport" v="station"/>
+  <tag k="railway" v="station"/>
+  <tag k="usage" v="leisure"/>
+  <tag k="website:de" v="https://www.europapark.de/de/freizeitpark/attraktionen/ep-express-station-spanien"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="463938609" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2621682" lon="7.7219851"/>
+ <node id="463938612" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2623461" lon="7.7219604"/>
+ <node id="463938618" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2625581" lon="7.7217317"/>
+ <node id="463938620" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2628708" lon="7.7215443"/>
+ <node id="463938623" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2631435" lon="7.7213236"/>
+ <node id="463938628" visible="true" version="4" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2632833" lon="7.7212628"/>
+ <node id="463938632" visible="true" version="5" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2638392" lon="7.7212710"/>
+ <node id="463938638" visible="true" version="3" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2639911" lon="7.7213090"/>
+ <node id="463938644" visible="true" version="4" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2643599" lon="7.7214321"/>
+ <node id="463938648" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2644925" lon="7.7214389"/>
+ <node id="463938655" visible="true" version="5" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2646429" lon="7.7213959"/>
+ <node id="463938658" visible="true" version="5" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2650637" lon="7.7211313"/>
+ <node id="463938664" visible="true" version="5" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2652647" lon="7.7209344"/>
+ <node id="463938668" visible="true" version="4" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2654329" lon="7.7207218"/>
+ <node id="463938672" visible="true" version="4" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2657862" lon="7.7203715"/>
+ <node id="463938678" visible="true" version="12" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792" lat="48.2662992" lon="7.7200064">
+  <tag k="access" v="customers"/>
+  <tag k="layer" v="1"/>
+  <tag k="monorail" v="yes"/>
+  <tag k="name" v="EP-Express Station &quot;Griechenland&quot;"/>
+  <tag k="public_transport" v="station"/>
+  <tag k="railway" v="halt"/>
+  <tag k="usage" v="leisure"/>
+  <tag k="website:de" v="https://www.europapark.de/de/freizeitpark/attraktionen/ep-express-station-griechenland"/>
+  <tag k="wheelchair" v="yes"/>
+ </node>
+ <node id="463938682" visible="true" version="3" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2666572" lon="7.7198576"/>
+ <node id="463938686" visible="true" version="3" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2669771" lon="7.7196987"/>
+ <node id="463938690" visible="true" version="4" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2675466" lon="7.7198102"/>
+ <node id="463938699" visible="true" version="3" changeset="6742929" timestamp="2010-12-23T08:20:52Z" user="hurdygurdyman" uid="206037" lat="48.2676043" lon="7.7199150"/>
+ <node id="463938719" visible="true" version="3" changeset="6742929" timestamp="2010-12-23T08:20:44Z" user="hurdygurdyman" uid="206037" lat="48.2676492" lon="7.7200399"/>
+ <node id="463938727" visible="true" version="2" changeset="6742929" timestamp="2010-12-23T08:20:50Z" user="hurdygurdyman" uid="206037" lat="48.2676995" lon="7.7203285"/>
+ <node id="463938732" visible="true" version="3" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2677117" lon="7.7205686"/>
+ <node id="463938735" visible="true" version="4" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2677405" lon="7.7207986"/>
+ <node id="463938741" visible="true" version="4" changeset="14213171" timestamp="2012-12-09T14:11:55Z" user="q_un_go" uid="11374" lat="48.2679358" lon="7.7212695"/>
+ <node id="463938750" visible="true" version="3" changeset="14213171" timestamp="2012-12-09T14:11:55Z" user="q_un_go" uid="11374" lat="48.2681695" lon="7.7214381"/>
+ <node id="513975619" visible="true" version="1" changeset="2682926" timestamp="2009-09-29T23:08:04Z" user="detbar" uid="62644" lat="48.2629899" lon="7.7230884"/>
+ <node id="513975620" visible="true" version="4" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2634842" lon="7.7212541"/>
+ <node id="513975621" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2633518" lon="7.7229371"/>
+ <node id="1306576978" visible="true" version="2" changeset="16087087" timestamp="2013-05-11T21:52:33Z" user="mapper999" uid="165061" lat="48.2617116" lon="7.7214141"/>
+ <node id="1306576980" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2602118" lon="7.7222235"/>
+ <node id="1306576983" visible="true" version="4" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2604187" lon="7.7217077"/>
+ <node id="1306576990" visible="true" version="3" changeset="34009194" timestamp="2015-09-13T21:28:18Z" user="mapper999" uid="165061" lat="48.2620293" lon="7.7218449"/>
+ <node id="1306576992" visible="true" version="2" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2602705" lon="7.7223773"/>
+ <node id="1306576995" visible="true" version="4" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2602940" lon="7.7218071"/>
+ <node id="1306577004" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2620936" lon="7.7219391"/>
+ <node id="1306577006" visible="true" version="2" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2617351" lon="7.7233757"/>
+ <node id="1306577009" visible="true" version="3" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2645514" lon="7.7214307"/>
+ <node id="1306577010" visible="true" version="3" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2602147" lon="7.7219603"/>
+ <node id="1306577013" visible="true" version="4" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2606401" lon="7.7215525"/>
+ <node id="1751021579" visible="true" version="1" changeset="11585664" timestamp="2012-05-13T13:09:57Z" user="mapper999" uid="165061" lat="48.2685667" lon="7.7217164"/>
+ <node id="1751021580" visible="true" version="1" changeset="11585664" timestamp="2012-05-13T13:09:57Z" user="mapper999" uid="165061" lat="48.2685828" lon="7.7216694"/>
+ <node id="1751021584" visible="true" version="1" changeset="11585664" timestamp="2012-05-13T13:09:58Z" user="mapper999" uid="165061" lat="48.2688720" lon="7.7218579"/>
+ <node id="1751021587" visible="true" version="1" changeset="11585664" timestamp="2012-05-13T13:09:58Z" user="mapper999" uid="165061" lat="48.2689065" lon="7.7219330"/>
+ <node id="1751021588" visible="true" version="1" changeset="11585664" timestamp="2012-05-13T13:09:58Z" user="mapper999" uid="165061" lat="48.2689176" lon="7.7218876"/>
+ <node id="2057874184" visible="true" version="2" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2677690" lon="7.7209605"/>
+ <node id="2057874188" visible="true" version="2" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2677956" lon="7.7210630"/>
+ <node id="2057874192" visible="true" version="2" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2678175" lon="7.7211105"/>
+ <node id="2057874197" visible="true" version="2" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2678522" lon="7.7211769"/>
+ <node id="2057874274" visible="true" version="1" changeset="14213171" timestamp="2012-12-09T14:11:45Z" user="q_un_go" uid="11374" lat="48.2682268" lon="7.7214763"/>
+ <node id="2057874288" visible="true" version="1" changeset="14213171" timestamp="2012-12-09T14:11:45Z" user="q_un_go" uid="11374" lat="48.2682743" lon="7.7215106"/>
+ <node id="2066853124" visible="true" version="3" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2608923" lon="7.7214271"/>
+ <node id="2066853125" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2610228" lon="7.7213911"/>
+ <node id="2066853126" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2611101" lon="7.7213725"/>
+ <node id="2066853127" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2611777" lon="7.7213455"/>
+ <node id="2066853128" visible="true" version="2" changeset="38392264" timestamp="2016-04-07T20:58:12Z" user="Mammi71" uid="668573" lat="48.2613834" lon="7.7212626"/>
+ <node id="2066853129" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2614832" lon="7.7212347"/>
+ <node id="2066853130" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2615520" lon="7.7212533"/>
+ <node id="2066853134" visible="true" version="2" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2635678" lon="7.7212558"/>
+ <node id="2066853135" visible="true" version="2" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2636620" lon="7.7212497"/>
+ <node id="2066853138" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2652054" lon="7.7210088"/>
+ <node id="2066853139" visible="true" version="4" changeset="132050647" timestamp="2023-02-03T17:08:44Z" user="R4ss1lon" uid="15256568" lat="48.2655763" lon="7.7205466"/>
+ <node id="2066853140" visible="true" version="2" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2661375" lon="7.7201270"/>
+ <node id="2066853141" visible="true" version="1" changeset="14274315" timestamp="2012-12-14T18:15:58Z" user="cMartin" uid="128287" lat="48.2670791" lon="7.7233405"/>
+ <node id="2066853142" visible="true" version="2" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2671355" lon="7.7196269"/>
+ <node id="2079264477" visible="true" version="2" changeset="128011042" timestamp="2022-10-24T19:05:43Z" user="floquet nicolas" uid="934949" lat="48.2657867" lon="7.7220373"/>
+ <node id="2079264511" visible="true" version="3" changeset="132309462" timestamp="2023-02-09T14:05:53Z" user="R4ss1lon" uid="15256568" lat="48.2674209" lon="7.7236182"/>
+ <node id="2079264520" visible="true" version="3" changeset="132309462" timestamp="2023-02-09T14:05:53Z" user="R4ss1lon" uid="15256568" lat="48.2675078" lon="7.7236124"/>
+ <node id="2079264578" visible="true" version="3" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2690943" lon="7.7231650"/>
+ <node id="2079264579" visible="true" version="1" changeset="14371870" timestamp="2012-12-22T23:27:12Z" user="mapper999" uid="165061" lat="48.2690424" lon="7.7219964"/>
+ <node id="2079264591" visible="true" version="4" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2692268" lon="7.7222237"/>
+ <node id="2079264599" visible="true" version="3" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2692653" lon="7.7223411"/>
+ <node id="2079264601" visible="true" version="3" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2692685" lon="7.7224932"/>
+ <node id="2079264606" visible="true" version="3" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2692747" lon="7.7223823"/>
+ <node id="2300215899" visible="true" version="1" changeset="16087087" timestamp="2013-05-11T21:52:00Z" user="mapper999" uid="165061" lat="48.2686302" lon="7.7217568"/>
+ <node id="2301043509" visible="true" version="1" changeset="16095432" timestamp="2013-05-12T13:19:27Z" user="mapper999" uid="165061" lat="48.2676753" lon="7.7201784"/>
+ <node id="3033230285" visible="true" version="2" changeset="110328863" timestamp="2021-08-27T09:10:50Z" user="Lejun" uid="8085973" lat="48.2660762" lon="7.7223332"/>
+ <node id="3741911902" visible="true" version="1" changeset="34009194" timestamp="2015-09-13T21:27:29Z" user="mapper999" uid="165061" lat="48.2617262" lon="7.7214340"/>
+ <node id="3741911903" visible="true" version="1" changeset="34009194" timestamp="2015-09-13T21:27:29Z" user="mapper999" uid="165061" lat="48.2617273" lon="7.7214658"/>
+ <node id="3741911920" visible="true" version="1" changeset="34009194" timestamp="2015-09-13T21:27:30Z" user="mapper999" uid="165061" lat="48.2619853" lon="7.7218156"/>
+ <node id="3741912919" visible="true" version="1" changeset="34009194" timestamp="2015-09-13T21:27:34Z" user="mapper999" uid="165061" lat="48.2685167" lon="7.7216621"/>
+ <node id="4106134785" visible="true" version="2" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2664739" lon="7.7199411"/>
+ <node id="4106134786" visible="true" version="3" changeset="128460831" timestamp="2022-11-04T01:00:48Z" user="floquet nicolas" uid="934949" lat="48.2662049" lon="7.7200763"/>
+ <node id="4106381899" visible="true" version="2" changeset="128055879" timestamp="2022-10-25T20:39:46Z" user="floquet nicolas" uid="934949" lat="48.2616310" lon="7.7233947"/>
+ <node id="4106381900" visible="true" version="1" changeset="38392264" timestamp="2016-04-07T20:58:11Z" user="Mammi71" uid="668573" lat="48.2629899" lon="7.7214540"/>
+ <node id="5079826548" visible="true" version="3" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2691820" lon="7.7221494"/>
+ <node id="5079826549" visible="true" version="1" changeset="51730451" timestamp="2017-09-04T20:15:43Z" user="ferrero2" uid="121235" lat="48.2691121" lon="7.7231146"/>
+ <node id="5079826550" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2690745" lon="7.7232101"/>
+ <node id="5079826551" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2690580" lon="7.7232422"/>
+ <node id="5079826552" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2684917" lon="7.7232325"/>
+ <node id="5079826553" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2686223" lon="7.7232158"/>
+ <node id="5079826554" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2685495" lon="7.7232125"/>
+ <node id="5079826555" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2688015" lon="7.7232921"/>
+ <node id="5079826556" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2687276" lon="7.7232624"/>
+ <node id="5079826557" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2687009" lon="7.7232472"/>
+ <node id="5079826558" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2686753" lon="7.7232302"/>
+ <node id="5079826560" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2689867" lon="7.7233182"/>
+ <node id="5079826561" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2688981" lon="7.7233325"/>
+ <node id="5079826562" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2689563" lon="7.7233325"/>
+ <node id="5079888572" visible="true" version="2" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2688741" lon="7.7233250"/>
+ <node id="10129076337" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2648087" lon="7.7212906"/>
+ <node id="10129076338" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2648862" lon="7.7212400"/>
+ <node id="10129076382" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2651293" lon="7.7219405"/>
+ <node id="10129076396" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2650551" lon="7.7219601"/>
+ <node id="10129076398" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2652023" lon="7.7219473"/>
+ <node id="10129076399" visible="true" version="1" changeset="128057665" timestamp="2022-10-25T21:50:36Z" user="floquet nicolas" uid="934949" lat="48.2653991" lon="7.7219904"/>
+ <node id="10129120406" visible="true" version="1" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2672554" lon="7.7196194"/>
+ <node id="10129120407" visible="true" version="1" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2674224" lon="7.7196826"/>
+ <node id="10129120408" visible="true" version="1" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2673407" lon="7.7196403"/>
+ <node id="10129120409" visible="true" version="1" changeset="128058240" timestamp="2022-10-25T22:19:21Z" user="floquet nicolas" uid="934949" lat="48.2675015" lon="7.7197545"/>
+ <node id="10129208799" visible="true" version="1" changeset="128059457" timestamp="2022-10-25T23:33:53Z" user="floquet nicolas" uid="934949" lat="48.2639397" lon="7.7212900"/>
+ <node id="10131283440" visible="true" version="1" changeset="128102744" timestamp="2022-10-26T21:33:08Z" user="floquet nicolas" uid="934949" lat="48.2626970" lon="7.7231378"/>
+ <node id="10131445100" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2631052" lon="7.7230500"/>
+ <node id="10131445112" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2630685" lon="7.7230648"/>
+ <node id="10131445113" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2632501" lon="7.7229861"/>
+ <node id="10131526320" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2629140" lon="7.7231187"/>
+ <node id="10131526342" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2622615" lon="7.7220039"/>
+ <node id="10131526350" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2632124" lon="7.7212827"/>
+ <node id="10131526682" visible="true" version="1" changeset="128106073" timestamp="2022-10-27T00:40:06Z" user="floquet nicolas" uid="934949" lat="48.2629259" lon="7.7215117"/>
+ <node id="10133702608" visible="true" version="1" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2679522" lon="7.7234482"/>
+ <node id="10133741744" visible="true" version="1" changeset="128144718" timestamp="2022-10-27T19:44:59Z" user="floquet nicolas" uid="934949" lat="48.2670341" lon="7.7232816"/>
+ <node id="10148713321" visible="true" version="1" changeset="128369532" timestamp="2022-11-02T03:37:00Z" user="floquet nicolas" uid="934949" lat="48.2665687" lon="7.7228494"/>
+ <node id="10155837826" visible="true" version="1" changeset="128460831" timestamp="2022-11-04T01:00:48Z" user="floquet nicolas" uid="934949" lat="48.2661504" lon="7.7201170"/>
+ <node id="10155837827" visible="true" version="1" changeset="128460831" timestamp="2022-11-04T01:00:48Z" user="floquet nicolas" uid="934949" lat="48.2664224" lon="7.7199564"/>
+ <node id="10632534008" visible="true" version="1" changeset="132309462" timestamp="2023-02-09T14:05:53Z" user="R4ss1lon" uid="15256568" lat="48.2673612" lon="7.7236050"/>
+ <node id="10632534009" visible="true" version="1" changeset="132309462" timestamp="2023-02-09T14:05:53Z" user="R4ss1lon" uid="15256568" lat="48.2674659" lon="7.7236185"/>
+ <node id="12485035688" visible="true" version="1" changeset="161146617" timestamp="2025-01-08T20:03:26Z" user="kloburste" uid="21389681" lat="48.2692366" lon="7.7222501"/>
+ <node id="12485035689" visible="true" version="1" changeset="161146617" timestamp="2025-01-08T20:03:26Z" user="kloburste" uid="21389681" lat="48.2692594" lon="7.7225532"/>
+ <node id="12485035690" visible="true" version="1" changeset="161146617" timestamp="2025-01-08T20:03:26Z" user="kloburste" uid="21389681" lat="48.2692756" lon="7.7224186"/>
+ <way id="163401290" visible="true" version="9" changeset="180981474" timestamp="2026-04-07T07:16:10Z" user="MosStuff" uid="23826035">
+  <nd ref="1751021587"/>
+  <nd ref="2300215899"/>
+  <nd ref="1751021579"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="layer" v="2"/>
+  <tag k="lit" v="yes"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="tactile_paving" v="no"/>
+ </way>
+ <way id="163401291" visible="true" version="8" changeset="180981474" timestamp="2026-04-07T07:16:00Z" user="MosStuff" uid="23826035">
+  <nd ref="1751021580"/>
+  <nd ref="1751021584"/>
+  <nd ref="1751021588"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="layer" v="2"/>
+  <tag k="lit" v="yes"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="railway" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="tactile_paving" v="no"/>
+ </way>
+ <way id="196345450" visible="true" version="11" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="1306576990"/>
+  <nd ref="1306577004"/>
+  <nd ref="463938609"/>
+  <nd ref="10131526342"/>
+  <nd ref="463938612"/>
+  <nd ref="463938618"/>
+  <nd ref="463938620"/>
+  <nd ref="10131526682"/>
+  <nd ref="4106381900"/>
+  <nd ref="463938623"/>
+  <nd ref="10131526350"/>
+  <nd ref="463938628"/>
+  <nd ref="513975620"/>
+  <nd ref="2066853134"/>
+  <nd ref="2066853135"/>
+  <nd ref="463938632"/>
+  <nd ref="10129208799"/>
+  <nd ref="463938638"/>
+  <nd ref="463938644"/>
+  <nd ref="463938648"/>
+  <nd ref="1306577009"/>
+  <nd ref="463938655"/>
+  <nd ref="10129076337"/>
+  <nd ref="10129076338"/>
+  <nd ref="463938658"/>
+  <nd ref="2066853138"/>
+  <nd ref="463938664"/>
+  <nd ref="463938668"/>
+  <nd ref="2066853139"/>
+  <nd ref="463938672"/>
+  <nd ref="2066853140"/>
+  <nd ref="10155837826"/>
+  <nd ref="4106134786"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="370494932" visible="true" version="6" changeset="148966205" timestamp="2024-03-21T14:18:04Z" user="YieldMapper" uid="3847112">
+  <nd ref="3741911920"/>
+  <nd ref="3741911903"/>
+  <tag k="bench" v="yes"/>
+  <tag k="bin" v="yes"/>
+  <tag k="lit" v="yes"/>
+  <tag k="public_transport" v="platform"/>
+  <tag k="shelter" v="yes"/>
+  <tag k="tactile_paving" v="no"/>
+ </way>
+ <way id="370494949" visible="true" version="4" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="3741912919"/>
+  <nd ref="463938317"/>
+  <nd ref="463938321"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="covered" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="indoor" v="yes"/>
+  <tag k="layer" v="1"/>
+  <tag k="level" v="1"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="370494950" visible="true" version="6" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="3741911902"/>
+  <nd ref="463938605"/>
+  <nd ref="1306576990"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="covered" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="indoor" v="yes"/>
+  <tag k="layer" v="1"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="370494951" visible="true" version="14" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="12485035689"/>
+  <nd ref="463938332"/>
+  <nd ref="463938335"/>
+  <nd ref="5079826549"/>
+  <nd ref="2079264578"/>
+  <nd ref="5079826550"/>
+  <nd ref="5079826551"/>
+  <nd ref="463938340"/>
+  <nd ref="5079826560"/>
+  <nd ref="5079826562"/>
+  <nd ref="5079826561"/>
+  <nd ref="5079888572"/>
+  <nd ref="5079826555"/>
+  <nd ref="5079826556"/>
+  <nd ref="5079826557"/>
+  <nd ref="5079826558"/>
+  <nd ref="5079826553"/>
+  <nd ref="5079826554"/>
+  <nd ref="5079826552"/>
+  <nd ref="463938363"/>
+  <nd ref="10133702608"/>
+  <nd ref="463938366"/>
+  <nd ref="463938373"/>
+  <nd ref="2079264520"/>
+  <nd ref="10632534009"/>
+  <nd ref="2079264511"/>
+  <nd ref="10632534008"/>
+  <nd ref="463938379"/>
+  <nd ref="463938384"/>
+  <nd ref="2066853141"/>
+  <nd ref="10133741744"/>
+  <nd ref="463938389"/>
+  <nd ref="463938393"/>
+  <nd ref="463938399"/>
+  <nd ref="10148713321"/>
+  <nd ref="463938404"/>
+  <nd ref="463938408"/>
+  <nd ref="463938413"/>
+  <nd ref="3033230285"/>
+  <nd ref="463938417"/>
+  <nd ref="463938423"/>
+  <nd ref="2079264477"/>
+  <nd ref="463938427"/>
+  <nd ref="463938431"/>
+  <nd ref="10129076399"/>
+  <nd ref="463938434"/>
+  <nd ref="10129076398"/>
+  <nd ref="10129076382"/>
+  <nd ref="463938438"/>
+  <nd ref="10129076396"/>
+  <nd ref="463938442"/>
+  <nd ref="463938445"/>
+  <nd ref="463938450"/>
+  <nd ref="463938485"/>
+  <nd ref="513975621"/>
+  <nd ref="10131445113"/>
+  <nd ref="10131445100"/>
+  <nd ref="10131445112"/>
+  <nd ref="513975619"/>
+  <nd ref="10131526320"/>
+  <nd ref="463938493"/>
+  <nd ref="10131283440"/>
+  <nd ref="463938498"/>
+  <nd ref="463938504"/>
+  <nd ref="463938510"/>
+  <nd ref="463938513"/>
+  <nd ref="463938518"/>
+  <nd ref="1306577006"/>
+  <nd ref="4106381899"/>
+  <nd ref="463938523"/>
+  <nd ref="463938527"/>
+  <nd ref="463938531"/>
+  <nd ref="463938536"/>
+  <nd ref="1306576992"/>
+  <nd ref="463938542"/>
+  <nd ref="1306576980"/>
+  <nd ref="463938548"/>
+  <nd ref="1306577010"/>
+  <nd ref="463938553"/>
+  <nd ref="1306576995"/>
+  <nd ref="463938559"/>
+  <nd ref="1306576983"/>
+  <nd ref="463938562"/>
+  <nd ref="1306577013"/>
+  <nd ref="463938567"/>
+  <nd ref="2066853124"/>
+  <nd ref="2066853125"/>
+  <nd ref="2066853126"/>
+  <nd ref="2066853127"/>
+  <nd ref="2066853128"/>
+  <nd ref="2066853129"/>
+  <nd ref="2066853130"/>
+  <nd ref="463938600"/>
+  <nd ref="1306576978"/>
+  <nd ref="3741911902"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="408705763" visible="true" version="5" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="4106134785"/>
+  <nd ref="463938682"/>
+  <nd ref="463938686"/>
+  <nd ref="2066853142"/>
+  <nd ref="10129120406"/>
+  <nd ref="10129120408"/>
+  <nd ref="10129120407"/>
+  <nd ref="10129120409"/>
+  <nd ref="463938690"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="408705765" visible="true" version="5" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="4106134786"/>
+  <nd ref="463938678"/>
+  <nd ref="10155837827"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="covered" v="yes"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="408709183" visible="true" version="4" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="463938690"/>
+  <nd ref="463938699"/>
+  <nd ref="463938719"/>
+  <nd ref="2301043509"/>
+  <nd ref="463938727"/>
+  <nd ref="463938732"/>
+  <nd ref="463938735"/>
+  <nd ref="2057874184"/>
+  <nd ref="2057874188"/>
+  <nd ref="2057874192"/>
+  <nd ref="2057874197"/>
+  <nd ref="463938741"/>
+  <nd ref="463938750"/>
+  <nd ref="2057874274"/>
+  <nd ref="2057874288"/>
+  <nd ref="3741912919"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="1110145039" visible="true" version="2" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="10155837827"/>
+  <nd ref="4106134785"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="covered" v="yes"/>
+  <tag k="layer" v="1"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="1349619951" visible="true" version="3" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="463938321"/>
+  <nd ref="2079264579"/>
+  <nd ref="5079826548"/>
+  <nd ref="2079264591"/>
+  <nd ref="12485035688"/>
+  <nd ref="463938327"/>
+  <nd ref="2079264599"/>
+  <nd ref="2079264606"/>
+  <nd ref="12485035690"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="bridge" v="yes"/>
+  <tag k="electrified" v="rail"/>
+  <tag k="gauge" v="700"/>
+  <tag k="layer" v="2"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <way id="1349619952" visible="true" version="2" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <nd ref="12485035690"/>
+  <nd ref="2079264601"/>
+  <nd ref="12485035689"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="layer" v="-1"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="railway" v="monorail"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="start_date" v="1995"/>
+  <tag k="tunnel" v="yes"/>
+  <tag k="usage" v="tourism"/>
+ </way>
+ <relation id="5504331" visible="true" version="9" changeset="181479462" timestamp="2026-04-17T23:00:49Z" user="Txitxarra" uid="14986792">
+  <member type="node" ref="463938317" role="stop"/>
+  <member type="way" ref="163401290" role="platform_exit_only"/>
+  <member type="way" ref="163401291" role="platform_entry_only"/>
+  <member type="node" ref="463938605" role="stop"/>
+  <member type="way" ref="370494932" role="platform_exit_only"/>
+  <member type="node" ref="463938678" role="stop"/>
+  <member type="way" ref="370494950" role=""/>
+  <member type="way" ref="196345450" role=""/>
+  <member type="way" ref="408705765" role=""/>
+  <member type="way" ref="1110145039" role=""/>
+  <member type="way" ref="408705763" role=""/>
+  <member type="way" ref="408709183" role=""/>
+  <member type="way" ref="370494949" role=""/>
+  <member type="way" ref="1349619951" role=""/>
+  <member type="way" ref="1349619952" role=""/>
+  <member type="way" ref="370494951" role=""/>
+  <member type="node" ref="463938531" role="stop"/>
+  <tag k="access" v="customers"/>
+  <tag k="alt_name" v="EP-Express"/>
+  <tag k="name" v="EP-Express"/>
+  <tag k="operator" v="Europa-Park Rust"/>
+  <tag k="ref" v="E.P.E."/>
+  <tag k="roundtrip" v="yes"/>
+  <tag k="route" v="monorail"/>
+  <tag k="service" v="tourism"/>
+  <tag k="short_name" v="E.P.E."/>
+  <tag k="type" v="route"/>
+ </relation>
+</osm>

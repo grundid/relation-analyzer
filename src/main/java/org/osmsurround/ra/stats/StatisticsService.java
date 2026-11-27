@@ -3,6 +3,7 @@ package org.osmsurround.ra.stats;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.osmsurround.ra.analyzer.RouteMemberFilter;
 import org.osmtools.ra.data.Member;
 import org.osmtools.ra.data.Node;
 import org.osmtools.ra.data.Relation;
@@ -145,6 +146,8 @@ public class StatisticsService {
 		Hierarchy highwayHierarchy = createHighwayHierarchy();
 
 		for (Member member : relation.getMembers()) {
+			if (!RouteMemberFilter.isRouteMember(member))
+				continue;
 			Way way = member.getWay();
                         List<Node> nodes = way.getNodes();
 			double length = 0;
@@ -182,6 +185,8 @@ public class StatisticsService {
 		Hierarchy surfaceHierarchy = createSurfaceHierarchy();
 
 		for (Member member : relation.getMembers()) {
+			if (!RouteMemberFilter.isRouteMember(member))
+				continue;
 			Way way = member.getWay();
 			List<Node> nodes = way.getNodes();
 			double length = 0;
